@@ -1,0 +1,14 @@
+2018-12-29 03:34:26 : /usr/share/php/puzzle/ipz_menus.php:107:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2018-12-29 03:34:26 : LG : fr
+2018-12-29 03:34:29 : /usr/share/php/puzzle/ipz_menus.php:378:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2018-12-29 03:34:29 : LG : fr
+2018-12-29 03:34:29 : /usr/share/php/puzzle/ipz_menus.php:618:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2018-12-29 03:34:29 : /usr/share/php/puzzle/ipz_menus.php:632 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+

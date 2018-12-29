@@ -73,5 +73,5 @@
 	global $database, $db_prefix;
 	//date_default_timezone_set("Europe/Paris");
 	$db_prefix="pz_";
-	$database="akades";
+	$database="ipuzzle";
 ?>
