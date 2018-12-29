@@ -1,3 +1,6 @@
+/logs/
+/web/html/admin/
+/data/mysql/
 /vendor/
 /build/
 /composer.phar
