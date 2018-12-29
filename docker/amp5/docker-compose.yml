@@ -1,0 +1,41 @@
+version: "3.0"
+services:
+  mysql57:
+    build: ./mysql57
+    #image: mysql:latest
+    container_name: amp5_db
+    ports:
+     - "3309:3306"
+    restart: always
+    volumes:
+     - mysql_data:/mysql57
+     - ../../data/mysql:/data
+    environment:
+     - MYSQL_ROOT_PASSWORD=demo
+     #- MYSQL_HOST=localhost
+     #- MYSQL_PORT=33060
+     - MYSQL_USER=david
+     - MYSQL_PASSWORD=demo
+     - MYSQL_DATABASE=mysql
+     - MYSQL_MY_DATABASE=webfactory
+
+  phttpd270:
+    build: ./apache2php7
+    #image: davidb71/solight:latest
+    container_name: amp5_web
+    ports:
+     - "8100:80"
+    privileged: true
+    volumes:
+     - ../../web:/var/www
+     - ../../includes:/usr/share/php/puzzle
+     #- ./php.ini:/etc/php.ini
+     #- ./apache2.conf:/etc/apache2/apache2.conf
+     - ./common.conf:/etc/apache2/sites-enabled/common.conf
+     #- ../../log/php_error.log:/var/log/php_error.log
+    links:
+     - mysql57:mysql
+
+volumes:
+  mysql_data:
+
