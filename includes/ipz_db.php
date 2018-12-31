@@ -134,17 +134,23 @@ function mysqli_field_type($result, $i) {
 
 function pdo_field_name($stmt, $i)
 {
-	return $stmt->getColumnMeta($i)['name'];
+	// return $stmt->getColumnMeta($i)['name'];
+	return $stmt->getFieldName($i);
 }
 
 function pdo_field_type($stmt, $i)
 {
-	return $stmt->getColumnMeta($i)['pdo_type'];
+	// return $stmt->getColumnMeta($i)['native_type'];
+	//return $stmt->getColumnMeta($i)['pdo_type'];
+	return $stmt->getFieldType($i);
+
 }
 
 function pdo_field_len($stmt, $i)
 {
-	return $stmt->getColumnMeta($i)['len'];
+	// return $stmt->getColumnMeta($i)['len'];
+	return $stmt->getFieldLen($i);
+
 }
 
 

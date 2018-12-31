@@ -40,7 +40,9 @@
 			$im_dir = $_POST["im_dir"];
 			$im_url = $_POST["im_url"];
 			$im_site = $_POST["im_site"];
-;
+			$im_name=escapeChars($im_name);
+			$im_dir=escapeChars($im_dir);
+			$im_url=escapeChars($im_url);
 			$sql="insert into images (".
 				"im_id, ".
 				"im_name, ".
@@ -49,9 +51,9 @@
 				"im_site".
 			") values (".
 				"$im_id, ".
-				"$im_name, ".
-				"$im_dir, ".
-				"$im_url, ".
+				"'$im_name', ".
+				"'$im_dir', ".
+				"'$im_url', ".
 				"$im_site".
 			")";
 			$stmt = $cs->query($sql);
@@ -62,7 +64,9 @@
 			$im_dir = $_POST["im_dir"];
 			$im_url = $_POST["im_url"];
 			$im_site = $_POST["im_site"];
-;
+			$im_name=escapeChars($im_name);
+			$im_dir=escapeChars($im_dir);
+			$im_url=escapeChars($im_url);
 			$sql="update images set ".
 				"im_id='$im_id', ".
 				"im_name='$im_name', ".

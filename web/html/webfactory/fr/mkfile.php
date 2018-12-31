@@ -24,12 +24,13 @@
 	$di_long = get_variable("di_long");
 	$di_short = get_variable("di_short");
 	$di_name = get_variable("di_name");
+	$lg = get_variable("lg", "fr");
 		
 	$cs = connection(CONNECT, $userdb) or die("UserDb='$userdb'<br>");
 	$tmp_filename = 'tmp_'.$pa_filename;
 	$wwwroot = get_www_root();
         
-    $relations = relations($userdb,$usertable,$cs);
+    $relations = relations($userdb, $usertable, $cs);
 	$A_fieldDefs = $relations["field_defs"];
 	
 	echo "<br>";
@@ -43,7 +44,9 @@
 	$script_exists_tostring = $script_exists ? YES : NO;
 	$http_root = get_http_root();
 
-	if($save=="") {
+	$menus = new Menus($lg, $db_prefix);
+
+	if($save === "") {
  
 		$formname = "fiche_$usertable";
 		$sql = "show fields from $usertable;";
@@ -61,7 +64,7 @@
 		$indexfield = $A_sqlFields[0];
 		$secondfield = $A_sqlFields[1];
 		
-		list($me_id, $pa_id) = get_menu_and_page($userdb, $rel_page_filename);
+		list($me_id, $pa_id) = $menus->get_menu_and_page($userdb, $rel_page_filename);
 		
 		echo "Catalog file name: $rel_page_filename<br>";
 
@@ -73,7 +76,7 @@
 		}
 		
 		if (($me_id == 0 || $pa_id == 0) && $autogen == 1) {
-			list($me_id, $pa_id) = add_menu_and_page(
+			list($me_id, $pa_id) = $menu->add_menu_and_page(
 			$userdb,
 			$di_name,
 			$me_level,
@@ -276,7 +279,7 @@
 
         } elseif ($save=="Non") {
 			$sstatus="Page non-enregistré";
-			delete_menu($userdb, $di_name);
+			$menu->delete_menu($userdb, $di_name);
 
 			if(file_exists($root_code_filename)) {
 				unlink($root_code_filename);

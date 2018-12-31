@@ -32,17 +32,19 @@
 				</tr>
 					<td>im_name</td>
 					<td>
-						<input type='text' name='im_name' size='45' value='<?php echo $im_name?>'>
+						<input type='text' name='im_name' size='15' value='<?php echo $im_name?>'>
 					</td>
 				</tr>
+				<tr>
 					<td>im_dir</td>
 					<td>
-						<input type='text' name='im_dir' size='80' value='<?php echo $im_dir?>'>
+						<textarea name='im_dir' cols='80' rows='4'><?php echo $im_dir?></textarea>
 					</td>
 				</tr>
+				<tr>
 					<td>im_url</td>
 					<td>
-						<input type='text' name='im_url' size='80' value='<?php echo $im_url?>'>
+						<textarea name='im_url' cols='80' rows='4'><?php echo $im_url?></textarea>
 					</td>
 				</tr>
 					<td>im_site</td>
