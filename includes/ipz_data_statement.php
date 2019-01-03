@@ -42,6 +42,9 @@ class Statement
     private $_sql = '';
     private $_result = null;
     private $_driver = '';
+    private $_native_types = [];
+    private $_native2php_assoc = [];
+    private $_native2php_num = [];
 
     public function __construct($statement, $config, $sql)
     {
@@ -49,6 +52,8 @@ class Statement
         $this->_config = (object) $config;
         $this->_sql = $sql;
         $this->_driver = $this->_config->driver;
+        $this->_typesMapper();
+
     }
 
     public function fetch($mode = \PDO::FETCH_NUM)
@@ -109,7 +114,7 @@ class Statement
     {
         $name = '';
 
-        if ($this->_driver === Driver::MYSQL && $this->getMySQLiResult()) {
+        if ($this->_driver === Driver::MYSQL && $this->_getMySQLiResult()) {
             $field_info = $this->_result->fetch_field_direct($i);
             $name = $field_info->name;
         } else {
@@ -126,7 +131,7 @@ class Statement
     {
         $type = '';
 
-        if ($this->_driver === Driver::MYSQL && $this->getMySQLiResult()) {
+        if ($this->_driver === Driver::MYSQL && $this->_getMySQLiResult()) {
             $field_info = $this->_result->fetch_field_direct($i);
             $type = $field_info->type;
         } else {
@@ -143,7 +148,7 @@ class Statement
     {
         $len = 0;
 
-        if ($this->_driver === Driver::MYSQL && $this->getMySQLiResult()) {
+        if ($this->_driver === Driver::MYSQL && $this->_getMySQLiResult()) {
             $field_info = $this->_result->fetch_field_direct($i);
             $len = $field_info->length;
         } else {
@@ -156,7 +161,7 @@ class Statement
         return $len;
     }
 
-    private function getMySQLiResult()
+    private function _getMySQLiResult()
     {
         if ($this->_result === null) {
             try {
@@ -176,5 +181,119 @@ class Statement
         }
 
         return true;
+    }
+
+    public function typeNumToName($type)
+    {
+        return $this->_native_types[$type];
+    }
+
+    public function typeNameToPhp($type)
+    {
+        return $this->_native2php_assoc[$type];
+    }
+
+    public function typeNumToPhp($type)
+    {
+        return $this->_native2php_num[$type];
+    }
+
+    private function _typesMapper()
+    {
+        if ($this->_driver === Driver::MYSQL) {
+            $this->_mysqlTypes();
+        }
+        if ($this->_driver === Driver::SQLITE) {
+            $this->_sqliteTypes();
+        }
+    }
+    
+    private function _sqliteTypes()
+    {
+        $this->_native_types = (array) null;
+        $this->_native2php_assoc = (array) null;
+        $this->_native2php_num = (array) null;
+
+        $this->_native_types[1] = "INTEGER";
+        $this->_native_types[2] = "TEXT";
+        $this->_native_types[3] = "BLOB";
+        $this->_native_types[4] = "REAL";
+        $this->_native_types[5] = "NUMERIC";
+
+        
+        $this->_native2php_assoc["INTEGER"] = "int";
+        $this->_native2php_assoc["TEXT"] = "string";
+        $this->_native2php_assoc["BLOB"] = "blob";
+        $this->_native2php_assoc["REAL"] = "float";
+        $this->_native2php_assoc["NUMERIC"] = "float";
+
+        
+        $this->_native2php_num[1] = "int";
+        $this->_native2php_num[2] = "string";
+        $this->_native2php_num[3] = "blob";
+        $this->_native2php_num[4] = "float";
+        $this->_native2php_num[5] = "float";
+
+    }
+
+    private function _mysqlTypes()
+    {
+        $this->_native_types = (array) null;
+        $this->_native2php_assoc = (array) null;
+        $this->_native2php_num = (array) null;
+
+        $this->_native_types[1] = "TINYINT";
+        $this->_native_types[2] = "SMALLINT";
+        $this->_native_types[3] = "INT";
+        $this->_native_types[4] = "FLOAT";
+        $this->_native_types[5] = "DOUBLE";
+        $this->_native_types[7] = "TIMESTAMP";
+        $this->_native_types[8] = "BIGINT";
+        $this->_native_types[9] = "MEDIUMINT";
+        $this->_native_types[10] = "DATE";
+        $this->_native_types[11] = "TIME";
+        $this->_native_types[12] = "DATETIME";
+        $this->_native_types[13] = "YEAR";
+        $this->_native_types[16] = "BIT";
+        $this->_native_types[246] = "DECIMAL";
+        $this->_native_types[252] = "BLOB";
+        $this->_native_types[253] = "VARCHAR";
+        $this->_native_types[254] = "CHAR";
+        
+        $this->_native2php_assoc["TINYINT"] = "int";
+        $this->_native2php_assoc["SMALLINT"] = "int";
+        $this->_native2php_assoc["INT"] = "int";
+        $this->_native2php_assoc["FLOAT"] = "float";
+        $this->_native2php_assoc["DOUBLE"] = "float";
+        $this->_native2php_assoc["TIMESTAMP"] = "int";
+        $this->_native2php_assoc["BIGINT"] = "int";
+        $this->_native2php_assoc["MEDIUMINT"] = "int";
+        $this->_native2php_assoc["DATE"] = "date";
+        $this->_native2php_assoc["TIME"] = "time";
+        $this->_native2php_assoc["DATETIME"] = "datetime";
+        $this->_native2php_assoc["YEAR"] = "year";
+        $this->_native2php_assoc["BIT"] = "int";
+        $this->_native2php_assoc["DECIMAL"] = "float";
+        $this->_native2php_assoc["BLOB"] = "blob";
+        $this->_native2php_assoc["VARCHAR"] = "string";
+        $this->_native2php_assoc["CHAR"] = "char";
+        
+        $this->_native2php_num[1] = "int";
+        $this->_native2php_num[2] = "int";
+        $this->_native2php_num[3] = "int";
+        $this->_native2php_num[4] = "float";
+        $this->_native2php_num[5] = "float";
+        $this->_native2php_num[7] = "int";
+        $this->_native2php_num[8] = "int";
+        $this->_native2php_num[9] = "int";
+        $this->_native2php_num[10] = "date";
+        $this->_native2php_num[11] = "time";
+        $this->_native2php_num[12] = "datetime";
+        $this->_native2php_num[13] = "year";
+        $this->_native2php_num[16] = "int";
+        $this->_native2php_num[246] = "float";
+        $this->_native2php_num[252] = "blob";
+        $this->_native2php_num[253] = "string";
+        $this->_native2php_num[254] = "char";
     }
 }

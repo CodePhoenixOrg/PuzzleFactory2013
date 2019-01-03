@@ -18,6 +18,7 @@ function connection($c, $d, $cs = null)
         if ($c == CONNECT) {
 
             $cs = new Connection(Driver::MYSQL, $dbname, $host, $user, $passwd);
+            // debugLog("CONNECTION::Driver::MYSQL, $dbname, $host, $user, $passwd", $cs);            
             $cs->open();
         } elseif ($c == DISCONNECT && $cs !== null) {
             //$cs->close();
@@ -26,7 +27,7 @@ function connection($c, $d, $cs = null)
             
     }
     catch(\PDOException $ex) {
-        die("Connection failed: " . $e->getMessage());
+        die("Connection failed: " . $ex->getMessage());
     }
     return $cs;
 }

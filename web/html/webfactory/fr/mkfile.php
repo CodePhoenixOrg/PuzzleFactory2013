@@ -96,7 +96,7 @@
 				"Voulez-vous écraser le script actuel sachant que toutes les modifications effectuées seront perdues ?</p>\n";
 		}
 		
-		$script = make_code($userdb, $usertable, $pa_id, $indexfield, $secondfield, $A_fieldDefs, $cs, NO_FRAME);
+		$script = make_code($userdb, $usertable, $stmt, $pa_id, $indexfield, $secondfield, $A_fieldDefs, $cs, NO_FRAME);
 		file_put_contents('tmp_code.php', $script);
 		
 		$script = make_page($userdb, $usertable, $pa_filename, $pa_id, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
@@ -279,7 +279,7 @@
 
         } elseif ($save=="Non") {
 			$sstatus="Page non-enregistré";
-			$menu->delete_menu($userdb, $di_name);
+			$menus->delete_menu($userdb, $di_name);
 
 			if(file_exists($root_code_filename)) {
 				unlink($root_code_filename);

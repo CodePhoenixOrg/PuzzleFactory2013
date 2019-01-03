@@ -31,20 +31,21 @@ define("SUBSCRIBE", "subscribe");
 
 global $dyna_bset_counter;
 
-function create_block_set($database, $column, $id, $lg, $colors) {
-	global $db_prefix;
-        $cs=connection(CONNECT, $database);
-	
-	$block_set="";
-	$sql="select bl_id from ${db_prefix}blocks where bl_column=$column and bl_type=\"menu\" order by bl_id";
-	//echo "$sql<br>";	
-        $stmt = $cs->query($sql);
-        while($rows=$stmt->fetch()) {
-                $index=$rows[0];
-		$block_set.=create_block($database, $index, $id, $lg, $colors);
-	}
-	
-	return $block_set;
+function create_block_set($database, $column, $id, $lg, $colors)
+{
+    global $db_prefix;
+    $cs=connection(CONNECT, $database);
+    
+    $block_set="";
+    $sql="select bl_id from ${db_prefix}blocks where bl_column=$column and bl_type=\"menu\" order by bl_id";
+    //echo "$sql<br>";
+    $stmt = $cs->query($sql);
+    while ($rows=$stmt->fetch()) {
+        $index=$rows[0];
+        $block_set.=create_block($database, $index, $id, $lg, $colors);
+    }
+    
+    return $block_set;
 }
 
 function create_enhanced_block_set($database, $column, $id, $lg, $colors) {

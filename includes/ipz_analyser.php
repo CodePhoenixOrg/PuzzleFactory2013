@@ -39,12 +39,11 @@ function relations($database, $table, $cs)
     $k = $stmt->columnCount();
     
     while ($i<$k) {
-        $fieldname=pdo_field_name($stmt, $i);
-        $fieldtype=pdo_field_type($stmt, $i);
-        $fieldsize=pdo_field_len($stmt, $i);
-        $fieldhtml=mysqli_to_html($fieldtype);
-        $fieldtype=mysqli_to_string($fieldtype);
-
+        $fieldname = $stmt->getFieldName($i);
+        $fieldtype = $stmt->getFieldType($i);
+        $fieldsize = $stmt->getFieldLen($i);
+        $fieldhtml = $stmt->typeNumToPhp($fieldtype);
+        $fieldtype = $stmt->typeNumToName($fieldtype);
         
         $cols=($fieldsize>80) ? 80: $fieldsize;
         $lines=($fieldhtml=="blob" || ($fieldhtml=="string" && $fieldsize > 80)) ? ceil($fieldsize / 80): 1;

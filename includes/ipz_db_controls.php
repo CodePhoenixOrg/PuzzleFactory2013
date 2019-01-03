@@ -1710,6 +1710,7 @@ function create_options_from_query($sql="", $value_col=0, $option_col=0, $select
 	if(empty($selected)) {$selected=(array) null;}
 	$inter=(array) null;
 
+	debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
 	/*
 	echo "<pre>";
 	print_r($selected);

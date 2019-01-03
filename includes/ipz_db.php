@@ -42,115 +42,35 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  tableau_sql($sql="", $page_lien="", $id=0, $index_fieldname="", $image_lien="", $compl_url="", $dialog, $largeurs_cols, $conn)
  fiche_sql($sql="", $page_lien="", $id=0, $index_fieldname="", $image_lien="", $compl_url="", $dialog, $titre, $largeurs_cols, $conn) 
 */
-global $mysqli_types, $mysqli_html_types;
 
-$mysqli_types[1] = "TINYINT";
-$mysqli_types[2] = "SMALLINT";
-$mysqli_types[3] = "INT";
-$mysqli_types[4] = "FLOAT";
-$mysqli_types[5] = "DOUBLE";
-$mysqli_types[7] = "TIMESTAMP";
-$mysqli_types[8] = "BIGINT";
-$mysqli_types[9] = "MEDIUMINT";
-$mysqli_types[10] = "DATE";
-$mysqli_types[11] = "TIME";
-$mysqli_types[12] = "DATETIME";
-$mysqli_types[13] = "YEAR";
-$mysqli_types[16] = "BIT";
-$mysqli_types[246] = "DECIMAL";
-$mysqli_types[252] = "BLOB";
-$mysqli_types[253] = "VARCHAR";
-$mysqli_types[254] = "CHAR";
+// function mysqli_field_name($result, $i) {
+// 	$field_info = $stmt->fetch_field_direct($i);
+// 	return $field_info->name;
+// }
 
-$mysqli_php_types["TINYINT"] = "int";
-$mysqli_php_types["SMALLINT"] = "int";
-$mysqli_php_types["INT"] = "int";
-$mysqli_php_types["FLOAT"] = "float";
-$mysqli_php_types["DOUBLE"] = "float";
-$mysqli_php_types["TIMESTAMP"] = "int";
-$mysqli_php_types["BIGINT"] = "int";
-$mysqli_php_types["MEDIUMINT"] = "int";
-$mysqli_php_types["DATE"] = "date";
-$mysqli_php_types["TIME"] = "time";
-$mysqli_php_types["DATETIME"] = "datetime";
-$mysqli_php_types["YEAR"] = "year";
-$mysqli_php_types["BIT"] = "int";
-$mysqli_php_types["DECIMAL"] = "float";
-$mysqli_php_types["BLOB"] = "blob";
-$mysqli_php_types["VARCHAR"] = "string";
-$mysqli_php_types["CHAR"] = "char";
+// function mysqli_field_len($result, $i) {
+// 	$field_info = $stmt->fetch_field_direct($i);
+// 	return $field_info->length;
+// }
 
-$mysqli_html_types[1] = "int";
-$mysqli_html_types[2] = "int";
-$mysqli_html_types[3] = "int";
-$mysqli_html_types[4] = "float";
-$mysqli_html_types[5] = "float";
-$mysqli_html_types[7] = "int";
-$mysqli_html_types[8] = "int";
-$mysqli_html_types[9] = "int";
-$mysqli_html_types[10] = "date";
-$mysqli_html_types[11] = "time";
-$mysqli_html_types[12] = "datetime";
-$mysqli_html_types[13] = "year";
-$mysqli_html_types[16] = "int";
-$mysqli_html_types[246] = "float";
-$mysqli_html_types[252] = "blob";
-$mysqli_html_types[253] = "string";
-$mysqli_html_types[254] = "char";
-
-
-function mysqli_to_string($type) {
-	global $mysqli_types;
-
-	return $mysqli_types[$type];
-}
-
-function mysqli_to_php($type) {
-	global $mysqli_php_types;
-
-	return $mysqli_php_types[$type];
-}
-
-function mysqli_to_html($type) {
-	global $mysqli_html_types;
-
-	return $mysqli_html_types[$type];
-}
-
-function mysqli_field_name($result, $i) {
-	$field_info = $stmt->fetch_field_direct($i);
-	return $field_info->name;
-}
-
-function mysqli_field_len($result, $i) {
-	$field_info = $stmt->fetch_field_direct($i);
-	return $field_info->length;
-}
-
-function mysqli_field_type($result, $i) {
-	$field_info = $stmt->fetch_field_direct($i);
-	return $field_info->type;
-}
+// function mysqli_field_type($result, $i) {
+// 	$field_info = $stmt->fetch_field_direct($i);
+// 	return $field_info->type;
+// }
 
 function pdo_field_name($stmt, $i)
 {
-	// return $stmt->getColumnMeta($i)['name'];
 	return $stmt->getFieldName($i);
 }
 
 function pdo_field_type($stmt, $i)
 {
-	// return $stmt->getColumnMeta($i)['native_type'];
-	//return $stmt->getColumnMeta($i)['pdo_type'];
 	return $stmt->getFieldType($i);
-
 }
 
 function pdo_field_len($stmt, $i)
 {
-	// return $stmt->getColumnMeta($i)['len'];
 	return $stmt->getFieldLen($i);
-
 }
 
 
