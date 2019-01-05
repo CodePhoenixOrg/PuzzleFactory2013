@@ -35,7 +35,7 @@
 	$id = get_variable("id", 1);
 	$di = get_variable("di");
 
-	$menus = new Menus($lg, $db_prefix);
+	$menus = new \Puzzle\Menus($lg, $db_prefix);
 	
 	$main_menu = $menus->create_main_menu($database, 1);
 	$sub_menu = $menus->create_sub_menu($database, 1, SUB_MENU_HORIZONTAL);
@@ -119,7 +119,8 @@
 			if(!isset($mbr_pass)) $mbr_pass="";
 			if(!isset($mbr_valider)) $mbr_valider="";
 			
-			$block_set=create_enhanced_block_set($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
+			$blocks = new \Puzzle\Blocks($lg, $db_prefix);
+			$block_set= $blocks->create_enhanced_block_set($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
 			echo $block_set."\n\n";
 		?>
 	
@@ -141,7 +142,7 @@
 			if(!isset($nlr_valider)) $nlr_valider="";
 			if(!isset($date)) $date="";
 			
-			$block_set=create_enhanced_block_set($database, BLOCK_RIGHT_COLUMN, $id, $lg, $panel_colors);
+			$block_set = $blocks->create_enhanced_block_set($database, BLOCK_RIGHT_COLUMN, $id, $lg, $panel_colors);
 			echo $block_set."\n\n";
 		?>
 	
@@ -165,11 +166,11 @@
 </center>
 <?php
 	if($mbr_login!="" && $mbr_pass!="") {
-		$msg=perform_members_ident($mbr_login, $mbr_pass, $mbr_valider);
+		$msg = $blocks->perform_members_ident($mbr_login, $mbr_pass, $mbr_valider);
 		echo $msg;
 	}
 	if($nlr_email!="") {
-		$js=perform_newsletter_subscription($nlr_email, $nlr_subscribe, $nlr_valider);
+		$js = $blocks->perform_newsletter_subscription($nlr_email, $nlr_subscribe, $nlr_valider);
 		echo $js;
 	}
 ?>

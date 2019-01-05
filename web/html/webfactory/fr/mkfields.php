@@ -23,13 +23,16 @@
 	$wwwroot=get_www_root();
 	//$filepath="$wwwroot/../$userdb/fr/$pa_filename";
 	//$filedir="$wwwroot/../$userdb/fr/";
+	$datacontrols = new \Puzzle\Data\Controls($lg, $db_prefix);
 	
-	$relations=relations($userdb, $usertable, $cs);
+	$analyzer = new \Puzzle\Data\Analyzer();
+
+	$references = $analyzer->searchReferences($userdb, $usertable, $cs);
 	
-	$relation_tables=$relations["relation_tables"];
-	$relation_fields=$relations["relation_fields"];
-	$form_fields=$relations["form_fields"];
-	$field_defs=$relations["field_defs"];
+	$relation_tables=$references["relation_tables"];
+	$relation_fields=$references["relation_fields"];
+	$form_fields=$references["form_fields"];
+	$field_defs=$references["field_defs"];
 	
 	echo "<br>";
 	
@@ -70,7 +73,7 @@
 	foreach($field_defs as $def) {
 		$defs=explode(",", $def);
 		$mk_fields.="<tr>\n";
-		$options=create_options_from_array($list, ",", 0, 0, array(), $defs[3], false);
+		$options = $datacontrols->create_options_from_array($list, ",", 0, 0, array(), $defs[3], false);
 		$mk_fields.="<td><input type='text' size='25' value=\"$defs[0]\"></td>\n";
 		$mk_fields.="<td><input type='text' readonly size='10' value=\"$defs[1]\"></td>\n";
 		$mk_fields.="<td><input type='text' readonly size='10' value=\"$defs[2]\"></td>\n";

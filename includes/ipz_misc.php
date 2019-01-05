@@ -21,6 +21,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 define("LINUX", "linux");
 define("WIN32", "windows");
 define ('DEBUG_LOG_FILE', serverPath() . '/logs/debug.log');
+define("DOCUMENT_ROOT", get_www_root()."/");
+
 define ('CR_LF', "\r\n");
 global $DEBUG_LOG_FILE;
 

@@ -1,5 +1,6 @@
 <center>
 <?php   
+	include_once 'puzzle/ipz_menus.php';
 	include_once 'puzzle/ipz_source.php';
     include_once 'puzzle/ipz_analyser.php';
 
@@ -29,9 +30,10 @@
 	$cs = connection(CONNECT, $userdb) or die("UserDb='$userdb'<br>");
 	$tmp_filename = 'tmp_'.$pa_filename;
 	$wwwroot = get_www_root();
-        
-    $relations = relations($userdb, $usertable, $cs);
-	$A_fieldDefs = $relations["field_defs"];
+	
+	$analyzer = new \Puzzle\Data\Analyzer();
+    $references = $analyzer->searchReferences($userdb, $usertable, $cs);
+	$A_fieldDefs = $references["field_defs"];
 	
 	echo "<br>";
 		
@@ -44,7 +46,7 @@
 	$script_exists_tostring = $script_exists ? YES : NO;
 	$http_root = get_http_root();
 
-	$menus = new Menus($lg, $db_prefix);
+	$menus = new \Puzzle\Menus($lg, $db_prefix);
 
 	if($save === "") {
  
@@ -76,7 +78,7 @@
 		}
 		
 		if (($me_id == 0 || $pa_id == 0) && $autogen == 1) {
-			list($me_id, $pa_id) = $menu->add_menu_and_page(
+			list($me_id, $pa_id) = $menus->add_menu_and_page(
 			$userdb,
 			$di_name,
 			$me_level,
@@ -96,10 +98,10 @@
 				"Voulez-vous écraser le script actuel sachant que toutes les modifications effectuées seront perdues ?</p>\n";
 		}
 		
-		$script = make_code($userdb, $usertable, $stmt, $pa_id, $indexfield, $secondfield, $A_fieldDefs, $cs, NO_FRAME);
+		$script = $scriptMaker->make_code($userdb, $usertable, $stmt, $pa_id, $indexfield, $secondfield, $A_fieldDefs, $cs, NO_FRAME);
 		file_put_contents('tmp_code.php', $script);
 		
-		$script = make_page($userdb, $usertable, $pa_filename, $pa_id, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+		$script = $scriptMaker->make_page($userdb, $usertable, $pa_filename, $pa_id, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 		file_put_contents('tmp_page.php', $script);
 
 //		$script=make_single_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);

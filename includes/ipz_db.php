@@ -58,20 +58,20 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 // 	return $field_info->type;
 // }
 
-function pdo_field_name($stmt, $i)
-{
-	return $stmt->getFieldName($i);
-}
+// function pdo_field_name($stmt, $i)
+// {
+// 	return $stmt->getFieldName($i);
+// }
 
-function pdo_field_type($stmt, $i)
-{
-	return $stmt->getFieldType($i);
-}
+// function pdo_field_type($stmt, $i)
+// {
+// 	return $stmt->getFieldType($i);
+// }
 
-function pdo_field_len($stmt, $i)
-{
-	return $stmt->getFieldLen($i);
-}
+// function pdo_field_len($stmt, $i)
+// {
+// 	return $stmt->getFieldLen($i);
+// }
 
 
 $my_max_file_size    = "102400";    // in bytes 

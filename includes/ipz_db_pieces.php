@@ -1,8 +1,4 @@
-<script language="JavaScript" src="js/pz_shared.js"></script>
-<script language="JavaScript" src="js/pz_scroller.js"></script>
-<script language="JavaScript" src="js/pz_cursor.js"></script>
-<?php   
-
+<?php
 /*
 iPuzzle.WebPieces
 Copyright (C) 2004 David Blanchard
@@ -21,10 +17,29 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
+namespace Puzzle;
 
-function debug_scroller($switch=false) {
+class Pieces
+{
+    public function __construct()
+    {
+        $this->_init_javascript();
+    }
 
-	if($switch) {
+    protected function _init_javascript()
+    {
+        $js = <<<JAVASCRIPT
+<script language="JavaScript" src="js/pz_shared.js"></script>
+<script language="JavaScript" src="js/pz_scroller.js"></script>
+<script language="JavaScript" src="js/pz_cursor.js"></script>
+JAVASCRIPT;
+
+		echo $js;
+	}
+	
+    public function debug_scroller($switch=false)
+    {
+        if ($switch) {
             echo '
 
 	<div id="myDebug1" style="z-index:1;position:absolute;left:0px;top:0px;">
@@ -58,13 +73,12 @@ function debug_scroller($switch=false) {
 	</form>
 	</div>
 	';
-	
-	}
-}
+        }
+    }
 
-function container($name, $top, $left, $height, $width, $cursor_width) {
-
-echo '
+    public function container($name, $top, $left, $height, $width, $cursor_width)
+    {
+        echo '
 <div id="scrX_'. $name.' style="position:absolute;z-index:1;height:16px;visibility:visible" onMouseOver="PZ_SCROLLBOX=my_'.$name.';PZ_CURSOR=my_'.$name.'.cursorX;">
 	<table height="'. $cursor_width.'" width="'. $width.'" cellpadding="0" cellspacing="0" border="0">
 	<tr>
@@ -145,8 +159,5 @@ echo '
 	my_'. $name.'.show();
 
 </script>';
-
+	}
 }
-
-
-?>

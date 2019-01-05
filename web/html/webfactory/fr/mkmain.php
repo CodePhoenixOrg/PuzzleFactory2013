@@ -7,9 +7,10 @@
 	$rad_choice = ['', '', ''];
 	$choice = get_variable('choice', 0);
 	$rad_choice[$choice]=" checked"; 
-	
-	$tab_ides=get_tab_ides();
-	
+
+
+	$tab_ides = $scriptMaker->get_tab_ides();
+
 	$on_click="var index=get_radio_value(\"myTabForm\", \"choice\");";
 	$on_click.=js_array("myTabCaptions", $tab_ides);
 	$on_click.="location.href=\"page.php?id=\"+myTabCaptions[index]+\"&lg=$lg\";";

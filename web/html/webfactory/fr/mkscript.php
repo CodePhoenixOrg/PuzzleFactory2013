@@ -13,12 +13,23 @@ function checkValues() {
 <center>
 <?php   
 	include_once 'puzzle/ipz_controls.php';
+
+	use \Puzzle\Data\Controls as DataControls;
+	use \Puzzle\Controls;
+	// use \Puzzle\ScriptsMaker;
+
 	$userdb = get_variable('userdb', 'webfactory');
 	$basedir = get_variable('srvdir');
 	$usertable = get_variable('usertable');
 	$pa_filename = get_variable('pa_filename', $usertable);
 	$query = get_variable('query', 'MENU');
 	$bl_id = get_variable('bl_id', 0);
+	$lg = get_variable('lg');
+	//$db_prefix = get_variable('db_prefix');
+
+	$datacontrols = new DataControls($lg, $db_prefix);
+	$controls = new Controls($lg, $db_prefix);
+	// $scriptMaker = new ScriptsMaker();
 
 	$cs=connection(CONNECT, $userdb);
 	$tmp_filename="tmp.php";
@@ -31,18 +42,18 @@ function checkValues() {
 	
 	echo "<br>";
 		
-	$tab_ides=get_tab_ides();
+	$tab_ides = $scriptMaker->get_tab_ides();
 	
 	if($basedir=="") $basedir= get_current_dir() . "/fr";
 
-	$on_change="";
-	$on_change_table="";
-	$srvdir=create_server_directory_selector("srvdir", "myForm", $basedir, $on_change);
-	$srvfiles=create_server_file_selector("srvfiles", "myForm", $basedir, "php", 5, "srvdir", $on_change);
-	$database_list=create_options_from_query("show databases", 0, 0, array(), $userdb, false, $cs);
-	$table_list=create_options_from_query("show tables from $userdb", 0, 0, array(), $usertable, false, $cs);
-	$sql='select b.bl_id, d.di_fr_short from blocks b, dictionary d where b.di_name=d.di_name order by d.di_fr_short';
-	$block_list=create_options_from_query($sql, 0, 1, array(), $bl_id, false, $cs);
+	$on_change = "";
+	$on_change_table = "";
+	$srvdir = $controls->create_server_directory_selector("srvdir", "myForm", $basedir, $on_change);
+	$srvfiles = $controls->create_server_file_selector("srvfiles", "myForm", $basedir, "php", 5, "srvdir", $on_change);
+	$database_list = $datacontrols->create_options_from_query("show databases", 0, 0, array(), $userdb, false, $cs);
+	$table_list = $datacontrols->create_options_from_query("show tables from $userdb", 0, 0, array(), $usertable, false, $cs);
+	$sql = 'select b.bl_id, d.di_fr_short from blocks b, dictionary d where b.di_name=d.di_name order by d.di_fr_short';
+	$block_list = $datacontrols->create_options_from_query($sql, 0, 1, array(), $bl_id, false, $cs);
 	
 	//Options de menu
 	$rad_menu = ['', ''];

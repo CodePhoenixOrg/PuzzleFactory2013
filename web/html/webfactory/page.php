@@ -27,8 +27,10 @@
 	$id = get_variable("id", 1);
 	$di = get_variable("di");
 
-	$menus = new Menus($lg, $db_prefix);
-	
+	$menus = new Puzzle\Menus($lg, $db_prefix);
+	$design = new Puzzle\Design();
+	$scriptMaker = new Puzzle\ScriptsMaker();
+
 	$main_menu = $menus->create_main_menu($database, 1);
 	$sub_menu = $menus->create_sub_menu($database, 1, SUB_MENU_HORIZONTAL);
 	$toplinks=$main_menu["menu"];

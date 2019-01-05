@@ -18,6 +18,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+namespace Puzzle;
+
+include_once("ipz_base.php");
 include_once("ipz_misc.php");
 include_once("ipz_mysqlconn.php");
 include_once("ipz_db_pieces.php");
@@ -33,15 +36,8 @@ define("BUTTON_INPUT_RESET", "input_reset");
 define("SUB_MENU_HORIZONTAL", 0);
 define("SUB_MENU_VERTICAL", 1);
 
-class Menus
+class Menus extends Base
 {
-    private $lg = '';
-    private $db_prefix = '';
-
-    public function __construct($lg, $db_prefix) {
-        $this->db_prefix = $db_prefix;
-        $this->lg = $lg;
-    }
 
     public function get_admin_url($userdb)
     {
@@ -49,7 +45,7 @@ class Menus
         $cs=connection(CONNECT, $userdb);
         $sql="select app_link from {$this->db_prefix}applications where di_name='modadmin'";
         $stmt = $cs->query($sql);
-        if ($rows=$stmt->fetch(PDO::FETCH_ASSOC)) {
+        if ($rows=$stmt->fetch(\PDO::FETCH_ASSOC)) {
             $adm_url=$rows["app_link"];
         }
     
@@ -165,7 +161,7 @@ class Menus
         $di_en_short="",
         $di_en_long=""
     ) {
-        list($me_id, $pa_id) = get_menu_and_page($userdb, $pa_filename);
+        list($me_id, $pa_id) = $this->get_menu_and_page($userdb, $pa_filename);
         if (!($me_id && $pa_id)) {
             $cs=connection(CONNECT, $userdb);
             $wwwroot=get_www_root();
@@ -621,7 +617,7 @@ INSERT;
         //"and p.pa_id=m.me_id " .
         $cs=connection(CONNECT, $database);
         $stmt = $cs->query($sql);
-        $rows=$stmt->fetch(PDO::FETCH_ASSOC);
+        $rows=$stmt->fetch(\PDO::FETCH_ASSOC);
         $index = $rows["di_name"];
         $page = $rows["pa_filename"];
         $title = $rows["di_".$this->lg."_long"];
@@ -666,7 +662,7 @@ INSERT;
         //"and p.pa_id=m.me_id " .
         $cs=connection(CONNECT, $database);
         $stmt = $cs->query($sql);
-        $rows=$stmt->fetch(PDO::FETCH_ASSOC);
+        $rows=$stmt->fetch(\PDO::FETCH_ASSOC);
         $index = $rows["di_name"];
         $page = $rows["pa_filename"];
         $title = $rows["di_".$this->lg."_long"];
@@ -709,7 +705,7 @@ INSERT;
 
         $cs=connection(CONNECT, $database);
         $stmt = $cs->query($sql);
-        $rows=$stmt->fetch(PDO::FETCH_ASSOC);
+        $rows=$stmt->fetch(\PDO::FETCH_ASSOC);
         $index = $rows["me_id"];
         $page = $rows["pa_filename"];
         $charset = $rows["me_charset"];

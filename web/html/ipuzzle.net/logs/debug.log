@@ -1328,3 +1328,800 @@
 2019-01-01 07:07:53 : /usr/share/php/puzzle/ipz_blocks.php:165:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
 2019-01-01 07:07:53 : /usr/share/php/puzzle/ipz_blocks.php:152:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
 2019-01-01 07:07:53 : /usr/share/php/puzzle/ipz_blocks.php:165:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 08:08:10 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 08:08:10 : LG : fr
+2019-01-04 08:08:10 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 08:08:10 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 08:08:10 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 08:08:10 : TITLE PAGE : fr/news.php
+2019-01-04 08:09:35 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 08:09:35 : LG : fr
+2019-01-04 08:09:35 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 08:09:35 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 08:09:35 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 08:09:35 : TITLE PAGE : fr/news.php
+2019-01-04 08:12:02 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 08:12:02 : LG : fr
+2019-01-04 08:12:02 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 08:12:02 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 08:12:02 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 08:12:02 : TITLE PAGE : fr/news.php
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 08:22:25 : LG : fr
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 08:22:25 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 08:22:25 : TITLE PAGE : fr/news.php
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 08:22:25 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 08:22:25 : SQL : /var/www/html/ipuzzle.net/fr/news.php:9 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 08:37:01 : LG : fr
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 08:37:01 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 08:37:01 : TITLE PAGE : fr/news.php
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 08:37:01 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 08:37:01 : SQL : /var/www/html/ipuzzle.net/fr/news.php:11 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 08:39:27 : LG : fr
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 08:39:27 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 08:39:27 : TITLE PAGE : fr/news.php
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 08:39:27 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 08:39:27 : SQL : /var/www/html/ipuzzle.net/fr/news.php:11 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:11:53 : LG : fr
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 09:11:53 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:11:53 : TITLE PAGE : fr/news.php
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:11:53 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:11:53 : SQL : /var/www/html/ipuzzle.net/fr/news.php:11 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:11:59 : LG : fr
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=30 : 
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => project
+    [pa_filename] => project.php
+    [me_charset] => utf8
+    [di_fr_short] => Le Projet
+    [di_fr_long] => 
+)
+
+2019-01-04 09:11:59 : TITLE PAGE : Array
+(
+    [index] => project
+    [title] => Le Projet
+    [page] => project.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:11:59 : TITLE PAGE : fr/project.php
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:11:59 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:00 : LG : fr
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=40 : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => download
+    [pa_filename] => download.php
+    [me_charset] => utf8
+    [di_fr_short] => Téléchargement
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:00 : TITLE PAGE : Array
+(
+    [index] => download
+    [title] => Téléchargement
+    [page] => download.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:00 : TITLE PAGE : fr/download.php
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:00 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:01 : LG : fr
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=70 : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => contact
+    [pa_filename] => contact.php
+    [me_charset] => utf8
+    [di_fr_short] => Contact
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:01 : TITLE PAGE : Array
+(
+    [index] => contact
+    [title] => Contact
+    [page] => contact.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:01 : TITLE PAGE : fr/contact.php
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:01 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:02 : LG : fr
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=70 : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => contact
+    [pa_filename] => contact.php
+    [me_charset] => utf8
+    [di_fr_short] => Contact
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:02 : TITLE PAGE : Array
+(
+    [index] => contact
+    [title] => Contact
+    [page] => contact.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:02 : TITLE PAGE : fr/contact.php
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:02 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:03 : LG : fr
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=211 : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => blog
+    [pa_filename] => pz_news.php
+    [me_charset] => utf8
+    [di_fr_short] => Blog
+    [di_fr_long] => Blog
+)
+
+2019-01-04 09:12:03 : TITLE PAGE : Array
+(
+    [index] => blog
+    [title] => Blog
+    [page] => pz_news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:03 : TITLE PAGE : fr/pz_news.php
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:03 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:07 : LG : fr
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=20 : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => sshot
+    [pa_filename] => screenshot.php
+    [me_charset] => utf8
+    [di_fr_short] => Copie d'écran
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:07 : TITLE PAGE : Array
+(
+    [index] => sshot
+    [title] => Copie d'écran
+    [page] => screenshot.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:07 : TITLE PAGE : fr/screenshot.php
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:07 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:07 : LG : fr
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=30 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => project
+    [pa_filename] => project.php
+    [me_charset] => utf8
+    [di_fr_short] => Le Projet
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:08 : TITLE PAGE : Array
+(
+    [index] => project
+    [title] => Le Projet
+    [page] => project.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:08 : TITLE PAGE : fr/project.php
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:08 : LG : fr
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=40 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => download
+    [pa_filename] => download.php
+    [me_charset] => utf8
+    [di_fr_short] => Téléchargement
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:08 : TITLE PAGE : Array
+(
+    [index] => download
+    [title] => Téléchargement
+    [page] => download.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:08 : TITLE PAGE : fr/download.php
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:08 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:09 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:09 : LG : fr
+2019-01-04 09:12:09 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=70 : 
+2019-01-04 09:12:09 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => contact
+    [pa_filename] => contact.php
+    [me_charset] => utf8
+    [di_fr_short] => Contact
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:09 : TITLE PAGE : Array
+(
+    [index] => contact
+    [title] => Contact
+    [page] => contact.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:09 : TITLE PAGE : fr/contact.php
+2019-01-04 09:12:09 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:10 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:10 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:10 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:10 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:10 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:11 : LG : fr
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=60 : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => env
+    [pa_filename] => environment.php
+    [me_charset] => utf8
+    [di_fr_short] => Environnement
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:11 : TITLE PAGE : Array
+(
+    [index] => env
+    [title] => Environnement
+    [page] => environment.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:11 : TITLE PAGE : fr/environment.php
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:11 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 09:12:12 : LG : fr
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=140 : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => comp
+    [pa_filename] => components.php
+    [me_charset] => utf8
+    [di_fr_short] => Composants
+    [di_fr_long] => 
+)
+
+2019-01-04 09:12:12 : TITLE PAGE : Array
+(
+    [index] => comp
+    [title] => Composants
+    [page] => components.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 09:12:12 : TITLE PAGE : fr/components.php
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 09:12:12 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 12:54:24 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 12:54:24 : LG : fr
+2019-01-04 12:54:24 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 12:54:24 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 12:54:24 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 12:54:24 : TITLE PAGE : fr/news.php
+2019-01-04 12:54:24 : /usr/share/php/puzzle/ipz_blocks.php:155:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 12:54:24 : /usr/share/php/puzzle/ipz_blocks.php:168:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 01:02:41 : LG : fr
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 01:02:41 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 01:02:41 : TITLE PAGE : fr/news.php
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 01:02:41 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 01:02:41 : SQL : /var/www/html/ipuzzle.net/fr/news.php:11 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 01:22:10 : LG : fr
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 01:22:10 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 01:22:10 : TITLE PAGE : fr/news.php
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 01:22:10 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 01:22:10 : SQL : /var/www/html/ipuzzle.net/fr/news.php:13 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 01:22:14 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 01:22:14 : LG : fr
+2019-01-04 01:22:14 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=20 : 
+2019-01-04 01:22:14 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => sshot
+    [pa_filename] => screenshot.php
+    [me_charset] => utf8
+    [di_fr_short] => Copie d'écran
+    [di_fr_long] => 
+)
+
+2019-01-04 01:22:14 : TITLE PAGE : Array
+(
+    [index] => sshot
+    [title] => Copie d'écran
+    [page] => screenshot.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 01:22:14 : TITLE PAGE : fr/screenshot.php
+2019-01-04 01:22:14 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 01:22:14 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 01:22:15 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 01:22:15 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 01:22:15 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 01:22:15 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 01:22:16 : LG : fr
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=30 : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => project
+    [pa_filename] => project.php
+    [me_charset] => utf8
+    [di_fr_short] => Le Projet
+    [di_fr_long] => 
+)
+
+2019-01-04 01:22:16 : TITLE PAGE : Array
+(
+    [index] => project
+    [title] => Le Projet
+    [page] => project.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 01:22:16 : TITLE PAGE : fr/project.php
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 01:22:16 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 01:22:18 : LG : fr
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-04 01:22:18 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 01:22:18 : TITLE PAGE : fr/news.php
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 01:22:18 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 01:22:18 : SQL : /var/www/html/ipuzzle.net/fr/news.php:13 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-04 06:59:45 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 06:59:45 : LG : fr
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=20 : 
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => sshot
+    [pa_filename] => screenshot.php
+    [me_charset] => utf8
+    [di_fr_short] => Copie d'écran
+    [di_fr_long] => 
+)
+
+2019-01-04 06:59:46 : TITLE PAGE : Array
+(
+    [index] => sshot
+    [title] => Copie d'écran
+    [page] => screenshot.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 06:59:46 : TITLE PAGE : fr/screenshot.php
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 06:59:46 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 06:59:47 : LG : fr
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=20 : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => sshot
+    [pa_filename] => screenshot.php
+    [me_charset] => utf8
+    [di_fr_short] => Copie d'écran
+    [di_fr_long] => 
+)
+
+2019-01-04 06:59:47 : TITLE PAGE : Array
+(
+    [index] => sshot
+    [title] => Copie d'écran
+    [page] => screenshot.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 06:59:47 : TITLE PAGE : fr/screenshot.php
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 06:59:47 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 06:59:48 : LG : fr
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=30 : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => project
+    [pa_filename] => project.php
+    [me_charset] => utf8
+    [di_fr_short] => Le Projet
+    [di_fr_long] => 
+)
+
+2019-01-04 06:59:48 : TITLE PAGE : Array
+(
+    [index] => project
+    [title] => Le Projet
+    [page] => project.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 06:59:48 : TITLE PAGE : fr/project.php
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 06:59:48 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 06:59:49 : LG : fr
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=40 : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => download
+    [pa_filename] => download.php
+    [me_charset] => utf8
+    [di_fr_short] => Téléchargement
+    [di_fr_long] => 
+)
+
+2019-01-04 06:59:49 : TITLE PAGE : Array
+(
+    [index] => download
+    [title] => Téléchargement
+    [page] => download.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 06:59:49 : TITLE PAGE : fr/download.php
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 06:59:49 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-04 06:59:51 : LG : fr
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=60 : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => env
+    [pa_filename] => environment.php
+    [me_charset] => utf8
+    [di_fr_short] => Environnement
+    [di_fr_long] => 
+)
+
+2019-01-04 06:59:51 : TITLE PAGE : Array
+(
+    [index] => env
+    [title] => Environnement
+    [page] => environment.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-04 06:59:51 : TITLE PAGE : fr/environment.php
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-04 06:59:51 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
