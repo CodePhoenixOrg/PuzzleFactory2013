@@ -2,13 +2,14 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
+		<link rel="stylesheet" href="/css/default.css" type="text/css" />
 
 <title>Puzzle WebFactory</title>
 <?php     
 	session_start();
 	//$include_path = ini_get("include_path");
 	//ini_set("include_path","$default_include_path:/usr/share/php/ipuzzle.inc/");
-	include_once 'puzzle/ipz_style.php';
+	// include_once 'puzzle/ipz_style.php';
 	include_once 'puzzle/ipz_misc.php';
 	include(PZ_DEFAULTS);
 

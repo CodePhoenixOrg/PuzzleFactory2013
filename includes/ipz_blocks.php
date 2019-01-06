@@ -310,6 +310,8 @@ class Blocks extends Base
 
     public function create_members_block($userdb, $logout, $di_id, $id, $lg, $colors)
     {
+        global $PHP_SELF;
+
         if (empty($colors)) {
             global $panel_colors;
             $color=$panel_colors;

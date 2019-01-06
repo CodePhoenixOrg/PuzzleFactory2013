@@ -2,6 +2,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
+		<link rel="stylesheet" href="/css/default.css" type="text/css" />
 
 <title>Akadès</title>
 <?php  
@@ -21,7 +22,7 @@
 	<META NAME="Copyright" CONTENT="(C)2004 David Blanchard">
 <?php
 	
-	include_once 'puzzle/ipz_style.php';
+	// include_once 'puzzle/ipz_style.php';
 	include_once 'puzzle/ipz_misc.php';
 	include(PZ_DEFAULTS);
 

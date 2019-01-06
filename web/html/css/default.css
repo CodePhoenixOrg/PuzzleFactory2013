@@ -1,0 +1,71 @@
+body {
+	background-color: white;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+	color: black;
+}
+
+div {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+	color: black;
+}
+
+td {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+}
+
+input {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+	color: black;
+}
+
+textarea {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+	color: black;
+}
+
+span {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+}
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	font-family: arial, helvetica, sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+p {
+	font-family: arial, helvetica, sans-serif;
+}
+
+ul {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+}
+
+li {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+}
+
+file {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+}
+
+select {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12;
+}
+
