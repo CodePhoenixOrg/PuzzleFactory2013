@@ -4636,3 +4636,300 @@
 2019-01-06 10:24:17 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
 2019-01-06 10:24:17 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
 2019-01-06 10:24:17 : SQL : /var/www/html/ipuzzle.net/fr/news.php:13 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-08 01:31:47 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-08 01:31:47 : LG : fr
+2019-01-08 01:31:47 : /usr/share/php/puzzle/ipz_connection.php:102: : PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1049] Unknown database 'ipuzzle'
+    [string:Exception:private] => 
+    [code:protected] => 1049
+    [file:protected] => /usr/share/php/puzzle/ipz_connection.php
+    [line:protected] => 97
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_connection.php
+                    [line] => 97
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=mysql;dbname=ipuzzle
+                            [1] => root
+                            [2] => demo
+                            [3] => Array
+                                (
+                                    [1002] => SET NAMES utf8
+                                    [19] => 3
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_mysqlconn.php
+                    [line] => 22
+                    [function] => open
+                    [class] => Puzzle\Data\Connection
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_menus.php
+                    [line] => 377
+                    [function] => connection
+                    [args] => Array
+                        (
+                            [0] => connect
+                            [1] => ipuzzle
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/ipuzzle.net/page.php
+                    [line] => 41
+                    [function] => create_main_menu
+                    [class] => Puzzle\Menus
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => ipuzzle
+                            [1] => 1
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+)
+
+2019-01-08 01:32:29 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-08 01:32:29 : LG : fr
+2019-01-08 01:32:30 : /usr/share/php/puzzle/ipz_connection.php:102: : PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1049] Unknown database 'ipuzzle'
+    [string:Exception:private] => 
+    [code:protected] => 1049
+    [file:protected] => /usr/share/php/puzzle/ipz_connection.php
+    [line:protected] => 97
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_connection.php
+                    [line] => 97
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=mysql;dbname=ipuzzle
+                            [1] => root
+                            [2] => demo
+                            [3] => Array
+                                (
+                                    [1002] => SET NAMES utf8
+                                    [19] => 3
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_mysqlconn.php
+                    [line] => 22
+                    [function] => open
+                    [class] => Puzzle\Data\Connection
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_menus.php
+                    [line] => 377
+                    [function] => connection
+                    [args] => Array
+                        (
+                            [0] => connect
+                            [1] => ipuzzle
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/ipuzzle.net/page.php
+                    [line] => 41
+                    [function] => create_main_menu
+                    [class] => Puzzle\Menus
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => ipuzzle
+                            [1] => 1
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+)
+
+2019-01-08 01:32:31 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-08 01:32:31 : LG : fr
+2019-01-08 01:32:31 : /usr/share/php/puzzle/ipz_connection.php:102: : PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000] [1049] Unknown database 'ipuzzle'
+    [string:Exception:private] => 
+    [code:protected] => 1049
+    [file:protected] => /usr/share/php/puzzle/ipz_connection.php
+    [line:protected] => 97
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_connection.php
+                    [line] => 97
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => mysql:host=mysql;dbname=ipuzzle
+                            [1] => root
+                            [2] => demo
+                            [3] => Array
+                                (
+                                    [1002] => SET NAMES utf8
+                                    [19] => 3
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_mysqlconn.php
+                    [line] => 22
+                    [function] => open
+                    [class] => Puzzle\Data\Connection
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => /usr/share/php/puzzle/ipz_menus.php
+                    [line] => 377
+                    [function] => connection
+                    [args] => Array
+                        (
+                            [0] => connect
+                            [1] => ipuzzle
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => /var/www/html/ipuzzle.net/page.php
+                    [line] => 41
+                    [function] => create_main_menu
+                    [class] => Puzzle\Menus
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => ipuzzle
+                            [1] => 1
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+)
+
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-08 01:38:56 : LG : fr
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=1 : 
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => news
+    [pa_filename] => news.php
+    [me_charset] => utf8
+    [di_fr_short] => News
+    [di_fr_long] => 
+)
+
+2019-01-08 01:38:56 : TITLE PAGE : Array
+(
+    [index] => news
+    [title] => News
+    [page] => news.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-08 01:38:56 : TITLE PAGE : fr/news.php
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-08 01:38:56 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 
+2019-01-08 01:38:56 : SQL : /var/www/html/ipuzzle.net/fr/news.php:13 : select nw_id, nw_url, concat('<span style=\"font-size:12; font-weight:bold\">', nw_title, '</span><br><span style=\"font-size:12; font-style:normal\">', nw_text, '</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">', nw_author, ', ', nw_date, ' @ ', nw_time, '</span>') as News from pz_news order by nw_date desc, nw_time desc
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_menus.php:374:select m.pa_id, m.me_level, d.di_fr_short from pz_menus m, pz_dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-08 01:39:00 : LG : fr
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_menus.php:614:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pz_pages p, pz_menus m, pz_dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=20 : 
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_menus.php:628 : Array
+(
+    [di_name] => sshot
+    [pa_filename] => screenshot.php
+    [me_charset] => utf8
+    [di_fr_short] => Copie d'écran
+    [di_fr_long] => 
+)
+
+2019-01-08 01:39:00 : TITLE PAGE : Array
+(
+    [index] => sshot
+    [title] => Copie d'écran
+    [page] => screenshot.php
+    [request] => 
+    [charset] => utf8
+)
+
+2019-01-08 01:39:00 : TITLE PAGE : fr/screenshot.php
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=10 : 
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=10 order by m.me_id : 
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=50 : 
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=50 order by m.me_id : 
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_blocks.php:160:select d.di_fr_short from pz_blocks b, pz_dictionary d where  b.di_id=d.di_id and b.bl_id=70 : 
+2019-01-08 01:39:00 : /usr/share/php/puzzle/ipz_blocks.php:173:select m.me_id, m.me_level, m.bl_id, d.di_fr_short, m.me_target, p.pa_filename, p.pa_id from pz_menus m, pz_blocks b, pz_pages p, pz_dictionary d where m.di_name=d.di_name and p.pa_id=m.pa_id and m.bl_id=b.bl_id and m.bl_id=70 order by m.me_id : 

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+filename=$1;
+tmp_dir=/tmp/twarp;
+ 
+if [ -z "$filename" ];
+then
+	echo "Missing file name. Wildcard is allowed for extension range.";
+	exit 1;
+fi;
+
+
+if [ ! -d $tmp_dir ];
+then 
+	mkdir -p $tmp_dir;
+fi; 
+
+for i in $(find . -type f -name "$filename");
+do  
+	enc=$(file $i --mime-encoding|cut -f2- -d':');
+	f=$(echo $i|rev|cut -f1 -d'/'|rev);
+
+	if [ $enc == 'iso-8859-1' ]; 
+	then 
+		echo -e "converting $i ... \c"; 
+		iconv -f iso-8859-1 -t UTF-8 $i 1> $tmp_dir/$f 2> error_log;
+		cp $tmp_dir/$f $i;
+		echo -e "Done";
+	fi;
+done;
+
+rm -rf $tmp_dir;
+
+exit 0;

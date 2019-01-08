@@ -1,0 +1,23 @@
+#!/bin/bash
+
+filename=$1;
+ 
+if [ -z "$filename" ];
+then
+	echo "Missing file name. Wildcard is allowed for extension range.";
+	exit 1;
+fi;
+
+for i in $(find . -type f -name "$filename");
+do
+	mime=$(file $i --mime-encoding); 
+	enc=$(echo $mime|cut -f2- -d':'); 
+	if [ $enc == 'iso-8859-1' ]; 
+	then
+		echo "$mime => twarp it!";
+	else
+		echo $mime;
+	fi;
+done;
+
+exit 0;
