@@ -20,7 +20,7 @@ then
 	rm $out_file;
 fi;
 
-for i in $(find ../web/html/webfactory -type f -name "*.php");
+for i in $(find ../web/html/ipuzzle.net -type f -name "*.php");
 do
 
 	f=$(echo $i|rev|cut -f1 -d'/'|rev);
@@ -34,7 +34,7 @@ do
 	# cat $tmp_dir/$f >> $tmp_dir/$tmp_file;
 	# cd ../includes;
 
-	for j in $(cat $dir/replacements.txt);
+	for j in $(cat $dir/replacements2.txt);
 	do 
 		from=$(echo $j|cut -f1 -d'|');
 		to=$(echo $j|cut -f2 -d'|');

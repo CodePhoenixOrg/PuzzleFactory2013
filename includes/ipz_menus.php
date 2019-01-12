@@ -159,7 +159,7 @@ class Menus extends \Puzzle\Base
         list($me_id, $pa_id) = $this->getMenuAndPage($userdb, $pa_filename);
         if (!($me_id && $pa_id)) {
             $cs=connection(CONNECT, $userdb);
-            $wwwroot=get_www_root();
+            $wwwroot=getWwwRoot();
         
             if (empty($me_target)) {
                 $me_target="page";
@@ -252,13 +252,13 @@ INSERT;
 
     public function makeButtonImage($text="", $style="", $hl_color="")
     {
-        $images_dir=get_local_images_dir();
+        $images_dir=getLocalImagesDir();
         $filename=$images_dir.$text."_".$style.".png";
 
         if (!file_exists($filename)) {
             $size=10;
             $offset=-16;
-            $fonts_dir=get_local_fonts_dir();
+            $fonts_dir=getLocalFontsDir();
             $font=$fonts_dir."tahoma.ttf";
 
             if (!empty($hl_color)) {
@@ -330,7 +330,7 @@ INSERT;
         $values=makeButtonImage($text, BUTTON_OUT, $out_color);
         $values=makeButtonImage($text, BUTTON_OVER, $over_color);
         $values=makeButtonImage($text, BUTTON_DOWN, $down_color);
-        $images_dir=get_http_images_dir();
+        $images_dir=getHttpImagesDir();
 
         if ($type==BUTTON_IMAGE || $type==BUTTON_IMAGE_RESET) {
             $button="<img\n";
@@ -355,7 +355,7 @@ INSERT;
 
     public function createMainMenu($database, $level=0)
     {
-        //${this->lg}=get_variable("lg");
+        //${this->lg}=getVariable("lg");
     
         $main_menu="<table border='0' cellpading='0' cellspacing='0'><tr>";
         $sql="";

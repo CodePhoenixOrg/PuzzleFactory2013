@@ -2,8 +2,8 @@
 <?php   
 	include("images_code.php");
 	$datacontrols = new DataControls($lg, $db_prefix);
-	$pc = get_variable("pc");
-	$sr = get_variable("sr");
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
 	$curl_pager = "";
 	$dialog = "";
 	if(isset($pc)) $curl_pager="&pc=$pc";

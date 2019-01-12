@@ -2,10 +2,10 @@
 	include_once 'puzzle/ipz_mysqlconn.php';
 	include_once 'puzzle/ipz_db_controls.php';
 	$cs=connection(CONNECT,$database);
-	$query = get_variable("query");
-	$event = get_variable("event");
-	$action = get_variable("action");
-	$td_id = get_variable("td_id");
+	$query = getVariable("query");
+	$event = getVariable("event");
+	$action = getVariable("action");
+	$td_id = getVariable("td_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";
@@ -58,7 +58,7 @@
 			$td_title=escapeChars($td_title);
 			$td_text=escapeChars($td_text);
 			$td_status=escapeChars($td_status);
-            $td_date = date_french_to_mysql($td_date);
+            $td_date = dateFrenchToMysql($td_date);
 			$sql="insert into todo (".
 				"td_id, ".
 				"td_title, ".
@@ -96,7 +96,7 @@
 			$td_title=escapeChars($td_title);
 			$td_text=escapeChars($td_text);
 			$td_status=escapeChars($td_status);
-            $td_date = date_french_to_mysql($td_date);
+            $td_date = dateFrenchToMysql($td_date);
 			$sql="update todo set ".
 				"td_id=$td_id, ".
 				"td_title='$td_title', ".

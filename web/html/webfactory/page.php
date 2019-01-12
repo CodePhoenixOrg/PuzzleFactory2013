@@ -8,24 +8,18 @@
 	session_start();
 	//$include_path = ini_get("include_path");
 	//ini_set("include_path","$default_include_path:/usr/share/php/ipuzzle.inc/");
-	// include_once 'puzzle/ipz_style.php';
+
 	include 'puzzle/ipuzzle_library.php';
 	include(PZ_DEFAULTS);
-
-	// include_once 'puzzle/ipz_menus.php';
-	// include_once 'puzzle/ipz_blocks.php';
-	// include_once 'puzzle/ipz_controls.php';
-	// include_once 'puzzle/ipz_db_controls.php';
-	// include_once 'puzzle/ipz_mkscripts.php';
 	
 //	if(!session_is_registered("javascript")) {
 //		session_register("javascript");
 //	}
 	$_SESSION["javascript"]="";
 	
-	$lg = get_variable("lg", "fr");
-	$id = get_variable("id", 1);
-	$di = get_variable("di");
+	$lg = getVariable("lg", "fr");
+	$id = getVariable("id", 1);
+	$di = getVariable("di");
 
 	$menus = new Puzzle\Menus($lg, $db_prefix);
 	$design = new Puzzle\Design();

@@ -2,12 +2,12 @@
 	include_once("puzzle/ipz_mysqlconn.php");
 	include_once("puzzle/ipz_db_controls.php");
 	$cs=connection(CONNECT,$database);
-	$query = get_variable("query", "SELECT");
-	$event = get_variable("event", "onLoad");
-	$action = get_variable("action", "Ajouter");
-	$id = get_variable("id");
-	$di = get_variable("di");
-	$me_id = get_variable("me_id");
+	$query = getVariable("query", "SELECT");
+	$event = getVariable("event", "onLoad");
+	$action = getVariable("action", "Ajouter");
+	$id = getVariable("id");
+	$di = getVariable("di");
+	$me_id = getVariable("me_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":

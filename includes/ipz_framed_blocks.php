@@ -24,7 +24,7 @@ define("FRAMED_BLOCK_RIGHT_COLUMN", 3);
 
 class FramedBlocks {
 
-function create_enhanced_framed_block_set($database, $column, $target, $id, $lg, $colors) {
+function createEnhancedFramedBlockSet($database, $column, $target, $id, $lg, $colors) {
 	global $db_prefix;
 
         $cs=connection(CONNECT, $database);
@@ -57,7 +57,7 @@ function create_enhanced_framed_block_set($database, $column, $target, $id, $lg,
 		}
 		
 		if($bl_type=="static") {
-			$block_set.=create_framed_block($database, $index, $target, $id, $lg, $colors);
+			$block_set.=createFramedBlock($database, $index, $target, $id, $lg, $colors);
 		} elseif($bl_type=="dynamic") {
 			if($first_block) {
 				$dyna_bset_counter++;
@@ -65,19 +65,19 @@ function create_enhanced_framed_block_set($database, $column, $target, $id, $lg,
 				$dyna_block_set="<table id=\"$dbs_name\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" width=\"100\" bordercolor=\"$border_color\"><tr><td>\n";
 				$first_block=false;
 			}
-			$dyna_block_set.=create_framed_collapseable_block($dbs_name, $index, $target, $colors);
+			$dyna_block_set.=createFramedCollapseableBlock($dbs_name, $index, $target, $colors);
 		} elseif($bl_type=="members") {
-			$logout=get_variable("logout");
-			//$panel_colors=get_variable("panel_colors");
-			$block_set.=create_framed_members_block($database, $logout, "members", $id, $lg, $target, $panel_colors);
+			$logout=getVariable("logout");
+			//$panel_colors=getVariable("panel_colors");
+			$block_set.=createFramedMembersBlock($database, $logout, "members", $id, $lg, $target, $panel_colors);
 		} elseif($bl_type=="newsletter") {
-			//$panel_colors=get_variable("panel_colors");
+			//$panel_colors=getVariable("panel_colors");
 			global $panel_colors;
-			$block_set.=create_framed_newsletter_block($database, "newsltr", $id, $lg, $target, $panel_colors);
+			$block_set.=createFramedNewsletterBlock($database, "newsltr", $id, $lg, $target, $panel_colors);
 		} elseif($bl_type=="diary") {
 			global $diary_colors;
-			$date=get_variable("date");
-			$block_set.=create_framed_diary_block($date, $id, $lg, $target, $diary_colors);
+			$date=getVariable("date");
+			$block_set.=createFramedDiaryBlock($date, $id, $lg, $target, $diary_colors);
 		}
 		
 		$old_bl_type=$bl_type;
@@ -97,7 +97,7 @@ function create_enhanced_framed_block_set($database, $column, $target, $id, $lg,
 	return $block_set;	
 }
 
-function create_framed_block($database, $block_num, $target, $id, $lg, $colors) {
+function createFramedBlock($database, $block_num, $target, $id, $lg, $colors) {
 	global $db_prefix;
 	
 	if(empty($colors)) { 
@@ -185,7 +185,7 @@ function create_framed_block($database, $block_num, $target, $id, $lg, $colors) 
 	return $block;
 }
 
-function create_framed_collapseable_block($block_skin_name, $block_num, $target, $colors) {
+function createFramedCollapseableBlock($block_skin_name, $block_num, $target, $colors) {
 	global $db_prefix;
 
 	if(empty($colors)) { 
@@ -205,9 +205,9 @@ function create_framed_collapseable_block($block_skin_name, $block_num, $target,
 		$fore_color="black";
 	}
 
-	$id=get_variable("id");
-	$lg=get_variable("lg");
-	$database=get_variable("database");
+	$id=getVariable("id");
+	$lg=getVariable("lg");
+	$database=getVariable("database");
 
         $cs=connection(CONNECT, $database);
 	$sql=	"select d.di_".$lg."_short, b.bl_column ".
@@ -270,7 +270,7 @@ function create_framed_collapseable_block($block_skin_name, $block_num, $target,
 	return $block;
 }
 
-function create_framed_diary_block($date, $id, $lg, $target, $colors) {
+function createFramedDiaryBlock($date, $id, $lg, $target, $colors) {
 	global $diary_colors, $db_prefix;
 	
 	if(!isset($colors)) { 
@@ -293,7 +293,7 @@ function create_framed_diary_block($date, $id, $lg, $target, $colors) {
 		$hl_text_color="white";
 	}
 
-	$diary=create_framed_diary_control("", $target, $colors);
+	$diary=createFramedDiaryControl("", $target, $colors);
 	
 	$table_name="diary";
 	$block=	"<table id=\"$table_name\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" width=\"100\" bordercolor=\"$border_color\">\n".
@@ -309,7 +309,7 @@ function create_framed_diary_block($date, $id, $lg, $target, $colors) {
 	return $block;
 }
 
-function create_framed_members_block($database, $logout, $di_name, $id, $lg, $target, $colors) {
+function createFramedMembersBlock($database, $logout, $di_name, $id, $lg, $target, $colors) {
 	global $db_prefix, $PHP_SELF;
 
 	if(empty($colors)) { 
@@ -400,7 +400,7 @@ function create_framed_members_block($database, $logout, $di_name, $id, $lg, $ta
 	return $block;
 }
 
-function create_framed_newsletter_block($database, $di_name, $id, $lg, $target, $colors) {
+function createFramedNewsletterBlock($database, $di_name, $id, $lg, $target, $colors) {
 	global $db_prefix, $PHP_SELF;
 
 	if(empty($colors)) { 

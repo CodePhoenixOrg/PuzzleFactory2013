@@ -18,7 +18,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-function send_mail_from_table($sender, $subject="", $body="", $action="SEND", $show_body=false, $alert_on_send=false) {
+function sendMailFromTable($sender, $subject="", $body="", $action="SEND", $show_body=false, $alert_on_send=false) {
 
 	if(empty($action)) $action=="SEND";
 
@@ -51,7 +51,7 @@ function send_mail_from_table($sender, $subject="", $body="", $action="SEND", $s
 		$headers.="Content-Type: text/html; charset=iso-8859-1\r\n";
 	
 		if($show_body) echo $body;
-		if($alert_on_send) echo js_alert("Le message a été envoyé.");
+		if($alert_on_send) echo jsAlert("Le message a été envoyé.");
 		
 		//$sql="select * from subscribers";
 		$sql="select * from subscribers where sub_id not in (select sb.sub_id from newsltr_history as nh, subscribers as sb where nh.sub_id<>sb.sub_id and nh.nl_id=$nl_id)";
@@ -67,7 +67,7 @@ function send_mail_from_table($sender, $subject="", $body="", $action="SEND", $s
 
 }
 
-function send_mail($sender, $recipient, $subject="", $body="", $action="SEND", $show_body=false, $alert_on_send=false) {
+function sendMail($sender, $recipient, $subject="", $body="", $action="SEND", $show_body=false, $alert_on_send=false) {
 
 	if(empty($action)) $action=="SEND";
 
@@ -100,7 +100,7 @@ function send_mail($sender, $recipient, $subject="", $body="", $action="SEND", $
 		$headers.="Content-Type: text/html; charset=iso-8859-1\r\n";
 	
 		if($show_body) echo $body;
-		//if($alert_on_send) echo js_alert("Le message a été envoyé.");
+		//if($alert_on_send) echo jsAlert("Le message a été envoyé.");
 		if($alert_on_send) echo "<p>Le message a été envoyé.</p>";
 		
 		mail($recipient, $subject, $body, $headers);

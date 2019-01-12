@@ -20,8 +20,8 @@
 			$td_priority="";
 			$td_expiry="";
 			$td_status="";
-			$td_date=get_sql_date();
-			$td_time=get_short_time();
+			$td_date=getSqlDate();
+			$td_time=getShortTime();
 			$mbr_id="";
 			$mbr_id2="";
 		break;
@@ -42,8 +42,8 @@
 		break;
 		}
 	} else if($event=="onRun" && $query=="ACTION") {
-		$td_date=get_sql_date();
-		$td_time=get_sql_time();
+		$td_date=getSqlDate();
+		$td_time=getSqlTime();
 		switch ($action) {
 		case "Ajouter":
 			$sql="insert into todo (".

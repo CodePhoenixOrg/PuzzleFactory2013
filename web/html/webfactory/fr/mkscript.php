@@ -18,14 +18,14 @@ function checkValues() {
 	use \Puzzle\Controls;
 	// use \Puzzle\ScriptsMaker;
 
-	$userdb = get_variable('userdb', 'webfactory');
-	$basedir = get_variable('srvdir');
-	$usertable = get_variable('usertable');
-	$pa_filename = get_variable('pa_filename', $usertable);
-	$query = get_variable('query', 'MENU');
-	$bl_id = get_variable('bl_id', 0);
-	$lg = get_variable('lg');
-	//$db_prefix = get_variable('db_prefix');
+	$userdb = getVariable('userdb', 'webfactory');
+	$basedir = getVariable('srvdir');
+	$usertable = getVariable('usertable');
+	$pa_filename = getVariable('pa_filename', $usertable);
+	$query = getVariable('query', 'MENU');
+	$bl_id = getVariable('bl_id', 0);
+	$lg = getVariable('lg');
+	//$db_prefix = getVariable('db_prefix');
 
 	$datacontrols = new DataControls($lg, $db_prefix);
 	$controls = new Controls($lg, $db_prefix);
@@ -33,8 +33,8 @@ function checkValues() {
 
 	$cs=connection(CONNECT, $userdb);
 	$tmp_filename="tmp.php";
-	//$wwwroot=get_www_root();
-	$wwwroot=get_current_http_root();
+	//$wwwroot=getWwwRoot();
+	$wwwroot=getCurrentHttpRoot();
 	//$filepath="$wwwroot/$userdb/fr/$pa_filename";
 	//$filedir="$wwwroot/$userdb/fr/";
 	$filepath="$wwwroot/$lg/$pa_filename";
@@ -44,7 +44,7 @@ function checkValues() {
 		
 	$tab_ides = $scriptMaker->getTabIdes();
 	
-	if($basedir=="") $basedir= get_current_dir() . "/fr";
+	if($basedir=="") $basedir= getCurrentDir() . "/fr";
 
 	$on_change = "";
 	$on_change_table = "";
@@ -57,25 +57,25 @@ function checkValues() {
 	
 	//Options de menu
 	$rad_menu = ['', ''];
-	$menu = get_variable('menu', 0);
+	$menu = getVariable('menu', 0);
 	$rad_menu[$menu]=" checked"; 
 	
 	//Options de script
 	$rad_dbgrid = ['', ''];
-	$dbgrid = get_variable('dbgrid', 0);
+	$dbgrid = getVariable('dbgrid', 0);
 	$rad_dbgrid[$dbgrid]=" checked"; 
 	
 	//Option de filtre
 	$chk_filter = '';
-	$filter = get_variable('filter');
+	$filter = getVariable('filter');
 	if($filter=="1") $chk_filter=" checked"; 
 	
 	//Option d'ajout
 	$chk_addoption = '';
-	$addoption = get_variable('addoption');
+	$addoption = getVariable('addoption');
 	if($addoption=="1") $chk_addoption=" checked";
 
-	$me_id = get_variable('me_id');
+	$me_id = getVariable('me_id');
 
 	
 	$hidden="<input type='hidden' name='query' value=''>\n";

@@ -19,8 +19,8 @@
 			$br_text="";
 			$br_importance="";
 			$br_status="";
-			$br_date=get_sql_date();
-			$br_time=get_short_time();
+			$br_date=getSqlDate();
+			$br_time=getShortTime();
 			$mbr_id="";
 		break;
 		case "Modifier":
@@ -38,8 +38,8 @@
 		break;
 		}
 	} else if($event=="onRun" && $query=="ACTION") {
-		$br_date=get_sql_date();
-		$br_time=get_sql_time();
+		$br_date=getSqlDate();
+		$br_time=getSqlTime();
 		switch ($action) {
 		case "Ajouter":
 			$sql="insert into bugreport (".

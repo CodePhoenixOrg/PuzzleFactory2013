@@ -6,7 +6,7 @@
 	$cs=connection(CONNECT, $userdb);
 	if(empty($lg)) $lg='fr';
 
-	$wwwroot=get_www_root();
+	$wwwroot=getWwwRoot();
 	$filepath="$wwwroot/../$userdb/fr/$pa_filename";
 	echo "filepath=$filepath<br>";
 		

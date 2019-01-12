@@ -2,10 +2,10 @@
 	include_once 'puzzle/ipz_mysqlconn.php';
 	include_once 'puzzle/ipz_db_controls.php';
 	$cs=connection(CONNECT,$database);
-	$query = get_variable("query");
-	$event = get_variable("event");
-	$action = get_variable("action");
-	$br_id = get_variable("br_id");
+	$query = getVariable("query");
+	$event = getVariable("event");
+	$action = getVariable("action");
+	$br_id = getVariable("br_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";
@@ -55,7 +55,7 @@
 			$br_title=escapeChars($br_title);
 			$br_text=escapeChars($br_text);
 			$br_status=escapeChars($br_status);
-                        $br_date = date_french_to_mysql($br_date);
+                        $br_date = dateFrenchToMysql($br_date);
 			$sql="insert into bugreport (".
 				"br_id, ".
 				"br_title, ".
@@ -91,7 +91,7 @@
 			$br_title=escapeChars($br_title);
 			$br_text=escapeChars($br_text);
 			$br_status=escapeChars($br_status);
-                        $br_date = date_french_to_mysql($br_date);
+                        $br_date = dateFrenchToMysql($br_date);
 			$sql="update bugreport set ".
 				"br_id=$br_id, ".
 				"br_title='$br_title', ".

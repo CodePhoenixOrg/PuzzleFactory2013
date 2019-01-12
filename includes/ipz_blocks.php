@@ -96,16 +96,16 @@ class Blocks extends Base
                 }
                 $dyna_block_set .= $this->createCollapseableBlock($dbs_name, $index, $colors);
             } elseif ($bl_type=="members") {
-                $logout=get_variable("logout");
-                //$panel_colors=get_variable("panel_colors");
+                $logout=getVariable("logout");
+                //$panel_colors=getVariable("panel_colors");
                 $block_set .= $this->createMembersBlock($userdb, $logout, "members", $id, $lg, $panel_colors);
             } elseif ($bl_type=="newsletter") {
-                //$panel_colors=get_variable("panel_colors");
+                //$panel_colors=getVariable("panel_colors");
                 global $panel_colors;
                 $block_set .= $this->createNewsletterBlock($userdb, "newsltr", $id, $lg, $panel_colors);
             } elseif ($bl_type=="diary") {
                 global $diary_colors;
-                $date=get_variable("date");
+                $date=getVariable("date");
                 //$block_set.=createDiaryBlock($date, $id, $lg, $diary_colors);
             }
         
@@ -238,9 +238,9 @@ class Blocks extends Base
             $fore_color="black";
         }
 
-        $id=get_variable("id");
-        $lg=get_variable("lg");
-        $userdb=get_variable("database");
+        $id=getVariable("id");
+        $lg=getVariable("lg");
+        $userdb=getVariable("database");
 
         $cs=connection(CONNECT, $userdb);
         $sql=	"select d.di_".$lg."_short, b.bl_column ".
@@ -719,7 +719,7 @@ class Blocks extends Base
             $hl_text_color="white";
         }
 
-        $diary=create_diary_control("", $colors);
+        $diary=createDiaryControl("", $colors);
     
         $table_name="diary";
         $block=	"<table id=\"$table_name\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" width=\"100\" bordercolor=\"$border_color\">\n".

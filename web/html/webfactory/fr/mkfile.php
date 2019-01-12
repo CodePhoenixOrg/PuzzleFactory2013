@@ -7,29 +7,29 @@
 	define('YES', 'Oui');
 	define('NO', 'Non');
 
-	$userdb = get_variable("userdb");
-	$usertable = get_variable("usertable");
-	$dbgrid = get_variable("dbgrid");
-	$menu = get_variable("menu");
-	$filter = get_variable("filter");
-	$addoption = get_variable("addoption");
-	$me_level = get_variable("me_level", "1");
-	$bl_id = get_variable("bl_id");
-	$pa_filename = get_variable("pa_filename");
-	$extension = get_variable("extension");
-	$basedir = get_variable("basedir");
-	$save = get_variable("save");
-	$autogen = get_variable("autogen");
-	$catalog = get_variable("catalog", 0);
-	$query = get_variable("query");
-	$di_long = get_variable("di_long");
-	$di_short = get_variable("di_short");
-	$di_name = get_variable("di_name");
-	$lg = get_variable("lg", "fr");
+	$userdb = getVariable("userdb");
+	$usertable = getVariable("usertable");
+	$dbgrid = getVariable("dbgrid");
+	$menu = getVariable("menu");
+	$filter = getVariable("filter");
+	$addoption = getVariable("addoption");
+	$me_level = getVariable("me_level", "1");
+	$bl_id = getVariable("bl_id");
+	$pa_filename = getVariable("pa_filename");
+	$extension = getVariable("extension");
+	$basedir = getVariable("basedir");
+	$save = getVariable("save");
+	$autogen = getVariable("autogen");
+	$catalog = getVariable("catalog", 0);
+	$query = getVariable("query");
+	$di_long = getVariable("di_long");
+	$di_short = getVariable("di_short");
+	$di_name = getVariable("di_name");
+	$lg = getVariable("lg", "fr");
 		
 	$cs = connection(CONNECT, $userdb) or die("UserDb='$userdb'<br>");
 	$tmp_filename = 'tmp_'.$pa_filename;
-	$wwwroot = get_www_root();
+	$wwwroot = getWwwRoot();
 	
 	$analyzer = new \Puzzle\Data\Analyzer();
     $references = $analyzer->searchReferences($userdb, $usertable, $cs);
@@ -44,7 +44,7 @@
 
 	$script_exists = file_exists($rel_page_filename);
 	$script_exists_tostring = $script_exists ? YES : NO;
-	$http_root = get_http_root();
+	$http_root = getHttpRoot();
 
 	$menus = new \Puzzle\Menus($lg, $db_prefix);
 
@@ -221,10 +221,10 @@
 	}
 	
     if ($save!=="") {
-		$indexfield = get_variable("indexfield");
-		$secondfield = get_variable("secondfield");
-		$pa_id = get_variable("pa_id");
-		$me_id = get_variable("me_id");
+		$indexfield = getVariable("indexfield");
+		$secondfield = getVariable("secondfield");
+		$pa_id = getVariable("pa_id");
+		$me_id = getVariable("me_id");
 	
         if ($dbgrid=="0") {
             $props="Grille";

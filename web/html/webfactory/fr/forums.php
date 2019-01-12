@@ -1,8 +1,8 @@
 <center>
 <?php   
 	include("forums_code.php");
-	$pc = get_variable("pc");
-	$sr = get_variable("sr");
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
 	$curl_pager = "";
 	$dialog = "";
 	if(isset($pc)) $curl_pager="&pc=$pc";

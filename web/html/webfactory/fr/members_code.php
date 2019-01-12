@@ -2,10 +2,10 @@
 	include_once("puzzle/ipz_mysqlconn.php");
 	include_once("puzzle/ipz_db_controls.php");
 	$cs=connection(CONNECT,$database);
-	$query = get_variable("query");
-	$event = get_variable("event");
-	$action = get_variable("action");
-	$mbr_id = get_variable("mbr_id");
+	$query = getVariable("query");
+	$event = getVariable("event");
+	$action = getVariable("action");
+	$mbr_id = getVariable("mbr_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";

@@ -93,7 +93,7 @@ class pz_pdf extends FPDF
             for ($i=0;$i<$n;$i++) {
                 $value=$rows[$i];
                 if (mysqli_field_type($result, $i)=="date") {
-                    $value=date_mysql_to_french($value);
+                    $value=dateMysqlToFrench($value);
                 }
                 $this->Cell($col_widths[$i], 6, $value, 'LR', 0, 'L', $fill);
                 

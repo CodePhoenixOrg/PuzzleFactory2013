@@ -24,8 +24,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  *   This program was used and modified by David Blanchard to fit the iPuzzle.net project needs.
  *   So it is now released in version 1.0 with some changes :
- *      - new function diary_lang() to determine diary language,
- *	- diary() function was renamed as create_diary_control() to respect the iPuzzle.net project API model,
+ *      - new function diaryLang() to determine diary language,
+ *	- diary() function was renamed as createDiaryControl() to respect the iPuzzle.net project API model,
  *      - CSS style has been temporarly removed to ease the use of the functions in the API.
  *
  *   This program was previously made and released by Mathieu Lesniak under these terms :
@@ -40,7 +40,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  ***************************************************************************/
 
-function diary_lang($lg="fr") {
+function diaryLang($lg="fr") {
 
 	$diary_txt=array();
 	if(!isset($lg)) $lg="fr";
@@ -78,7 +78,7 @@ function diary_lang($lg="fr") {
 	return $diary_txt;
 }
 
-function create_diary_control($date, $colors=array()) {
+function createDiaryControl($date, $colors=array()) {
 	global $link_on_day, $PHP_SELF, $params;
 	global $_POST, $_GET;
 	global $diary_txt;
@@ -103,15 +103,15 @@ function create_diary_control($date, $colors=array()) {
 	}
 
 	//$hl_back_color="grey";
-    	//$id = get_variable('id');
-	$lg = get_variable('lg');
+    	//$id = getVariable('id');
+	$lg = getVariable('lg');
 	
 	//echo $database;
 	if(!isset($diarydb)) $diarydb=$database;
 	
 	$cs=connection(CONNECT, $diarydb);
 	
-	$date = get_variable('date');
+	$date = getVariable('date');
 	if(empty($date))
        		$sql_date="now()";
 	else
@@ -160,7 +160,7 @@ function create_diary_control($date, $colors=array()) {
 	//$params['link_on_hour']        = $PHP_SELF.'?hour=%%hh%%';
 	$params['link_on_hour']	= $PHP_SELF.'?id=42&lg='.$lg.'&hour=%%hh%%';
 
-	$diary_txt = diary_lang($lg);
+	$diary_txt = diaryLang($lg);
 	
 	$month_names = $diary_txt[$lg]['months'];
 	$params['diary_columns'] = ($params['show_day']) ? 7 : $params['diary_columns'];
@@ -344,7 +344,7 @@ function create_diary_control($date, $colors=array()) {
 	return $output;
 }
 
-function create_framed_diary_control($date, $target, $colors=array()) {
+function createFramedDiaryControl($date, $target, $colors=array()) {
 	global $link_on_day, $PHP_SELF, $params;
 	global $_POST, $_GET;
 	global $diary_txt;
@@ -369,13 +369,13 @@ function create_framed_diary_control($date, $target, $colors=array()) {
 	}
 
 	//$hl_back_color="grey";
-    	//$id = get_variable('id');
-	$lg = get_variable('lg');
+    	//$id = getVariable('id');
+	$lg = getVariable('lg');
 	if(empty($diarydb)) $diarydb=$database;
 	
 	$cs=connection(CONNECT, $diarydb);
 	
-	$date = get_variable('date');
+	$date = getVariable('date');
 	if(empty($date))
        		$sql_date="now()";
 	else
@@ -423,7 +423,7 @@ function create_framed_diary_control($date, $target, $colors=array()) {
 	//$params['link_on_hour']        = $PHP_SELF.'?hour=%%hh%%';
 	$params['link_on_hour']	= 'page.php?di=diary&lg='.$lg.'&hour=%%hh%%';
 
-	$diary_txt = diary_lang($lg);
+	$diary_txt = diaryLang($lg);
 	
 	$month_names = $diary_txt[$lg]['months'];
 	$params['diary_columns'] = ($params['show_day']) ? 7 : $params['diary_columns'];
@@ -617,7 +617,7 @@ function create_framed_diary_control($date, $target, $colors=array()) {
 	return $output;
 }
 
-function create_diary_grid($name="", $date="", $id=0, $page_link="",  $curl_rows="", $can_add, $dialog, $col_widths, $colors, $conn) { 
+function createDiaryGrid($name="", $date="", $id=0, $page_link="",  $curl_rows="", $can_add, $dialog, $col_widths, $colors, $conn) { 
 /*
 	Desciption des paramètres :
 
@@ -665,7 +665,7 @@ function create_diary_grid($name="", $date="", $id=0, $page_link="",  $curl_rows
 	if($image_link=="") $image_link="images/Editer.png";
 
 	//Détermine la langue de la page qui sera affichée
-	//$lg=get_variable("lg");
+	//$lg=getVariable("lg");
 	$add="Ajouter";
 	
 	/*
@@ -800,7 +800,7 @@ function create_diary_grid($name="", $date="", $id=0, $page_link="",  $curl_rows
 		$a="";
 		
 		$js_events="";
-		if(is_num($id))
+		if(isNum($id))
 			$page_id="id=$id&lg=$lg";
 		else
 			$page_id="di=$id&lg=$lg";

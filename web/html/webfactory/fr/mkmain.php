@@ -5,14 +5,14 @@
 	$tab_ctrl_name="myTab";
 	//Options de départ
 	$rad_choice = ['', '', ''];
-	$choice = get_variable('choice', 0);
+	$choice = getVariable('choice', 0);
 	$rad_choice[$choice]=" checked"; 
 
 
 	$tab_ides = $scriptMaker->getTabIdes();
 
 	$on_click="var index=get_radio_value(\"myTabForm\", \"choice\");";
-	$on_click.=js_array("myTabCaptions", $tab_ides);
+	$on_click.=jsArray("myTabCaptions", $tab_ides);
 	$on_click.="location.href=\"page.php?id=\"+myTabCaptions[index]+\"&lg=$lg\";";
 	
 	$tab_start="

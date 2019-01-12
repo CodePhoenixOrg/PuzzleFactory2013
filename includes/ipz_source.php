@@ -20,7 +20,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 namespace Puzzle;
 
-class Source extends \Puzzle\Base
+class Source extends Base
 {
     public function __construct()
     {

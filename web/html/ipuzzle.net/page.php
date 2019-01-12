@@ -31,9 +31,9 @@
 	$_SESSION["javascript"]="";
 	$_SESSION["ses_apply_skin"]="N";
 
-	$lg = get_variable("lg", "fr");
-	$id = get_variable("id", 1);
-	$di = get_variable("di");
+	$lg = getVariable("lg", "fr");
+	$id = getVariable("id", 1);
+	$di = getVariable("di");
 
 	$menus = new \Puzzle\Menus($lg, $db_prefix);
 	

@@ -212,7 +212,7 @@ JAVASCRIPT;
         */
         global $img, $panel_colors;
 
-        $hostname=get_http_root()."/";
+        $hostname=getHttpRoot()."/";
     
         if (!isset($_SESSION["ses_apply_skin"])) {
             $_SESSION["ses_apply_skin"]="N";
@@ -281,7 +281,7 @@ JAVASCRIPT;
             return $table;
         }
     
-        $hostname=get_http_root()."/";
+        $hostname=getHttpRoot()."/";
     
         $shadow="";
     

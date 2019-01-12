@@ -20,26 +20,26 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 namespace Puzzle\Data;
 
-//$hostname=get_http_root()."/";
+//$hostname=getHttpRoot()."/";
 class Controls extends \Puzzle\Base
 {
     public function getJsArrayFromQuery($name, $sql, $cs)
     {
-        $js_array="<script language='JavaScript'>\n";
+        $jsArray="<script language='JavaScript'>\n";
 
         $stmt = $cs->query($sql);
         $n=$stmt->rowCount();
         $i=0;
-        $js_array.="\tvar $name=new Array($n);\n";
-        $js_array.="\t$name"."[$i]=new Array(\"0\", \"\");"."\n";
+        $jsArray.="\tvar $name=new Array($n);\n";
+        $jsArray.="\t$name"."[$i]=new Array(\"0\", \"\");"."\n";
         while ($rows=$stmt->fetch()) {
             $i++;
-            $js_array.="\t$name"."[$i]=new Array(\"".implode("\",\"", array_unique($rows))."\");"."\n";
+            $jsArray.="\t$name"."[$i]=new Array(\"".implode("\",\"", array_unique($rows))."\");"."\n";
         }
     
-        $js_array.="</script>\n";
+        $jsArray.="</script>\n";
 
-        return $js_array;
+        return $jsArray;
     }
 
     public function getFieldsFromSelectClause($sql)
@@ -330,12 +330,12 @@ class Controls extends \Puzzle\Base
         }
         /*elseif($page_link!="") {
             if(substr($page_link, 0, 1)=="/") {
-                $page_uri=get_http_root().$page_link;
+                $page_uri=getHttpRoot().$page_link;
             } else {
                 $page_uri=$page_link;
             }
         }*/
-        if (is_num($id)) {
+        if (isNum($id)) {
             $page_uri="$page_link?id=$id&lg=$lg";
         } else {
             $page_uri="$page_link?di=$id&lg=$lg";
@@ -452,12 +452,12 @@ class Controls extends \Puzzle\Base
         }
         /*elseif($page_link!="") {
             if(substr($page_link, 0, 1)=="/") {
-                $page_uri=get_http_root().$page_link;
+                $page_uri=getHttpRoot().$page_link;
             } else {
                 $page_uri=$page_link;
             }
         }*/
-        if (is_num($id)) {
+        if (isNum($id)) {
             $page_uri="$page_link?id=$id&lg=$lg";
         } else {
             $page_uri="$page_link?di=$id&lg=$lg";
@@ -523,7 +523,7 @@ class Controls extends \Puzzle\Base
         global $sr, $pc, $img, $lg;
         global $PHP_SELF;
     
-        $criterion=get_variable("criterion");
+        $criterion=getVariable("criterion");
     
         //Détermine les couleurs du dbGrid
         if (!empty($colors)) {
@@ -573,7 +573,7 @@ class Controls extends \Puzzle\Base
         }
 
         $i=1;
-        $criterions=get_variable("criterions");
+        $criterions=getVariable("criterions");
         if (is_array($criterions)) {
             //echo "criterions rempli<br>";
             foreach ($criterions as $criterion) {
@@ -582,12 +582,12 @@ class Controls extends \Puzzle\Base
             }
         } else {
             //echo "criterions vide<br>";
-            $criterion=get_variable("c$i");
+            $criterion=getVariable("c$i");
             while ($criterion!="") {
                 $criterions[$i]=$criterion;
                 $curl_pager.="&c$i=$criterion";
                 $i++;
-                $criterion=get_variable("c$i");
+                $criterion=getVariable("c$i");
             }
         }
     
@@ -671,7 +671,7 @@ class Controls extends \Puzzle\Base
             fclose($fh);
         // end*/
     
-        $pager_id=get_variable("id");
+        $pager_id=getVariable("id");
         //echo "page_link='$page_link'<br>";
 
         $pager_link=$page_link;
@@ -807,7 +807,7 @@ class Controls extends \Puzzle\Base
             }
 
             $js_events="";
-            if (is_num($rows_id)) {
+            if (isNum($rows_id)) {
                 $page_id="id=$rows_id&lg=$lg";
             } else {
                 $page_id="di=$rows_id&lg=$lg";
@@ -881,9 +881,9 @@ class Controls extends \Puzzle\Base
                         $table.="<td>$ahref$field$a</td>\n";
                     } else {
                         if ($fieldtype=="datetime") {
-                            $field = date_mysql_to_french($field);
+                            $field = dateMysqlToFrench($field);
                         }
-                        //if($fieldtype=="time") $field = time_mysql_to_short($field);
+                        //if($fieldtype=="time") $field = timeMysqlToShort($field);
                         $tag_align=" align='left'";
                         if ($fieldtype=="int") {
                             $tag_align=" align='right'";
@@ -927,7 +927,7 @@ class Controls extends \Puzzle\Base
             $ahref="";
             $a="";
         
-            if (is_num($rows_id)) {
+            if (isNum($rows_id)) {
                 $page_id="id=$rows_id&lg=$lg&action=$add";
             } else {
                 $page_id="di=$rows_id&lg=$lg&action=$add";
@@ -1022,7 +1022,7 @@ class Controls extends \Puzzle\Base
         */
         global $sr, $pc, $img, $lg, $database;
     
-        $criterion=get_variable("criterion");
+        $criterion=getVariable("criterion");
     
         //Détermine les couleurs du dbGrid
         if (!empty($colors)) {
@@ -1071,7 +1071,7 @@ class Controls extends \Puzzle\Base
         }
 
         $i=1;
-        $criterions=get_variable("criterions");
+        $criterions=getVariable("criterions");
         if (is_array($criterions)) {
             //echo "criterions rempli<br>";
             foreach ($criterions as $criterion) {
@@ -1080,12 +1080,12 @@ class Controls extends \Puzzle\Base
             }
         } else {
             //echo "criterions vide<br>";
-            $criterion=get_variable("c$i");
+            $criterion=getVariable("c$i");
             while ($criterion!="") {
                 $criterions[$i]=$criterion;
                 $curl_pager.="&c$i=$criterion";
                 $i++;
-                $criterion=get_variable("c$i");
+                $criterion=getVariable("c$i");
             }
         }
     
@@ -1145,7 +1145,7 @@ class Controls extends \Puzzle\Base
             }
         }
     
-        $pager_id=get_variable("id");
+        $pager_id=getVariable("id");
         $pager_ctrl=createPagerControl($userdb, $page_link, $sql, $pager_id, $lg, $caption, $sr, $step, $pc, $curl_pager);
         $sql=$pager_ctrl["sql_query"];
         $pager=$pager_ctrl["pager_ctrl"];
@@ -1265,7 +1265,7 @@ class Controls extends \Puzzle\Base
             }
 
             $js_events="";
-            if (is_num($rows_id)) {
+            if (isNum($rows_id)) {
                 $page_id="id=$rows_id&lg=$lg";
             } else {
                 $page_id="di=$rows_id&lg=$lg";
@@ -1318,7 +1318,7 @@ class Controls extends \Puzzle\Base
 
             if ($r==0) {
                 $_SESSION["javascript"].="\tvar thmb=eval(document.getElementById(\"thumbnail\"));\n";
-                $_SESSION["javascript"].="\tthmb.src=\"".get_http_root()."/$database/$lg/galerie/albums/$al_id/small/".$rows[$web_field]."\";\n";
+                $_SESSION["javascript"].="\tthmb.src=\"".getHttpRoot()."/$database/$lg/galerie/albums/$al_id/small/".$rows[$web_field]."\";\n";
             }
             if ($r==0) {
                 $table.="<td rowspan='$rowspan' width='100' valign='top'><img id='thumbnail' width='100'></td>";
@@ -1362,7 +1362,7 @@ class Controls extends \Puzzle\Base
                                 $tag_align=" align='center'";
                             }
                             $c=$j-1;
-                            $onmouseover=" onmouseover='thmb.src=\"".get_http_root()."/$database/$lg/galerie/albums/$al_id/small/".$rows[$web_field]."\";'";
+                            $onmouseover=" onmouseover='thmb.src=\"".getHttpRoot()."/$database/$lg/galerie/albums/$al_id/small/".$rows[$web_field]."\";'";
                             $table.="<td$tag_align$tag_width$onmouseover>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$field</span>$a</td>\n";
                         }
                     }
@@ -1396,7 +1396,7 @@ class Controls extends \Puzzle\Base
             $ahref="";
             $a="";
         
-            if (is_num($rows_id)) {
+            if (isNum($rows_id)) {
                 $page_id="id=$rows_id&lg=$lg&action=$add";
             } else {
                 $page_id="di=$rows_id&lg=$lg&action=$add";
@@ -1508,7 +1508,7 @@ class Controls extends \Puzzle\Base
         }
 
         //Détermine la langue de la page qui sera affichée
-        //$lg=get_variable("lg");
+        //$lg=getVariable("lg");
         $add="Ajouter";
     
         /*
@@ -1619,7 +1619,7 @@ class Controls extends \Puzzle\Base
             }
 
             $js_events="";
-            if (is_num($rows_id)) {
+            if (isNum($rows_id)) {
                 $page_id="id=$rows_id&lg=$lg";
             } else {
                 $page_id="di=$rows_id&lg=$lg";
@@ -1731,7 +1731,7 @@ class Controls extends \Puzzle\Base
             $ahref="";
             $a="";
         
-            if (is_num($rows_id)) {
+            if (isNum($rows_id)) {
                 $page_id="id=$rows_id&lg=$lg&action=$add";
             } else {
                 $page_id="di=$rows_id&lg=$lg&action=$add";

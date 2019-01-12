@@ -28,14 +28,14 @@ class Controls extends Base {
 		
 		// global $pz_current_tab;
 
-		$id=get_variable("id");
-		$lg=get_variable("lg");
+		$id=getVariable("id");
+		$lg=getVariable("lg");
 
 		$tab_count=sizeof($tab_captions);
 		
 		if(empty($pz_current_tab)) $pz_current_tab=$tab_captions[0];
 		
-		$js="\t".js_array($name."Captions", $tab_captions)."\n";
+		$js="\t".jsArray($name."Captions", $tab_captions)."\n";
 		$js.="\tvar currentTab=document.getElementById(\"$pz_current_tab\");\n";
 		$js.="\tdisplay_tab(currentTab,".$name."Captions);\n";
 		
@@ -116,9 +116,9 @@ class Controls extends Base {
 		echo "</pre>";
 		*/
 		
-		chdir(get_www_root().$basedir);
+		chdir(getWwwRoot().$basedir);
 		
-		$handle=opendir(get_www_root().$basedir);
+		$handle=opendir(getWwwRoot().$basedir);
 
 		$result="";
 		$result.="<select id='$name' name='$name' multiple size='$size' maxlength='15' onChange='document.$formname.filename.value=this.value;".$onChange."'>\n";
@@ -162,11 +162,11 @@ class Controls extends Base {
 			$basedir = substr($basedir, 0, $p)."/";
 		}
 
-		echo "basedir='".get_www_root().$basedir."'<br>";
+		echo "basedir='".getWwwRoot().$basedir."'<br>";
 		
-		chdir(get_www_root().$basedir);
+		chdir(getWwwRoot().$basedir);
 		
-		$handle=opendir(get_www_root().$basedir);
+		$handle=opendir(getWwwRoot().$basedir);
 		//document.$formname.basedir.value=this.value
 
 		$result="";

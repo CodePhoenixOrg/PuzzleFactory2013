@@ -3,12 +3,12 @@
 	include_once("puzzle/ipz_db_controls.php");
 	use \Puzzle\Data\Controls as DataControls;
 	$cs=connection(CONNECT,$database);
-	$query = get_variable("query", "SELECT");
-	$event = get_variable("event", "onLoad");
-	$action = get_variable("action", "Ajouter");
-	$id = get_variable("id");
-	$di = get_variable("di");
-	$im_id = get_variable("im_id");
+	$query = getVariable("query", "SELECT");
+	$event = getVariable("event", "onLoad");
+	$action = getVariable("action", "Ajouter");
+	$id = getVariable("id");
+	$di = getVariable("di");
+	$im_id = getVariable("im_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":

@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 define("LINUX", "linux");
 define("WIN32", "windows");
 define ('DEBUG_LOG_FILE', serverPath() . '/logs/debug.log');
-define("DOCUMENT_ROOT", get_www_root()."/");
+define("DOCUMENT_ROOT", getWwwRoot()."/");
 
 define ('CR_LF', "\r\n");
 global $DEBUG_LOG_FILE;
@@ -57,7 +57,7 @@ function escapeChars($phrase) {
         return $result;
 }
 
-function js_quote($code) {
+function jsQuote($code) {
 	$js="<script language='JavaScript'>\n";
 	$js.=$code;
 	$js.="</script>\n";
@@ -65,20 +65,20 @@ function js_quote($code) {
 	return $js;
 }
 
-function js_array($name="", $array=array()) {
+function jsArray($name="", $array=array()) {
 
 	$js="var $name=new Array(\"".implode("\", \"", $array)."\");";
 	
 	return $js;
 }
 	
-function js_alert($msg) {
+function jsAlert($msg) {
 	$js="<script language=\"JavaScript\">alert(\"$msg\")</script>";
 
 	return $js;
 }
 
-function get_sql_date() {
+function getSqlDate() {
 	$date=getdate();
 	$mon="0".$date["mon"];
 	$mon=substr($mon, strlen($mon)-2, 2);
@@ -88,7 +88,7 @@ function get_sql_date() {
 	return $sql_date;
 }
 
-function get_french_date() {
+function getFrenchDate() {
 	$date=getdate();
 	$mon="0".$date["mon"];
 	$mon=substr($mon, strlen($mon)-2, 2);
@@ -98,7 +98,7 @@ function get_french_date() {
 	return $french_date;
 }
 
-function get_sql_time() {
+function getSqlTime() {
 	$time=getdate();
 	$hours="0".$time["hours"];
 	$hours=substr($hours, strlen($hours)-2, 2);
@@ -110,7 +110,7 @@ function get_sql_time() {
 	return $time;
 }
 
-function get_short_time() {
+function getShortTime() {
 	$time=getdate();
 	$hours="0".$time["hours"];
 	$hours=substr($hours, strlen($hours)-2, 2);
@@ -120,9 +120,9 @@ function get_short_time() {
 	return $time;
 }
 
-function get_days_delta($recent_date, $old_date) {
-	$a_old_date=date_sql_to_array($old_date);
-	$a_recent_date=date_sql_to_array($recent_date);
+function getDaysDelta($recent_date, $old_date) {
+	$a_old_date=dateSqlToArray($old_date);
+	$a_recent_date=dateSqlToArray($recent_date);
 	
 	$mm=$a_old_date["month"];
 	$dd=$a_old_date["day"];
@@ -139,20 +139,20 @@ function get_days_delta($recent_date, $old_date) {
 	return $delta;
 }
 				
-function date_mysql_to_french($date) {
+function dateMysqlToFrench($date) {
 	if(strlen($date) > 10) $date = substr($date, 0, 10);
 	$date = preg_replace('^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$', '\3/\2/\1', $date);
 
 	return $date;
 }
 
-function date_french_to_mysql($date) {
+function dateFrenchToMysql($date) {
 	$date = preg_replace('^([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4})$', '\3-\2-\1', $date);
 
 	return $date;
 }
 
-function date_sql_to_array($date) {
+function dateSqlToArray($date) {
 	$yy = substr($date, 0, 4);
 	$mm = substr($date, 5, 2);
 	$dd = substr($date, 8, 2);
@@ -160,49 +160,49 @@ function date_sql_to_array($date) {
 	return array("day"=>$dd, "month"=>$mm, "year"=>$yy);
 }
 
-function time_mysql_to_short($time) {
+function timeMysqlToShort($time) {
 	if(strlen($time)==19) $time = substr($time, 11, 5);
 
 	return $time;
 }
 
-function datetime_mysql_to_french($datetime) {
+function datetimeMysqlToFrench($datetime) {
 	$datetime = preg_replace('^([0-9]{1,2})-([0-9]{1,2})-([0-9]{2,4}) ([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})$', '\1/\2/\3 \4:\5', $datetime);
 
 	return $datetime;
 }
 
-function datetime_user_to_french($date, $time) {
-	$date = date_mysql_to_french($date);
-	$time = time_mysql_to_short($time);
+function datetimeUserToFrench($date, $time) {
+	$date = dateMysqlToFrench($date);
+	$time = timeMysqlToShort($time);
 	$datetime = $date . " " . $time;
 
 	return $datetime;
 }
 
-function is_num($var) {
+function isNum($var) {
 
-	$is_num=true;
+	$isNum=true;
 	$l=trim(strlen($var));
 	$i=0;
-	while(($i<$l) && $is_num===true) {
+	while(($i<$l) && $isNum===true) {
 		$char=substr($var, $i, 1);
         	$asc=ord($char);
 		//echo "var[$i]='".$char."'; ascii_code='".$asc."'<br>";
-                $char_is_num=($asc>47 && $asc<58);
-		$is_num=$is_num && $char_is_num;
+                $char_isNum=($asc>47 && $asc<58);
+		$isNum=$isNum && $char_isNum;
 		$i++;
 	}
-    	return $is_num;
+    	return $isNum;
 }
 
-function get_variable_set($var) {
+function getVariableSet($var) {
 	//Global $HTTP_GET_VARS, $HTTP_POST_VARS;
 	
 	return array_merge($_POST, $_GET);
 }
 
-function get_variable($var, $default = '')
+function getVariable($var, $default = '')
 {
     $result = '';
 
@@ -218,7 +218,7 @@ function get_variable($var, $default = '')
     return $result;
 }
 
-function get_http_root() {
+function getHttpRoot() {
 	if($_SERVER["SERVER_PORT"]!='80')
 		$http_root="http://".$_SERVER["SERVER_ADDR"].":".$_SERVER["SERVER_PORT"]."/";
 	else
@@ -227,7 +227,7 @@ function get_http_root() {
 	return $http_root;
 }
 
-function get_www_root() {
+function getWwwRoot() {
 	/*
 	$p=strpos($_SERVER["DOCUMENT_ROOT"], "/");
 	if($p==2) 
@@ -245,7 +245,7 @@ function get_www_root() {
 	return $wwwroot;
 }
 
-function get_current_dir() {
+function getCurrentDir() {
 	$current_dir="";
 	$phpself=$_SERVER["PHP_SELF"];
 	
@@ -259,7 +259,7 @@ function get_current_dir() {
 	return $current_dir;
 }
 
-function get_current_http_root() {
+function getCurrentHttpRoot() {
 	$current_dir="";
 	$phpself=$_SERVER["PHP_SELF"];
 	
@@ -269,17 +269,17 @@ function get_current_http_root() {
 	$p3=strrpos($phpself, "/");
 	$current_dir=substr($phpself, 0, $p3);
 	
-	$http_root=get_http_root();
+	$http_root=getHttpRoot();
 	
 	$current_http_root=$http_root.$current_dir;
 
 	return $current_http_root;
 }
 	
-function get_current_www_root() {
+function getCurrentWwwRoot() {
 
-	$www_root=get_www_root();
-	$current_dir=get_current_dir();
+	$www_root=getWwwRoot();
+	$current_dir=getCurrentDir();
 	$files_dir="";
 
 	$files_dir=$www_root.$current_dir;
@@ -287,27 +287,27 @@ function get_current_www_root() {
 	return $files_dir;
 }
 
-function get_http_images_dir($directory="") {
-	$images_dir=get_http_root()."images/";
+function getHttpImagesDir($directory="") {
+	$images_dir=getHttpRoot()."images/";
 	return $images_dir;
 }
 
-function get_http_fonts_dir($directory="") {
-	$fonts_dir=get_http_root()."fonts/";
+function getHttpFontsDir($directory="") {
+	$fonts_dir=getHttpRoot()."fonts/";
 	return $fonts_dir;
 }
 
-function get_local_images_dir() {
+function getLocalImagesDir() {
 	$images_dir=$_SERVER["DOCUMENT_ROOT"]."/$img/";
 	return $images_dir;
 }
 
-function get_local_fonts_dir() {
+function getLocalFontsDir() {
 	$fonts_dir=$_SERVER["DOCUMENT_ROOT"]."/fonts/";
 	return $fonts_dir;
 }
 
-function raise_error($message, $action, $on_click) {
+function raiseError($message, $action, $on_click) {
 	global $panel_colors;
 	
 	$on_click=trim($on_click);
@@ -332,7 +332,7 @@ function raise_error($message, $action, $on_click) {
 <?php   
 }
 
-function msg_box($message, $action, $on_click) {
+function msgBox($message, $action, $on_click) {
 	global $panel_colors;
 	
 	$on_click=trim($on_click);
@@ -357,4 +357,4 @@ function msg_box($message, $action, $on_click) {
 <?php   
 }
 
-define("PZ_DEFAULTS", get_current_www_root()."/pz_defaults.php");
+define("PZ_DEFAULTS", getCurrentWwwRoot()."/pz_defaults.php");

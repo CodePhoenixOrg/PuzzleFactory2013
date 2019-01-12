@@ -12,7 +12,7 @@
 	$cs=connection(CONNECT, $userdb);
 	$tmp_filename="tmp.php";
 	
-	$wwwroot=get_www_root();
+	$wwwroot=getWwwRoot();
 	$filepath="$wwwroot/../$userdb/fr/$pa_filename";
 		
 	if($query=="SCRIPT") {
@@ -21,7 +21,7 @@
 		$dir="/var/www/html/$userdb/fr";
 		//if(!file_exists($dir)) mkdir($dir);
 		$siteroot=$dir;
-		$http_root=get_http_root();
+		$http_root=getHttpRoot();
 	
 		if(!empty($action)) {
 			$formname="fiche_$table";

@@ -1,26 +1,26 @@
 <center>
 <?php   
 	//if(empty($userdb)) $userdb="webfactory";
-	$userdb = get_variable("userdb");
-	$usertable = get_variable("usertable");
-	$dbgrid = get_variable("dbgrid");
-	$menu = get_variable("menu");
-	$filter = get_variable("filter");
-	$addoption = get_variable("addoption");
-	$me_id = get_variable("me_id");
-	$me_level = get_variable("me_level");
-	$bl_id = get_variable("bl_id");
-	$di_long = get_variable("di_long");
-	$di_short = get_variable("di_short");
-	$di_name = get_variable("di_name");
-	$autogen = get_variable("autogen");
-	$pa_filename = get_variable("pa_filename");
-	$extension = get_variable("extension");
-	$basedir = get_variable("basedir");
+	$userdb = getVariable("userdb");
+	$usertable = getVariable("usertable");
+	$dbgrid = getVariable("dbgrid");
+	$menu = getVariable("menu");
+	$filter = getVariable("filter");
+	$addoption = getVariable("addoption");
+	$me_id = getVariable("me_id");
+	$me_level = getVariable("me_level");
+	$bl_id = getVariable("bl_id");
+	$di_long = getVariable("di_long");
+	$di_short = getVariable("di_short");
+	$di_name = getVariable("di_name");
+	$autogen = getVariable("autogen");
+	$pa_filename = getVariable("pa_filename");
+	$extension = getVariable("extension");
+	$basedir = getVariable("basedir");
 	
 	$cs=connection(CONNECT, $userdb);
 	$tmp_filename="tmp.php";
-	$wwwroot=get_www_root();
+	$wwwroot=getWwwRoot();
 	//$filepath="$wwwroot/../$userdb/fr/$pa_filename";
 	//$filedir="$wwwroot/../$userdb/fr/";
 	$datacontrols = new \Puzzle\Data\Controls($lg, $db_prefix);

@@ -23,7 +23,7 @@ include_once("ipz_misc.php");
 include_once("ipz_mysqlconn.php");
 */
 /*
-function get_image_size($directory, $image) {
+function getImageSize($directory, $image) {
 		echo "$directory$image";
 	if(substr($image, 0, 1)=="#") {
 		$p1=strpos($image, "h");
@@ -40,7 +40,7 @@ function get_image_size($directory, $image) {
 	return array("width"=>$width, "height"=>$height);
 }
 */
-function get_parameters($this_profile="") {
+function getParameters($this_profile="") {
 
 	global $profile, $skin_model, $apply_skin, $page_colors, $panel_colors, $diary_colors, $grid_colors;
 	
@@ -59,12 +59,12 @@ function get_parameters($this_profile="") {
 		}
 		
 		global $database, $img;
-		$hostname=get_http_root()."/";
+		$hostname=getHttpRoot()."/";
 		$cs=connection(CONNECT, $database);
 
 		//echo "DATABASE='$database'<br>";
 	
-		//echo js_alert("Je prends les paramètres dans la base $database avec le profil $this_profile.");
+		//echo jsAlert("Je prends les paramètres dans la base $database avec le profil $this_profile.");
 		
 		$sql="select p.*, s.* from parameters p, skins s where p.sk_id=s.sk_id and p.par_profile='$this_profile'";
 		$stmt = $cs->query($sql);
@@ -101,14 +101,14 @@ function get_parameters($this_profile="") {
 		$source=$hostname."/".$img."/skin/".$sk_theme."/";
 		
 		/*
-		$size_top_left_pic=get_image_size($source, $sk_top_left_pic);
-		$size_top_pic=get_image_size($source, $sk_top_pic);
-		$size_top_right_pic=get_image_size($source, $sk_top_right_pic);
-		$size_right_pic=get_image_size($source, $sk_right_pic);
-		$size_bottom_right_pic=get_image_size($source, $sk_bottom_right_pic);
-		$size_bottom_pic=get_image_size($source, $sk_bottom_pic);
-		$size_bottom_left_pic=get_image_size($source, $sk_bottom_left_pic);
-		$size_left_pic=get_image_size($source, $sk_left_pic);
+		$size_top_left_pic=getImageSize($source, $sk_top_left_pic);
+		$size_top_pic=getImageSize($source, $sk_top_pic);
+		$size_top_right_pic=getImageSize($source, $sk_top_right_pic);
+		$size_right_pic=getImageSize($source, $sk_right_pic);
+		$size_bottom_right_pic=getImageSize($source, $sk_bottom_right_pic);
+		$size_bottom_pic=getImageSize($source, $sk_bottom_pic);
+		$size_bottom_left_pic=getImageSize($source, $sk_bottom_left_pic);
+		$size_left_pic=getImageSize($source, $sk_left_pic);
 		*/
 		
 		//$min_size=min($size1["height"], $size2["height"], $size1["width"], $size2["whidth"]);
@@ -175,7 +175,7 @@ function get_parameters($this_profile="") {
 		$_SESSION["ses_bottom_left_pic"]=$sk_bottom_left_pic;
 		$_SESSION["ses_left_pic"]=$sk_left_pic;
 	} else {
-		//echo js_alert("Je prends les paramètres dans la session pour le profile $this_profile.");
+		//echo jsAlert("Je prends les paramètres dans la session pour le profile $this_profile.");
 		
 		$profile= $_SESSION["ses_profile"];
 		$apply_skin= $_SESSION["ses_apply_skin"];

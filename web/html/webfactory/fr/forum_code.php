@@ -2,10 +2,10 @@
 	include_once("ipz_mysqlconn.php");
 	include_once("ipz_db_controls.php");
 	$cs=connection(CONNECT,$database);
-	$query = get_variable("query");
-	$event = get_variable("event");
-	$action = get_variable("action");
-	$fr_id = get_variable("fr_id");
+	$query = getVariable("query");
+	$event = getVariable("event");
+	$action = getVariable("action");
+	$fr_id = getVariable("fr_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";

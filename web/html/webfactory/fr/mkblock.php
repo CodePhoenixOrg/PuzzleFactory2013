@@ -4,7 +4,7 @@
 	if(empty($query)) $query="MENU";
 	$cs=connection(CONNECT, $userdb);
 	$tmp_filename="tmp.php";
-	$wwwroot=get_www_root();
+	$wwwroot=getWwwRoot();
 	$filepath="$wwwroot/../$userdb/fr/$pa_filename";
 	$filedir="$wwwroot/../$userdb/fr/";
 	
@@ -72,7 +72,7 @@
 		$tab_captions=array("Start", "Scripts", "Menus");
 		
 		$on_click="var index=get_radio_value(\"myTabForm\", \"choice\")+1;";
-		//$on_click.=js_array("mytabCaptions", $tab_captions);
+		//$on_click.=jsArray("mytabCaptions", $tab_captions);
 		$on_click.="var changeTab=document.getElementById(".$tab_ctrl_name."Captions[index]);";
 		$on_click.="display_tab(changeTab,".$tab_ctrl_name."Captions);";
 		
@@ -187,7 +187,7 @@
 
 		echo $tab_ctrl;
 	
-		if($js_error!="") echo js_quote($js_error);
+		if($js_error!="") echo jsQuote($js_error);
 
 
 	} elseif($query=="SCRIPT") {
@@ -196,7 +196,7 @@
 		$dir="/var/www/html/$userdb/fr";
 		//if(!file_exists($dir)) mkdir($dir);
 		$siteroot=$filedir;
-		$http_root=get_http_root();
+		$http_root=getHttpRoot();
 	
 		if($action="Créer") {
 			$formname="fiche_$table";
