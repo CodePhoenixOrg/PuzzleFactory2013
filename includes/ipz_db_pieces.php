@@ -37,7 +37,7 @@ JAVASCRIPT;
 		echo $js;
 	}
 	
-    public function debug_scroller($switch=false)
+    public function debugScroller($switch=false)
     {
         if ($switch) {
             echo '

@@ -3,8 +3,8 @@
 	include_once 'blocks_code.php';
 	if($query=="SELECT") {
 			$sql="select bl_id, bl_column from blocks order by bl_id";
-			$dbgrid=create_pager_db_grid("blocks", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("blocks", $dbgrid);
+			$dbgrid=createPagerDbGrid("blocks", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("blocks", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>
@@ -41,7 +41,7 @@
 					<td>
 						<select name='di_name'>
 						<?php    $sql='select di_name, di_fr_short from dictionary order by di_fr_short';
-						$options=create_options_from_query($sql, 0, 1, array(), $di_name, false, $cs);
+						$options=createOptionsFromQuery($sql, 0, 1, array(), $di_name, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>

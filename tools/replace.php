@@ -2,12 +2,20 @@
 
 class Program
 {
+	// $re = '/(([a-z]*)\()?(\\\\([0-9]))(\))?/m';
+	// $str = 'strtolower(\\1).strtoupper(\\2)';
+	// $subst = '\\1$match[\\4]\\5';
+	
+	// $result = pregUreplace($re, $subst, $str);
+	
+	// echo "The result of the substitution is ".$result;
+	
     private static $exclusions;
 
     public static function main($argv, $argc)
     {
 
-        //print_r($argv);
+        //printUr($argv);
 
         $filename = (isset($argv[1])) ? $argv[1] : '';
 
@@ -17,13 +25,14 @@ class Program
 
     public function replace($filename)
     {
-        $re = '/(\w)?(?!^.)(_([a-z])([a-z]*))/m';
-        $str = file_get_contents($filename);
-        $exclude = file_get_contents('exclude.txt');
+		$re = '/(\w)?(?!^.)(_([a-z])([a-z]*))/m';
+		
+        $str = fileUgetUcontents($filename);
+        $exclude = fileUgetUcontents('exclude.txt');
 
         self::$exclusions = explode("\n", $exclude);
 
-        $result = preg_replace_callback($re, 'Program::replaceCallback', $str);
+        $result = pregUreplaceUcallback($re, 'Program::replaceCallback', $str);
 
         echo "The result of the substitution is ".$result;
     }
@@ -33,15 +42,15 @@ class Program
         // $re = '/([a-z]*)_([a-z])([a-z]*)/m';
         $re = '/_([a-z])([a-z]*)/m';
 
-        $str = file_get_contents($filename);
+        $str = fileUgetUcontents($filename);
 
 		$matches = [];
-        preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
-		print_r($matches);
+        pregUmatchUall($re, $str, $matches, PREG_SET_ORDER, 0);
+		printUr($matches);
         // Print the entire match result
         // foreach ($matches as $key=>$value) {
 		// 	// print $matches[$key][0] . PHP_EOL;
-		// 	print_r($matches[$key], true) . PHP_EOL;
+		// 	printUr($matches[$key], true) . PHP_EOL;
         // }
     }
 

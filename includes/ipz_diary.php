@@ -742,7 +742,7 @@ function create_diary_grid($name="", $date="", $id=0, $page_link="",  $curl_rows
 		$_SESSION["javascript"].="\tvdiv$name$i.style.left=v$tdname0.offsetWidth+vdiv$name.offsetLeft+v$name.offsetLeft+9+\"px\";\n";
 		$_SESSION["javascript"].="\tvdiv$name$i.style.top=(v$tdname0.offsetHeight+1)*$hhour+v$name.offsetTop+vdiv$name.offsetTop+v$tdname0.offsetTop+\"px\";\n";
 		$panels.="<div id=\"div$name$i\" style=\"background:$pager_color;z-index:1;position:absolute;\">\n";
-		$panels.=create_enhanced_panel("div$name$i", "$time $obj", $comment, "font-size: 10;", "", "0", "100%", $panel_width, $panel_colors);
+		$panels.=createEnhancedPanel("div$name$i", "$time $obj", $comment, "font-size: 10;", "", "0", "100%", $panel_width, $panel_colors);
 		$panels.="</div>\n";	
 		$i++;
 	}

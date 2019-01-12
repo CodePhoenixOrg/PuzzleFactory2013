@@ -444,7 +444,7 @@ class pz_pdf extends FPDF
     
 
 
-    public static function create_pdf_from_query($filename, $sql, $caption_name, $caption_size, $col_widths, $orientation, $header, $title, $footer, $colors, $cs)
+    public static function createPdfFromQuery($filename, $sql, $caption_name, $caption_size, $col_widths, $orientation, $header, $title, $footer, $colors, $cs)
     {
         $pdf=new pz_pdf();
         $pdf->Open();
@@ -475,7 +475,7 @@ class pz_pdf extends FPDF
         return $pdf;
     }
 
-    public static function create_pdf_from_query_with_image($filename, $image_path, $image_position, $image_heigth, $image_width, $sql, $caption_name, $caption_size, $col_widths, $orientation, $header, $title, $footer, $colors, $cs)
+    public static function createPdfFromQueryWithImage($filename, $image_path, $image_position, $image_heigth, $image_width, $sql, $caption_name, $caption_size, $col_widths, $orientation, $header, $title, $footer, $colors, $cs)
     {
         $pdf=new pz_pdf();
         $pdf->Open();

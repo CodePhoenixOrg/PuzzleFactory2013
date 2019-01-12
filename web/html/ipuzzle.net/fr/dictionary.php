@@ -80,8 +80,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select di_id, di_fr_short from dictionary order by di_id";
-		$dbgrid=create_pager_db_grid("dictionary", $sql, $id, "page.php", "&query=ACTION", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		//$dbgrid=table_shadow("dictionary", $dbgrid);
+		$dbgrid=createPagerDbGrid("dictionary", $sql, $id, "page.php", "&query=ACTION", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		//$dbgrid=tableShadow("dictionary", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 ?>

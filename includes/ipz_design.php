@@ -41,7 +41,7 @@ JAVASCRIPT;
         echo $js;
     }
 
-    public function create_panel($name, $caption, $content, $colors, $panel_width)
+    public function createPanel($name, $caption, $content, $colors, $panel_width)
     {
         if (!empty($colors)) {
             $border_color=$colors["border_color"];
@@ -81,7 +81,7 @@ JAVASCRIPT;
         return $panel;
     }
 
-    public function create_enhanced_panel($name, $caption, $content, $caption_style, $content_style, $border_width, $panel_height, $panel_width, $color)
+    public function createEnhancedPanel($name, $caption, $content, $caption_style, $content_style, $border_width, $panel_height, $panel_width, $color)
     {
         if (empty($colors)) {
             global $panel_colors;
@@ -128,7 +128,7 @@ JAVASCRIPT;
         return $panel;
     }
 
-    public function create_panel_with_image($name, $caption, $content, $colors, $panel_width, $image_file, $image_pos, $image_width)
+    public function createPanelWithImage($name, $caption, $content, $colors, $panel_width, $image_file, $image_pos, $image_width)
     {
         if (!isset($colors)) {
             global $panel_colors;
@@ -202,7 +202,7 @@ JAVASCRIPT;
     }
 
 
-    public function table_shadow($name="", $html_table="", $suffix="eeeeee")
+    public function tableShadow($name="", $html_table="", $suffix="eeeeee")
     {
         /*
             $name : nom du tableau
@@ -263,7 +263,7 @@ JAVASCRIPT;
         return $shadow;
     }
 
-    public function create_skin($name="", $table="", $skin_theme="")
+    public function createSkin($name="", $table="", $skin_theme="")
     {
         /*
             $name : nom du tableau
@@ -312,7 +312,7 @@ JAVASCRIPT;
     }
 
 
-    public function create_thumbnail($source, $destination, $new_width)
+    public function createThumbnail($source, $destination, $new_width)
     {
         $result=copy($source, $destination);
 

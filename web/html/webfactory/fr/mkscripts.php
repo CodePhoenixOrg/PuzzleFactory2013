@@ -40,7 +40,7 @@
 			$secondfield=$A_sqlFields[1];
 			
 			$catalog_pa_filename="$table.php";
-			$catalog=get_menu_id($userdb, $catalog_pa_filename);
+			$catalog=getMenuId($userdb, $catalog_pa_filename);
 		
 			//echo "catalog='$catalog'<br>";
 	
@@ -141,9 +141,9 @@
 
 		echo $sql;
 		
-		$dbgrid=create_pager_db_grid("menu", $sql, "editor", "page.php", "&me_id=#Menu&userdb=$database", "", false, true, $dialog, array(), 15, $grid_colors, $cs);
+		$dbgrid=createPagerDbGrid("menu", $sql, "editor", "page.php", "&me_id=#Menu&userdb=$database", "", false, true, $dialog, array(), 15, $grid_colors, $cs);
 		
-		$dbgrid=table_shadow("menu", $dbgrid);
+		$dbgrid=tableShadow("menu", $dbgrid);
 		
 		echo $dbgrid;
 		*/

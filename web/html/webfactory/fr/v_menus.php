@@ -96,8 +96,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select me_id, pa_id from v_menus order by me_id";
-		$dbgrid=create_pager_db_grid("v_menus", $sql, $id, "page.php", "&query=ACTION", "", "pa_id", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		$dbgrid=table_shadow("v_menus", $dbgrid);
+		$dbgrid=createPagerDbGrid("v_menus", $sql, $id, "page.php", "&query=ACTION", "", "pa_id", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		$dbgrid=tableShadow("v_menus", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 ?>

@@ -66,7 +66,7 @@
 		$indexfield = $A_sqlFields[0];
 		$secondfield = $A_sqlFields[1];
 		
-		list($me_id, $pa_id) = $menus->get_menu_and_page($userdb, $rel_page_filename);
+		list($me_id, $pa_id) = $menus->getMenuAndPage($userdb, $rel_page_filename);
 		
 		echo "Catalog file name: $rel_page_filename<br>";
 
@@ -98,43 +98,43 @@
 				"Voulez-vous écraser le script actuel sachant que toutes les modifications effectuées seront perdues ?</p>\n";
 		}
 		
-		$script = $scriptMaker->make_code($userdb, $usertable, $stmt, $pa_id, $indexfield, $secondfield, $A_fieldDefs, $cs, NO_FRAME);
+		$script = $scriptMaker->makeCode($userdb, $usertable, $stmt, $pa_id, $indexfield, $secondfield, $A_fieldDefs, $cs, NO_FRAME);
 		file_put_contents('tmp_code.php', $script);
 		
-		$script = $scriptMaker->make_page($userdb, $usertable, $pa_filename, $pa_id, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+		$script = $scriptMaker->makePage($userdb, $usertable, $pa_filename, $pa_id, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 		file_put_contents('tmp_page.php', $script);
 
-//		$script=make_single_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+//		$script=makeSingleScript($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 //
 //		$file=fopen('tmp_single.php', "w");
 //		fwrite($file, $script);
 //		fclose($file);
 //		
-//		$script=make_browse_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+//		$script=makeBrowseScript($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 //
 //		$file=fopen('tmp_browse.php', "w");
 //		fwrite($file, $script);
 //		fclose($file);
 //		
-//		$script=make_form_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+//		$script=makeFormScript($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 //
 //		$file=fopen('tmp_form.php', "w");
 //		fwrite($file, $script);
 //		fclose($file);
 //		
-//		$script=make_insert_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+//		$script=makeInsertScript($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 //
 //		$file=fopen('tmp_insert.php', "w");
 //		fwrite($file, $script);
 //		fclose($file);
 //		
-//		$script=make_update_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+//		$script=makeUpdateScript($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 //
 //		$file=fopen('tmp_update.php', "w");
 //		fwrite($file, $script);
 //		fclose($file);
 //		
-//		$script=make_delete_script($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
+//		$script=makeDeleteScript($userdb, $usertable, $pa_filename, $catalog, $indexfield, $secondfield, $A_sqlFields, $cs, NO_FRAME);
 //
 //		$file=fopen('tmp_delete.php', "w");
 //		fwrite($file, $script);
@@ -205,7 +205,7 @@
 //		echo "<input type='button' value='Voir' onClick='window.open(\"source.php?file=tmp_delete.php\")'>\n";
 //		echo "</td></tr>\n";
 		echo "</table>\n";
-		//$source=highlight_php($script, true);
+		//$source=highlightPhp($script, true);
 		//echo "<p><input type='button' value='Tester le script tout en un' onClick='window.open(\"/$userdb/page.php?id=$catalog&lg=fr\")'></p>\n";
 		
 		echo $message;
@@ -281,7 +281,7 @@
 
         } elseif ($save=="Non") {
 			$sstatus="Page non-enregistré";
-			$menus->delete_menu($userdb, $di_name);
+			$menus->deleteMenu($userdb, $di_name);
 
 			if(file_exists($root_code_filename)) {
 				unlink($root_code_filename);

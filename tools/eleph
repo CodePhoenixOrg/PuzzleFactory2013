@@ -20,27 +20,33 @@ then
 	rm $out_file;
 fi;
 
-for i in $(find . -type f -name "*.php");
+for i in $(find ../web/html/webfactory -type f -name "*.php");
 do
 
 	f=$(echo $i|rev|cut -f1 -d'/'|rev);
 
 	echo -e "reparing $i ... \c"; 
-	#sed -Ea 's/\<\?(.)/<?php \1/g' $i | \
-	#sed -Ea 's/(include|require)(_once)?\("(i)?pz_/\1\2("puzzle\/\3pz_/g'| \
-	#sed -Ea 's/php php/php /g' \
-	#sed -Ea 's/_([a-z])/\U\1/g' $i 1> $tmp_dir/$f 2>> /tmp/eleph_error.log ;
-	#cp $tmp_dir/$f $i;
+	# sed -Ea 's/\<\?(.)/<?php \1/g' $i | \
+	# sed -Ea 's/(include|require)(_once)?\("(i)?pz_/\1\2("puzzle\/\3pz_/g'| \
+	# sed -Ea 's/php php/php /g' \
 
-	php $dir/replace.php $i 1> $tmp_dir/$f 2>> /tmp/eleph_error.log;
-	cat $tmp_dir/$f >> $tmp_dir/$tmp_file;
+	# php $dir/replace.php $i 1> $tmp_dir/$f 2>> /tmp/eleph_error.log;
+	# cat $tmp_dir/$f >> $tmp_dir/$tmp_file;
+	# cd ../includes;
+
+	for j in $(cat $dir/replacements.txt);
+	do 
+		from=$(echo $j|cut -f1 -d'|');
+		to=$(echo $j|cut -f2 -d'|');
+		sed -Ea "s/$from/$to/g" $i 1> $tmp_dir/$f 2>> /tmp/eleph_error.log;
+		mv $tmp_dir/$f $i;
+	done;
 
 	echo -e "Done";
 
 done;
 # cat $tmp_dir/$tmp_file |sort -u|uniq > $out_file;
 
-mv $tmp_dir/$tmp_file $out_file;
 rm -rf $tmp_dir;
 
 exit 0;

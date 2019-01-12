@@ -39,7 +39,7 @@ define("SUB_MENU_VERTICAL", 1);
 class Menus extends Base
 {
 
-    public function get_admin_url($userdb)
+    public function getAdminUrl($userdb)
     {
         $adm_url="";
         $cs=connection(CONNECT, $userdb);
@@ -52,7 +52,7 @@ class Menus extends Base
         return $adm_url;
     }
         
-    public function show_menu($userdb)
+    public function showMenu($userdb)
     {
         $cs=connection(CONNECT, $userdb);
     
@@ -72,7 +72,7 @@ class Menus extends Base
     
         //tableau_sql("menu", $sql, 0, "edit.php", "", "&database=$database", "", "", "", $cs);
         //container("menu", 50, 250, 200, 355, 16);
-        $dbgrid=create_db_grid("menu", $sql, "editor", "page.php", "&me_id=#Menu&userdb=$database", false, $dialog, array(), $grid_colors, $cs);
+        $dbgrid=createDbGrid("menu", $sql, "editor", "page.php", "&me_id=#Menu&userdb=$database", false, $dialog, array(), $grid_colors, $cs);
         echo $dbgrid;
     }
 
@@ -96,7 +96,7 @@ class Menus extends Base
     }
     */
 
-    public function get_page_id($userdb, $pa_filename)
+    public function getPageId($userdb, $pa_filename)
     {
         $cs = connection(CONNECT, $userdb);
         $sql = "select pa_id from {$this->db_prefix}pages where pa_filename = '$pa_filename'";
@@ -110,7 +110,7 @@ class Menus extends Base
         return $pa_id;
     }
 
-    public function get_menu_id($database, $pa_filename)
+    public function getMenuId($database, $pa_filename)
     {
         $cs = connection(CONNECT, $database);
         $sql = "select m.me_id, p.pa_id from {$this->db_prefix}menus m left outer join {$this->db_prefix}pages p on m.pa_id = p.pa_id where p.pa_filename = '$pa_filename'";
@@ -122,7 +122,7 @@ class Menus extends Base
         return $me_id;
     }
 
-    public function get_menu_and_page($userdb, $pa_filename)
+    public function getMenuAndPage($userdb, $pa_filename)
     {
         $cs = connection(CONNECT, $userdb);
         $sql = "select m.me_id, p.pa_id from {$this->db_prefix}menus m left outer join {$this->db_prefix}pages p on m.pa_id = p.pa_id where p.pa_filename = '$pa_filename'";
@@ -135,7 +135,7 @@ class Menus extends Base
         return [$me_id, $pa_id];
     }
 
-    public function get_page_filename($database, $id=0)
+    public function getPageFilename($database, $id=0)
     {
         $sql=   "select p.pa_filename " .
                 "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
@@ -161,7 +161,7 @@ class Menus extends Base
         $di_en_short="",
         $di_en_long=""
     ) {
-        list($me_id, $pa_id) = $this->get_menu_and_page($userdb, $pa_filename);
+        list($me_id, $pa_id) = $this->getMenuAndPage($userdb, $pa_filename);
         if (!($me_id && $pa_id)) {
             $cs=connection(CONNECT, $userdb);
             $wwwroot=get_www_root();
@@ -203,7 +203,7 @@ INSERT;
         return [$me_id, $pa_id, $affected_rows];
     }
 
-    public function update_menu(
+    public function updateMenu(
         $userdb,
         $di_name,
         $me_level,
@@ -235,7 +235,7 @@ INSERT;
         return $affected_rows;
     }
 
-    public function delete_menu($userdb, $di_name)
+    public function deleteMenu($userdb, $di_name)
     {
         $cs=connection(CONNECT, $userdb);
 
@@ -255,7 +255,7 @@ INSERT;
         return $affected_rows;
     }
 
-    public function make_button_image($text="", $style="", $hl_color="")
+    public function makeButtonImage($text="", $style="", $hl_color="")
     {
         $images_dir=get_local_images_dir();
         $filename=$images_dir.$text."_".$style.".png";
@@ -330,11 +330,11 @@ INSERT;
         return $values;
     }
 
-    public function make_button_code($text="", $type="", $out_color="", $over_color="", $down_color="")
+    public function makeButtonCode($text="", $type="", $out_color="", $over_color="", $down_color="")
     {
-        $values=make_button_image($text, BUTTON_OUT, $out_color);
-        $values=make_button_image($text, BUTTON_OVER, $over_color);
-        $values=make_button_image($text, BUTTON_DOWN, $down_color);
+        $values=makeButtonImage($text, BUTTON_OUT, $out_color);
+        $values=makeButtonImage($text, BUTTON_OVER, $over_color);
+        $values=makeButtonImage($text, BUTTON_DOWN, $down_color);
         $images_dir=get_http_images_dir();
 
         if ($type==BUTTON_IMAGE || $type==BUTTON_IMAGE_RESET) {
@@ -358,7 +358,7 @@ INSERT;
         return $button;
     }
 
-    public function create_main_menu($database, $level=0)
+    public function createMainMenu($database, $level=0)
     {
         //${this->lg}=get_variable("lg");
     
@@ -400,7 +400,7 @@ INSERT;
         return array("index"=>$default_id, "menu"=>$main_menu);
     }
 
-    public function create_framed_main_menu($userdb, $color, $text_color, $over_color, $width, $height)
+    public function createFramedMainMenu($userdb, $color, $text_color, $over_color, $width, $height)
     {
         $main_menu="";
         $sql="";
@@ -432,7 +432,7 @@ INSERT;
         return $main_menu;
     }
 
-    public function create_sub_menu($database, $id=0, $orientation)
+    public function createSubMenu($database, $id=0, $orientation)
     {
         if ($orientation==SUB_MENU_HORIZONTAL) {
             $sub_menu="";
@@ -500,7 +500,7 @@ INSERT;
         return $sub_menu;
     }
 
-    public function create_menu_tree($database, $id=0, $lg="", $orientation)
+    public function createMenuTree($database, $id=0, $lg="", $orientation)
     {
         if ($orientation==SUB_MENU_HORIZONTAL) {
             $sub_menu="";
@@ -601,7 +601,7 @@ INSERT;
         return $sub_menu;
     }
 
-    public function retrieve_page_by_id($database, $id=0, $lg="")
+    public function retrievePageById($database, $id=0, $lg="")
     {
         $title="";
         $page="";
@@ -646,7 +646,7 @@ INSERT;
         return $title_page;
     }
 
-    public function retrieve_page_by_menu_id($database, $id=0, $lg="")
+    public function retrievePageByMenuId($database, $id=0, $lg="")
     {
         $title="";
         $page="";
@@ -690,7 +690,7 @@ INSERT;
         return $title_page;
     }
 
-    public function retrieve_page_by_dictionary_id($database, $di="", $lg="")
+    public function retrievePageByDictionaryId($database, $di="", $lg="")
     {
         $title="";
         $page="";

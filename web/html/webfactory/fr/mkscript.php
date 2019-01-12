@@ -42,7 +42,7 @@ function checkValues() {
 	
 	echo "<br>";
 		
-	$tab_ides = $scriptMaker->get_tab_ides();
+	$tab_ides = $scriptMaker->getTabIdes();
 	
 	if($basedir=="") $basedir= get_current_dir() . "/fr";
 
@@ -50,10 +50,10 @@ function checkValues() {
 	$on_change_table = "";
 	$srvdir = $controls->create_server_directory_selector("srvdir", "myForm", $basedir, $on_change);
 	$srvfiles = $controls->create_server_file_selector("srvfiles", "myForm", $basedir, "php", 5, "srvdir", $on_change);
-	$database_list = $datacontrols->create_options_from_query("show databases", 0, 0, array(), $userdb, false, $cs);
-	$table_list = $datacontrols->create_options_from_query("show tables from $userdb", 0, 0, array(), $usertable, false, $cs);
+	$database_list = $datacontrols->createOptionsFromQuery("show databases", 0, 0, array(), $userdb, false, $cs);
+	$table_list = $datacontrols->createOptionsFromQuery("show tables from $userdb", 0, 0, array(), $usertable, false, $cs);
 	$sql = 'select b.bl_id, d.di_fr_short from blocks b, dictionary d where b.di_name=d.di_name order by d.di_fr_short';
-	$block_list = $datacontrols->create_options_from_query($sql, 0, 1, array(), $bl_id, false, $cs);
+	$block_list = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $bl_id, false, $cs);
 	
 	//Options de menu
 	$rad_menu = ['', ''];

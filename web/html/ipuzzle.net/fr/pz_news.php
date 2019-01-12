@@ -3,8 +3,8 @@
 	include("pz_news_code.php");
 	if($query=="SELECT") {
 			$sql="select nw_id, nw_title from pz_news order by nw_id";
-			$dbgrid=create_pager_db_grid("pz_news", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("pz_news", $dbgrid);
+			$dbgrid=createPagerDbGrid("pz_news", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("pz_news", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>

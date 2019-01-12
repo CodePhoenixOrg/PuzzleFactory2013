@@ -40,7 +40,7 @@ function make_catalog(
 	$script.="\tif(empty(\$event)) \$event=\"onLoad\";\n";
 	$script.="\tif(empty(\$action)) \$action=\"Ajouter\";\n";
 	
-	$catalog_page=get_page_filename($database, $catalog);
+	$catalog_page=getPageFilename($database, $catalog);
 	$script.="?>\n";
 	/*
 	if($with_frames)
@@ -55,7 +55,7 @@ function make_catalog(
 	*/
 	$script.="\t\t\$sql=\"select $indexfield, $secondfield from $table;\";\n";
 	$script.="\t\t\$colors=array();\n";
-	$editor_page=get_page_filename($database, $editor);
+	$editor_page=getPageFilename($database, $editor);
 	/*
 	if($with_frames)
 		$script.="\t\ttableau_sql('$table', \$sql, $editor, '$editor_page', '/$database/img/Editer.png', '', '', '', \$colors, \$cs);\n";
@@ -180,7 +180,7 @@ function make_editor(
 	$script.="\t\techo \"<script language='JavaScript'>window.location.href='page.php?id=$catalog&lg=fr'</script>\";\n";
 	$script.="\t}\n";
 	$script.="?>\n";
-	$editor_page=get_page_filename($database, $editor);
+	$editor_page=getPageFilename($database, $editor);
 	if($with_frames)
 		$script.="<form method='POST' name='$formname' action='<?php echo \$lg?>/$editor_page?id=$editor&lg=fr'>\n";
 	else if(!$with_frames)

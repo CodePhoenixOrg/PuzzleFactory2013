@@ -41,7 +41,7 @@ class Blocks extends Base
 		$this->_design = new \Puzzle\Design();
 	}
 
-    public function create_block_set($userdb, $column, $id, $lg, $colors)
+    public function createBlockSet($userdb, $column, $id, $lg, $colors)
     {
         $cs=connection(CONNECT, $userdb);
     
@@ -51,13 +51,13 @@ class Blocks extends Base
         $stmt = $cs->query($sql);
         while ($rows=$stmt->fetch()) {
             $index=$rows[0];
-            $block_set.=create_block($userdb, $index, $id, $lg, $colors);
+            $block_set.=createBlock($userdb, $index, $id, $lg, $colors);
         }
     
         return $block_set;
     }
 
-    public function create_enhanced_block_set($userdb, $column, $id, $lg, $colors)
+    public function createEnhancedBlockSet($userdb, $column, $id, $lg, $colors)
     {
 
         $cs=connection(CONNECT, $userdb);
@@ -84,14 +84,14 @@ class Blocks extends Base
             //echo $js;
             if (($old_bl_type=="dynamic") && ($bl_type!=$old_bl_type)) {
                 $dyna_block_set.="</td></tr></table>\n";
-                $dyna_block_set = $this->_design->table_shadow($dbs_name, $dyna_block_set);
+                $dyna_block_set = $this->_design->tableShadow($dbs_name, $dyna_block_set);
                 $first_block=true;
                 $dbs_name="";
                 $block_set.=$dyna_block_set;
             }
         
             if ($bl_type=="static") {
-                $block_set .= $this->create_block($userdb, $index, $id, $lg, $colors);
+                $block_set .= $this->createBlock($userdb, $index, $id, $lg, $colors);
             } elseif ($bl_type=="dynamic") {
                 if ($first_block) {
                     $dyna_bset_counter++;
@@ -99,19 +99,19 @@ class Blocks extends Base
                     $dyna_block_set="<table id=\"$dbs_name\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" width=\"100\" bordercolor=\"$border_color\"><tr><td>\n";
                     $first_block=false;
                 }
-                $dyna_block_set .= $this->create_collapseable_block($dbs_name, $index, $colors);
+                $dyna_block_set .= $this->createCollapseableBlock($dbs_name, $index, $colors);
             } elseif ($bl_type=="members") {
                 $logout=get_variable("logout");
                 //$panel_colors=get_variable("panel_colors");
-                $block_set .= $this->create_members_block($userdb, $logout, "members", $id, $lg, $panel_colors);
+                $block_set .= $this->createMembersBlock($userdb, $logout, "members", $id, $lg, $panel_colors);
             } elseif ($bl_type=="newsletter") {
                 //$panel_colors=get_variable("panel_colors");
                 global $panel_colors;
-                $block_set .= $this->create_newsletter_block($userdb, "newsltr", $id, $lg, $panel_colors);
+                $block_set .= $this->createNewsletterBlock($userdb, "newsltr", $id, $lg, $panel_colors);
             } elseif ($bl_type=="diary") {
                 global $diary_colors;
                 $date=get_variable("date");
-                //$block_set.=create_diary_block($date, $id, $lg, $diary_colors);
+                //$block_set.=createDiaryBlock($date, $id, $lg, $diary_colors);
             }
         
             $old_bl_type=$bl_type;
@@ -121,7 +121,7 @@ class Blocks extends Base
         //echo $js;
         if ($old_bl_type=="dynamic") {
             $dyna_block_set.="</td></tr></table>\n";
-            $dyna_block_set = $this->_design->table_shadow($dbs_name, $dyna_block_set);
+            $dyna_block_set = $this->_design->tableShadow($dbs_name, $dyna_block_set);
             $first_block=true;
             $dbs_name="";
             $block_set.=$dyna_block_set;
@@ -132,7 +132,7 @@ class Blocks extends Base
     }
 
 
-    public function create_block($userdb, $block_num, $id, $lg, $colors)
+    public function createBlock($userdb, $block_num, $id, $lg, $colors)
     {
     
         if (empty($colors)) {
@@ -217,12 +217,12 @@ class Blocks extends Base
         "</table>\n".
         "</td></tr></table>\n";
 
-        $block = $this->_design->table_shadow($table_name, $block);
+        $block = $this->_design->tableShadow($table_name, $block);
 
         return $block;
     }
 
-    public function create_collapseable_block($block_skin_name, $block_num, $colors)
+    public function createCollapseableBlock($block_skin_name, $block_num, $colors)
     {
         global $db_prefix;
 
@@ -308,7 +308,7 @@ class Blocks extends Base
         return $block;
     }
 
-    public function create_members_block($userdb, $logout, $di_id, $id, $lg, $colors)
+    public function createMembersBlock($userdb, $logout, $di_id, $id, $lg, $colors)
     {
         global $PHP_SELF;
 
@@ -399,12 +399,12 @@ class Blocks extends Base
         "</table>\n".
         "</td></tr></table>\n";
 
-        $block = $this->_design->table_shadow($table_name, $block);
+        $block = $this->_design->tableShadow($table_name, $block);
     
         return $block;
     }
 
-    public function get_authentication($login)
+    public function getAuthentication($login)
     {
         global $db_prefix;
 
@@ -466,7 +466,7 @@ class Blocks extends Base
     }
 
 
-    public function perform_members_ident($login, $pass, $submit)
+    public function performMembersIdent($login, $pass, $submit)
     {
         global $userdb, $db_prefix;
     
@@ -532,7 +532,7 @@ class Blocks extends Base
         return $js;
     }
 
-    public function create_newsletter_block($userdb, $di_id, $id, $lg, $colors)
+    public function createNewsletterBlock($userdb, $di_id, $id, $lg, $colors)
     {
         global $PHP_SELF, $db_prefix;
     
@@ -590,12 +590,12 @@ class Blocks extends Base
         "</table>\n".
         "</td></tr></table>\n";
         
-        $block = $this->_design->table_shadow($table_name, $block);
+        $block = $this->_design->tableShadow($table_name, $block);
     
         return $block;
     }
 
-    public function perform_newsletter_subscription($email, $radios, $submit)
+    public function performNewsletterSubscription($email, $radios, $submit)
     {
         global $db_prefix;
     
@@ -663,7 +663,7 @@ class Blocks extends Base
     }
 
     /* OBSOLETE Calendar block, no more supported
-    function create_calendar_block($date, $id, $lg, $colors) {
+    function create_calendarBlock($date, $id, $lg, $colors) {
         if(empty($colors)) {
             global $panel_colors;
             $color=$panel_colors;
@@ -694,13 +694,13 @@ class Blocks extends Base
             "</table>\n".
             "</td></tr></table>\n";
     
-        $block = $this->_design->table_shadow($table_name, $block);
+        $block = $this->_design->tableShadow($table_name, $block);
     
         return $block;
     }
     */
 
-    public function create_diary_block($date, $id, $lg, $colors)
+    public function createDiaryBlock($date, $id, $lg, $colors)
     {
         global $diary_colors;
         /*
@@ -735,7 +735,7 @@ class Blocks extends Base
         "</tr>\n".
         "</table>\n";
 
-        $block = $this->_design->table_shadow($table_name, $block);
+        $block = $this->_design->tableShadow($table_name, $block);
     
         return $block;
     }

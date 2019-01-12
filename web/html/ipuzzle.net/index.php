@@ -19,7 +19,7 @@
 	// $cs=connection(CONNECT, "webfactory");
 	//if(empty($lg)) $lg="fr";
 	$menus = new \Puzzle\Menus($lg, $db_prefix);
-	$index = $menus->get_page_id($database, "news.php");
+	$index = $menus->getPageId($database, "news.php");
 
 	$version = file_get_contents("VERSION");
 

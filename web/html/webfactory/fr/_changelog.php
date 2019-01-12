@@ -93,8 +93,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select cl_id, concat('<b>', cl_title, '</b><br>', cl_text, '<br>') as changements, cl_date as Date from changelog order by cl_date desc, cl_time desc";
-		$dbgrid=create_pager_db_grid("changelog", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		//$dbgrid=table_shadow("changelog", $dbgrid);
+		$dbgrid=createPagerDbGrid("changelog", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		//$dbgrid=tableShadow("changelog", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 ?>
@@ -119,11 +119,11 @@ if($query=="SELECT") {
 </td></tr>
 <tr><td>Forum</td>
 <td><select name='fr_id'>
-<?php   $sql='select fr_id, fr_title from forums order by fr_title';$options=create_options_from_query($sql, 0, 1, array(), $fr_id, false, $cs);
+<?php   $sql='select fr_id, fr_title from forums order by fr_title';$options=createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
 echo $options["list"];?></select></td></tr>
 <tr><td>Rapporté par</td>
 <td><select name='mbr_id'>
-<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';$options=create_options_from_query($sql, 0, 1, array(), $mbr_id, false, $cs);
+<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';$options=createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 echo $options["list"];?></select></td></tr>
 
 <tr><td align='center' colspan='2'>

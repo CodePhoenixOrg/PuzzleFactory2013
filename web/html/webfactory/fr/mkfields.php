@@ -73,7 +73,7 @@
 	foreach($field_defs as $def) {
 		$defs=explode(",", $def);
 		$mk_fields.="<tr>\n";
-		$options = $datacontrols->create_options_from_array($list, ",", 0, 0, array(), $defs[3], false);
+		$options = $datacontrols->createOptionsFromArray($list, ",", 0, 0, array(), $defs[3], false);
 		$mk_fields.="<td><input type='text' size='25' value=\"$defs[0]\"></td>\n";
 		$mk_fields.="<td><input type='text' readonly size='10' value=\"$defs[1]\"></td>\n";
 		$mk_fields.="<td><input type='text' readonly size='10' value=\"$defs[2]\"></td>\n";

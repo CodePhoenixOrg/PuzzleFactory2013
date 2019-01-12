@@ -88,8 +88,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select br_id, concat('<b>', br_title, '</b><br>', br_text, '<br>') as `bugs trouvés`, br_importance as 'importance', br_status as 'etat' from bugreport order by br_status, br_importance desc";
-		$dbgrid=create_pager_db_grid("bugreport", $sql, $id, "page.php", "&query=ACTION", "", false, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		//$dbgrid=table_shadow("bugreport", $dbgrid);
+		$dbgrid=createPagerDbGrid("bugreport", $sql, $id, "page.php", "&query=ACTION", "", false, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		//$dbgrid=tableShadow("bugreport", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 	$importance=array(1,2,3);

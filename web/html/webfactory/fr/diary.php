@@ -91,8 +91,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select dy_id, dy_date from diary order by dy_id";
-		$dbgrid=create_pager_db_grid("diary", $sql, $id, "page.php", "&query=ACTION", "", "dy_date", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		$dbgrid=table_shadow("diary", $dbgrid);
+		$dbgrid=createPagerDbGrid("diary", $sql, $id, "page.php", "&query=ACTION", "", "dy_date", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		$dbgrid=tableShadow("diary", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 ?>

@@ -3,8 +3,8 @@
 	include_once 'dictionary_code.php';
 	if($query=="SELECT") {
 			$sql="select di_name, di_fr_short from dictionary order by di_name";
-			$dbgrid=create_pager_db_grid("dictionary", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("dictionary", $dbgrid);
+			$dbgrid=createPagerDbGrid("dictionary", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("dictionary", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>

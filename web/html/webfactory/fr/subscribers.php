@@ -3,8 +3,8 @@
 	include_once 'subscribers_code.php';
 	if($query=="SELECT") {
 			$sql="select sub_id, sub_email from subscribers order by sub_id";
-			$dbgrid=create_pager_db_grid("subscribers", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("subscribers", $dbgrid);
+			$dbgrid=createPagerDbGrid("subscribers", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("subscribers", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>

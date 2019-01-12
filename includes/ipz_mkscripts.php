@@ -32,7 +32,7 @@ class ScriptsMaker extends \Puzzle\Base
     {
     }
 
-    public function make_code(
+    public function makeCode(
         $database,
         $table="",
         $stmt,
@@ -184,7 +184,7 @@ class ScriptsMaker extends \Puzzle\Base
         return $script;
     }
 
-    public function make_page(
+    public function makePage(
         $database,
         $table="",
         $pa_filename="",
@@ -214,12 +214,12 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="\tif(isset(\$sr)) \$curl_pager.=\"&sr=\$sr\";\n";
         $script.="\tif(\$query==\"SELECT\") {\n";
         $script.="\t\t\t\$sql=\"select $indexfield, $secondfield from $table order by $indexfield\";\n";
-        $script.="\t\t\t\$dbgrid=\$datacontrols->create_pager_db_grid(\"$table\", \$sql, \$id, \"page.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
-        $script.="\t\t\t//\$dbgrid=table_shadow(\"$table\", \$dbgrid);\n";
+        $script.="\t\t\t\$dbgrid=\$datacontrols->createPagerDbGrid(\"$table\", \$sql, \$id, \"page.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
+        $script.="\t\t\t//\$dbgrid=tableShadow(\"$table\", \$dbgrid);\n";
         $script.="\t\t\techo \"<br>\".\$dbgrid;\n";
         $script.="\t} elseif(\$query==\"ACTION\") {\n";
         $script.="?>\n";
-        //$page_filename=get_page_filename($database, $page_id);
+        //$page_filename=getPageFilename($database, $page_id);
         $page_filename="page.php";
         if ($with_frames) {
             $script.="<form method='POST' name='$formname' action='<?php echo \$lg?>/$page_filename?id=$page_id&lg=fr'>\n";
@@ -266,7 +266,7 @@ class ScriptsMaker extends \Puzzle\Base
         return $script;
     }
 
-    public function make_single_script(
+    public function makeSingleScript(
         $database,
         $table="",
         $pa_filename="",
@@ -384,13 +384,13 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="if(\$query==\"SELECT\") {\n";
         $script.="\t\t\$sql=\"select $indexfield, $secondfield from $table order by $indexfield\";\n";
 
-        $script.="\t\t\$dbgrid=\$datacontrols->create_pager_db_grid(\"$table\", \$sql, \$id, \"page.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
+        $script.="\t\t\$dbgrid=\$datacontrols->createPagerDbGrid(\"$table\", \$sql, \$id, \"page.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
   
-        $script.="\t\t//\$dbgrid=table_shadow(\"$table\", \$dbgrid);\n";
+        $script.="\t\t//\$dbgrid=tableShadow(\"$table\", \$dbgrid);\n";
         $script.="\t\techo \"<br>\".\$dbgrid;\n";
         $script.="} elseif(\$query==\"ACTION\") {\n";
         $script.="?>\n";
-        //$page_filename=get_page_filename($database, $page_id);
+        //$page_filename=getPageFilename($database, $page_id);
         $page_filename="page.php";
         if ($with_frames) {
             $script.="<form method='POST' name='$formname' action='<?php echo \$lg?>/$page_filename?id=$page_id&lg=fr'>\n";
@@ -437,7 +437,7 @@ class ScriptsMaker extends \Puzzle\Base
         return $script;
     }
 
-    public function script_header($database)
+    public function scriptHeader($database)
     {
         $script="";
         $script.="<?php   \n";
@@ -458,7 +458,7 @@ class ScriptsMaker extends \Puzzle\Base
         return $script;
     }
 
-    public function script_footer()
+    public function scriptFooter()
     {
         $script="";
         $script.="<script language=\"JavaScript\">\n";
@@ -471,7 +471,7 @@ class ScriptsMaker extends \Puzzle\Base
         return $script;
     }
 
-    public function script_browse(
+    public function scriptBrowse(
         $database,
         $table="",
         $pa_filename="",
@@ -491,16 +491,16 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="\tif(isset(\$sr)) \$curl_pager.=\"&sr=\$sr\";\n";
         $script.="\t\$sql=\"select $indexfield, $secondfield from $table order by $indexfield\";\n";
 
-        $script.="\t\$dbgrid=\$datacontrols->create_pager_db_grid(\"$table\", \$sql, \$id, \"".$pa_filename."_browse.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
+        $script.="\t\$dbgrid=\$datacontrols->createPagerDbGrid(\"$table\", \$sql, \$id, \"".$pa_filename."_browse.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
   
-        $script.="\t//\$dbgrid=table_shadow(\"$table\", \$dbgrid);\n";
+        $script.="\t//\$dbgrid=tableShadow(\"$table\", \$dbgrid);\n";
         $script.="\techo \"<br>\".\$dbgrid;\n";
         $script.="?>\n";
     
         return $script;
     }
 
-    public function script_form(
+    public function scriptForm(
         $database,
         $table="",
         $pa_filename="",
@@ -520,7 +520,7 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="\tif(isset(\$pc)) \$curl_pager=\"&pc=\$pc\";\n";
         $script.="\tif(isset(\$sr)) \$curl_pager.=\"&sr=\$sr\";\n";
         $script.="?>\n";
-        //$page_filename=get_page_filename($database, $page_id);
+        //$page_filename=getPageFilename($database, $page_id);
         $page_filename=$pa_filename;
         //if($with_frames)
         $script.="\t<form method='POST' name='$formname' action='<?php echo \$lg?>/$page_filename?id=$page_id&lg=fr'>\n";
@@ -554,7 +554,7 @@ class ScriptsMaker extends \Puzzle\Base
         return $script;
     }
 
-    public function make_browse_script(
+    public function makeBrowseScript(
         $database,
         $table="",
         $pa_filename="",
@@ -569,16 +569,16 @@ class ScriptsMaker extends \Puzzle\Base
     
         //$script.="<script language=\"JavaScript\" src=\"js/pz_form_events.js\"></script>\n";
         $script="";
-        $script.=script_header($database);
+        $script.=scriptHeader($database);
         $script.="<center>\n";
-        $script.=script_browse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
+        $script.=scriptBrowse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
         $script.="</center>\n";
-        $script.=script_footer();
+        $script.=scriptFooter();
 
         return $script;
     }
 
-    public function make_form_script(
+    public function makeFormScript(
         $database,
         $table="",
         $pa_filename="",
@@ -596,16 +596,16 @@ class ScriptsMaker extends \Puzzle\Base
     
         //$script.="<script language=\"JavaScript\" src=\"js/pz_form_events.js\"></script>\n";
         $script="";
-        $script.=script_header($database);
+        $script.=scriptHeader($database);
         $script.="<center>\n";
-        $script.=script_form($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
+        $script.=scriptForm($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
         $script.="</center>\n";
-        $script.=script_footer();
+        $script.=scriptFooter();
 
         return $script;
     }
 
-    public function make_insert_script(
+    public function makeInsertScript(
         $database,
         $table="",
         $pa_filename="",
@@ -620,7 +620,7 @@ class ScriptsMaker extends \Puzzle\Base
         $formname=$table."Form";
     
         $script="";
-        $script.=script_header($database);
+        $script.=scriptHeader($database);
         $script.="<?php   \n";
         $script.="\t\$cs=connection(CONNECT,\$database);\n";
         $script.="\tif(empty(\$event)) \$event=\"onLoad\";\n";
@@ -661,13 +661,13 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="\t\tinclude('".$pa_filename."_browse".$extension."')\n";
         $script.="\t}\n";
         $script.="?>\n";
-        $script.=script_browse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
-        $script.=script_footer();
+        $script.=scriptBrowse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
+        $script.=scriptFooter();
 
         return $script;
     }
 
-    public function make_update_script(
+    public function makeUpdateScript(
         $database,
         $table="",
         $pa_filename="",
@@ -682,7 +682,7 @@ class ScriptsMaker extends \Puzzle\Base
         $formname=$table."Form";
     
         $script="";
-        $script.=script_header($database);
+        $script.=scriptHeader($database);
         $script.="<?php   \n";
         $script.="\t\$cs=connection(CONNECT,\$database);\n";
         $script.="\tif(empty(\$event)) \$event=\"onLoad\";\n";
@@ -712,13 +712,13 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="\t\tinclude('".$pa_filename."_browse".$extension."')\n";
         $script.="\t}\n";
         $script.="?>\n";
-        $script.=script_browse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
-        $script.=script_footer();
+        $script.=scriptBrowse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
+        $script.=scriptFooter();
 
         return $script;
     }
 
-    public function make_delete_script(
+    public function makeDeleteScript(
         $database,
         $table="",
         $pa_filename="",
@@ -733,7 +733,7 @@ class ScriptsMaker extends \Puzzle\Base
         $formname=$table."Form";
     
         $script="";
-        $script.=script_header($database);
+        $script.=scriptHeader($database);
         $script.="<?php   \n";
         $script.="\t\$cs=connection(CONNECT,\$database);\n";
         $script.="\tif(empty(\$event)) \$event=\"onLoad\";\n";
@@ -743,13 +743,13 @@ class ScriptsMaker extends \Puzzle\Base
         $script.="\t\tinclude('".$pa_filename."_browse".$extension."')\n";
         $script.="\t}\n";
         $script.="?>\n";
-        $script.=script_browse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
-        $script.=script_footer();
+        $script.=scriptBrowse($database, $table, $pa_filename, $page_id, $indexfield, $secondfield, $A_sqlFields, $cs, $with_frames);
+        $script.=scriptFooter();
 
         return $script;
     }
 
-    public function get_tab_ides()
+    public function getTabIdes()
     {
         global $database;
     

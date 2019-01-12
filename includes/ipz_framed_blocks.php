@@ -51,7 +51,7 @@ function create_enhanced_framed_block_set($database, $column, $target, $id, $lg,
 		//echo $js;
 		if(($old_bl_type=="dynamic") && ($bl_type!=$old_bl_type)) {
 			$dyna_block_set.="</td></tr></table>\n";
-			$dyna_block_set=table_shadow($dbs_name, $dyna_block_set);
+			$dyna_block_set=tableShadow($dbs_name, $dyna_block_set);
 			$first_block=true;
 			$dbs_name="";
 			$block_set.=$dyna_block_set;
@@ -89,7 +89,7 @@ function create_enhanced_framed_block_set($database, $column, $target, $id, $lg,
 	//echo $js;
 	if($old_bl_type=="dynamic") {
 		$dyna_block_set.="</td></tr></table>\n";
-		$dyna_block_set=table_shadow($dbs_name, $dyna_block_set);
+		$dyna_block_set=tableShadow($dbs_name, $dyna_block_set);
 		$first_block=true;
 		$dbs_name="";
 		$block_set.=$dyna_block_set;
@@ -182,7 +182,7 @@ function create_framed_block($database, $block_num, $target, $id, $lg, $colors) 
 		"</table>\n".
 		"</td></tr></table>\n";
 
-	$block=table_shadow($table_name, $block);
+	$block=tableShadow($table_name, $block);
 
 	return $block;
 }
@@ -306,7 +306,7 @@ function create_framed_diary_block($date, $id, $lg, $target, $colors) {
 		"</tr>\n".
 		"</table>\n";
 
-	$block=table_shadow($table_name, $block);
+	$block=tableShadow($table_name, $block);
 	
 	return $block;
 }
@@ -397,7 +397,7 @@ function create_framed_members_block($database, $logout, $di_name, $id, $lg, $ta
 		"</table>\n".
 		"</td></tr></table>\n";
 
-	$block=table_shadow($table_name, $block);
+	$block=tableShadow($table_name, $block);
 	
 	return $block;
 }
@@ -459,7 +459,7 @@ function create_framed_newsletter_block($database, $di_name, $id, $lg, $target, 
 		"</table>\n".
 		"</td></tr></table>\n";
 		
-	$block=table_shadow($table_name, $block);
+	$block=tableShadow($table_name, $block);
 	
 	return $block;
 }

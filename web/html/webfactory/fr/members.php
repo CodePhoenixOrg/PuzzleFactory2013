@@ -91,8 +91,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select mbr_id, mbr_nom from members order by mbr_id";
-		$dbgrid=create_pager_db_grid("members", $sql, $id, "page.php", "&query=ACTION", "", "mbr_nom", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		$dbgrid=table_shadow("members", $dbgrid);
+		$dbgrid=createPagerDbGrid("members", $sql, $id, "page.php", "&query=ACTION", "", "mbr_nom", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		$dbgrid=tableShadow("members", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 ?>

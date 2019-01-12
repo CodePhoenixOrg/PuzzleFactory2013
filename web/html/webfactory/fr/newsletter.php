@@ -101,8 +101,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select nl_id, nl_title from newsletter order by nl_id";
-		$dbgrid=create_pager_db_grid("newsletter", $sql, $id, "page.php", "&query=ACTION", "", "nl_title", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-		$dbgrid=table_shadow("newsletter", $dbgrid);
+		$dbgrid=createPagerDbGrid("newsletter", $sql, $id, "page.php", "&query=ACTION", "", "nl_title", true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		$dbgrid=tableShadow("newsletter", $dbgrid);
 		echo "<br>".$dbgrid;
 } elseif($query=="ACTION") {
 ?>

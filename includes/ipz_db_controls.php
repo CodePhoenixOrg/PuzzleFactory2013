@@ -30,7 +30,7 @@ include_once("ipz_controls.php");
 //$hostname=get_http_root()."/";
 class Controls extends \Puzzle\Base
 {
-    public function get_js_array_from_query($name, $sql, $cs)
+    public function getJsArrayFromQuery($name, $sql, $cs)
     {
         $js_array="<script language='JavaScript'>\n";
 
@@ -49,7 +49,7 @@ class Controls extends \Puzzle\Base
         return $js_array;
     }
 
-    public function get_fields_from_select_clause($sql)
+    public function getFieldsFromSelectClause($sql)
     {
         $select="select";
         $from="from";
@@ -74,7 +74,7 @@ class Controls extends \Puzzle\Base
         return $result;
     }
 
-    public function insert_test($sql, $left, $right, $operator, $right_is_quoted)
+    public function insertTest($sql, $left, $right, $operator, $right_is_quoted)
     {
         $where="where";
         $having="having";
@@ -160,7 +160,7 @@ class Controls extends \Puzzle\Base
         return $sql;
     }
 
-    public function insert_like_clause($sql, $filter, $criterion)
+    public function insertLikeClause($sql, $filter, $criterion)
     {
         $where="where";
         $having="having";
@@ -238,7 +238,7 @@ class Controls extends \Puzzle\Base
         return $sql;
     }
 
-    public function get_recordset($sql, $cs)
+    public function getRecordset($sql, $cs)
     {
         $recordset=(array) null;
         $names=(array) null;
@@ -263,7 +263,7 @@ class Controls extends \Puzzle\Base
         return $recordset=array("names"=>$names, "values"=>$values, "types"=>$types);
     }
 
-    public function create_pager_control($userdb="", $page_link="", $sql_query="", $id="", $lg="", $caption, $sr=0, $step=5, $pc=0, $comp_url)
+    public function createPagerControl($userdb="", $page_link="", $sql_query="", $id="", $lg="", $caption, $sr=0, $step=5, $pc=0, $comp_url)
     {
         /*
             Desciption des parametres :
@@ -384,7 +384,7 @@ class Controls extends \Puzzle\Base
         return $pager;
     }
 
-    public function create_enhanced_pager_control($page_link="", $sql_query="", $id="", $lg="", $caption, $sr=0, $step=5, $pc=0, $comp_url, $cs)
+    public function createEnhancedPagerControl($page_link="", $sql_query="", $id="", $lg="", $caption, $sr=0, $step=5, $pc=0, $comp_url, $cs)
     {
         /*
             Desciption des parametres :
@@ -506,7 +506,7 @@ class Controls extends \Puzzle\Base
         return $pager;
     }
 
-    public function create_pager_db_grid($name="", $sql="", $rows_id=0, $page_link="", $curl_rows="", $curl_pager, $can_filter, $can_add, $dialog, $col_widths, $step, $colors, $cs)
+    public function createPagerDbGrid($name="", $sql="", $rows_id=0, $page_link="", $curl_rows="", $curl_pager, $can_filter, $can_add, $dialog, $col_widths, $step, $colors, $cs)
     {
         /*
             Desciption des paramètres :
@@ -662,11 +662,11 @@ class Controls extends \Puzzle\Base
 
     
         if (is_array($criterions) && $can_filter) {
-            $fields=get_fields_from_select_clause($sql);
+            $fields=getFieldsFromSelectClause($sql);
             array_unshift($criterions, "dummy");
             $s=sizeof($fields);
             for ($i=1; $i<$s; $i++) {
-                $sql=insert_like_clause($sql, $fields[$i], $criterions[$i]);
+                $sql=insertLikeClause($sql, $fields[$i], $criterions[$i]);
             }
         }
     
@@ -696,7 +696,7 @@ class Controls extends \Puzzle\Base
             $pc=0;
         }
     
-        $pager_ctrl = $this->create_enhanced_pager_control($pager_link, $sql, $pager_id, $lg, $caption, $sr, $step, $pc, $curl_pager, $cs);
+        $pager_ctrl = $this->createEnhancedPagerControl($pager_link, $sql, $pager_id, $lg, $caption, $sr, $step, $pc, $curl_pager, $cs);
         $sql=$pager_ctrl["sql_query"];
         $pager=$pager_ctrl["pager_ctrl"];
 
@@ -1006,7 +1006,7 @@ class Controls extends \Puzzle\Base
         return $table;
     }
 
-    public function create_image_db_grid($name="", $sql="", $rows_id=0, $page_link="", $curl_rows="", $curl_pager, $can_filter, $can_add, $dialog, $col_widths, $step, $colors, $cs)
+    public function createImageDbGrid($name="", $sql="", $rows_id=0, $page_link="", $curl_rows="", $curl_pager, $can_filter, $can_add, $dialog, $col_widths, $step, $colors, $cs)
     {
         /*
             Desciption des paramètres :
@@ -1144,16 +1144,16 @@ class Controls extends \Puzzle\Base
         }
 
         if (is_array($criterions) && $can_filter) {
-            $fields=get_fields_from_select_clause($sql);
+            $fields=getFieldsFromSelectClause($sql);
             array_unshift($criterions, "dummy");
             $s=sizeof($fields);
             for ($i=1; $i<$s; $i++) {
-                $sql=insert_like_clause($sql, $fields[$i], $criterions[$i]);
+                $sql=insertLikeClause($sql, $fields[$i], $criterions[$i]);
             }
         }
     
         $pager_id=get_variable("id");
-        $pager_ctrl=create_pager_control($userdb, $page_link, $sql, $pager_id, $lg, $caption, $sr, $step, $pc, $curl_pager);
+        $pager_ctrl=createPagerControl($userdb, $page_link, $sql, $pager_id, $lg, $caption, $sr, $step, $pc, $curl_pager);
         $sql=$pager_ctrl["sql_query"];
         $pager=$pager_ctrl["pager_ctrl"];
 
@@ -1479,7 +1479,7 @@ class Controls extends \Puzzle\Base
         return $table;
     }
 
-    public function create_db_grid($name="", $sql="", $rows_id=0, $page_link="", $curl_rows="", $can_add, $dialog, $col_widths, $colors, $cs)
+    public function createDbGrid($name="", $sql="", $rows_id=0, $page_link="", $curl_rows="", $can_add, $dialog, $col_widths, $colors, $cs)
     {
         /*
             Desciption des paramètres :
@@ -1803,7 +1803,7 @@ class Controls extends \Puzzle\Base
         return $table;
     }
 
-    public function create_options_from_table($index_field="", $option_field="", $table="", $like="", $orderby="", $default="", $only_default=false, $cs)
+    public function createOptionsFromTable($index_field="", $option_field="", $table="", $like="", $orderby="", $default="", $only_default=false, $cs)
     {
         $list="";
         $default=trim($default);
@@ -1855,7 +1855,7 @@ class Controls extends \Puzzle\Base
         return $list;
     }
 
-    public function create_options_from_query($sql="", $value_col=0, $option_col=0, $selected=array(), $default="", $only_default=false, $cs)
+    public function createOptionsFromQuery($sql="", $value_col=0, $option_col=0, $selected=array(), $default="", $only_default=false, $cs)
     {
         global $PZ_ZERO_SELECT;
         if (empty($PZ_ZERO_SELECT)) {
@@ -1896,9 +1896,9 @@ class Controls extends \Puzzle\Base
                 }
             }
         } elseif ($only_default && $default!="") {
-            $fields=get_fields_from_select_clause($sql);
+            $fields=getFieldsFromSelectClause($sql);
             $value_field=$fields[$value_col];
-            $sql=insert_test($sql, $value_field, $default, "=", true);
+            $sql=insertTest($sql, $value_field, $default, "=", true);
         
             $stmt = $cs->query($sql);
             while ($rows=$stmt->fetch()) {
@@ -1914,7 +1914,7 @@ class Controls extends \Puzzle\Base
         return array("list"=>$list, "selected"=>$options, "sql"=>$sql);
     }
 
-    public function create_options_from_array($records, $separator="", $value_col=0, $option_col=0, $selected=array(), $default="", $only_default=false)
+    public function createOptionsFromArray($records, $separator="", $value_col=0, $option_col=0, $selected=array(), $default="", $only_default=false)
     {
         global $PZ_ZERO_SELECT;
     
@@ -1976,9 +1976,9 @@ class Controls extends \Puzzle\Base
             }
         }
         /*elseif ($only_default && $default!="") {
-            $fields=get_fields_from_select_clause($sql);
+            $fields=getFieldsFromSelectClause($sql);
             $value_field=$fields[$value_col];
-            $sql=insert_test($sql, $value_field, $default, "=", true);
+            $sql=insertTest($sql, $value_field, $default, "=", true);
 
             foreach($records as $rows) {
                 $value=$rows[$value_col];

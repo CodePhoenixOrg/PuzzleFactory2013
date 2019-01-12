@@ -38,18 +38,18 @@
 
 	$menus = new \Puzzle\Menus($lg, $db_prefix);
 	
-	$main_menu = $menus->create_main_menu($database, 1);
-	$sub_menu = $menus->create_sub_menu($database, 1, SUB_MENU_HORIZONTAL);
+	$main_menu = $menus->createMainMenu($database, 1);
+	$sub_menu = $menus->createSubMenu($database, 1, SUB_MENU_HORIZONTAL);
 
 	$toplinks=$main_menu["menu"];
 	$default_id=$main_menu["index"];
 
 	if($di !== '') {
-		$title_page = $menus->retrieve_page_by_dictionary_id($database, $di, $lg);
+		$title_page = $menus->retrievePageByDictionaryId($database, $di, $lg);
 		$id=$title_page["index"];
 	} else {
-		// $title_page = retrieve_page_by_menu_id($database, $id, $lg);
-		$title_page = $menus->retrieve_page_by_id($database, $id, $lg);
+		// $title_page = retrievePageByMenuId($database, $id, $lg);
+		$title_page = $menus->retrievePageById($database, $id, $lg);
 		$di=$title_page["index"];
 	}
 	
@@ -80,7 +80,7 @@
 ?>
 <body bgcolor="<?php echo $back_color?>" text="<?php echo $text_color?>" link="<?php echo $link_color?>" vlink="<?php echo $vlink_color?>" alink="<?php echo $alink_color?>" leftmargin="0" topmargin="0">
 <center>
-  <table id="my_table_shadow" border="0" cellspacing="0" cellpadding="0">
+  <table id="my_tableShadow" border="0" cellspacing="0" cellpadding="0">
     <tr><td bgcolor="white" height="3" colspan="2"></td></tr>
     <tr>
       <td rowspan="2" colspan="2">
@@ -121,7 +121,7 @@
 			if(!isset($mbr_valider)) $mbr_valider="";
 			
 			$blocks = new \Puzzle\Blocks($lg, $db_prefix);
-			$block_set= $blocks->create_enhanced_block_set($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
+			$block_set= $blocks->createEnhancedBlockSet($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
 			echo $block_set."\n\n";
 		?>
 	
@@ -143,7 +143,7 @@
 			if(!isset($nlr_valider)) $nlr_valider="";
 			if(!isset($date)) $date="";
 			
-			$block_set = $blocks->create_enhanced_block_set($database, BLOCK_RIGHT_COLUMN, $id, $lg, $panel_colors);
+			$block_set = $blocks->createEnhancedBlockSet($database, BLOCK_RIGHT_COLUMN, $id, $lg, $panel_colors);
 			echo $block_set."\n\n";
 		?>
 	
@@ -167,11 +167,11 @@
 </center>
 <?php
 	if($mbr_login!="" && $mbr_pass!="") {
-		$msg = $blocks->perform_members_ident($mbr_login, $mbr_pass, $mbr_valider);
+		$msg = $blocks->performMembersIdent($mbr_login, $mbr_pass, $mbr_valider);
 		echo $msg;
 	}
 	if($nlr_email!="") {
-		$js = $blocks->perform_newsletter_subscription($nlr_email, $nlr_subscribe, $nlr_valider);
+		$js = $blocks->performNewsletterSubscription($nlr_email, $nlr_subscribe, $nlr_valider);
 		echo $js;
 	}
 ?>

@@ -7,8 +7,8 @@
 	if($query=="SELECT") {
 		//$sql="select td_id, td_title from todo order by td_id";
 		$sql="select td.td_id, concat('<b>', td.td_title, '</b><br>', td.td_text, '<br>') as `tâches`, mb.mbr_ident as 'r&eacute;al.', td.td_status as '&eacute;tat', td.td_priority as 'priorité', td.td_expiry as '&eacute;ch&eacute;ance' from todo as td left outer join members as mb on td.mbr_id2=mb.mbr_id order by td.td_status, td.td_expiry, td.td_priority desc";
-		$dbgrid=create_pager_db_grid("todo", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
-		//$dbgrid=table_shadow("todo", $dbgrid);
+		$dbgrid=createPagerDbGrid("todo", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
+		//$dbgrid=tableShadow("todo", $dbgrid);
 		echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 		$priority=array(1,2,3);
@@ -43,7 +43,7 @@
 						<td>
 							<select name='mbr_id'>
 							<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
-							$options=create_options_from_query($sql, 0, 1, array(), $mbr_id, false, $cs);
+							$options=createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 							echo $options["list"];?>
 							</select>
 						</td>
@@ -53,7 +53,7 @@
 						<td>
 							<select name='mbr_id2'>
 							<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
-							$options=create_options_from_query($sql, 0, 1, array(), $mbr_id2, false, $cs);
+							$options=createOptionsFromQuery($sql, 0, 1, array(), $mbr_id2, false, $cs);
 							echo $options["list"];?>
 							</select>
 						</td>

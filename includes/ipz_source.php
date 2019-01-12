@@ -46,7 +46,7 @@ class Source extends \Puzzle\Base
     }
 
     // Highlight PHP code
-    public function highlight_php($code, $return = false)
+    public function highlightPhp($code, $return = false)
     {
         // Use colors instead of class names
         ini_set('comment', 'highlight.comment');
@@ -71,7 +71,7 @@ class Source extends \Puzzle\Base
     }
 
     // Highlight PHP code
-    public function highlight_php_with_css($code, $return = false)
+    public function highlightPhpWithCss($code, $return = false)
     {
         // Use class names instead of colors
         ini_set('highlight.comment', 'comment');
@@ -116,7 +116,7 @@ class Source extends \Puzzle\Base
         return $highlighted;
     }
 
-    public function get_pagename($url="")
+    public function getPagename($url="")
     {
         // No file param specified
         if (!isset($url)) {

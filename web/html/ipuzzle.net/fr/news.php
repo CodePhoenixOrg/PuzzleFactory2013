@@ -26,9 +26,9 @@ end*/
     $compl_url="";
     $col_largeurs=array(0, 100 ,470);
     
-    $dbgrid = $datacontrols->create_pager_db_grid("news", $sql, "compnews", "&nw_url", "&nw=#nw_id$compl_url", "", false, false, $dialog, $col_largeurs, 5, $grid_colors, $cs);
+    $dbgrid = $datacontrols->createPagerDbGrid("news", $sql, "compnews", "&nw_url", "&nw=#nw_id$compl_url", "", false, false, $dialog, $col_largeurs, 5, $grid_colors, $cs);
         
-    $dbgrid=$design->table_shadow("news", $dbgrid);
+    $dbgrid=$design->tableShadow("news", $dbgrid);
     echo $dbgrid;
 
 /*

@@ -3,8 +3,8 @@
 	include_once 'groups_code.php';
 	if($query=="SELECT") {
 			$sql="select grp_group, grp_members_priv from groups order by grp_group";
-			$dbgrid=create_pager_db_grid("groups", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("groups", $dbgrid);
+			$dbgrid=createPagerDbGrid("groups", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("groups", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>

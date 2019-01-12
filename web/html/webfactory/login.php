@@ -57,10 +57,10 @@
                 exit();
                 $ses_login=$_SESSION["ses_login"];
 		$status=$_SESSION["ses_status"];
-		$authentication=get_authentication($ses_login);
+		$authentication=getAuthentication($ses_login);
 		
 		// if($authentication) {
-		// 	$admin_url=get_admin_url($database);
+		// 	$admin_url=getAdminUrl($database);
 		// 	$js="<script language='JavaScript'>window.location.href='page.php?lg=$lg'</script>";
 		// } else {
 		// 	if($status==MEMBER_LOGGED_IN) {
@@ -88,10 +88,10 @@
 <tr>
 	<td align="center" valign="middle">
 	<?php    
-				$members_block=create_members_block($database, $logout, "members", $id, $lg, $panel_colors);
+				$members_block=createMembersBlock($database, $logout, "members", $id, $lg, $panel_colors);
 				echo $members_block."\n\n";
 			
-				$js=perform_members_ident($mbr_login, $mbr_pass, $mbr_valider);
+				$js=performMembersIdent($mbr_login, $mbr_pass, $mbr_valider);
 	?>
 	</td>
 </tr>

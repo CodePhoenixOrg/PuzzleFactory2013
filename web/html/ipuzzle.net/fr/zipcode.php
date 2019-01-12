@@ -9,8 +9,8 @@
 	if(isset($sr)) $curl_pager.="&sr=$sr";
 	if($query=="SELECT") {
 			$sql="select zc_id, zc_code from pz_zip_code order by zc_id";
-			$dbgrid=create_pager_db_grid("pz_zip_code", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("pz_zip_code", $dbgrid);
+			$dbgrid=createPagerDbGrid("pz_zip_code", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("pz_zip_code", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>

@@ -3,8 +3,8 @@
 	include_once 'applications_code.php';
 	if($query=="SELECT") {
 			$sql="select app_id, app_link from applications order by app_id";
-			$dbgrid=create_pager_db_grid("applications", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=table_shadow("applications", $dbgrid);
+			$dbgrid=createPagerDbGrid("applications", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			//$dbgrid=tableShadow("applications", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>
@@ -35,7 +35,7 @@
 					<td>
 						<select name='di_name'>
 						<?php    $sql='select di_name, di_fr_short from dictionary order by di_fr_short';
-						$options=create_options_from_query($sql, 0, 1, array(), $di_name, false, $cs);
+						$options=createOptionsFromQuery($sql, 0, 1, array(), $di_name, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>

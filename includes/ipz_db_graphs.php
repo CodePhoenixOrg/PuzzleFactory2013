@@ -326,7 +326,7 @@ class Controls extends \Puzzle\Base
             $data_field=$series[1];
         }
 
-        $rst=get_recordset($sql, $cs);
+        $rst=getRecordset($sql, $cs);
         $names=$rst["names"];
         $values=$rst["values"];
         $nrows=sizeof($values);
@@ -519,7 +519,7 @@ class Controls extends \Puzzle\Base
             $data_field=$series[1];
         }
 
-        $rst=get_recordset($sql, $cs);
+        $rst=getRecordset($sql, $cs);
         $names=$rst["names"];
         $values=$rst["values"];
         $nrows=sizeof($values);

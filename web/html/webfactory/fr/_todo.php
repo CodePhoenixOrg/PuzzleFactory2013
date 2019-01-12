@@ -98,8 +98,8 @@
 	}
 if($query=="SELECT") {
 		$sql="select td.td_id, concat('<b>', td.td_title, '</b><br>', td.td_text, '<br>') as `tâches`, mb.mbr_ident as 'r&eacute;al.', td.td_status as '&eacute;tat', td.td_priority as 'priorité', td.td_expiry as '&eacute;ch&eacute;ance' from todo as td, members as mb where td.mbr_id2=mb.mbr_id order by td.td_status, td.td_expiry, td.td_priority desc";
-		$dbgrid=create_pager_db_grid("tâches", $sql, $id, "page.php", "&query=ACTION", "", false, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
-		//$dbgrid=table_shadow("todo", $dbgrid);
+		$dbgrid=createPagerDbGrid("tâches", $sql, $id, "page.php", "&query=ACTION", "", false, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
+		//$dbgrid=tableShadow("todo", $dbgrid);
 		echo "<br>".$dbgrid."<br>";
 } elseif($query=="ACTION") {
 	$priority=array(1,2,3);
