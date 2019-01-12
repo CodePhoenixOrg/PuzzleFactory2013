@@ -1,7 +1,4 @@
 <?php   
-	include_once("puzzle/ipz_mysqlconn.php");
-	include_once("puzzle/ipz_db_controls.php");
-	use \Puzzle\Data\Controls as DataControls;
 	$cs=connection(CONNECT,$database);
 	$query = getVariable("query", "SELECT");
 	$event = getVariable("event", "onLoad");

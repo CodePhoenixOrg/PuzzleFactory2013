@@ -43,9 +43,6 @@ class ScriptsMaker extends Base
         $script="\n";
         //$script.="<script language=\"JavaScript\" src=\"js/pz_form_events.js\"></script>\n";
         $script="<?php   \n";
-        $script.="\tinclude_once(\"puzzle/ipz_mysqlconn.php\");\n";
-        $script.="\tinclude_once(\"puzzle/ipz_db_controls.php\");\n";
-        $script.="\tuse \\Puzzle\\Data\\Controls as DataControls;\n";
         $script.="\t\$cs=connection(CONNECT,\$database);\n";
         $script.="\t\$query = getVariable(\"query\", \"SELECT\");\n";
         $script.="\t\$event = getVariable(\"event\", \"onLoad\");\n";
@@ -202,6 +199,7 @@ class ScriptsMaker extends Base
         $script="<center>\n";
         $script.="<?php   \n";
         $script.="\tinclude(\"".$pa_filename."_code.php\");\n";
+        $script.="\tuse \\Puzzle\\Data\\Controls as DataControls;\n";
         $script.="\t\$datacontrols = new DataControls(\$lg, \$db_prefix);\n";
         $script.="\t\$pc = getVariable(\"pc\");\n";
         $script.="\t\$sr = getVariable(\"sr\");\n";

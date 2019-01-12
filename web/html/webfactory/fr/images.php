@@ -1,6 +1,7 @@
 <center>
 <?php   
 	include("images_code.php");
+	use \Puzzle\Data\Controls as DataControls;
 	$datacontrols = new DataControls($lg, $db_prefix);
 	$pc = getVariable("pc");
 	$sr = getVariable("sr");
