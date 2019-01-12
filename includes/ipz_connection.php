@@ -16,14 +16,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
- 
 namespace Puzzle\Data;
 
-use PDO;
+define("CONNECT", "connect");
+define("DISCONNECT", "disconnect");
 
-include_once 'ipz_data_driver.php';
-include_once 'ipz_crud_queries.php';
-include_once 'ipz_data_statement.php';
+use PDO;
 
 use Puzzle\Data\Driver;
 use Puzzle\Data\Statement;

@@ -1,23 +1,22 @@
 <html lang="fr" debug="true" >
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-		<link rel="stylesheet" href="/css/default.css" type="text/css" />
-
-<title>Puzzle WebFactory</title>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/default.css" type="text/css" />
+	<title>Puzzle WebFactory</title>
 <?php     
 	session_start();
 	//$include_path = ini_get("include_path");
 	//ini_set("include_path","$default_include_path:/usr/share/php/ipuzzle.inc/");
 	// include_once 'puzzle/ipz_style.php';
-	include_once 'puzzle/ipz_misc.php';
+	include 'puzzle/ipuzzle_library.php';
 	include(PZ_DEFAULTS);
 
-	include_once 'puzzle/ipz_menus.php';
-	include_once 'puzzle/ipz_blocks.php';
-	include_once 'puzzle/ipz_controls.php';
-	include_once 'puzzle/ipz_db_controls.php';
-	include_once 'puzzle/ipz_mkscripts.php';
+	// include_once 'puzzle/ipz_menus.php';
+	// include_once 'puzzle/ipz_blocks.php';
+	// include_once 'puzzle/ipz_controls.php';
+	// include_once 'puzzle/ipz_db_controls.php';
+	// include_once 'puzzle/ipz_mkscripts.php';
 	
 //	if(!session_is_registered("javascript")) {
 //		session_register("javascript");

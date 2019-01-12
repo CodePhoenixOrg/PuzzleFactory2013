@@ -16,12 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
- 
 namespace Puzzle\Data;
 
 use PDOStatement;
-
-include_once 'ipz_data_driver.php';
 
 use Puzzle\Data\Driver;
 

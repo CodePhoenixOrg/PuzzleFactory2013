@@ -22,11 +22,8 @@ namespace Puzzle;
 
 define("FRAME", true);
 define("NO_FRAME", false);
-include_once("ipz_base.php");
-include_once("ipz_menus.php");
-include_once("ipz_analyser.php");
 
-class ScriptsMaker extends \Puzzle\Base
+class ScriptsMaker extends Base
 {
     public function __construct()
     {

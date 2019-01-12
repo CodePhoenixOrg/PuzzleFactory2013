@@ -21,7 +21,7 @@ namespace Puzzle;
 
 class Crypto
 {
-    public function HashPassword($password)
+    public function hashPassword($password)
     {
         mt_srand((double)microtime()*1000000);
         $salt = mhash_keygen_s2k(MHASH_SHA1, $password, substr(pack('h*', md5(mt_rand())), 0, 8), 4);
@@ -29,7 +29,7 @@ class Crypto
         return $hash;
     }
  
-    public function ValidatePassword($password, $hash)
+    public function validatePassword($password, $hash)
     {
         $hash = base64_decode(substr($hash, 6));
         $original_hash = substr($hash, 0, 20);

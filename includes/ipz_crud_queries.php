@@ -18,8 +18,6 @@
  
  namespace Puzzle\Data;
 
-//require_once 'phink/core/object.php';
-
 /**
  * Description of crudQueries
  *

@@ -1,6 +1,5 @@
 <center>
 <?php 	
-	//include("puzzle/ipz_mysqlconn.php");
 	$sql="select * from ${db_prefix}books where la_country='$lg' order by bo_id";
 	$cs=connection(CONNECT, "leela");
 	$stmt = $cs->query($sql);

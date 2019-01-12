@@ -1,8 +1,4 @@
 <?php
-define("CONNECT", "connect");
-define("DISCONNECT", "disconnect");
-
-include 'ipz_connection.php';
 
 use \Puzzle\Data\Connection;
 use \Puzzle\Data\Driver;

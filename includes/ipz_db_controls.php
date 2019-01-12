@@ -20,13 +20,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 namespace Puzzle\Data;
 
-include_once("ipz_base.php");
-include_once("ipz_mysqlconn.php");
-include_once("ipz_misc.php");
-include_once("ipz_db.php");
-include_once("ipz_design.php");
-include_once("ipz_controls.php");
-
 //$hostname=get_http_root()."/";
 class Controls extends \Puzzle\Base
 {

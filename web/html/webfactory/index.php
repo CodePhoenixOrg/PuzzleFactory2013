@@ -1,29 +1,30 @@
 <html lang="en" debug="true" >
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-
-<title>Puzzle WebFactory</title>
-<?php include_once 'puzzle/ipz_menus.php'; ?>
-
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Puzzle WebFactory</title>
 </head>
 <body text="#000000" link="#888888" vlink="#880000" alink="#FF0000" leftmargin="0" topmargin="0" style="text-align:center;background-color:#FFFFFF;">
-<?php    
-	//include_once 'puzzle/ipz_mysqlconn.php';
-	include_once 'pz_defaults.php';
-	include_once 'puzzle/ipz_menus.php';
-	
-	//$default_include_path = ini_get("include_path");
-	//ini_set("include_path","$default_include_path:/usr/share/php/ipuzzle.inc/");
+<?php
+    //include_once 'puzzle/ipz_mysqlconn.php';
+    // include_once 'pz_defaults.php';
+    // include_once 'puzzle/ipz_menus.php';
+    session_start();
+    
+    include 'puzzle/ipuzzle_library.php';
+    include(PZ_DEFAULTS);
 
-	// $cs=connection(CONNECT, "webfactory");
-	//if(empty($lg)) $lg="fr";
-	$menus = new Puzzle\Menus($lg, $db_prefix);
-	$index = $menus->getPageId($database, "mkmain.php");
+    //$default_include_path = ini_get("include_path");
+    //ini_set("include_path","$default_include_path:/usr/share/php/ipuzzle.inc/");
 
-	$version = file_get_contents("VERSION");
+    // $cs=connection(CONNECT, "webfactory");
+    //if(empty($lg)) $lg="fr";
+    $menus = new Puzzle\Menus($lg, $db_prefix);
+    $index = $menus->getPageId($database, "mkmain.php");
 
-	$img="images";
+    $version = file_get_contents("VERSION");
+
+    $img="images";
 ?>
 	<div style="position:absolute;z-index:1;margin-top:150;margin-left:150">
 		<table border="0" cellpadding="0" cellspacing="0"><tr><td>

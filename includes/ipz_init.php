@@ -201,5 +201,3 @@ function get_parameters($this_profile="") {
 	$_SESSION["javascript"].=$highlight_colors;
 		
 }
-
-?>

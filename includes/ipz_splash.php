@@ -19,9 +19,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 namespace Puzzle;
 
-include_once("ipz_base.php");
-
-class Splash extends \Puzzle\Base
+class Splash extends Base
 {
     function display($message="", $text_color="", $back_color="", $width=0)
     {

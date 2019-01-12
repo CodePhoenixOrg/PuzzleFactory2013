@@ -1,7 +1,6 @@
 <!-- PUT THE TEXT HERE -->
 <!-- BEGIN -->
 <?php 
-	//require "include/openconn.php";
 
 	$sql="select * from books where la_country='$lg' order by bo_index";
 	dbconnection("connect");

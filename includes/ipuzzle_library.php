@@ -16,35 +16,41 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 class iPuzzleLibrary {
 
     public static function mount() {
 
         $filenames = [ 
-            "const.php",
-            //"style.php",
-            "db.php",
-            "dico.php",
-            "source.php",
-            "framed_blocks.php",
-            "db_controls.php",
-            "pdf.php",
-            "db_pieces.php",
-            //"init.php",
-            "menus.php",
-            "splash.php",
-            //"empty_file.php",
-            "mail.php",
-            "diary.php",
-            "scripts.php",
-            "calendar.php",
+            "constants.php",
+            "base.php",
             "misc.php",
-            "controls.php",
-            "mkscripts.php",
-            "analyser.php",
-            "db_graphs.php",
+            "crud_queries.php",
+            "data_driver.php",
+            "data_statement.php",
+            "connection.php",
+            "mysqlconn.php",
             "design.php",
-            "blocks.php"
+            "controls.php",
+            "db_controls.php",
+            "db_graphs.php",            
+            "blocks.php",
+            "framed_blocks.php",
+            "menus.php",
+            "analyser.php",
+            "mkscripts.php",
+            "source.php",
+            "splash.php",
+            "mail.php",
+            "diary.php"
+
+            // "db.php",
+            // "dico.php",
+            // "pdf.php",
+            //"init.php",
+            //"empty_file.php",
+            // "calendar.php",
+    
         ];
 
         foreach ($filenames as $filename) {

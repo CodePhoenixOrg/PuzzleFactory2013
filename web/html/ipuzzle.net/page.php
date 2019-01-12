@@ -1,33 +1,32 @@
 <html lang="fr" debug="true" >
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-		<link rel="stylesheet" href="/css/default.css" type="text/css" />
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/default.css" type="text/css" />
 
-<title>Akadès</title>
+	<title>Akadès</title>
 <?php  
-	session_start();
-	$lg=$_GET["lg"];
-	if(!isset($lg)) $lg="fr";
-	//header('lang="'.$lg.'"');
+
 	header('P3P: PolicyRef="/w3c/p3p.xml" CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"');
 ?>
-	<META NAME="Generator" CONTENT="PHP Eclipse, Vi">
-	<META NAME="Description" CONTENT="iPuzzle.net Project">
-	<META NAME="Keywords" CONTENT="ipuzzle, puzzle, web, creation, programmation, development, new, technology, technologie, technologies, php, csharp, c sharp, c#, mysql, microsoft, dotnet, .net, open source, opensource, linux">
-	<META NAME="Identifier-URL" CONTENT="http://www.ipuzzle.net/">
-	<META NAME="Robot" CONTENT="index, follow">
-	<META NAME="Reply-to" CONTENT="dpjb@free.fr">
-	<META NAME="Category" CONTENT="Internet">
-	<META NAME="Copyright" CONTENT="(C)2004 David Blanchard">
+	<meta name="Generator" content="PHP Eclipse, Vi">
+	<meta name="Description" content="iPuzzle.net Project">
+	<meta name="Keywords" content="ipuzzle, puzzle, web, creation, programmation, development, new, technology, technologie, technologies, php, csharp, c sharp, c#, mysql, microsoft, dotnet, .net, open source, opensource, linux">
+	<meta name="Identifier-URL" content="http://www.ipuzzle.net/">
+	<meta name="Robot" content="index, follow">
+	<meta name="Reply-to" content="dpjb@free.fr">
+	<meta name="Category" content="Internet">
+	<meta name="Copyright" content="(C)2004 David Blanchard">
 <?php
 	
 	// include_once 'puzzle/ipz_style.php';
-	include_once 'puzzle/ipz_misc.php';
+	session_start();
+	require 'puzzle/ipuzzle_library.php';
+
 	include(PZ_DEFAULTS);
 
-	include_once 'puzzle/ipz_menus.php';
-	include_once 'puzzle/ipz_blocks.php';
+	// include_once 'puzzle/ipz_menus.php';
+	// include_once 'puzzle/ipz_blocks.php';
 
 	$_SESSION["javascript"]="";
 	$_SESSION["ses_apply_skin"]="N";
@@ -80,7 +79,7 @@
 ?>
 <body bgcolor="<?php echo $back_color?>" text="<?php echo $text_color?>" link="<?php echo $link_color?>" vlink="<?php echo $vlink_color?>" alink="<?php echo $alink_color?>" leftmargin="0" topmargin="0">
 <center>
-  <table id="my_tableShadow" border="0" cellspacing="0" cellpadding="0">
+  <table id="my_table_shadow" border="0" cellspacing="0" cellpadding="0">
     <tr><td bgcolor="white" height="3" colspan="2"></td></tr>
     <tr>
       <td rowspan="2" colspan="2">

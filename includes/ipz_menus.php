@@ -20,11 +20,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 namespace Puzzle;
 
-include_once("ipz_base.php");
-include_once("ipz_misc.php");
-include_once("ipz_mysqlconn.php");
-include_once("ipz_db_pieces.php");
-
 define("BUTTON_OUT", "out");
 define("BUTTON_OVER", "over");
 define("BUTTON_DOWN", "down");
@@ -36,7 +31,7 @@ define("BUTTON_INPUT_RESET", "input_reset");
 define("SUB_MENU_HORIZONTAL", 0);
 define("SUB_MENU_VERTICAL", 1);
 
-class Menus extends Base
+class Menus extends \Puzzle\Base
 {
 
     public function getAdminUrl($userdb)

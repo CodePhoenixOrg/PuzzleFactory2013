@@ -19,11 +19,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 namespace Puzzle;
 
-include_once("ipz_base.php");
-include_once("ipz_mysqlconn.php");
-include_once("ipz_design.php");
-include_once("ipz_diary.php");
-
 define("BLOCK_LEFT_COLUMN", 1);
 define("BLOCK_RIGHT_COLUMN", 3);
 define("MEMBER_LOGGED_OUT", 0);

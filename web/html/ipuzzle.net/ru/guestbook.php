@@ -42,7 +42,6 @@
 				</TABLE><BR>
 				<HR COLOR=#0 WIDTH=100% ALIGN=CENTER>
 <?php 
-	require "include/connection.php";
 	$cs->select_db($dbname);
 	//alimentation du livre
 	if ($action=="fill"){

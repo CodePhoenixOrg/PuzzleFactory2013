@@ -25,7 +25,7 @@ define("PANEL_IMAGE_ON_LEFT", "l");
 define("PANEL_IMAGE_NONE", "n");
 
     
-class Design extends \Puzzle\Base
+class Design extends Base
 {
     public function __construct()
     {

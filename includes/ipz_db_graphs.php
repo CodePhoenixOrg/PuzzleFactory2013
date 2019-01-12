@@ -26,11 +26,9 @@ define("CURRENCY_USD", 4);
 define("CURRENCY_GBP", 6);
 define("CURRENCY_EUR", 8);
 
-include_once("ipz_db_controls.php");
-	
-class Controls extends \Puzzle\Base
+class Graphs extends \Puzzle\Base
 {
-    function color_range($number)
+    function colorRange($number)
     {
         $r_angle=0;
         $g_angle=120;
@@ -54,7 +52,7 @@ class Controls extends \Puzzle\Base
         return $colors;
     }
 
-    function dark_color_range($number)
+    function darkColorRange($number)
     {
         $r_angle=0;
         $g_angle=120;
@@ -180,7 +178,7 @@ class Controls extends \Puzzle\Base
         return $filename;
     }
 
-    function legend_table($name, $recordset, $caption_size, $refs)
+    function legendTable($name, $recordset, $caption_size, $refs)
     {
         $legend_data="";
         if ($data_type==PERCENT) {

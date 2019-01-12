@@ -19,9 +19,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 namespace Puzzle;
 
-include_once('ipz_mysqlconn.php');
-include_once('ipz_misc.php');
-require_once('fpdf.php');
+require_once('fpdf/fpdf.php');
 
 class pz_pdf extends FPDF
 {
