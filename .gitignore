@@ -1,5 +1,5 @@
-/web/html/webfactory/logs/
-/web/html/ipuzzle.net/logs/
+/web/html/webfactory/logs/*
+/web/html/ipuzzle.net/logs/*
 /web/html/admin/
 /data/mysql/
 /vendor/
