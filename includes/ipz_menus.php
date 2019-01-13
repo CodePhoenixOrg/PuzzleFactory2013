@@ -31,7 +31,7 @@ define("BUTTON_INPUT_RESET", "input_reset");
 define("SUB_MENU_HORIZONTAL", 0);
 define("SUB_MENU_VERTICAL", 1);
 
-class Menus extends \Puzzle\Base
+class Menus extends Base
 {
 
     public function getAdminUrl($userdb)
@@ -400,7 +400,7 @@ INSERT;
         $main_menu="";
         $sql="";
         $sql=   "select m.pa_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename " .
-                "from  {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
+                "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.me_level=1 " .
                 "and m.pa_id=p.pa_id " .
                 "and m.di_name=d.di_name " .
@@ -436,7 +436,7 @@ INSERT;
         }
     
         $sql=	"select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
-                "from  {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
+                "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.pa_id=m.pa_id " .
                 "and m.me_id<>m.pa_id " .
@@ -504,7 +504,7 @@ INSERT;
         }
 
         $sql=   "select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
-                "from  {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
+                "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.me_level>1 " .
                 "and m.pa_id=p.pa_id " .
                 "and m.di_name=d.di_name " .
@@ -525,13 +525,13 @@ INSERT;
         }
         
         $sql=   "select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
-                "from menus m, pages p, dictionary d " .
+                "from {$this->db_prefix}menus m, pages p, {$this->db_prefix}dictionary d " .
                 "where m.me_level=1 " .
                 "and m.pa_id=p.pa_id " .
                 "and m.di_name=d.di_name " .
         "union " .
             "select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
-                "from menus m, pages p, dictionary d " .
+                "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and m.me_id<>m.pa_id " .
                 "and p.pa_id=m.pa_id " .
@@ -602,7 +602,7 @@ INSERT;
         $page="";
         $sql = "";
         $sql=   "select d.di_name, p.pa_filename, m.me_charset, d.di_" . $this->lg . "_short, d.di_" . $this->lg . "_long " .
-                "from  {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
+                "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name " .
                 "and p.pa_id=$id";
@@ -647,7 +647,7 @@ INSERT;
         $page="";
         $sql = "";
         $sql=   "select d.di_name, p.pa_filename, m.me_charset, d.di_" . $this->lg . "_short, d.di_" . $this->lg . "_long " .
-                "from  {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
+                "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name " .
                 "and m.me_id=$id";

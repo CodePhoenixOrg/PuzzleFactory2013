@@ -1,6 +1,8 @@
 <center>
 <?php   
 	include("forums_code.php");
+	use \Puzzle\Data\Controls as DataControls;
+	$datacontrols = new DataControls($lg, $db_prefix);
 	$pc = getVariable("pc");
 	$sr = getVariable("sr");
 	$curl_pager = "";
@@ -9,7 +11,7 @@
 	if(isset($sr)) $curl_pager.="&sr=$sr";
 	if($query=="SELECT") {
 			$sql="select fr_id, fr_title from forums order by fr_id";
-			$dbgrid=createPagerDbGrid("forums", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			$dbgrid = $datacontrols->createPagerDbGrid("forums", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("forums", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {

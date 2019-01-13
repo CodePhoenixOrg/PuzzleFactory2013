@@ -3,11 +3,21 @@
 	include_once 'todo_code.php';
 	$td_expiry = date('Y-m-d H:i:s');
 	$td_expiry = date('Y-m-d H:i:s', strtotime($td_expiry . '+31 day'));
+	
+	use \Puzzle\Data\Controls as DataControls;
+	$datacontrols = new DataControls($lg, $db_prefix);
 
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
+	$curl_pager = "";
+	$dialog = "";
+	if(isset($pc)) $curl_pager="&pc=$pc";
+	if(isset($sr)) $curl_pager.="&sr=$sr";
+	
 	if($query=="SELECT") {
 		//$sql="select td_id, td_title from todo order by td_id";
 		$sql="select td.td_id, concat('<b>', td.td_title, '</b><br>', td.td_text, '<br>') as `tâches`, mb.mbr_ident as 'r&eacute;al.', td.td_status as '&eacute;tat', td.td_priority as 'priorité', td.td_expiry as '&eacute;ch&eacute;ance' from todo as td left outer join members as mb on td.mbr_id2=mb.mbr_id order by td.td_status, td.td_expiry, td.td_priority desc";
-		$dbgrid=createPagerDbGrid("todo", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
+		$dbgrid=$datacontrols->createPagerDbGrid("todo", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
 		//$dbgrid=tableShadow("todo", $dbgrid);
 		echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {

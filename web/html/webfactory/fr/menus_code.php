@@ -1,6 +1,4 @@
 <?php   
-	include_once("puzzle/ipz_mysqlconn.php");
-	include_once("puzzle/ipz_db_controls.php");
 	$cs=connection(CONNECT,$database);
 	$query = getVariable("query", "SELECT");
 	$event = getVariable("event", "onLoad");

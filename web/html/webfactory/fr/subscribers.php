@@ -1,9 +1,19 @@
 <center>
 <?php    
 	include_once 'subscribers_code.php';
+
+	use \Puzzle\Data\Controls as DataControls;
+	$datacontrols = new DataControls($lg, $db_prefix);
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
+	$curl_pager = "";
+	$dialog = "";
+	if(isset($pc)) $curl_pager="&pc=$pc";
+	if(isset($sr)) $curl_pager.="&sr=$sr";
+
 	if($query=="SELECT") {
 			$sql="select sub_id, sub_email from subscribers order by sub_id";
-			$dbgrid=createPagerDbGrid("subscribers", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			$dbgrid = $datacontrols->createPagerDbGrid("subscribers", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("subscribers", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {

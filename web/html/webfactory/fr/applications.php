@@ -1,9 +1,19 @@
 <center>
 <?php    
 	include_once 'applications_code.php';
+	
+	use \Puzzle\Data\Controls as DataControls;
+	$datacontrols = new DataControls($lg, $db_prefix);
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
+	$curl_pager = "";
+	$dialog = "";
+	if(isset($pc)) $curl_pager="&pc=$pc";
+	if(isset($sr)) $curl_pager.="&sr=$sr";
+	
 	if($query=="SELECT") {
 			$sql="select app_id, app_link from applications order by app_id";
-			$dbgrid=createPagerDbGrid("applications", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			$dbgrid = $datacontrols->createPagerDbGrid("applications", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("applications", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {

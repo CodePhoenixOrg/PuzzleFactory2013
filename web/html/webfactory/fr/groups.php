@@ -1,11 +1,21 @@
 <center>
 <?php    
 	include_once 'groups_code.php';
+
+	use \Puzzle\Data\Controls as DataControls;
+	$datacontrols = new DataControls($lg, $db_prefix);
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
+	$curl_pager = "";
+	$dialog = "";
+	if(isset($pc)) $curl_pager="&pc=$pc";
+	if(isset($sr)) $curl_pager.="&sr=$sr";
+
 	if($query=="SELECT") {
-			$sql="select grp_group, grp_members_priv from groups order by grp_group";
-			$dbgrid=createPagerDbGrid("groups", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
-			//$dbgrid=tableShadow("groups", $dbgrid);
-			echo "<br>".$dbgrid;
+		$sql="select grp_group, grp_members_priv from groups order by grp_group";
+		$dbgrid = $datacontrols->createPagerDbGrid("groups", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+		//$dbgrid=tableShadow("groups", $dbgrid);
+		echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>
 <form method='POST' name='groupsForm' action='page.php?id=27&lg=fr'>
