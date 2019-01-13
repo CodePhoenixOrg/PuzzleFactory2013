@@ -119,11 +119,11 @@ if($query=="SELECT") {
 </td></tr>
 <tr><td>Forum</td>
 <td><select name='fr_id'>
-<?php   $sql='select fr_id, fr_title from forums order by fr_title';$options=createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
+<?php   $sql='select fr_id, fr_title from forums order by fr_title';$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
 echo $options["list"];?></select></td></tr>
 <tr><td>Rapporté par</td>
 <td><select name='mbr_id'>
-<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';$options=createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
+<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 echo $options["list"];?></select></td></tr>
 
 <tr><td align='center' colspan='2'>

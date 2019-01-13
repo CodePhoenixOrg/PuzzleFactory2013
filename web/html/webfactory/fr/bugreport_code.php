@@ -20,7 +20,6 @@
 			$br_importance="";
 			$br_status="";
 			$br_date="";
-			$br_time="";
 			$mbr_id="";
 		break;
 		case "Modifier":
@@ -33,7 +32,6 @@
 			$br_importance=$rows["br_importance"];
 			$br_status=$rows["br_status"];
 			$br_date=$rows["br_date"];
-			$br_time=$rows["br_time"];
 			$mbr_id=$rows["mbr_id"];
 		break;
 		}
@@ -46,7 +44,6 @@
 			$br_importance = $_POST["br_importance"];
 			$br_status = $_POST["br_status"];
 			$br_date = $_POST["br_date"];
-			$br_time = $_POST["br_time"];
 			$mbr_id = $_POST["mbr_id"];
 			$br_title=escapeChars($br_title);
 			$br_text=escapeChars($br_text);
@@ -59,7 +56,6 @@
 				"br_importance, ".
 				"br_status, ".
 				"br_date, ".
-				"br_time, ".
 				"mbr_id".
 			") values (".
 				"$br_id, ".
@@ -68,7 +64,6 @@
 				"$br_importance, ".
 				"'$br_status', ".
 				"'$br_date', ".
-				"'$br_time', ".
 				"$mbr_id".
 			")";
 			$stmt = $cs->query($sql);
@@ -82,7 +77,6 @@
 			$br_importance = $_POST["br_importance"];
 			$br_status = $_POST["br_status"];
 			$br_date = $_POST["br_date"];
-			$br_time = $_POST["br_time"];
 			$mbr_id = $_POST["mbr_id"];
 			$br_title=escapeChars($br_title);
 			$br_text=escapeChars($br_text);
@@ -95,7 +89,6 @@
 				"br_importance=$br_importance, ".
 				"br_status='$br_status', ".
 				"br_date='$br_date', ".
-				"br_time='$br_time', ".
 				"mbr_id=$mbr_id ".
 			"where br_id='$br_id'";
 			$stmt = $cs->query($sql);

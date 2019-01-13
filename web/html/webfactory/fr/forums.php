@@ -57,7 +57,7 @@
 					<td>
 						<select name='me_id'>
 						<?php   $sql='select me_id, me_level from menus order by me_level';
-						$options=createOptionsFromQuery($sql, 0, 1, [], $me_id, false, $cs);
+						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, [], $me_id, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>

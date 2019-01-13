@@ -34,8 +34,8 @@
 		$on_change="document.myTabForm.pz_current_tab.value=PZ_CURRENT_TAB_NAME;";
 		$srvdir=create_server_directory_selector("srvdir", "myTabForm", $basedir, $on_change);
 		$srvfiles=create_server_file_selector("srvfiles", "myTabForm", $basedir, "php", 5, "srvdir", $on_change);
-		$database_list=createOptionsFromQuery("show databases", 0, 0, array(), $userdb, false, $cs);
-		$table_list=createOptionsFromQuery("show tables", 0, 0, array(), $table, false, $cs);
+		$database_list = $datacontrols->createOptionsFromQuery("show databases", 0, 0, array(), $userdb, false, $cs);
+		$table_list = $datacontrols->createOptionsFromQuery("show tables", 0, 0, array(), $table, false, $cs);
 		
 		//Options de départ
 		$rad_choice=(array) null;

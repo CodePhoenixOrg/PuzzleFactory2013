@@ -12,8 +12,13 @@
 	if(isset($sr)) $curl_pager.="&sr=$sr";
 
 	if($query=="SELECT") {
-			$sql="select cl_id, cl_title from changelog order by cl_id";
-			$dbgrid = $datacontrols->createPagerDbGrid("changelog", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			$sql=<<<SQL
+SELECT 
+    cl_id, cl_title as 'Résumé', cl_text as 'Description'
+FROM
+    changelog
+SQL;
+			$dbgrid = $datacontrols->createPagerDbGrid("changelog", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, [0, 50, 350], 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("changelog", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
@@ -65,7 +70,7 @@
 					<td>
 						<select name='fr_id'>
 						<?php   $sql='select fr_id, fr_title from forums order by fr_title';
-						$options=createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
+						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>
@@ -75,7 +80,7 @@
 					<td>
 						<select name='mbr_id'>
 						<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
-						$options=createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
+						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>

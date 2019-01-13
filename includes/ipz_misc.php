@@ -141,13 +141,13 @@ function getDaysDelta($recent_date, $old_date) {
 				
 function dateMysqlToFrench($date) {
 	if(strlen($date) > 10) $date = substr($date, 0, 10);
-	$date = preg_replace('^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$', '\3/\2/\1', $date);
+	$date = preg_replace('/^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$/', '\3/\2/\1', $date);
 
 	return $date;
 }
 
 function dateFrenchToMysql($date) {
-	$date = preg_replace('^([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4})$', '\3-\2-\1', $date);
+	$date = preg_replace('@^([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4})$@', '\3-\2-\1', $date);
 
 	return $date;
 }

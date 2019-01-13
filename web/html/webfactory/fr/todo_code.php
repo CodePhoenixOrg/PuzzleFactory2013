@@ -6,6 +6,8 @@
 	$id = getVariable("id");
 	$di = getVariable("di");
 	$td_id = getVariable("td_id");
+	$td_id = getVariable("td_id");
+	$mbr_id2 = getVariable("mbr_id2");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -21,7 +23,6 @@
 			$td_expiry="";
 			$td_status="";
 			$td_date="";
-			$td_time="";
 			$mbr_id="";
 		break;
 		case "Modifier":
@@ -35,7 +36,6 @@
 			$td_expiry=$rows["td_expiry"];
 			$td_status=$rows["td_status"];
 			$td_date=$rows["td_date"];
-			$td_time=$rows["td_time"];
 			$mbr_id=$rows["mbr_id"];
 		break;
 		}
@@ -49,7 +49,6 @@
 			$td_expiry = $_POST["td_expiry"];
 			$td_status = $_POST["td_status"];
 			$td_date = $_POST["td_date"];
-			$td_time = $_POST["td_time"];
 			$mbr_id = $_POST["mbr_id"];
 			$td_title=escapeChars($td_title);
 			$td_text=escapeChars($td_text);
@@ -63,7 +62,6 @@
 				"td_expiry, ".
 				"td_status, ".
 				"td_date, ".
-				"td_time, ".
 				"mbr_id".
 			") values (".
 				"$td_id, ".
@@ -73,7 +71,6 @@
 				"'$td_expiry', ".
 				"'$td_status', ".
 				"'$td_date', ".
-				"'$td_time', ".
 				"$mbr_id".
 			")";
                         
@@ -87,7 +84,6 @@
 			$td_expiry = $_POST["td_expiry"];
 			$td_status = $_POST["td_status"];
 			$td_date = $_POST["td_date"];
-			$td_time = $_POST["td_time"];
 			$mbr_id = $_POST["mbr_id"];
 			$td_title=escapeChars($td_title);
 			$td_text=escapeChars($td_text);
@@ -101,7 +97,6 @@
 				"td_expiry='$td_expiry', ".
 				"td_status='$td_status', ".
 				"td_date='$td_date', ".
-				"td_time='$td_time', ".
 				"mbr_id=$mbr_id ".
 			"where td_id='$td_id'";
 			$stmt = $cs->query($sql);

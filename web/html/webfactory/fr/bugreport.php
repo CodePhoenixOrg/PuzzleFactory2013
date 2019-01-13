@@ -50,7 +50,7 @@
 						<td>
 							<select name='mbr_id'>
 							<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
-							$options=createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
+							$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 							echo $options["list"];?>
 							</select>
 						</td>

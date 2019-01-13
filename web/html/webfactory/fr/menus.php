@@ -12,8 +12,27 @@
 	if(isset($sr)) $curl_pager.="&sr=$sr";
 	
 	if($query=="SELECT") {
-			$sql="select me_id, me_level from menus order by me_id";
-			$dbgrid = $datacontrols->createPagerDbGrid("menus", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			$sql=<<<SQL
+SELECT 
+    me_id,
+    d.di_fr_short AS Page,
+    CASE
+        WHEN me_level = '0' THEN 'Caché'
+        WHEN me_level = '1' THEN 'Principal'
+        WHEN me_level = '2' THEN 'Latéral'
+    END AS Niveau,
+    bd.di_fr_short AS Bloc
+FROM
+    menus m
+        INNER JOIN
+    dictionary d ON d.di_name = m.di_name
+        LEFT JOIN
+    blocks b ON m.bl_id = b.bl_id
+        LEFT OUTER JOIN
+    dictionary bd ON bd.di_name = b.di_name
+ORDER BY d.di_fr_short
+SQL;
+			$dbgrid = $datacontrols->createPagerDbGrid("menus", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, [0, 200, 100], 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("menus", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
@@ -49,7 +68,7 @@
 					<td>
 						<select name='pa_id'>
 						<?php   $sql='select pa_id, di_name from pages order by di_name';
-						$options=createOptionsFromQuery($sql, 0, 1, [], $pa_id, false, $cs);
+						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, [], $pa_id, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>
@@ -59,7 +78,7 @@
 					<td>
 						<select name='bl_id'>
 						<?php   $sql='select bl_id, bl_column from blocks order by bl_column';
-						$options=createOptionsFromQuery($sql, 0, 1, [], $bl_id, false, $cs);
+						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, [], $bl_id, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>

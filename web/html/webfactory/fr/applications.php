@@ -45,7 +45,7 @@
 					<td>
 						<select name='di_name'>
 						<?php    $sql='select di_name, di_fr_short from dictionary order by di_fr_short';
-						$options=createOptionsFromQuery($sql, 0, 1, array(), $di_name, false, $cs);
+						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $di_name, false, $cs);
 						echo $options["list"];?>
 						</select>
 					</td>
