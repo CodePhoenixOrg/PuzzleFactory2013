@@ -1,0 +1,2636 @@
+2019-01-12 10:17:20 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:17:20 : LG : fr
+2019-01-12 10:17:20 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-12 10:17:20 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-12 10:17:22 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:17:22 : LG : fr
+2019-01-12 10:17:22 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:17:22 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:23:37 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:23:37 : LG : fr
+2019-01-12 10:23:37 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:23:37 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:23:41 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:23:41 : LG : fr
+2019-01-12 10:23:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:23:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:23:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:23:52 : LG : fr
+2019-01-12 10:23:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:23:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:23:54 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:23:54 : LG : fr
+2019-01-12 10:23:54 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:23:54 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:24:00 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:24:00 : LG : fr
+2019-01-12 10:24:00 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:24:00 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:24:03 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:24:03 : LG : fr
+2019-01-12 10:24:03 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:24:03 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:24:43 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:24:43 : LG : fr
+2019-01-12 10:24:43 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:24:43 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:24:47 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:24:47 : LG : fr
+2019-01-12 10:24:47 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:24:47 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-12 10:24:49 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-12 10:24:49 : LG : fr
+2019-01-12 10:24:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-12 10:24:50 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 01:28:40 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:28:40 : LG : fr
+2019-01-13 01:28:40 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from  pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 01:28:40 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 01:45:22 : /usr/share/php/puzzle/ipz_menus.php:98:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2019-01-13 01:45:22 : LG : fr
+2019-01-13 08:01:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:01:59 : LG : fr
+2019-01-13 08:01:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-13 08:01:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-13 08:02:11 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:02:11 : LG : fr
+2019-01-13 08:02:11 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 08:02:11 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 08:02:19 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:02:19 : LG : fr
+2019-01-13 08:02:19 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 08:02:19 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 08:02:36 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:02:36 : LG : fr
+2019-01-13 08:02:36 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:02:36 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:07:14 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:07:14 : LG : fr
+2019-01-13 08:07:14 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:07:14 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:07:32 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:07:32 : LG : fr
+2019-01-13 08:07:32 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:07:32 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:07:33 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:07:33 : LG : fr
+2019-01-13 08:07:33 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 08:07:33 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 08:08:04 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:08:04 : LG : fr
+2019-01-13 08:08:04 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:08:04 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:44:18 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:18 : LG : fr
+2019-01-13 08:44:18 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 08:44:18 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 08:44:19 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:19 : LG : fr
+2019-01-13 08:44:19 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 08:44:19 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 08:44:21 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:21 : LG : fr
+2019-01-13 08:44:21 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 08:44:21 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 08:44:22 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:22 : LG : fr
+2019-01-13 08:44:22 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 08:44:22 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 08:44:23 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:23 : LG : fr
+2019-01-13 08:44:23 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:44:23 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:44:24 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:24 : LG : fr
+2019-01-13 08:44:24 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 08:44:24 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 08:44:26 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:26 : LG : fr
+2019-01-13 08:44:26 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 08:44:26 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 08:44:28 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:28 : LG : fr
+2019-01-13 08:44:28 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 08:44:28 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 08:44:29 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:29 : LG : fr
+2019-01-13 08:44:29 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:44:29 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:44:30 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:44:30 : LG : fr
+2019-01-13 08:44:30 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 08:44:30 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 08:45:06 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:06 : LG : fr
+2019-01-13 08:45:06 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 08:45:06 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 08:45:27 : /usr/share/php/puzzle/ipz_menus.php:98:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2019-01-13 08:45:27 : LG : fr
+2019-01-13 08:45:39 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:39 : LG : fr
+2019-01-13 08:45:39 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-13 08:45:39 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-13 08:45:41 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:41 : LG : fr
+2019-01-13 08:45:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:45:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:45:55 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:55 : LG : fr
+2019-01-13 08:45:55 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 08:45:55 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 08:45:58 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:58 : LG : fr
+2019-01-13 08:45:58 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 08:45:58 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 08:45:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:59 : LG : fr
+2019-01-13 08:45:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 08:45:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 08:45:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:45:59 : LG : fr
+2019-01-13 08:45:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 08:45:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 08:46:00 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:46:00 : LG : fr
+2019-01-13 08:46:00 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:46:00 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:46:01 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:46:01 : LG : fr
+2019-01-13 08:46:01 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 08:46:01 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 08:46:02 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:46:02 : LG : fr
+2019-01-13 08:46:02 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 08:46:02 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 08:46:03 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:46:03 : LG : fr
+2019-01-13 08:46:03 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 08:46:03 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 12:34:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:34:52 : LG : fr
+2019-01-13 12:34:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 12:34:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 12:36:35 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:36:35 : LG : fr
+2019-01-13 12:36:35 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 12:36:35 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 12:36:35 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 12:36:35 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 12:37:53 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:37:53 : LG : fr
+2019-01-13 12:37:53 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 12:37:53 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 12:37:54 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:37:54 : LG : fr
+2019-01-13 12:37:54 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 12:37:54 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 12:37:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:37:59 : LG : fr
+2019-01-13 12:37:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 12:37:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 12:37:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:37:59 : LG : fr
+2019-01-13 12:37:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 12:37:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 12:38:04 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:38:04 : LG : fr
+2019-01-13 12:38:04 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 12:38:04 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 12:38:05 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:38:05 : LG : fr
+2019-01-13 12:38:05 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 12:38:05 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 12:52:40 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:52:40 : LG : fr
+2019-01-13 12:52:40 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 12:52:40 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 12:53:58 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:53:58 : LG : fr
+2019-01-13 12:53:58 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 12:53:58 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 12:53:58 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 12:53:58 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 12:54:06 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 12:54:06 : LG : fr
+2019-01-13 12:54:06 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 12:54:06 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:14:16 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:14:16 : LG : fr
+2019-01-13 01:14:16 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:14:16 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:15:41 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:15:41 : LG : fr
+2019-01-13 01:15:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:15:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:16:12 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:16:12 : LG : fr
+2019-01-13 01:16:12 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:16:12 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:16:12 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 01:16:12 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 01:18:16 : /usr/share/php/puzzle/ipz_menus.php:98:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2019-01-13 01:18:16 : LG : fr
+2019-01-13 01:18:16 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:18:16 : LG : fr
+2019-01-13 01:18:16 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-13 01:18:16 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-13 01:18:19 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:18:19 : LG : fr
+2019-01-13 01:18:19 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:18:19 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:18:40 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:18:40 : LG : fr
+2019-01-13 01:18:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:18:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:18:41 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 01:18:41 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 01:18:49 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:18:49 : LG : fr
+2019-01-13 01:18:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:18:49 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:18:56 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:18:56 : LG : fr
+2019-01-13 01:18:56 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:18:56 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:18:56 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 01:18:56 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 01:19:05 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:19:05 : LG : fr
+2019-01-13 01:19:05 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:19:05 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:19:21 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:19:21 : LG : fr
+2019-01-13 01:19:21 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:19:21 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:19:29 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:19:29 : LG : fr
+2019-01-13 01:19:29 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:19:29 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:19:37 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:19:37 : LG : fr
+2019-01-13 01:19:37 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:19:37 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:39:20 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:39:20 : LG : fr
+2019-01-13 01:39:20 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:39:20 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:40:11 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:40:11 : LG : fr
+2019-01-13 01:40:11 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:40:12 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:41:08 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:41:08 : LG : fr
+2019-01-13 01:41:08 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:41:08 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:41:28 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:41:28 : LG : fr
+2019-01-13 01:41:28 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:41:28 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:41:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:41:52 : LG : fr
+2019-01-13 01:41:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:41:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:42:04 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:04 : LG : fr
+2019-01-13 01:42:04 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:42:04 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:42:08 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:08 : LG : fr
+2019-01-13 01:42:08 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:42:08 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:42:19 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:19 : LG : fr
+2019-01-13 01:42:19 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:42:19 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:42:20 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:20 : LG : fr
+2019-01-13 01:42:20 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:42:20 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:42:22 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:22 : LG : fr
+2019-01-13 01:42:22 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:42:22 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:42:28 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:28 : LG : fr
+2019-01-13 01:42:28 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:42:28 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:42:39 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:39 : LG : fr
+2019-01-13 01:42:39 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:42:39 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:42:42 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:42 : LG : fr
+2019-01-13 01:42:42 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:42:42 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:42:46 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:46 : LG : fr
+2019-01-13 01:42:46 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:42:46 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:42:48 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:48 : LG : fr
+2019-01-13 01:42:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:42:49 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:42:51 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:51 : LG : fr
+2019-01-13 01:42:51 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:42:51 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:42:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:52 : LG : fr
+2019-01-13 01:42:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:42:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:42:56 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:56 : LG : fr
+2019-01-13 01:42:56 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:42:56 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:42:58 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:42:58 : LG : fr
+2019-01-13 01:42:58 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:42:58 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:43:06 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:43:06 : LG : fr
+2019-01-13 01:43:06 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:43:07 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:43:27 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:43:27 : LG : fr
+2019-01-13 01:43:27 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:43:27 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:43:29 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:43:29 : LG : fr
+2019-01-13 01:43:29 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:43:29 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:43:33 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:43:33 : LG : fr
+2019-01-13 01:43:33 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:43:33 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:44:37 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:37 : LG : fr
+2019-01-13 01:44:37 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:44:37 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:44:40 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:40 : LG : fr
+2019-01-13 01:44:40 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:44:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:44:41 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:41 : LG : fr
+2019-01-13 01:44:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:44:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:44:42 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:42 : LG : fr
+2019-01-13 01:44:42 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:44:42 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:44:43 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:43 : LG : fr
+2019-01-13 01:44:43 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 01:44:43 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 01:44:45 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:45 : LG : fr
+2019-01-13 01:44:45 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 01:44:45 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 01:44:50 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:50 : LG : fr
+2019-01-13 01:44:50 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:44:50 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:44:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:52 : LG : fr
+2019-01-13 01:44:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:44:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:44:55 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:55 : LG : fr
+2019-01-13 01:44:55 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 01:44:55 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 01:44:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:44:59 : LG : fr
+2019-01-13 01:44:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:44:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:45:02 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:02 : LG : fr
+2019-01-13 01:45:02 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:45:02 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:45:16 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:16 : LG : fr
+2019-01-13 01:45:16 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:45:16 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:45:25 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:25 : LG : fr
+2019-01-13 01:45:25 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:45:25 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:45:31 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:31 : LG : fr
+2019-01-13 01:45:31 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:45:31 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:45:33 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:33 : LG : fr
+2019-01-13 01:45:33 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:45:33 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:45:34 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:34 : LG : fr
+2019-01-13 01:45:35 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:45:35 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:45:42 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:42 : LG : fr
+2019-01-13 01:45:42 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:45:42 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:45:44 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:44 : LG : fr
+2019-01-13 01:45:44 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:45:44 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:45:49 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:49 : LG : fr
+2019-01-13 01:45:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=23 : 
+2019-01-13 01:45:49 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => forums
+    [pa_filename] => forums.php
+    [me_charset] => utf8
+    [di_fr_short] => Forums
+    [di_fr_long] => Forums disponibles
+)
+
+2019-01-13 01:45:54 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:54 : LG : fr
+2019-01-13 01:45:54 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:45:54 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:45:58 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:45:58 : LG : fr
+2019-01-13 01:45:58 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:45:58 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:45:58 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 01:45:58 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 01:46:16 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:46:16 : LG : fr
+2019-01-13 01:46:16 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:46:16 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:46:23 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:46:23 : LG : fr
+2019-01-13 01:46:23 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:46:23 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:46:23 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 01:46:23 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 01:46:34 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:46:34 : LG : fr
+2019-01-13 01:46:34 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:46:34 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:46:57 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:46:57 : LG : fr
+2019-01-13 01:46:57 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:46:57 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:47:27 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:47:27 : LG : fr
+2019-01-13 01:47:27 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:47:27 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:47:27 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 01:47:27 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 01:47:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:47:59 : LG : fr
+2019-01-13 01:47:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:47:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:48:23 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:48:23 : LG : fr
+2019-01-13 01:48:23 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 01:48:23 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 01:48:24 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:48:24 : LG : fr
+2019-01-13 01:48:24 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:48:24 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:48:25 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:48:25 : LG : fr
+2019-01-13 01:48:25 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:48:25 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:48:26 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:48:26 : LG : fr
+2019-01-13 01:48:26 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:48:26 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:54:53 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:54:53 : LG : fr
+2019-01-13 01:54:53 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:54:53 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:54:58 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:54:58 : LG : fr
+2019-01-13 01:54:58 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:54:58 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:57:22 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:57:22 : LG : fr
+2019-01-13 01:57:22 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 01:57:22 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 01:57:41 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:57:41 : LG : fr
+2019-01-13 01:57:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:57:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:57:43 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:57:43 : LG : fr
+2019-01-13 01:57:43 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 01:57:43 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 01:57:44 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:57:44 : LG : fr
+2019-01-13 01:57:44 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:57:44 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 01:59:04 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 01:59:04 : LG : fr
+2019-01-13 01:59:04 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 01:59:04 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:11:58 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:11:58 : LG : fr
+2019-01-13 02:11:58 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:11:58 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:12:10 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:12:10 : LG : fr
+2019-01-13 02:12:10 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:12:10 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:13:38 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:13:38 : LG : fr
+2019-01-13 02:13:38 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:13:38 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:13:39 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:13:39 : LG : fr
+2019-01-13 02:13:39 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 02:13:39 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 02:13:43 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:13:43 : LG : fr
+2019-01-13 02:13:43 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:13:43 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:13:45 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:13:45 : LG : fr
+2019-01-13 02:13:45 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:13:45 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:13:49 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:13:49 : LG : fr
+2019-01-13 02:13:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:13:49 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:13:51 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:13:51 : LG : fr
+2019-01-13 02:13:51 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 02:13:51 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 02:14:24 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:14:24 : LG : fr
+2019-01-13 02:14:24 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:14:24 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:14:32 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:14:32 : LG : fr
+2019-01-13 02:14:32 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:14:32 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:14:32 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 02:14:32 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 02:14:37 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:14:37 : LG : fr
+2019-01-13 02:14:37 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 02:14:37 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 02:14:44 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:14:44 : LG : fr
+2019-01-13 02:14:44 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 02:14:44 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 02:14:51 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:14:51 : LG : fr
+2019-01-13 02:14:51 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:14:51 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:14:56 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:14:56 : LG : fr
+2019-01-13 02:14:56 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:14:56 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:25:06 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:06 : LG : fr
+2019-01-13 02:25:06 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:25:06 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:25:08 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:08 : LG : fr
+2019-01-13 02:25:08 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:25:08 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:25:08 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select fr_id, fr_title from forums order by fr_title : 
+2019-01-13 02:25:08 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:25:19 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:19 : LG : fr
+2019-01-13 02:25:19 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:25:19 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:25:22 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:22 : LG : fr
+2019-01-13 02:25:22 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:25:22 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:25:22 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:25:22 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:25:27 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:27 : LG : fr
+2019-01-13 02:25:27 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:25:27 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:25:29 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:29 : LG : fr
+2019-01-13 02:25:29 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 02:25:29 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 02:25:30 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:30 : LG : fr
+2019-01-13 02:25:30 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:25:30 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:25:32 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:32 : LG : fr
+2019-01-13 02:25:32 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:25:32 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:25:32 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:25:45 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:45 : LG : fr
+2019-01-13 02:25:45 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:25:45 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:25:50 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:50 : LG : fr
+2019-01-13 02:25:50 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 02:25:50 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 02:25:51 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:51 : LG : fr
+2019-01-13 02:25:51 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:25:51 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:25:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:25:52 : LG : fr
+2019-01-13 02:25:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:25:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:26:05 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:26:05 : LG : fr
+2019-01-13 02:26:05 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 02:26:05 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 02:26:07 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:26:07 : LG : fr
+2019-01-13 02:26:07 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:26:07 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:28:32 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:28:32 : LG : fr
+2019-01-13 02:28:32 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:28:32 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:28:35 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:28:35 : LG : fr
+2019-01-13 02:28:35 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:28:35 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:28:35 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:28:35 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:30:38 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:30:38 : LG : fr
+2019-01-13 02:30:39 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:30:39 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:30:46 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:30:46 : LG : fr
+2019-01-13 02:30:46 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:30:46 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:30:48 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:30:48 : LG : fr
+2019-01-13 02:30:48 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:30:48 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:30:48 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:30:48 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:31:53 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:31:53 : LG : fr
+2019-01-13 02:31:53 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:31:53 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:32:43 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:32:43 : LG : fr
+2019-01-13 02:32:43 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:32:43 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:32:43 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:32:43 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:33:20 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:33:20 : LG : fr
+2019-01-13 02:33:21 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:33:21 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:34:56 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:34:56 : LG : fr
+2019-01-13 02:34:56 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:34:56 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:34:56 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:34:56 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:35:15 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:35:15 : LG : fr
+2019-01-13 02:35:15 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:35:15 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:37:51 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:37:51 : LG : fr
+2019-01-13 02:37:51 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:37:51 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:37:51 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:37:51 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:38:03 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:38:03 : LG : fr
+2019-01-13 02:38:03 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:38:03 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:38:23 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:38:23 : LG : fr
+2019-01-13 02:38:23 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:38:23 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:38:23 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:38:23 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:38:38 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:38:38 : LG : fr
+2019-01-13 02:38:38 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:38:38 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:39:33 : /usr/share/php/puzzle/ipz_menus.php:98:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2019-01-13 02:39:33 : LG : fr
+2019-01-13 02:39:34 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:39:34 : LG : fr
+2019-01-13 02:39:34 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-13 02:39:34 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-13 02:39:37 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:39:37 : LG : fr
+2019-01-13 02:39:37 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:39:37 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:39:39 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:39:39 : LG : fr
+2019-01-13 02:39:39 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:39:39 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:39:39 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:39:39 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:39:48 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:39:48 : LG : fr
+2019-01-13 02:39:48 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:39:48 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:40:26 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:40:26 : LG : fr
+2019-01-13 02:40:26 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:40:26 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:40:26 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:40:26 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:40:33 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:40:33 : LG : fr
+2019-01-13 02:40:33 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:40:33 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:40:41 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:40:41 : LG : fr
+2019-01-13 02:40:41 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:40:41 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:40:41 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:40:41 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:41:27 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:41:27 : LG : fr
+2019-01-13 02:41:27 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:41:27 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:41:32 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:41:32 : LG : fr
+2019-01-13 02:41:32 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:41:32 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:41:32 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:41:32 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:43:14 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:43:14 : LG : fr
+2019-01-13 02:43:14 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:43:14 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:43:47 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:43:47 : LG : fr
+2019-01-13 02:43:47 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:43:47 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:43:47 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:43:47 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:43:52 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:43:52 : LG : fr
+2019-01-13 02:43:52 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:43:52 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:43:54 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:43:54 : LG : fr
+2019-01-13 02:43:54 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:43:54 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:43:54 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:43:54 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:44:05 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:44:05 : LG : fr
+2019-01-13 02:44:05 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:44:05 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:44:16 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:44:16 : LG : fr
+2019-01-13 02:44:16 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:44:16 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:44:16 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:44:16 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:44:40 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:44:40 : LG : fr
+2019-01-13 02:44:40 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:44:40 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:44:51 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:44:51 : LG : fr
+2019-01-13 02:44:51 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:44:51 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:44:53 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:44:53 : LG : fr
+2019-01-13 02:44:53 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:44:53 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:44:53 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:45:57 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:45:57 : LG : fr
+2019-01-13 02:45:57 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:45:57 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:47:02 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:47:02 : LG : fr
+2019-01-13 02:47:03 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:47:03 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:47:03 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:47:25 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:47:25 : LG : fr
+2019-01-13 02:47:25 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:47:25 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:47:32 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:47:32 : LG : fr
+2019-01-13 02:47:32 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:47:32 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:47:32 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:47:35 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:47:35 : LG : fr
+2019-01-13 02:47:35 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:47:35 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:47:45 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:47:45 : LG : fr
+2019-01-13 02:47:45 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:47:45 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:47:45 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:47:49 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:47:49 : LG : fr
+2019-01-13 02:47:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:47:49 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:52:59 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:52:59 : LG : fr
+2019-01-13 02:52:59 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:52:59 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:52:59 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select mbr_id, mbr_nom from members order by mbr_nom : 
+2019-01-13 02:53:03 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:53:03 : LG : fr
+2019-01-13 02:53:03 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:53:03 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:53:11 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:53:11 : LG : fr
+2019-01-13 02:53:11 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:53:11 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:56:10 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:10 : LG : fr
+2019-01-13 02:56:10 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:56:10 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:56:13 : /usr/share/php/puzzle/ipz_menus.php:98:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2019-01-13 02:56:13 : LG : fr
+2019-01-13 02:56:14 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:14 : LG : fr
+2019-01-13 02:56:14 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-13 02:56:14 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-13 02:56:17 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:17 : LG : fr
+2019-01-13 02:56:17 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:56:17 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:56:26 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:26 : LG : fr
+2019-01-13 02:56:26 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:56:26 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:56:35 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:35 : LG : fr
+2019-01-13 02:56:35 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=58 : 
+2019-01-13 02:56:35 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => images
+    [pa_filename] => images.php
+    [me_charset] => utf8
+    [di_fr_short] => Images
+    [di_fr_long] => Liste des images
+)
+
+2019-01-13 02:56:45 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:45 : LG : fr
+2019-01-13 02:56:45 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:56:45 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:56:49 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:56:49 : LG : fr
+2019-01-13 02:56:49 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:56:49 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:56:49 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select pa_id, di_name from pages order by di_name : 
+2019-01-13 02:56:49 : /usr/share/php/puzzle/ipz_db_controls.php:1867:select bl_id, bl_column from blocks order by bl_column : 
+2019-01-13 02:57:04 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:04 : LG : fr
+2019-01-13 02:57:04 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:57:04 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 02:57:07 : /usr/share/php/puzzle/ipz_menus.php:98:select pa_id from pages where pa_filename = 'mkmain.php' : 
+2019-01-13 02:57:07 : LG : fr
+2019-01-13 02:57:08 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:08 : LG : fr
+2019-01-13 02:57:08 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=17 : 
+2019-01-13 02:57:08 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => home
+    [pa_filename] => mkmain.php
+    [me_charset] => utf8
+    [di_fr_short] => Accueil
+    [di_fr_long] => Page d'accueil
+)
+
+2019-01-13 02:57:14 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:14 : LG : fr
+2019-01-13 02:57:14 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=21 : 
+2019-01-13 02:57:14 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => dictiona
+    [pa_filename] => dictionary.php
+    [me_charset] => utf8
+    [di_fr_short] => Dictionnaire
+    [di_fr_long] => 
+)
+
+2019-01-13 02:57:17 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:17 : LG : fr
+2019-01-13 02:57:17 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:57:17 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:57:19 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:19 : LG : fr
+2019-01-13 02:57:19 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:57:19 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:57:22 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:22 : LG : fr
+2019-01-13 02:57:22 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 02:57:22 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+
+2019-01-13 02:57:24 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:24 : LG : fr
+2019-01-13 02:57:25 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 02:57:25 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 02:57:30 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:30 : LG : fr
+2019-01-13 02:57:30 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 02:57:30 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 02:57:38 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 02:57:38 : LG : fr
+2019-01-13 02:57:38 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=18 : 
+2019-01-13 02:57:38 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => menus
+    [pa_filename] => menus.php
+    [me_charset] => utf8
+    [di_fr_short] => Menus
+    [di_fr_long] => Entrées de menus
+)
+
+2019-01-13 08:03:27 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:03:27 : LG : fr
+2019-01-13 08:03:27 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=24 : 
+2019-01-13 08:03:27 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => changelo
+    [pa_filename] => changelog.php
+    [me_charset] => utf8
+    [di_fr_short] => Changements
+    [di_fr_long] => Notes de changements
+)
+
+2019-01-13 08:03:30 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:03:30 : LG : fr
+2019-01-13 08:03:30 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=25 : 
+2019-01-13 08:03:30 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => todo
+    [pa_filename] => todo.php
+    [me_charset] => utf8
+    [di_fr_short] => A faire
+    [di_fr_long] => Liste des tâches
+)
+
+2019-01-13 08:03:38 : /usr/share/php/puzzle/ipz_menus.php:369:select m.pa_id, m.me_level, d.di_fr_short from menus m, dictionary d where m.di_name=d.di_name and m.me_level='1' order by m.me_id : 
+2019-01-13 08:03:38 : LG : fr
+2019-01-13 08:03:38 : /usr/share/php/puzzle/ipz_menus.php:609:select d.di_name, p.pa_filename, m.me_charset, d.di_fr_short, d.di_fr_long from pages p, menus m, dictionary d where m.di_name=d.di_name and p.di_name=m.di_name and p.pa_id=26 : 
+2019-01-13 08:03:38 : /usr/share/php/puzzle/ipz_menus.php:623 : Array
+(
+    [di_name] => bugrepor
+    [pa_filename] => bugreport.php
+    [me_charset] => utf8
+    [di_fr_short] => Bugs
+    [di_fr_long] => Rapport de bugs
+)
+

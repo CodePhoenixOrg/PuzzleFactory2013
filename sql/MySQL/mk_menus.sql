@@ -1,0 +1,15 @@
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('0', 'page', 'utf8', '59', '1', 'mkscript', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('0', 'page', 'utf8', '60', '1', 'mkmenu', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('0', 'page', 'utf8', '61', '1', 'mkblock', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('0', 'page', 'utf8', '62', '1', 'mkfields', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('0', 'page', 'utf8', '63', '1', 'mkfile', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('2', 'pages', 'utf8', '17', '1', 'home', '0');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('1', 'page', 'utf8', '18', '0', 'menus', '0');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('2', 'page', 'utf8', '19', '1', 'pages', '0');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('2', 'page', 'utf8', '20', '3', 'blocks', '0');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('1', 'page', 'utf8', '21', '1', 'dictiona', '0');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('2', 'page', 'utf8', '22', '1', 'applicat', '0');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('1', 'page', 'utf8', '24', '1', 'changelo', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('1', 'page', 'utf8', '25', '1', 'todo', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('1', 'page', 'utf8', '26', '1', 'bugrepor', 'user');
+INSERT INTO `ipuzzle`.`pz_menus` (`me_level`, `me_target`, `me_charset`, `pa_id`, `bl_id`, `di_name`, `grp_group`) VALUES ('2', 'page', 'utf8', '27', '1', 'groups', '0');
