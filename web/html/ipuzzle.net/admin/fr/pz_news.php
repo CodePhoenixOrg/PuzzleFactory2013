@@ -1,14 +1,22 @@
 <center>
 <?php   
 	include("pz_news_code.php");
+	use \Puzzle\Data\Controls as DataControls;
+	$datacontrols = new DataControls($lg, $db_prefix);
+	$pc = getVariable("pc");
+	$sr = getVariable("sr");
+	$curl_pager = "";
+	$dialog = "";
+	if(isset($pc)) $curl_pager="&pc=$pc";
+	if(isset($sr)) $curl_pager.="&sr=$sr";
 	if($query=="SELECT") {
 			$sql="select nw_id, nw_title from pz_news order by nw_id";
-			$dbgrid=createPagerDbGrid("pz_news", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
+			$dbgrid=$datacontrols->createPagerDbGrid("pz_news", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("pz_news", $dbgrid);
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>
-<form method='POST' name='pz_newsForm' action='page.php?id=&lg=fr'>
+<form method='POST' name='pz_newsForm' action='page.php?id=211&lg=fr'>
 	<input type='hidden' name='query' value='ACTION'>
 	<input type='hidden' name='event' value='onRun'>
 	<input type='hidden' name='pc' value='<?php echo $pc?>'>

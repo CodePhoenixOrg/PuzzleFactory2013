@@ -39,8 +39,19 @@
 		
 	$rel_page_filename = $pa_filename.$extension;
 
-	$root_code_filename = $wwwroot.$basedir.DIRECTORY_SEPARATOR.$pa_filename.'_code'.$extension;
-	$root_page_filename = $wwwroot.$basedir.DIRECTORY_SEPARATOR.$pa_filename.$extension;
+	$basedir .= "/";
+	$basedir = str_replace('./', "/", $basedir);
+	$basedir = str_replace('//', "/", $basedir);
+	
+	$root_code_filename = $wwwroot.$basedir.$pa_filename.'_code'.$extension;
+	$root_page_filename = $wwwroot.$basedir.$pa_filename.$extension;
+
+	
+	debugLog(__FILE__ . ':' . __LINE__ . ':WWWROOT:' . $wwwroot);
+	debugLog(__FILE__ . ':' . __LINE__ . ':BASEDIR:' . $basedir);
+	debugLog(__FILE__ . ':' . __LINE__ . ':PA_FILENAME:' . $pa_filename);
+	debugLog(__FILE__ . ':' . __LINE__ . ':DECL:FILE:PAGE:' . $root_code_filename);
+	debugLog(__FILE__ . ':' . __LINE__ . ':DECL:FILE:CODE:' . $root_page_filename);
 
 	$script_exists = file_exists($rel_page_filename);
 	$script_exists_tostring = $script_exists ? YES : NO;
@@ -78,7 +89,7 @@
 		}
 		
 		if (($me_id == 0 || $pa_id == 0) && $autogen == 1) {
-			list($me_id, $pa_id) = $menus->add_menu_and_page(
+			list($me_id, $pa_id) = $menus->addMenuAddPage(
 			$userdb,
 			$di_name,
 			$me_level,
@@ -210,11 +221,11 @@
 		
 		echo $message;
 		
-		echo "<form name='myForm' method='POST' action='page.php?id=33&lg=$lg'>\n";
+		echo "<form name='myForm' method='POST' action='page.php?di=mkfile&lg=$lg'>\n";
 		echo $hidden;
 		//echo "<div style='text-align:left;width:680px;height:500px;background:white;overflow:scroll'>$source</div><br>\n";
 		
-		echo "<input type='button' name='previous' value='<< Précédent' onClick='document.myForm.action=\"page.php?id=32&lg=$lg\";document.myForm.submit();'>\n";
+		echo "<input type='button' name='previous' value='<< Précédent' onClick='document.myForm.action=\"page.php?di=mkfields&lg=$lg\";document.myForm.submit();'>\n";
 		echo "<input type='submit' name='save' value='" . YES . "'>\n";
 		echo "<input type='submit' name='save' value='" . NO . "'>\n";
 		echo "</form>\n";
@@ -246,7 +257,7 @@
             
         if ($save=="Oui") {
             // if (($me_id == 0 || $pa_id == 0) && $autogen == 1) {
-            //     list($me_id, $pa_id) = add_menu_and_page(
+            //     list($me_id, $pa_id) = addMenuAddPage(
             //     $userdb,
             //     $di_name,
             //     $me_level,
@@ -264,8 +275,11 @@
             // copy('tmp_code.php', $pa_filename.'_code'.$extension);
 
             copy('tmp_code.php', $root_code_filename);
-            copy('tmp_page.php', $root_page_filename);
+			copy('tmp_page.php', $root_page_filename);
+			debugLog(__FILE__ . ':' . __LINE__ . ':FILE:PAGE:' . $root_code_filename);
+			debugLog(__FILE__ . ':' . __LINE__ . ':FILE:CODE:' . $root_page_filename);
 
+			 
             // copy('tmp_browse.php', $pa_filename.'_browse'.$extension);
             // copy('tmp_form.php', $pa_filename.'_form'.$extension);
             // copy('tmp_insert.php', $pa_filename.'_insert'.$extension);
@@ -322,7 +336,7 @@
 		</fieldset>\n
 		";
         
-        echo "<form name='myForm' method='POST' action='page.php?id=17&lg=$lg'>\n";
+        echo "<form name='myForm' method='POST' action='page.php?di=mkmain&lg=$lg'>\n";
         echo $mk_file;
         echo "</form>\n";
     }

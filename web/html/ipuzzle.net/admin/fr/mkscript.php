@@ -4,7 +4,7 @@ function checkValues() {
 		alert("Vous devez choisir une table.");
 		return false;
 	} else {
-		document.myForm.action="page.php?id=32&lg=<?php   echo $lg?>";
+		document.myForm.action="page.php?di=mkfields&lg=<?php   echo $lg?>";
 	}
 	
 	return true;
@@ -12,13 +12,12 @@ function checkValues() {
 </script>
 <center>
 <?php   
-	include_once 'puzzle/ipz_controls.php';
 
 	use \Puzzle\Data\Controls as DataControls;
 	use \Puzzle\Controls;
 	// use \Puzzle\ScriptsMaker;
 
-	$userdb = getVariable('userdb', 'webfactory');
+	$userdb = getVariable('userdb', $database);
 	$basedir = getVariable('srvdir');
 	$usertable = getVariable('usertable');
 	$pa_filename = getVariable('pa_filename', $usertable);
@@ -42,7 +41,7 @@ function checkValues() {
 	
 	echo "<br>";
 		
-	$tab_ides = $scriptMaker->getTabIdes();
+	$tab_ides = $menus->getTabIdes($userdb);
 	
 	if($basedir=="") $basedir= getCurrentDir() . "/fr";
 
@@ -52,7 +51,7 @@ function checkValues() {
 	$srvfiles = $controls->create_server_file_selector("srvfiles", "myForm", $basedir, "php", 5, "srvdir", $on_change);
 	$database_list = $datacontrols->createOptionsFromQuery("show databases", 0, 0, array(), $userdb, false, $cs);
 	$table_list = $datacontrols->createOptionsFromQuery("show tables from $userdb", 0, 0, array(), $usertable, false, $cs);
-	$sql = 'select b.bl_id, d.di_fr_short from blocks b, dictionary d where b.di_name=d.di_name order by d.di_fr_short';
+	$sql = "select b.bl_id, d.di_fr_short from ${db_prefix}blocks b, ${db_prefix}dictionary d where b.di_name=d.di_name order by d.di_fr_short";
 	$block_list = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $bl_id, false, $cs);
 	
 	//Options de menu
@@ -168,7 +167,7 @@ function checkValues() {
 	</select>
 	</td></tr>
 	<tr><td colspan='3' align='center'>
-	<br><input type='button' name='previous' value='<< Précédent' onClick='document.myForm.action=\"page.php?id=17&lg=$lg\";document.myForm.submit()'>
+	<br><input type='button' name='previous' value='<< Précédent' onClick='document.myForm.action=\"page.php?di=mkmain&lg=$lg\";document.myForm.submit()'>
 	&nbsp;<input type='button' name='next' value='Suivant >>' onClick='if(checkValues()) document.myForm.submit();'>
 	</td></tr>
 	</table>

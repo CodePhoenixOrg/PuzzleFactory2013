@@ -145,7 +145,7 @@ class Menus extends Base
         return $page;
     }
         
-    public function add_menu_and_page(
+    public function addMenuAddPage(
         $userdb,
         $di_name,
         $me_level,
@@ -666,6 +666,8 @@ INSERT;
             $title = $rows["di_".$this->lg."_short"];
         }
     
+        debugLog(__FILE__ . ':' . __LINE__, $rows);
+    
         $request="";
         $p=strpos($page, "?", 0);
         if ($p>-1) {
@@ -695,8 +697,8 @@ INSERT;
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name ".
                 "and d.di_name='$di'";
-        echo $sql . "<br>";
-        // debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+                
+        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
 
         $cs=connection(CONNECT, $database);
         $stmt = $cs->query($sql);
@@ -709,6 +711,8 @@ INSERT;
             $title = $rows["di_".$this->lg."_short"];
         }
 
+        debugLog(__FILE__ . ':' . __LINE__, $rows);
+
         $request="";
         $p=strpos($page, "?", 0);
         if ($p>-1) {
@@ -720,4 +724,30 @@ INSERT;
         
         return $title_page;
     }
+
+    public function getTabIdes($database)
+    {
+        debugLog(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':DATABASE', $database);
+    
+        $sql="select m.me_id, m.di_name ";
+        $sql.="from {$this->db_prefix}menus m ";
+        $sql.="where m.di_name like 'mk%' ";
+        $sql.="order by m.me_id";
+        debugLog(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':SQL', $sql);
+    
+        $cs=connection(CONNECT, $database);
+    
+        $stmt = $cs->query($sql);
+        $tab_ides=(array) null;
+        $i=0;
+        while ($rows=$stmt->fetch()) {
+            $tab_ides[$rows[0]]=$rows[1];
+            $i++;
+        }
+    
+        debugLog(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':RES', $tab_ides);
+
+        return $tab_ides;
+    }
+
 }

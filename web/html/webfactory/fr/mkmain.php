@@ -9,7 +9,7 @@
 	$rad_choice[$choice]=" checked"; 
 
 
-	$tab_ides = $scriptMaker->getTabIdes();
+	$tab_ides = $menus->getTabIdes($database);
 
 	$on_click="var index=get_radio_value(\"myTabForm\", \"choice\");";
 	$on_click.=jsArray("myTabCaptions", $tab_ides);

@@ -89,6 +89,8 @@ class Controls extends Base {
 			$basedir = substr($basedir, 0, $p)."/";
 		}
 
+		$basedir = str_replace("/./", "/", $basedir);
+
 		if($dir_selector!="") {
 			$js="\t$name=eval(document.getElementById('$name'));\n";
 			$js.="\t$dir_selector=eval(document.getElementById('$dir_selector'));\n";
@@ -154,13 +156,15 @@ class Controls extends Base {
 	}
 
 	function create_server_directory_selector($name="", $formname="", $basedir="", $onChange="") {
-		if(substr($basedir, -2) == "/.") $basedir = substr($basedir, 0, -1) ;
+		if(substr($basedir, -2) == "/.") $basedir = str_replace("/.", "/", $basedir);
 		if(substr($basedir, -1) != "/") $basedir.="/";
 		if(substr($basedir, -3) == "../") {
 			$basedir = substr($basedir, 0, -4);
 			$p = strrpos($basedir, "/");
 			$basedir = substr($basedir, 0, $p)."/";
 		}
+
+		$basedir = str_replace("/./", "/", $basedir);
 
 		echo "basedir='".getWwwRoot().$basedir."'<br>";
 		

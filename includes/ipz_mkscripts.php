@@ -28,7 +28,7 @@ class ScriptsMaker extends Base
     public function __construct()
     {
     }
-
+        
     public function makeCode(
         $database,
         $table="",
@@ -742,28 +742,5 @@ class ScriptsMaker extends Base
         $script.=scriptFooter();
 
         return $script;
-    }
-
-    public function getTabIdes()
-    {
-        global $database;
-    
-        $sql="select m.me_id ";
-        $sql.="from menus m, dictionary d ";
-        $sql.="where m.di_name=d.di_name ";
-        $sql.="and d.di_name like 'mk%' ";
-        $sql.="order by m.me_id";
-    
-        $cs=connection(CONNECT, $database);
-    
-        $stmt = $cs->query($sql);
-        $tab_ides=(array) null;
-        $i=0;
-        while ($rows=$stmt->fetch()) {
-            $tab_ides[$i]=$rows[0];
-            $i++;
-        }
-    
-        return $tab_ides;
     }
 }
