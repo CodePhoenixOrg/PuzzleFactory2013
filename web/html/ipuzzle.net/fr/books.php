@@ -1,7 +1,7 @@
 <center>
 <?php 	
 	$sql="select * from ${db_prefix}books where la_country='$lg' order by bo_id";
-	$cs=connection(CONNECT, "leela");
+	$cs=connection(CONNECT, $database);
 	$stmt = $cs->query($sql);
 	while($rows=$stmt->fetch(PDO::FETCH_ASSOC))
 	{
@@ -40,6 +40,5 @@
 		<br>
 		<?php 
 	}
-	$result->free_result();
 ?>
 </center>

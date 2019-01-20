@@ -1,6 +1,6 @@
 <center>
 <?php   
-	include("pz_news_code.php");
+	include("news_code.php");
 	use \Puzzle\Data\Controls as DataControls;
 	$datacontrols = new DataControls($lg, $db_prefix);
 	$pc = getVariable("pc");
@@ -16,7 +16,7 @@
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>
-<form method='POST' name='pz_newsForm' action='page.php?id=211&lg=fr'>
+<form method='POST' name='pz_newsForm' action='page.php?id=1&lg=fr'>
 	<input type='hidden' name='query' value='ACTION'>
 	<input type='hidden' name='event' value='onRun'>
 	<input type='hidden' name='pc' value='<?php echo $pc?>'>
@@ -62,13 +62,6 @@
 						<textarea name='nw_picture' cols='80' rows='4'><?php echo $nw_picture?></textarea>
 					</td>
 				</tr>
-				<tr>
-					<td>nw_time</td>
-					<td>
-						<input type='text' name='nw_time' size='10' value='<?php echo (empty($nw_time)) ? date('1970-01-01') : $nw_time; ?>' >
-					</td>
-				</tr>
-				<tr>
 				<tr>
 					<td>nw_date</td>
 					<td>

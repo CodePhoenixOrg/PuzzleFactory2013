@@ -25,10 +25,12 @@
 	$design = new Puzzle\Design();
 	$scriptMaker = new Puzzle\ScriptsMaker();
 
-	$main_menu = $menus->createMainMenu($database, 1);
+	$admin_menu = $menus->createMainMenu($database, 3);
+	$user_menu = $menus->createMainMenu($database, 1);
 	$sub_menu = $menus->createSubMenu($database, 1, SUB_MENU_HORIZONTAL);
-	$toplinks=$main_menu["menu"];
-	$default_id=$main_menu["index"];
+	$toplinks = $admin_menu["menu"];
+	$userlinks = $user_menu["menu"];
+	$default_id = $admin_menu["index"];
 
 	if($di !== '') {
 		$title_page = $menus->retrievePageByDictionaryId($database, $di, $lg);
@@ -103,6 +105,13 @@
 		</td>
 	</tr>
 	<tr>
+		<td colspan="2" bgcolor="black" height="8" align="center" valign="top">
+		<?php    
+			echo $userlinks;
+			//echo "<br>".$sub_menu;
+		?>
+		</td>
+	</tr>	<tr>
 		<td colspan="2" bgcolor="black" height="1" align="center" valign="top"></td>
 	</tr>
 	<tr bgcolor="#a8eaff">

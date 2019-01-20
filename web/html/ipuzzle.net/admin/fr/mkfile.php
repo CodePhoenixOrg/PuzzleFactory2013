@@ -89,7 +89,7 @@
 		}
 		
 		if (($me_id == 0 || $pa_id == 0) && $autogen == 1) {
-			list($me_id, $pa_id) = $menus->addMenuAddPage(
+			list($me_id, $pa_id) = $menus->addMenuAndPage(
 			$userdb,
 			$di_name,
 			$me_level,
@@ -257,7 +257,7 @@
             
         if ($save=="Oui") {
             // if (($me_id == 0 || $pa_id == 0) && $autogen == 1) {
-            //     list($me_id, $pa_id) = addMenuAddPage(
+            //     list($me_id, $pa_id) = addMenuAndPage(
             //     $userdb,
             //     $di_name,
             //     $me_level,

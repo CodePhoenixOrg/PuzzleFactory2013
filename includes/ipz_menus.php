@@ -145,7 +145,7 @@ class Menus extends Base
         return $page;
     }
         
-    public function addMenuAddPage(
+    public function addMenuAndPage(
         $userdb,
         $di_name,
         $me_level,
