@@ -553,7 +553,7 @@ class Controls extends \Puzzle\Base
         }
     
         if (!isset($image_link)) {
-            $image_link="images/edit.png";
+            $image_link="img/edit.png";
         }
 
         $add="Ajouter";
@@ -721,7 +721,7 @@ class Controls extends \Puzzle\Base
             $hidden_fields.
             "<tr>\n";
             if ($fields_count>1) {
-                $filters.="<td bgcolor=\"$pager_color\"><img src=\"images/filter.png\" border=\"0\"></td>";
+                $filters.="<td bgcolor=\"$pager_color\"><img src=\"img/filter.png\" border=\"0\"></td>";
             }
         
             $filter_button="<input type=\"submit\" name=\"filter\" value=\"Filtrer\">\n";
@@ -1051,7 +1051,7 @@ class Controls extends \Puzzle\Base
         }
     
         if ($image_link=="") {
-            $image_link="images/edit.png";
+            $image_link="img/edit.png";
         }
 
         $add="Ajouter";
@@ -1174,7 +1174,7 @@ class Controls extends \Puzzle\Base
         if ($can_filter) {
             $filters="<form method=\"post\" action=\"page.php?id=$pager_id&lg=$lg\" name=\"filter\"><tr>\n";
             if ($fields_count>1) {
-                $filters.="<td bgcolor=\"$pager_color\"><img src=\"images/filter.png\" border=\"0\"></td>";
+                $filters.="<td bgcolor=\"$pager_color\"><img src=\"img/filter.png\" border=\"0\"></td>";
             }
             $filter_button="<input type=\"submit\" name=\"filter\" value=\"Filtrer\">\n";
         } else {
@@ -1504,7 +1504,7 @@ class Controls extends \Puzzle\Base
             $odd_fore_color="white";
         }
         if ($image_link=="") {
-            $image_link="images/edit.png";
+            $image_link="img/edit.png";
         }
 
         //Détermine la langue de la page qui sera affichée

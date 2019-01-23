@@ -288,7 +288,7 @@ function getCurrentWwwRoot() {
 }
 
 function getHttpImagesDir($directory="") {
-	$images_dir=getHttpRoot()."images/";
+	$images_dir=getHttpRoot()."img/";
 	return $images_dir;
 }
 

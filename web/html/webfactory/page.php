@@ -57,7 +57,7 @@
 		$alink_color="black";
 	}
 
-	$img="images";
+	$img="img";
 	
 	//$ses_login=$_SESSION["ses_login"];
 	//$authentication=getAuthentication($ses_login);

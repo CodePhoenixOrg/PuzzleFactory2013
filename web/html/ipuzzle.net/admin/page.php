@@ -59,7 +59,7 @@
 		$alink_color="black";
 	}
 
-	$img="images";
+	$img="img";
 	
 	//$ses_login=$_SESSION["ses_login"];
 	//$authentication=getAuthentication($ses_login);
@@ -73,14 +73,17 @@
 <body bgcolor="<?php    echo $back_color?>" text="<?php    echo $text_color?>" link="<?php    echo $link_color?>" vlink="<?php    echo $vlink_color?>" alink="<?php    echo $alink_color?>" leftmargin="0" topmargin="0">
 
 <center>
-  <table id="my_tableShadow" border="0" cellspacing="0" cellpadding="0">
+
+
+<table id="my_tableShadow" border="0" cellspacing="0" cellpadding="0">
     <tr><td bgcolor="white" height="3" colspan="2"></td></tr>
     <tr>
       <td rowspan="2" colspan="2">
-
-<table border="1" cellpadding="0" cellspacing="0" height="760" width="760" valign="top"><tr><td>
-<table id="my_table" bgcolor="white" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
-	<tr height="80">
+		<table border="1" cellpadding="0" cellspacing="0" height="760" width="760" valign="top"><tr><td>
+		<table id="my_table" bgcolor="white" border="0" bordercolor="black" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr>
+		<td colspan="3"> 
+		<table  border="0" bordercolor="black" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr>
+		<tr height="80">
 		<td width="250" height="80" align="left" valign="top" style="font-size: 14;">
 			<img id="logo"
 	  			src="<?php    echo $img?>/small_logo.png"
@@ -95,30 +98,65 @@
 			<?php    echo $title?>
 			&nbsp;
 		</td>
+	</tr></tr>
+</table>
+		</td>
 	</tr>
 	<tr>
-		<td colspan="2" bgcolor="black" height="8" align="center" valign="top">
+		<td colspan="3" bgcolor="black" height="8" align="center" valign="top">
 		<?php    
 			echo $toplinks;
-			//echo "<br>".$sub_menu;
 		?>
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" bgcolor="black" height="8" align="center" valign="top">
+		<td colspan="3" background="<?php echo $img?>/menu_tube.jpg" height="20" align="center" valign="top">
 		<?php    
 			echo $userlinks;
-			//echo "<br>".$sub_menu;
 		?>
 		</td>
-	</tr>	<tr>
-		<td colspan="2" bgcolor="black" height="1" align="center" valign="top"></td>
+	</tr>	
+	<tr>
+		<td colspan="3" bgcolor="black" height="1" align="center" valign="top"></td>
 	</tr>
+	<!-- bgcolor="#a8eaff" 1680d9-->
 	<tr bgcolor="#a8eaff">
-		<td colspan="2" align="left" valign="top" height="680">
-		<?php    
-			include($page);
+		<td colspan="1" valign="top" width="100" height="100%">
+		<?php  
+			if(!isset($logout)) $logout=0;
+			if(!isset($panel_colors)) $panel_colors=array();
+			if(!isset($mbr_login)) $mbr_login="";
+			if(!isset($mbr_pass)) $mbr_pass="";
+			if(!isset($mbr_valider)) $mbr_valider="";
+			
+			$blocks = new \Puzzle\Blocks($lg, $db_prefix);
+			$block_set= $blocks->createEnhancedBlockSet($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
+			echo $block_set."\n\n";
 		?>
+	
+	    </td>
+
+		<td colspan="1" valign="top" width="600" bgcolor="#EEEEEE">
+		<font face="helvetica"><center>
+		<?php  
+			echo $title."<br>";
+		?>
+	    </font></center>
+		<?php  
+ 			include $page;
+		?>
+		</td>
+		<td colspan="1" valign="top" width="100" height="100%">
+		<?php 
+			if(!isset($nlr_email)) $nlr_email="";
+			if(!isset($nlr_subscribe)) $nlr_subscribe="";
+			if(!isset($nlr_valider)) $nlr_valider="";
+			if(!isset($date)) $date="";
+			
+			$block_set = $blocks->createEnhancedBlockSet($database, BLOCK_RIGHT_COLUMN, $id, $lg, $panel_colors);
+			echo $block_set."\n\n";
+		?>
+	
 		</td>
 	</tr>
 </table>

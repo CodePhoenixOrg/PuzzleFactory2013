@@ -662,7 +662,7 @@ function createDiaryGrid($name="", $date="", $id=0, $page_link="",  $curl_rows="
 		$odd_fore_color="white";
 		$pager_color="lightgrey";
 	}
-	if($image_link=="") $image_link="images/Editer.png";
+	if($image_link=="") $image_link="img/Editer.png";
 
 	//Détermine la langue de la page qui sera affichée
 	//$lg=getVariable("lg");

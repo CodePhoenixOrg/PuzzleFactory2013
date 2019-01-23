@@ -40,7 +40,7 @@
         }
 
 	global $img;
-	$img="images";
+	$img="img";
 ?>
 </head>
 <body bgcolor="<?php    echo $back_color?>" text="<?php    echo $text_color?>" link="<?php    echo $link_color?>" vlink="<?php    echo $vlink_color?>" alink="<?php    echo $alink_color?>" leftmargin="0" topmargin="0">

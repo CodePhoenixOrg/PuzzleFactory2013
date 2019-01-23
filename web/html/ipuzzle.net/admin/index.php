@@ -19,7 +19,7 @@
 
     $version = file_get_contents("VERSION");
 
-    $img="images";
+    $img="img";
 ?>
 	<div style="position:absolute;z-index:1;margin-top:150;margin-left:150">
 		<table border="0" cellpadding="0" cellspacing="0"><tr><td>

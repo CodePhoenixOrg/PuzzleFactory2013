@@ -87,8 +87,8 @@
 	</table>\n
 	</td></tr>\n
 	<tr><td colspan='3' align='center'>
-	<br>\n<input type='button' name='previous' value='<< Précédent' onClick='document.myForm.action=\"page.php?id=29&lg=$lg\";document.myForm.submit()'>
-	&nbsp;\n<input type='button' name='next' value='Suivant >>' onClick='document.myForm.action=\"page.php?id=33&lg=$lg\";document.myForm.submit()'>\n
+	<br>\n<input type='button' name='previous' value='<< Précédent' onClick='document.myForm.action=\"page.php?di=mkscript&lg=$lg\";document.myForm.submit()'>
+	&nbsp;\n<input type='button' name='next' value='Suivant >>' onClick='document.myForm.action=\"page.php?di=mkfile&lg=$lg\";document.myForm.submit()'>\n
 	</td></tr>\n
 	</table>\n
 	</fieldset>\n

@@ -208,7 +208,7 @@ JAVASCRIPT;
             $name : nom du tableau
             $html_table : tableau html
         
-            La fonction renvoie un tableau html à 2 linges et 2 colonnes contenant le tableau passé en paramètre dans la première cellule. Les autres cellules contiennent des images d\"ombres.
+            La fonction renvoie un tableau html à 2 linges et 2 colonnes contenant le tableau passé en paramètre dans la première cellule. Les autres cellules contiennent des img d\"ombres.
         */
         global $img, $panel_colors;
 
@@ -235,15 +235,15 @@ JAVASCRIPT;
         "      <td rowspan=\"2\" colspan=\"2\">\n\n".
         $html_table."\n\n".
         "      </td>\n".
-        "      <td background=\"images/shadows/${suffix}_top_right.png\" style=\"font-size: 1; width:11; height:8;\"></td>\n".
+        "      <td background=\"img/shadows/${suffix}_top_right.png\" style=\"font-size: 1; width:11; height:8;\"></td>\n".
         "    </tr>\n".
         "    <tr>\n".
-        "      <td id=\"".$name."_sh\" background=\"images/shadows/${suffix}_right.png\" style=\"font-size: 1; width:11;\"></td>\n".
+        "      <td id=\"".$name."_sh\" background=\"img/shadows/${suffix}_right.png\" style=\"font-size: 1; width:11;\"></td>\n".
         "    </tr>\n".
         "    <tr>\n".
-        "      <td background=\"images/shadows/${suffix}_bottom_left.png\" style=\"font-size: 1; width:8; height:11;\"></td>\n".
-        "      <td id=\"".$name."_sw\" background=\"images/shadows/${suffix}_bottom.png\" style=\"font-size: 1; height: 11\"></td>\n".
-        "      <td background=\"images/shadows/${suffix}_bottom_right.png\" style=\"font-size: 1; width:11; height:11;\"></td>\n".
+        "      <td background=\"img/shadows/${suffix}_bottom_left.png\" style=\"font-size: 1; width:8; height:11;\"></td>\n".
+        "      <td id=\"".$name."_sw\" background=\"img/shadows/${suffix}_bottom.png\" style=\"font-size: 1; height: 11\"></td>\n".
+        "      <td background=\"img/shadows/${suffix}_bottom_right.png\" style=\"font-size: 1; width:11; height:11;\"></td>\n".
         "    </tr>\n".
         "  </table>\n\n";
     
@@ -269,7 +269,7 @@ JAVASCRIPT;
             $name : nom du tableau
             $html_table : tableau html
         
-            La fonction renvoie un tableau html à 2 linges et 2 colonnes contenant le tableau passé en paramètre dans la première cellule. Les autres cellules contiennent des images d\"ombres.
+            La fonction renvoie un tableau html à 2 linges et 2 colonnes contenant le tableau passé en paramètre dans la première cellule. Les autres cellules contiennent des img d\"ombres.
         */
         global $img;
 
@@ -292,15 +292,15 @@ JAVASCRIPT;
         "      <td rowspan=\"2\" colspan=\"2\">\n\n".
         $table."\n\n".
         "      </td>\n".
-        "      <td background=\"images/skin/$skin/$sk_top_right_pic\" style=\"font-size: 1; width:11; height:8;\"></td>\n".
+        "      <td background=\"img/skin/$skin/$sk_top_right_pic\" style=\"font-size: 1; width:11; height:8;\"></td>\n".
         "    </tr>\n".
         "    <tr>\n".
-        "      <td id=\"".$name."_sh\" background=\"images/skin/$skin/$sk_right_pic\" style=\"font-size: 1; width:11;\"></td>\n".
+        "      <td id=\"".$name."_sh\" background=\"img/skin/$skin/$sk_right_pic\" style=\"font-size: 1; width:11;\"></td>\n".
         "    </tr>\n".
         "    <tr>\n".
-        "      <td background=\"images/skin/$skin/$sk_bottom_left_pic\" style=\"font-size: 1; width:$min_size; height:$max_size;\"></td>\n".
-        "      <td id=\"".$name."_sw\" background=\"images/skin/$skin/$sk_bottom_pic\" style=\"font-size: 1; height: 11\"></td>\n".
-        "      <td background=\"images/skin/$skin/$sk_bottom_right_pic\" style=\"font-size: 1; width:11; height:11;\"></td>\n".
+        "      <td background=\"img/skin/$skin/$sk_bottom_left_pic\" style=\"font-size: 1; width:$min_size; height:$max_size;\"></td>\n".
+        "      <td id=\"".$name."_sw\" background=\"img/skin/$skin/$sk_bottom_pic\" style=\"font-size: 1; height: 11\"></td>\n".
+        "      <td background=\"img/skin/$skin/$sk_bottom_right_pic\" style=\"font-size: 1; width:11; height:11;\"></td>\n".
         "    </tr>\n".
         "  </table>\n\n";
     

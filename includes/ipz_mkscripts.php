@@ -254,7 +254,7 @@ class ScriptsMaker extends Base
         $script.="\t\t</tr>\n";
         $script.="\t</table>\n";
         $script.="</form>\n";
-        //$script.="<table><tr><td valign=\"middle\"><a href=\"javascript: history.go(-1);\"><img src=\"../images/scroll/left_0.gif\" border=\"0\">Retour</a></td></tr></table>\n";
+        //$script.="<table><tr><td valign=\"middle\"><a href=\"javascript: history.go(-1);\"><img src=\"../img/scroll/left_0.gif\" border=\"0\">Retour</a></td></tr></table>\n";
         $script.="<?php   \t} ?>\n";
         $script.="</center>\n";
 
@@ -425,7 +425,7 @@ class ScriptsMaker extends Base
         $script.="\t\t</tr>\n";
         $script.="\t</table>\n";
         $script.="</form>\n";
-        //$script.="<table><tr><td valign=\"middle\"><a href=\"javascript: history.go(-1);\"><img src=\"../images/scroll/left_0.gif\" border=\"0\">Retour</a></td></tr></table>\n";
+        //$script.="<table><tr><td valign=\"middle\"><a href=\"javascript: history.go(-1);\"><img src=\"../img/scroll/left_0.gif\" border=\"0\">Retour</a></td></tr></table>\n";
         $script.="<?php   } ?>\n";
         $script.="</center>\n";
 
@@ -437,7 +437,7 @@ class ScriptsMaker extends Base
         $script="";
         $script.="<?php   \n";
         $script.="\tglobal \$img;\n";
-        $script.="\t\$img=\"/images\";\n";
+        $script.="\t\$img=\"/img\";\n";
         $script.="\tinclude_once(\"puzzle/ipz_style.php\");\n";
         $script.="\tinclude_once(\"puzzle/ipz_misc.php\");\n";
         $script.="\tinclude_once(PZ_DEFAULTS);\n";

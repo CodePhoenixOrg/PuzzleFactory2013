@@ -5,11 +5,11 @@
     use \Puzzle\Data\Controls as DataControls;
     use \Puzzle\Design;
 
-    $cs=connection(CONNECT, $database);
+    $cs = connection(CONNECT, $database);
     $datacontrols = new DataControls($lg, $db_prefix);
     $design = new Design();
 
-    $sql='select nw_id, nw_url, concat(\'<span style=\"font-size:12; font-weight:bold\">\', nw_title, \'</span><br><span style=\"font-size:12; font-style:normal\">\', nw_text, \'</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">\', nw_author, \', \', nw_date, \' @ \', nw_time, \'</span>\') as News from '.$db_prefix.'news order by nw_date desc, nw_time desc';
+    $sql = 'select nw_id, nw_url, concat(\'<span style=\"font-size:12; font-weight:bold\">\', nw_title, \'</span><br><span style=\"font-size:12; font-style:normal\">\', nw_text, \'</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">\', nw_author, \', \', nw_date, \' @ \', nw_time, \'</span>\') as News from '.$db_prefix.'news order by nw_date desc, nw_time desc';
     debugLog("SQL : " . __FILE__ . ":" . __LINE__, $sql);
 
 // DEBUG
