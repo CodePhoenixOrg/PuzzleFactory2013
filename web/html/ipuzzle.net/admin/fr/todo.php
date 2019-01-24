@@ -16,8 +16,8 @@
 	
 	if($query=="SELECT") {
 		//$sql="select td_id, td_title from todo order by td_id";
-		$sql="select td.td_id, concat('<b>', td.td_title, '</b><br>', td.td_text, '<br>') as `tâches`, mb.mbr_ident as 'r&eacute;al.', td.td_status as '&eacute;tat', td.td_priority as 'priorité', td.td_expiry as '&eacute;ch&eacute;ance' from todo as td left outer join members as mb on td.mbr_id2=mb.mbr_id order by td.td_status, td.td_expiry, td.td_priority desc";
-		$dbgrid=$datacontrols->createPagerDbGrid("todo", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 450), 15, $grid_colors, $cs);
+		$sql="select td.td_id, concat('<b>', td.td_title, '</b><br>', td.td_text, '<br>') as `tâches`, mb.mbr_ident as 'r&eacute;al.', td.td_status as '&eacute;tat', td.td_priority as 'priorité', td.td_expiry as '&eacute;ch&eacute;ance' from pz_todo as td left outer join pz_members as mb on td.mbr_id2=mb.mbr_id order by td.td_status, td.td_expiry, td.td_priority desc";
+		$dbgrid=$datacontrols->createPagerDbGrid("todo", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, [0, 140, 30, 30, 30, 30], 15, $grid_colors, $cs);
 		//$dbgrid=tableShadow("todo", $dbgrid);
 		echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
@@ -52,7 +52,7 @@
 						<td>Demandée par</td>
 						<td>
 							<select name='mbr_id'>
-							<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
+							<?php   $sql='select mbr_id, mbr_nom from pz_members order by mbr_nom';
 							$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 							echo $options["list"];?>
 							</select>
@@ -62,7 +62,7 @@
 						<td>Réalisée par</td>
 						<td>
 							<select name='mbr_id2'>
-							<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
+							<?php   $sql='select mbr_id, mbr_nom from pz_members order by mbr_nom';
 							$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id2, false, $cs);
 							echo $options["list"];?>
 							</select>

@@ -23,13 +23,13 @@ SELECT
     END AS Niveau,
     bd.di_fr_short AS Bloc
 FROM
-    menus m
+    pz_menus m
         INNER JOIN
-    dictionary d ON d.di_name = m.di_name
+    pz_dictionary d ON d.di_name = m.di_name
         LEFT JOIN
-    blocks b ON m.bl_id = b.bl_id
+    pz_blocks b ON m.bl_id = b.bl_id
         LEFT OUTER JOIN
-    dictionary bd ON bd.di_name = b.di_name
+    pz_dictionary bd ON bd.di_name = b.di_name
 ORDER BY d.di_fr_short
 SQL;
 			$dbgrid = $datacontrols->createPagerDbGrid("menus", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, [0, 200, 100], 15, $grid_colors, $cs);

@@ -82,16 +82,13 @@
 		<table border="1" cellpadding="0" cellspacing="0" height="760" width="760" valign="top"><tr><td>
 		<table id="my_table" bgcolor="white" border="0" bordercolor="black" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr>
 		<td colspan="3"> 
-		<table  border="0" bordercolor="black" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr>
+		<table  background="img/ipz_banner.png" border="0" bordercolor="black" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr>
 		<tr height="80">
 		<td width="250" height="80" align="left" valign="top" style="font-size: 14;">
-			<img id="logo"
-	  			src="<?php    echo $img?>/small_logo.png"
-				onMouseOut="PZ_IMG.src='<?php    echo $img?>/small_logo.png';"
-				onMouseOver="PZ_IMG=document.getElementById('logo');
-						PZ_IMG.src='<?php    echo $img?>/small_logo_light.png';"
-			  	onClick="document.location.href='<?php    echo "."?>'"
-	  		>
+			<!--img style="height:80px;" id="logo" src="<?php echo $img?>/ipz_logo_banner.jpg"
+				onMouseOut="PZ_IMG.src='<?php echo $img?>/ipz_logo_banner.jpg';"
+				onMouseOver="PZ_IMG=document.getElementById('logo');PZ_IMG.src='<?php echo $img?>/ipz_logo_banner2.jpg';"
+			  	onClick="document.location.href='<?php echo "."?>'"-->
 		</td>
 		<td style="font-size: 30" width="510" height="80" align="right" valign="middle">
 			<!--img src="<?php    echo $img?>/admin/<?php    echo $di?>.png" valign="top" border="0"-->
@@ -120,7 +117,7 @@
 		<td colspan="3" bgcolor="black" height="1" align="center" valign="top"></td>
 	</tr>
 	<!-- bgcolor="#a8eaff" 1680d9-->
-	<tr bgcolor="#a8eaff">
+	<tr bgcolor="1680d9">
 		<td colspan="1" valign="top" width="100" height="100%">
 		<?php  
 			if(!isset($logout)) $logout=0;

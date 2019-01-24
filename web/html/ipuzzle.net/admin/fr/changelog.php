@@ -16,7 +16,7 @@
 SELECT 
     cl_id, cl_title as 'Résumé', cl_text as 'Description'
 FROM
-    changelog
+    pz_changelog
 SQL;
 			$dbgrid = $datacontrols->createPagerDbGrid("changelog", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, [0, 50, 350], 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("changelog", $dbgrid);
@@ -69,7 +69,7 @@ SQL;
 					<td>fr_id</td>
 					<td>
 						<select name='fr_id'>
-						<?php   $sql='select fr_id, fr_title from forums order by fr_title';
+						<?php   $sql='select fr_id, fr_title from pz_forums order by fr_title';
 						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
 						echo $options["list"];?>
 						</select>
@@ -79,7 +79,7 @@ SQL;
 					<td>mbr_id</td>
 					<td>
 						<select name='mbr_id'>
-						<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
+						<?php   $sql='select mbr_id, mbr_nom from pz_members order by mbr_nom';
 						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 						echo $options["list"];?>
 						</select>

@@ -13,7 +13,7 @@
 		switch ($action) {
 		case "Ajouter":
 
-			$sql="select max(td_id) from todo;";
+			$sql="select max(td_id) from pz_todo;";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch();
 			$td_id=$rows[0]+1;
@@ -26,7 +26,7 @@
 			$mbr_id="";
 		break;
 		case "Modifier":
-			$sql="select * from todo where td_id='$td_id';";
+			$sql="select * from pz_todo where td_id='$td_id';";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 			$td_id=$rows["td_id"];
@@ -54,7 +54,7 @@
 			$td_text=escapeChars($td_text);
 			$td_status=escapeChars($td_status);
             $td_date = dateFrenchToMysql($td_date);
-			$sql="insert into todo (".
+			$sql="insert into pz_todo (".
 				"td_id, ".
 				"td_title, ".
 				"td_text, ".
@@ -89,7 +89,7 @@
 			$td_text=escapeChars($td_text);
 			$td_status=escapeChars($td_status);
             $td_date = dateFrenchToMysql($td_date);
-			$sql="update todo set ".
+			$sql="update pz_todo set ".
 				"td_id=$td_id, ".
 				"td_title='$td_title', ".
 				"td_text='$td_text', ".
@@ -102,7 +102,7 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Supprimer":
-			$sql="delete from todo where td_id='$td_id'";
+			$sql="delete from pz_todo where td_id='$td_id'";
 			$stmt = $cs->query($sql);
 		break;
 		}

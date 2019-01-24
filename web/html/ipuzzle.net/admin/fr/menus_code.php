@@ -10,7 +10,7 @@
 		switch ($action) {
 		case "Ajouter":
 
-			$sql="select max(me_id) from menus;";
+			$sql="select max(me_id) from pz_menus;";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch();
 			$me_id=$rows[0]+1;
@@ -21,7 +21,7 @@
 			$me_charset="";
 		break;
 		case "Modifier":
-			$sql="select * from menus where me_id='$me_id';";
+			$sql="select * from pz_menus where me_id='$me_id';";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 			$me_id=$rows["me_id"];
@@ -42,7 +42,7 @@
 			$bl_id = $_POST["bl_id"];
 			$me_charset = $_POST["me_charset"];
 ;
-			$sql="insert into menus (".
+			$sql="insert into pz_menus (".
 				"me_id, ".
 				"me_level, ".
 				"me_target, ".
@@ -67,7 +67,7 @@
 			$bl_id = $_POST["bl_id"];
 			$me_charset = $_POST["me_charset"];
 ;
-			$sql="update menus set ".
+			$sql="update pz_menus set ".
 				"me_id='$me_id', ".
 				"me_level='$me_level', ".
 				"me_target='$me_target', ".
@@ -78,7 +78,7 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Supprimer":
-			$sql="delete from menus where me_id='$me_id'";
+			$sql="delete from pz_menus where me_id='$me_id'";
 			$stmt = $cs->query($sql);
 		break;
 		}

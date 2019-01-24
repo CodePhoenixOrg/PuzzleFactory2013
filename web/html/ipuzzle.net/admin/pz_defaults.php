@@ -5,7 +5,7 @@
 	var hlBackColor="#46a0E9";
 	var hlTextColor="white";
 </script>
-<?php   
+<?php 
 	//Paramètres côté serveur
 	
 	//Coleurs de la page assignées au tag BODY (text, fond, liens)
@@ -23,8 +23,9 @@
 	$panel_colors=array(
 		"border_color"=>"#1680d9",
 		"caption_color"=>"white",
-		"back_color"=>"#E0E0E0",
+		"back_color"=>"#1680d9",
 		"fore_color"=>"black"
+		//"back_color"=>"#E0E0E0",
 	);
 
 	//Couleurs de l'agenda
@@ -52,9 +53,10 @@
 	);
 
 	//Initialisation de l'affichage sur la première page du menu en français
-	// if(!isset($id)) $id="17";
-	// if(!isset($lg)) $lg="fr";
-
-	$lg="fr";
-	$database="ipuzzle";
+	global $lg, $id, $di;
+	global $database, $db_prefix;
+	
+	//date_default_timezone_set("Europe/Paris");
 	$db_prefix="pz_";
+	$database="ipuzzle";
+?>

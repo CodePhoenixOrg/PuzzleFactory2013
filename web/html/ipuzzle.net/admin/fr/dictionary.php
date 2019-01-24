@@ -16,7 +16,7 @@
 SELECT 
     di_id, di_name as 'Clé', di_fr_short as 'Libellé court', di_fr_long as 'Libellé long'
 FROM
-    dictionary
+	pz_dictionary
 SQL;
 			$dbgrid = $datacontrols->createPagerDbGrid("dictionary", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, [0, 70, 120, 250], 15, $grid_colors, $cs);
 			//$dbgrid=tableShadow("dictionary", $dbgrid);

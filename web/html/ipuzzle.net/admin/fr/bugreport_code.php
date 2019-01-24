@@ -11,7 +11,7 @@
 		switch ($action) {
 		case "Ajouter":
 
-			$sql="select max(br_id) from bugreport;";
+			$sql="select max(br_id) from pz_bugreport;";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch();
 			$br_id=$rows[0]+1;
@@ -23,7 +23,7 @@
 			$mbr_id="";
 		break;
 		case "Modifier":
-			$sql="select * from bugreport where br_id='$br_id';";
+			$sql="select * from pz_bugreport where br_id='$br_id';";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 			$br_id=$rows["br_id"];
@@ -49,7 +49,7 @@
 			$br_text=escapeChars($br_text);
 			$br_status=escapeChars($br_status);
                         $br_date = dateFrenchToMysql($br_date);
-			$sql="insert into bugreport (".
+			$sql="insert into pz_bugreport (".
 				"br_id, ".
 				"br_title, ".
 				"br_text, ".
@@ -82,7 +82,7 @@
 			$br_text=escapeChars($br_text);
 			$br_status=escapeChars($br_status);
                         $br_date = dateFrenchToMysql($br_date);
-			$sql="update bugreport set ".
+			$sql="update pz_bugreport set ".
 				"br_id=$br_id, ".
 				"br_title='$br_title', ".
 				"br_text='$br_text', ".
@@ -97,7 +97,7 @@
 
 		break;
 		case "Supprimer":
-			$sql="delete from bugreport where br_id='$br_id'";
+			$sql="delete from pz_bugreport where br_id='$br_id'";
 			$stmt = $cs->query($sql);
 		break;
 		}

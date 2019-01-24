@@ -13,7 +13,7 @@
 
 	if($query=="SELECT") {
 		//$sql="select br_id, br_title from bugreport order by br_id";
-		$sql="select br_id, concat('<b>', br_title, '</b><br>', br_text, '<br>') as `bugs trouvés`, br_importance as 'importance', br_status as 'etat' from bugreport order by br_status, br_importance desc";
+		$sql="select br_id, concat('<b>', br_title, '</b><br>', br_text, '<br>') as `bugs trouvés`, br_importance as 'importance', br_status as 'etat' from pz_bugreport order by br_status, br_importance desc";
 		$dbgrid = $datacontrols->createPagerDbGrid("bugreport", $sql, $id, "page.php", "&query=ACTION$curl_pager", "", true, true, $dialog, array(0, 400), 15, $grid_colors, $cs);
 		//$dbgrid=tableShadow("bugreport", $dbgrid);
 		echo "<br>".$dbgrid;
@@ -49,7 +49,7 @@
 						<td>Rapporté par</td>
 						<td>
 							<select name='mbr_id'>
-							<?php   $sql='select mbr_id, mbr_nom from members order by mbr_nom';
+							<?php   $sql='select mbr_id, mbr_nom from pz_members order by mbr_nom';
 							$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $mbr_id, false, $cs);
 							echo $options["list"];?>
 							</select>

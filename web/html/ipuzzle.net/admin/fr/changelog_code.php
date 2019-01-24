@@ -11,7 +11,7 @@
 		switch ($action) {
 		case "Ajouter":
 
-			$sql="select max(cl_id) from changelog;";
+			$sql="select max(cl_id) from pz_changelog;";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch();
 			$cl_id=$rows[0]+1;
@@ -23,7 +23,7 @@
 			$mbr_id="";
 		break;
 		case "Modifier":
-			$sql="select * from changelog where cl_id='$cl_id';";
+			$sql="select * from pz_changelog where cl_id='$cl_id';";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 			$cl_id=$rows["cl_id"];
@@ -46,7 +46,7 @@
 			$fr_id = $_POST["fr_id"];
 			$mbr_id = $_POST["mbr_id"];
 ;
-			$sql="insert into changelog (".
+			$sql="insert into pz_changelog (".
 				"cl_id, ".
 				"cl_title, ".
 				"cl_text, ".
@@ -74,7 +74,7 @@
 			$fr_id = $_POST["fr_id"];
 			$mbr_id = $_POST["mbr_id"];
 ;
-			$sql="update changelog set ".
+			$sql="update pz_changelog set ".
 				"cl_id='$cl_id', ".
 				"cl_title='$cl_title', ".
 				"cl_text='$cl_text', ".
@@ -86,7 +86,7 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Supprimer":
-			$sql="delete from changelog where cl_id='$cl_id'";
+			$sql="delete from pz_changelog where cl_id='$cl_id'";
 			$stmt = $cs->query($sql);
 		break;
 		}

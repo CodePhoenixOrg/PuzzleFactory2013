@@ -11,7 +11,7 @@
 		switch ($action) {
 		case "Ajouter":
 
-			$sql="select max(di_name) from dictionary;";
+			$sql="select max(di_name) from pz_dictionary;";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch();
 			$di_name=$rows[0]+1;
@@ -23,7 +23,7 @@
 			$di_ru_long="";
 		break;
 		case "Modifier":
-			$sql="select * from dictionary where di_name='$di_name';";
+			$sql="select * from pz_dictionary where di_name='$di_name';";
 			$stmt = $cs->query($sql);
 			$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 			$di_name=$rows["di_name"];
@@ -38,7 +38,7 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$sql="insert into dictionary (".
+			$sql="insert into pz_dictionary (".
 				"di_name, ".
 				"di_fr_short, ".
 				"di_fr_long, ".
@@ -65,7 +65,7 @@
 			$di_en_long = $_POST["di_en_long"];
 			$di_ru_short = $_POST["di_ru_short"];
 			$di_ru_long = $_POST["di_ru_long"];
-			$sql="update dictionary set ".
+			$sql="update pz_dictionary set ".
 				"di_name='$di_name', ".
 				"di_fr_short='$di_fr_short', ".
 				"di_fr_long='$di_fr_long', ".
@@ -77,7 +77,7 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Supprimer":
-			$sql="delete from dictionary where di_name='$di_name'";
+			$sql="delete from pz_dictionary where di_name='$di_name'";
 			$stmt = $cs->query($sql);
 		break;
 		}
