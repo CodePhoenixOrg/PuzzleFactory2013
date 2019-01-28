@@ -44,14 +44,14 @@ class ScriptsMaker extends Base
         //$script.="<script language=\"JavaScript\" src=\"js/pz_form_events.js\"></script>\n";
         $script="<?php   \n";
         $script.="\t\$cs=connection(CONNECT,\$database);\n";
-        $script.="\t\$query = getVariable(\"query\", \"SELECT\");\n";
-        $script.="\t\$event = getVariable(\"event\", \"onLoad\");\n";
-        $script.="\t\$action = getVariable(\"action\", \"Ajouter\");\n";
-        $script.="\t\$id = getVariable(\"id\");\n";
-        $script.="\t\$di = getVariable(\"di\");\n";
+        $script.="\t\$query = getArgument(\"query\", \"SELECT\");\n";
+        $script.="\t\$event = getArgument(\"event\", \"onLoad\");\n";
+        $script.="\t\$action = getArgument(\"action\", \"Ajouter\");\n";
+        $script.="\t\$id = getArgument(\"id\");\n";
+        $script.="\t\$di = getArgument(\"di\");\n";
         $defs=explode(',', $A_sqlFields[0]);
         $fieldname=$defs[0];
-        $script.="\t$$fieldname = getVariable(\"$fieldname\");\n";
+        $script.="\t$$fieldname = getArgument(\"$fieldname\");\n";
         $script.="\tif(\$event==\"onLoad\" && \$query==\"ACTION\") {\n";
         $script.="\t\tswitch (\$action) {\n";
         $script.="\t\tcase \"Ajouter\":\n\n";
@@ -91,7 +91,7 @@ class ScriptsMaker extends Base
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $defs=explode(',', $A_sqlFields[$i]);
             $fieldname=$defs[0];
-            $script.="\t\t\t\$$fieldname = \$_POST[\"$fieldname\"];\n";
+            $script.="\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
         }
         $replaces=array();
         $insertFields=array();
@@ -132,7 +132,7 @@ class ScriptsMaker extends Base
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $defs=explode(',', $A_sqlFields[$i]);
             $fieldname=$defs[0];
-            $script.="\t\t\t\$$fieldname = \$_POST[\"$fieldname\"];\n";
+            $script.="\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
         }
         $replaces=array();
         $update=array();
@@ -201,8 +201,8 @@ class ScriptsMaker extends Base
         $script.="\tinclude(\"".$pa_filename."_code.php\");\n";
         $script.="\tuse \\Puzzle\\Data\\Controls as DataControls;\n";
         $script.="\t\$datacontrols = new DataControls(\$lg, \$db_prefix);\n";
-        $script.="\t\$pc = getVariable(\"pc\");\n";
-        $script.="\t\$sr = getVariable(\"sr\");\n";
+        $script.="\t\$pc = getArgument(\"pc\");\n";
+        $script.="\t\$sr = getArgument(\"sr\");\n";
         $script.="\t\$curl_pager = \"\";\n";
         $script.="\t\$dialog = \"\";\n";
         $script.="\tif(isset(\$pc)) \$curl_pager=\"&pc=\$pc\";\n";
@@ -284,11 +284,11 @@ class ScriptsMaker extends Base
         $script.="\tinclude_once(\"puzzle/ipz_mysqlconn.php\");\n";
         $script.="\tinclude_once(\"puzzle/ipz_db_controls.php\");\n";
         $script.="\t\$cs=connection(CONNECT,\$database);\n";
-        $script.="\t\$query = getVariable(\"query\");\n";
-        $script.="\t\$event = getVariable(\"event\");\n";
-        $script.="\t\$action = getVariable(\"action\");\n";
+        $script.="\t\$query = getArgument(\"query\");\n";
+        $script.="\t\$event = getArgument(\"event\");\n";
+        $script.="\t\$action = getArgument(\"action\");\n";
         $fieldname=$A_sqlFields[0];
-        $script.="\t$$fieldname = getVariable(\"$fieldname\");\n";
+        $script.="\t$$fieldname = getArgument(\"$fieldname\");\n";
         $script.="\tif(empty(\$query)) \$query=\"SELECT\";\n";
         $script.="\tif(empty(\$event)) \$event=\"onLoad\";\n";
         $script.="\tif(empty(\$action)) \$action=\"Ajouter\";\n";
@@ -348,7 +348,7 @@ class ScriptsMaker extends Base
         $script.="\t\tcase \"Modifier\":\n";
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
-            $script.="\t\t\t\$$fieldname = \$_POST[\"$fieldname\"];\n";
+            $script.="\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
         }
         $script.="\t\t\t\$sql=\"update $table set \".\n";
         $update="";

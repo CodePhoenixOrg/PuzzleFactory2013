@@ -1,22 +1,22 @@
 <center>
 <?php   
 	//if(empty($userdb)) $userdb="webfactory";
-	$userdb = getVariable("userdb");
-	$usertable = getVariable("usertable");
-	$dbgrid = getVariable("dbgrid");
-	$menu = getVariable("menu");
-	$filter = getVariable("filter");
-	$addoption = getVariable("addoption");
-	$me_id = getVariable("me_id");
-	$me_level = getVariable("me_level");
-	$bl_id = getVariable("bl_id");
-	$di_long = getVariable("di_long");
-	$di_short = getVariable("di_short");
-	$di_name = getVariable("di_name");
-	$autogen = getVariable("autogen");
-	$pa_filename = getVariable("pa_filename");
-	$extension = getVariable("extension");
-	$basedir = getVariable("basedir");
+	$userdb = getArgument("userdb");
+	$usertable = getArgument("usertable");
+	$dbgrid = getArgument("dbgrid");
+	$menu = getArgument("menu");
+	$filter = getArgument("filter");
+	$addoption = getArgument("addoption");
+	$me_id = getArgument("me_id");
+	$me_level = getArgument("me_level");
+	$bl_id = getArgument("bl_id");
+	$di_long = getArgument("di_long");
+	$di_short = getArgument("di_short");
+	$di_name = getArgument("di_name");
+	$autogen = getArgument("autogen");
+	$pa_filename = getArgument("pa_filename");
+	$extension = getArgument("extension");
+	$basedir = getArgument("basedir");
 	
 	$cs=connection(CONNECT, $userdb);
 	$tmp_filename="tmp.php";

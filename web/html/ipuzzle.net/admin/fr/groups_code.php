@@ -1,11 +1,11 @@
 <?php
 
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-    $grp_group = getVariable("grp_group");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+    $grp_group = getArgument("grp_group");
 
     if ($event=="onLoad" && $query=="ACTION") {
         switch ($action) {
@@ -74,17 +74,17 @@
             $stmt = $cs->query($sql);
         break;
         case "Modifier":
-            $grp_group = $_POST["grp_group"];
-            $grp_members_priv = $_POST["grp_members_priv"];
-            $grp_menu_priv = $_POST["grp_menu_priv"];
-            $grp_page_priv = $_POST["grp_page_priv"];
-            $grp_news_priv = $_POST["grp_news_priv"];
-            $grp_items_priv = $_POST["grp_items_priv"];
-            $grp_customers_priv = $_POST["grp_customers_priv"];
-            $grp_products_priv = $_POST["grp_products_priv"];
-            $grp_calendar_priv = $_POST["grp_calendar_priv"];
-            $grp_newsletter_priv = $_POST["grp_newsletter_priv"];
-            $grp_forum_priv = $_POST["grp_forum_priv"];
+            $grp_group = filterPOST("grp_group");
+            $grp_members_priv = filterPOST("grp_members_priv");
+            $grp_menu_priv = filterPOST("grp_menu_priv");
+            $grp_page_priv = filterPOST("grp_page_priv");
+            $grp_news_priv = filterPOST("grp_news_priv");
+            $grp_items_priv = filterPOST("grp_items_priv");
+            $grp_customers_priv = filterPOST("grp_customers_priv");
+            $grp_products_priv = filterPOST("grp_products_priv");
+            $grp_calendar_priv = filterPOST("grp_calendar_priv");
+            $grp_newsletter_priv = filterPOST("grp_newsletter_priv");
+            $grp_forum_priv = filterPOST("grp_forum_priv");
             $sql="update groups set ".
                 "grp_group='$grp_group', ".
                 "grp_members_priv='$grp_members_priv', ".

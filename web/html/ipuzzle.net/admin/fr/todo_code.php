@@ -1,13 +1,13 @@
 <?php
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$td_id = getVariable("td_id");
-	$td_id = getVariable("td_id");
-	$mbr_id2 = getVariable("mbr_id2");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$td_id = getArgument("td_id");
+	$td_id = getArgument("td_id");
+	$mbr_id2 = getArgument("mbr_id2");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -42,14 +42,14 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$td_id = $_POST["td_id"];
-			$td_title = $_POST["td_title"];
-			$td_text = $_POST["td_text"];
-			$td_priority = $_POST["td_priority"];
-			$td_expiry = $_POST["td_expiry"];
-			$td_status = $_POST["td_status"];
-			$td_date = $_POST["td_date"];
-			$mbr_id = $_POST["mbr_id"];
+			$td_id = filterPOST("td_id");
+			$td_title = filterPOST("td_title");
+			$td_text = filterPOST("td_text");
+			$td_priority = filterPOST("td_priority");
+			$td_expiry = filterPOST("td_expiry");
+			$td_status = filterPOST("td_status");
+			$td_date = filterPOST("td_date");
+			$mbr_id = filterPOST("mbr_id");
 			$td_title=escapeChars($td_title);
 			$td_text=escapeChars($td_text);
 			$td_status=escapeChars($td_status);
@@ -77,14 +77,14 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$td_id = $_POST["td_id"];
-			$td_title = $_POST["td_title"];
-			$td_text = $_POST["td_text"];
-			$td_priority = $_POST["td_priority"];
-			$td_expiry = $_POST["td_expiry"];
-			$td_status = $_POST["td_status"];
-			$td_date = $_POST["td_date"];
-			$mbr_id = $_POST["mbr_id"];
+			$td_id = filterPOST("td_id");
+			$td_title = filterPOST("td_title");
+			$td_text = filterPOST("td_text");
+			$td_priority = filterPOST("td_priority");
+			$td_expiry = filterPOST("td_expiry");
+			$td_status = filterPOST("td_status");
+			$td_date = filterPOST("td_date");
+			$mbr_id = filterPOST("mbr_id");
 			$td_title=escapeChars($td_title);
 			$td_text=escapeChars($td_text);
 			$td_status=escapeChars($td_status);

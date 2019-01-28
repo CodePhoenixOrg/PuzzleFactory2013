@@ -1,11 +1,11 @@
 <?php   
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$im_id = getVariable("im_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$im_id = getArgument("im_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
@@ -33,11 +33,11 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$im_id = $_POST["im_id"];
-			$im_name = $_POST["im_name"];
-			$im_dir = $_POST["im_dir"];
-			$im_url = $_POST["im_url"];
-			$im_site = $_POST["im_site"];
+			$im_id = filterPOST("im_id");
+			$im_name = filterPOST("im_name");
+			$im_dir = filterPOST("im_dir");
+			$im_url = filterPOST("im_url");
+			$im_site = filterPOST("im_site");
 			$im_name=escapeChars($im_name);
 			$im_dir=escapeChars($im_dir);
 			$im_url=escapeChars($im_url);
@@ -57,11 +57,11 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$im_id = $_POST["im_id"];
-			$im_name = $_POST["im_name"];
-			$im_dir = $_POST["im_dir"];
-			$im_url = $_POST["im_url"];
-			$im_site = $_POST["im_site"];
+			$im_id = filterPOST("im_id");
+			$im_name = filterPOST("im_name");
+			$im_dir = filterPOST("im_dir");
+			$im_url = filterPOST("im_url");
+			$im_site = filterPOST("im_site");
 			$im_name=escapeChars($im_name);
 			$im_dir=escapeChars($im_dir);
 			$im_url=escapeChars($im_url);

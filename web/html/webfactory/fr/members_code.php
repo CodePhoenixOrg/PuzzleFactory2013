@@ -1,12 +1,12 @@
 <?php    
 
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$mbr_id = getVariable("mbr_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$mbr_id = getArgument("mbr_id");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -41,14 +41,14 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$mbr_id = $_POST["mbr_id"];
-			$mbr_nom = $_POST["mbr_nom"];
-			$mbr_adr1 = $_POST["mbr_adr1"];
-			$mbr_adr2 = $_POST["mbr_adr2"];
-			$mbr_cp = $_POST["mbr_cp"];
-			$mbr_email = $_POST["mbr_email"];
-			$mbr_ident = $_POST["mbr_ident"];
-			$mbr_mpasse = $_POST["mbr_mpasse"];
+			$mbr_id = filterPOST("mbr_id");
+			$mbr_nom = filterPOST("mbr_nom");
+			$mbr_adr1 = filterPOST("mbr_adr1");
+			$mbr_adr2 = filterPOST("mbr_adr2");
+			$mbr_cp = filterPOST("mbr_cp");
+			$mbr_email = filterPOST("mbr_email");
+			$mbr_ident = filterPOST("mbr_ident");
+			$mbr_mpasse = filterPOST("mbr_mpasse");
 			$mbr_nom=escapeChars($mbr_nom);
 			$mbr_adr1=escapeChars($mbr_adr1);
 			$mbr_adr2=escapeChars($mbr_adr2);
@@ -78,14 +78,14 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$mbr_id = $_POST["mbr_id"];
-			$mbr_nom = $_POST["mbr_nom"];
-			$mbr_adr1 = $_POST["mbr_adr1"];
-			$mbr_adr2 = $_POST["mbr_adr2"];
-			$mbr_cp = $_POST["mbr_cp"];
-			$mbr_email = $_POST["mbr_email"];
-			$mbr_ident = $_POST["mbr_ident"];
-			$mbr_mpasse = $_POST["mbr_mpasse"];
+			$mbr_id = filterPOST("mbr_id");
+			$mbr_nom = filterPOST("mbr_nom");
+			$mbr_adr1 = filterPOST("mbr_adr1");
+			$mbr_adr2 = filterPOST("mbr_adr2");
+			$mbr_cp = filterPOST("mbr_cp");
+			$mbr_email = filterPOST("mbr_email");
+			$mbr_ident = filterPOST("mbr_ident");
+			$mbr_mpasse = filterPOST("mbr_mpasse");
 			$mbr_nom=escapeChars($mbr_nom);
 			$mbr_adr1=escapeChars($mbr_adr1);
 			$mbr_adr2=escapeChars($mbr_adr2);

@@ -2,12 +2,12 @@
 	include_once("puzzle/ipz_mysqlconn.php");
 	include_once("puzzle/ipz_db_controls.php");
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$zc_id = getVariable("zc_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$zc_id = getArgument("zc_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
@@ -31,9 +31,9 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$zc_id = $_POST["zc_id"];
-			$zc_code = $_POST["zc_code"];
-			$zc_city = $_POST["zc_city"];
+			$zc_id = filterPOST("zc_id");
+			$zc_code = filterPOST("zc_code");
+			$zc_city = filterPOST("zc_city");
 			$zc_code=escapeChars($zc_code);
 			$zc_city=escapeChars($zc_city);
 			$sql="insert into pz_zip_code (".
@@ -48,9 +48,9 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$zc_id = $_POST["zc_id"];
-			$zc_code = $_POST["zc_code"];
-			$zc_city = $_POST["zc_city"];
+			$zc_id = filterPOST("zc_id");
+			$zc_code = filterPOST("zc_code");
+			$zc_city = filterPOST("zc_city");
 			$zc_code=escapeChars($zc_code);
 			$zc_city=escapeChars($zc_city);
 			$sql="update pz_zip_code set ".

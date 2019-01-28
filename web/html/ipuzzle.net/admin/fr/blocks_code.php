@@ -1,11 +1,11 @@
 <?php    
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$bl_id = getVariable("bl_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$bl_id = getArgument("bl_id");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -46,10 +46,10 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$bl_id = $_POST["bl_id"];
-			$bl_column = $_POST["bl_column"];
-			$bl_type = $_POST["bl_type"];
-			$di_name = $_POST["di_name"];
+			$bl_id = filterPOST("bl_id");
+			$bl_column = filterPOST("bl_column");
+			$bl_type = filterPOST("bl_type");
+			$di_name = filterPOST("di_name");
 			$sql="update blocks set ".
 				"bl_id='$bl_id', ".
 				"bl_column='$bl_column', ".

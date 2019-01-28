@@ -5,7 +5,7 @@
 	$tab_ctrl_name="myTab";
 	//Options de départ
 	$rad_choice = ['', '', ''];
-	$choice = getVariable('choice', 0);
+	$choice = getArgument('choice', 0);
 	$rad_choice[$choice]=" checked"; 
 
 

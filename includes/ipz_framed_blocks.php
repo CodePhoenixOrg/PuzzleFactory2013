@@ -74,16 +74,16 @@ class FramedBlocks
                 }
                 $dyna_block_set.=createFramedCollapseableBlock($dbs_name, $index, $target, $colors);
             } elseif ($bl_type=="members") {
-                $logout=getVariable("logout");
-                //$panel_colors=getVariable("panel_colors");
+                $logout=getArgument("logout");
+                //$panel_colors=getArgument("panel_colors");
                 $block_set.=createFramedMembersBlock($database, $logout, "members", $id, $lg, $target, $panel_colors);
             } elseif ($bl_type=="newsletter") {
-                //$panel_colors=getVariable("panel_colors");
+                //$panel_colors=getArgument("panel_colors");
                 global $panel_colors;
                 $block_set.=createFramedNewsletterBlock($database, "newsltr", $id, $lg, $target, $panel_colors);
             } elseif ($bl_type=="diary") {
                 global $diary_colors;
-                $date=getVariable("date");
+                $date=getArgument("date");
                 $block_set.=createFramedDiaryBlock($date, $id, $lg, $target, $diary_colors);
             }
         
@@ -212,9 +212,9 @@ class FramedBlocks
             $fore_color="black";
         }
 
-        $id=getVariable("id");
-        $lg=getVariable("lg");
-        $database=getVariable("database");
+        $id=getArgument("id");
+        $lg=getArgument("lg");
+        $database=getArgument("database");
 
         $cs=connection(CONNECT, $database);
         $sql=	"select d.di_".$lg."_short, b.bl_column ".

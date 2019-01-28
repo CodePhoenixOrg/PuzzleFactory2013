@@ -41,73 +41,74 @@
 					</TR>
 				</TABLE><BR>
 				<HR COLOR=#0 WIDTH=100% ALIGN=CENTER>
-<?php 
-	require "include/connection.php";
-	$cs->select_db($dbname);
-	//alimentation du livre
-	if ($action=="fill"){
-		$action = "         ";
-		if ($msg > "         " )
-		{
-			$dday = date ("Ymd");
-			$hhour = date ("His");
-			if ($link == "http://") {
-				$link= " ";
-			}
-			$query = "SELECT * FROM guestbook where nickname = \"$nickname\" and dday = \"$dday\" and msg = \"$msg\"";
-			$result = $cs->query($query, $mysql);
-			$number = $result->num_rows();
-			if ($number == 0){
-				$sqlresult=$cs->db_query("insert into guestbook values(\"$nickname\",\"$city\",\"$email\",\"$msg\",\"$dday\",\"$link\",\"$hhour\")", $mysql);
-			}
-			$nickname =  "          " ;
-			$city = "           ";
-			$email = "          ";
-			$msg = "          ";
-			$link = "        ";
-			$action = "         ";
-		}
-	}
-	// affichage des message
-	$query = "SELECT * FROM guestbook order by dday desc, hhour desc";
-	$result = $cs->query($query, $mysql);
-	$number = $result->num_rows();
+<?php
+    require "include/connection.php";
+    $cs->select_db($dbname);
+    //alimentation du livre
+    if ($action=="fill") {
+        $action = "         ";
+        if ($msg > "         ") {
+            $dday = date("Ymd");
+            $hhour = date("His");
+            if ($link == "http://") {
+                $link= " ";
+            }
+            $query = "SELECT * FROM guestbook where nickname = \"$nickname\" and dday = \"$dday\" and msg = \"$msg\"";
+            $result = $cs->query($query, $mysql);
+            $number = $result->num_rows();
+            if ($number == 0) {
+                $sqlresult=$cs->db_query("insert into guestbook values(\"$nickname\",\"$city\",\"$email\",\"$msg\",\"$dday\",\"$link\",\"$hhour\")", $mysql);
+            }
+            $nickname =  "          " ;
+            $city = "           ";
+            $email = "          ";
+            $msg = "          ";
+            $link = "        ";
+            $action = "         ";
+        }
+    }
+    // affichage des message
+    $query = "SELECT * FROM guestbook order by dday desc, hhour desc";
+    $result = $cs->query($query, $mysql);
+    $number = $result->num_rows();
 ?>
 				<center><font face="ARIAL, HELVETICA, SANS-SERIF" SIZE="3" style="color:#000000">
 				<B><?php  echo $number ?></B></font>&nbsp;
 				<font face="ARIAL, HELVETICA, SANS-SERIF" SIZE="3" style="color:#86DEF6">
 				<B>messages</B></font></center>
-<?
-	$cpt=0;
-	if ($touche!="previous" && $touche!="next") {$i = 0;}
-	if ($touche=="previous"){
-		$i=$sav;
-		$i  -= 5;
-	}
-	if ($touche=="next"){
-		$i=$sav;
-		$i += 5;
-	}
-	$previous_msg="<A HREF=guestbook.php?touche=previous&sav=";
-	$previous_msg.=$i;
-	$previous_msg.="><font face=\"ARIAL, HELVETICA, SANS-SERIF\" SIZE=3 COLOR=#000000 ><B>Messages précédents</B></A>";
-	$next_msg="<A HREF=guestbook.php?touche=next&sav=";
-	$next_msg.="$i";
-	$next_msg.="><font face=\"ARIAL, HELVETICA, SANS-SERIF\" SIZE=3 COLOR=#000000 ><B>Messages suivants</B></A>";
-	while ( $cpt<5 && $i<$number)
-	{
-		if ($number == 0) {
-			print "<CENTER><P>Aucun message!</CENTER>";
-		} elseif ($number > 0) {
-			$nickname = $result->result($i, "nickname");
-			$city = $result->result($i, "city");
-			$email = $result->result($i, "email");
-			$msg = $result->result($i, "msg");
-			$dday = $result->result($i, "dday");
-			$link = $result->result($i, "link");
-			$hhour = $result->result($i, "hhour");
-			if ($link == "http://") {$link= " ";}
-?>
+<?php
+    $cpt=0;
+    if ($touche!="previous" && $touche!="next") {
+        $i = 0;
+    }
+    if ($touche=="previous") {
+        $i=$sav;
+        $i  -= 5;
+    }
+    if ($touche=="next") {
+        $i=$sav;
+        $i += 5;
+    }
+    $previous_msg="<A HREF=guestbook.php?touche=previous&sav=";
+    $previous_msg.=$i;
+    $previous_msg.="><font face=\"ARIAL, HELVETICA, SANS-SERIF\" SIZE=3 COLOR=#000000 ><B>Messages précédents</B></A>";
+    $next_msg="<A HREF=guestbook.php?touche=next&sav=";
+    $next_msg.="$i";
+    $next_msg.="><font face=\"ARIAL, HELVETICA, SANS-SERIF\" SIZE=3 COLOR=#000000 ><B>Messages suivants</B></A>";
+    while ($cpt<5 && $i<$number) {
+        if ($number == 0) {
+            print "<CENTER><P>Aucun message!</CENTER>";
+        } elseif ($number > 0) {
+            $nickname = $result->result($i, "nickname");
+            $city = $result->result($i, "city");
+            $email = $result->result($i, "email");
+            $msg = $result->result($i, "msg");
+            $dday = $result->result($i, "dday");
+            $link = $result->result($i, "link");
+            $hhour = $result->result($i, "hhour");
+            if ($link == "http://") {
+                $link= " ";
+            } ?>
 				<CENTER><BR>
 				<TABLE border=2 bordercolor=#0 cellspacing=0 cellpadding=0 width=90%>
 					<TR>
@@ -149,21 +150,21 @@
 					</TR>
 				</TABLE>
 				</CENTER>
-<?
-				$i++;
-				$cpt++;
-			}
-		}
-		if ($i > 5){
-			$previous=$previous_msg;
-		}else{
-			$previous="   ";
-		}
-		if ($i < $number){
-			$next=$next_msg;
-		}else{
-			$next="   ";
-		}
+<?php
+                $i++;
+            $cpt++;
+        }
+    }
+        if ($i > 5) {
+            $previous=$previous_msg;
+        } else {
+            $previous="   ";
+        }
+        if ($i < $number) {
+            $next=$next_msg;
+        } else {
+            $next="   ";
+        }
 ?>
 				<BR><BR><CENTER>
 			 	<TABLE width=100%>

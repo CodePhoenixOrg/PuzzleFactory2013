@@ -28,8 +28,8 @@ class Controls extends Base {
 		
 		// global $pz_current_tab;
 
-		$id=getVariable("id");
-		$lg=getVariable("lg");
+		$id=getArgument("id");
+		$lg=getArgument("lg");
 
 		$tab_count=sizeof($tab_captions);
 		

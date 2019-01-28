@@ -3,10 +3,10 @@
 	include_once 'puzzle/ipz_mysqlconn.php';
 	include_once 'puzzle/ipz_db_controls.php';
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query");
-	$event = getVariable("event");
-	$action = getVariable("action");
-	$cl_id = getVariable("cl_id");
+	$query = getArgument("query");
+	$event = getArgument("event");
+	$action = getArgument("action");
+	$cl_id = getArgument("cl_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";
@@ -63,13 +63,13 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$cl_id = $_POST["cl_id"];
-			$cl_title = $_POST["cl_title"];
-			$cl_text = $_POST["cl_text"];
-			$cl_date = $_POST["cl_date"];
-			$cl_time = $_POST["cl_time"];
-			$fr_id = $_POST["fr_id"];
-			$mbr_id = $_POST["mbr_id"];
+			$cl_id = filterPOST("cl_id");
+			$cl_title = filterPOST("cl_title");
+			$cl_text = filterPOST("cl_text");
+			$cl_date = filterPOST("cl_date");
+			$cl_time = filterPOST("cl_time");
+			$fr_id = filterPOST("fr_id");
+			$mbr_id = filterPOST("mbr_id");
 			$sql="update changelog set ".
 				"cl_id='$cl_id', ".
 				"cl_title='$cl_title', ".

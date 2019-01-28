@@ -2,10 +2,10 @@
 	include_once("ipz_mysqlconn.php");
 	include_once("ipz_db_controls.php");
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query");
-	$event = getVariable("event");
-	$action = getVariable("action");
-	$fr_id = getVariable("fr_id");
+	$query = getArgument("query");
+	$event = getArgument("event");
+	$action = getArgument("action");
+	$fr_id = getArgument("fr_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";
@@ -40,12 +40,12 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$fr_id = $_POST["fr_id"];
-			$fr_title = $_POST["fr_title"];
-			$fr_description = $_POST["fr_description"];
-			$fr_date = $_POST["fr_date"];
-			$fr_table_name = $_POST["fr_table_name"];
-			$me_id = $_POST["me_id"];
+			$fr_id = filterPOST("fr_id");
+			$fr_title = filterPOST("fr_title");
+			$fr_description = filterPOST("fr_description");
+			$fr_date = filterPOST("fr_date");
+			$fr_table_name = filterPOST("fr_table_name");
+			$me_id = filterPOST("me_id");
 			$fr_title=escapeChars($fr_title);
 			$fr_table_name=escapeChars($fr_table_name);
 			$sql="insert into forums (".
@@ -66,12 +66,12 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$fr_id = $_POST["fr_id"];
-			$fr_title = $_POST["fr_title"];
-			$fr_description = $_POST["fr_description"];
-			$fr_date = $_POST["fr_date"];
-			$fr_table_name = $_POST["fr_table_name"];
-			$me_id = $_POST["me_id"];
+			$fr_id = filterPOST("fr_id");
+			$fr_title = filterPOST("fr_title");
+			$fr_description = filterPOST("fr_description");
+			$fr_date = filterPOST("fr_date");
+			$fr_table_name = filterPOST("fr_table_name");
+			$me_id = filterPOST("me_id");
 			$fr_title=escapeChars($fr_title);
 			$fr_table_name=escapeChars($fr_table_name);
 			$sql="update forums set ".

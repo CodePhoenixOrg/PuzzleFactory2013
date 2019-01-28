@@ -17,9 +17,9 @@
 //	}
 	$_SESSION["javascript"]="";
 	
-	$lg = getVariable("lg", "fr");
-	$id = getVariable("id", 1);
-	$di = getVariable("di");
+	$lg = getArgument("lg", "fr");
+	$id = getArgument("id", 1);
+	$di = getArgument("di");
 
 	$menus = new Puzzle\Menus($lg, $db_prefix);
 	$design = new Puzzle\Design();

@@ -7,25 +7,25 @@
 	define('YES', 'Oui');
 	define('NO', 'Non');
 
-	$userdb = getVariable("userdb");
-	$usertable = getVariable("usertable");
-	$dbgrid = getVariable("dbgrid");
-	$menu = getVariable("menu");
-	$filter = getVariable("filter");
-	$addoption = getVariable("addoption");
-	$me_level = getVariable("me_level", "1");
-	$bl_id = getVariable("bl_id");
-	$pa_filename = getVariable("pa_filename");
-	$extension = getVariable("extension");
-	$basedir = getVariable("basedir");
-	$save = getVariable("save");
-	$autogen = getVariable("autogen");
-	$catalog = getVariable("catalog", 0);
-	$query = getVariable("query");
-	$di_long = getVariable("di_long");
-	$di_short = getVariable("di_short");
-	$di_name = getVariable("di_name");
-	$lg = getVariable("lg", "fr");
+	$userdb = getArgument("userdb");
+	$usertable = getArgument("usertable");
+	$dbgrid = getArgument("dbgrid");
+	$menu = getArgument("menu");
+	$filter = getArgument("filter");
+	$addoption = getArgument("addoption");
+	$me_level = getArgument("me_level", "1");
+	$bl_id = getArgument("bl_id");
+	$pa_filename = getArgument("pa_filename");
+	$extension = getArgument("extension");
+	$basedir = getArgument("basedir");
+	$save = getArgument("save");
+	$autogen = getArgument("autogen");
+	$catalog = getArgument("catalog", 0);
+	$query = getArgument("query");
+	$di_long = getArgument("di_long");
+	$di_short = getArgument("di_short");
+	$di_name = getArgument("di_name");
+	$lg = getArgument("lg", "fr");
 		
 	$cs = connection(CONNECT, $userdb) or die("UserDb='$userdb'<br>");
 	$tmp_filename = 'tmp_'.$pa_filename;
@@ -232,10 +232,10 @@
 	}
 	
     if ($save!=="") {
-		$indexfield = getVariable("indexfield");
-		$secondfield = getVariable("secondfield");
-		$pa_id = getVariable("pa_id");
-		$me_id = getVariable("me_id");
+		$indexfield = getArgument("indexfield");
+		$secondfield = getArgument("secondfield");
+		$pa_id = getArgument("pa_id");
+		$me_id = getArgument("me_id");
 	
         if ($dbgrid=="0") {
             $props="Grille";

@@ -4,8 +4,8 @@
 
 	use \Puzzle\Data\Controls as DataControls;
 	$datacontrols = new DataControls($lg, $db_prefix);
-	$pc = getVariable("pc");
-	$sr = getVariable("sr");
+	$pc = getArgument("pc");
+	$sr = getArgument("sr");
 	$curl_pager = "";
 	$dialog = "";
 	if(isset($pc)) $curl_pager="&pc=$pc";
@@ -62,17 +62,6 @@ SQL;
 					<td>cl_time</td>
 					<td>
 						<input type='text' name='cl_time' size='19' value='<?php echo (empty($cl_time)) ? date('1970-01-01') : $cl_time; ?>' >
-					</td>
-				</tr>
-				<tr>
-				<tr>
-					<td>fr_id</td>
-					<td>
-						<select name='fr_id'>
-						<?php   $sql='select fr_id, fr_title from pz_forums order by fr_title';
-						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, array(), $fr_id, false, $cs);
-						echo $options["list"];?>
-						</select>
 					</td>
 				</tr>
 				<tr>

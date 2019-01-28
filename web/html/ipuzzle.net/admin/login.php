@@ -34,9 +34,9 @@
 //		session_register("ses_apps_login");
 //	}
 	//$_SESSION["ses_apps_login"]=true;
-        if($_POST['mbr_login'] != '') {
-            $_SESSION["ses_login"] = $_POST['mbr_login'];
-            $_SESSION["ses_pass"] = $_POST['mbr_pass'];
+        if(filterPOST['mbr_login'] != '') {
+            $_SESSION["ses_login"] = filterPOST['mbr_login'];
+            $_SESSION["ses_pass"] = filterPOST['mbr_pass'];
         }
 
 	global $img;

@@ -291,6 +291,6 @@ class Statement
         $this->_native2php_num[246] = "float";
         $this->_native2php_num[252] = "blob";
         $this->_native2php_num[253] = "string";
-        $this->_native2php_num[254] = "char";
+        $this->_native2php_num[254] = "string";
     }
 }

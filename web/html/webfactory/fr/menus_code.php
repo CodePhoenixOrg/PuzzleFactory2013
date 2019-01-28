@@ -1,11 +1,11 @@
 <?php   
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$me_id = getVariable("me_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$me_id = getArgument("me_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
@@ -35,12 +35,12 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$me_id = $_POST["me_id"];
-			$me_level = $_POST["me_level"];
-			$me_target = $_POST["me_target"];
-			$pa_id = $_POST["pa_id"];
-			$bl_id = $_POST["bl_id"];
-			$me_charset = $_POST["me_charset"];
+			$me_id = filterPOST("me_id");
+			$me_level = filterPOST("me_level");
+			$me_target = filterPOST("me_target");
+			$pa_id = filterPOST("pa_id");
+			$bl_id = filterPOST("bl_id");
+			$me_charset = filterPOST("me_charset");
 ;
 			$sql="insert into menus (".
 				"me_id, ".
@@ -60,12 +60,12 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$me_id = $_POST["me_id"];
-			$me_level = $_POST["me_level"];
-			$me_target = $_POST["me_target"];
-			$pa_id = $_POST["pa_id"];
-			$bl_id = $_POST["bl_id"];
-			$me_charset = $_POST["me_charset"];
+			$me_id = filterPOST("me_id");
+			$me_level = filterPOST("me_level");
+			$me_target = filterPOST("me_target");
+			$pa_id = filterPOST("pa_id");
+			$bl_id = filterPOST("bl_id");
+			$me_charset = filterPOST("me_charset");
 ;
 			$sql="update menus set ".
 				"me_id='$me_id', ".

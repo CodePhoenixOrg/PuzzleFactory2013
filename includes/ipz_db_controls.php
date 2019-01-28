@@ -523,7 +523,7 @@ class Controls extends \Puzzle\Base
         global $sr, $pc, $img, $lg;
         global $PHP_SELF;
     
-        $criterion=getVariable("criterion");
+        $criterion=getArgument("criterion");
     
         //Détermine les couleurs du dbGrid
         if (!empty($colors)) {
@@ -573,7 +573,7 @@ class Controls extends \Puzzle\Base
         }
 
         $i=1;
-        $criterions=getVariable("criterions");
+        $criterions=getArgument("criterions");
         if (is_array($criterions)) {
             //echo "criterions rempli<br>";
             foreach ($criterions as $criterion) {
@@ -582,12 +582,12 @@ class Controls extends \Puzzle\Base
             }
         } else {
             //echo "criterions vide<br>";
-            $criterion=getVariable("c$i");
+            $criterion=getArgument("c$i");
             while ($criterion!="") {
                 $criterions[$i]=$criterion;
                 $curl_pager.="&c$i=$criterion";
                 $i++;
-                $criterion=getVariable("c$i");
+                $criterion=getArgument("c$i");
             }
         }
     
@@ -671,7 +671,7 @@ class Controls extends \Puzzle\Base
             fclose($fh);
         // end*/
     
-        $pager_id=getVariable("id");
+        $pager_id=getArgument("id");
         //echo "page_link='$page_link'<br>";
 
         $pager_link=$page_link;
@@ -1022,7 +1022,7 @@ class Controls extends \Puzzle\Base
         */
         global $sr, $pc, $img, $lg, $database;
     
-        $criterion=getVariable("criterion");
+        $criterion=getArgument("criterion");
     
         //Détermine les couleurs du dbGrid
         if (!empty($colors)) {
@@ -1071,7 +1071,7 @@ class Controls extends \Puzzle\Base
         }
 
         $i=1;
-        $criterions=getVariable("criterions");
+        $criterions=getArgument("criterions");
         if (is_array($criterions)) {
             //echo "criterions rempli<br>";
             foreach ($criterions as $criterion) {
@@ -1080,12 +1080,12 @@ class Controls extends \Puzzle\Base
             }
         } else {
             //echo "criterions vide<br>";
-            $criterion=getVariable("c$i");
+            $criterion=getArgument("c$i");
             while ($criterion!="") {
                 $criterions[$i]=$criterion;
                 $curl_pager.="&c$i=$criterion";
                 $i++;
-                $criterion=getVariable("c$i");
+                $criterion=getArgument("c$i");
             }
         }
     
@@ -1145,7 +1145,7 @@ class Controls extends \Puzzle\Base
             }
         }
     
-        $pager_id=getVariable("id");
+        $pager_id=getArgument("id");
         $pager_ctrl=createPagerControl($userdb, $page_link, $sql, $pager_id, $lg, $caption, $sr, $step, $pc, $curl_pager);
         $sql=$pager_ctrl["sql_query"];
         $pager=$pager_ctrl["pager_ctrl"];
@@ -1508,7 +1508,7 @@ class Controls extends \Puzzle\Base
         }
 
         //Détermine la langue de la page qui sera affichée
-        //$lg=getVariable("lg");
+        //$lg=getArgument("lg");
         $add="Ajouter";
     
         /*

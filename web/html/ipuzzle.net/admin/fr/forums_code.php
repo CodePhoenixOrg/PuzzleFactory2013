@@ -1,11 +1,11 @@
 <?php   
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$fr_id = getVariable("fr_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$fr_id = getArgument("fr_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
@@ -35,12 +35,12 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$fr_id = $_POST["fr_id"];
-			$fr_title = $_POST["fr_title"];
-			$fr_description = $_POST["fr_description"];
-			$fr_date = $_POST["fr_date"];
-			$fr_table_name = $_POST["fr_table_name"];
-			$me_id = $_POST["me_id"];
+			$fr_id = filterPOST("fr_id");
+			$fr_title = filterPOST("fr_title");
+			$fr_description = filterPOST("fr_description");
+			$fr_date = filterPOST("fr_date");
+			$fr_table_name = filterPOST("fr_table_name");
+			$me_id = filterPOST("me_id");
 ;
 			$sql="insert into forums (".
 				"fr_id, ".
@@ -60,12 +60,12 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$fr_id = $_POST["fr_id"];
-			$fr_title = $_POST["fr_title"];
-			$fr_description = $_POST["fr_description"];
-			$fr_date = $_POST["fr_date"];
-			$fr_table_name = $_POST["fr_table_name"];
-			$me_id = $_POST["me_id"];
+			$fr_id = filterPOST("fr_id");
+			$fr_title = filterPOST("fr_title");
+			$fr_description = filterPOST("fr_description");
+			$fr_date = filterPOST("fr_date");
+			$fr_table_name = filterPOST("fr_table_name");
+			$me_id = filterPOST("me_id");
 ;
 			$sql="update forums set ".
 				"fr_id='$fr_id', ".

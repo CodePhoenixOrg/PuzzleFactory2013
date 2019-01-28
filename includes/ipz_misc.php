@@ -65,9 +65,9 @@ function jsQuote($code) {
 	return $js;
 }
 
-function jsArray($name="", $array=array()) {
+function jsArray($name="", $array = []) {
 
-	$js="var $name=new Array(\"".implode("\", \"", $array)."\");";
+	$js="var $name = [\"".implode("\", \"", $array)."\"];";
 	
 	return $js;
 }
@@ -141,7 +141,7 @@ function getDaysDelta($recent_date, $old_date) {
 				
 function dateMysqlToFrench($date) {
 	if(strlen($date) > 10) $date = substr($date, 0, 10);
-	$date = preg_replace('/^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$/', '\3/\2/\1', $date);
+	$date = preg_replace('@^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$@', '\3/\2/\1', $date);
 
 	return $date;
 }
@@ -196,20 +196,20 @@ function isNum($var) {
     	return $isNum;
 }
 
-function getVariableSet($var) {
-	//Global $HTTP_GET_VARS, $HTTP_POST_VARS;
-	
-	return array_merge($_POST, $_GET);
+function filterPOST($arg)
+{
+    return filter_input(INPUT_POST, $arg, FILTER_DEFAULT);;
 }
 
-function getVariable($var, $default = '')
+function getArgument($arg, $default = '')
 {
     $result = '';
 
-    if (isset($_GET[$var])) {
-        $result = $_GET[$var];
-    } elseif (isset($_POST[$var])) {
-        $result = $_POST[$var];
+	// mysql_escape_string
+    if (isset($_GET[$arg])) {
+        $result = filter_input(INPUT_GET, $arg, FILTER_DEFAULT);
+    } elseif (isset($_POST[$arg])) {
+        $result = filter_input(INPUT_POST, $arg, FILTER_DEFAULT);
     }
     
     if ($result === '') {
@@ -249,10 +249,6 @@ function getCurrentDir() {
 	$current_dir="";
 	$phpself=$_SERVER["PHP_SELF"];
 	
-	//$p1=strpos($phpself, "/");
-	//$p2=strpos($phpself, "/", ++$p1);
-	//if($p2>0) $current_dir="/../".substr($phpself, $p1, $p2-$p1);
-	//if($p2>0) $current_dir="/".substr($phpself, $p1, $p2-$p1);
 	$p3=strrpos($phpself, "/");
 	$current_dir=substr($phpself, 0, $p3);
 	
@@ -263,9 +259,6 @@ function getCurrentHttpRoot() {
 	$current_dir="";
 	$phpself=$_SERVER["PHP_SELF"];
 	
-//	$p1=strpos($phpself, "/");
-//	$p2=strpos($phpself, "/", ++$p1);
-//	if($p2>0) $current_dir="/".substr($phpself, $p1, $p2-$p1);
 	$p3=strrpos($phpself, "/");
 	$current_dir=substr($phpself, 0, $p3);
 	

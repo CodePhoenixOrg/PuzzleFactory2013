@@ -17,14 +17,14 @@ function checkValues() {
 	use \Puzzle\Controls;
 	// use \Puzzle\ScriptsMaker;
 
-	$userdb = getVariable('userdb', $database);
-	$basedir = getVariable('srvdir');
-	$usertable = getVariable('usertable');
-	$pa_filename = getVariable('pa_filename', $usertable);
-	$query = getVariable('query', 'MENU');
-	$bl_id = getVariable('bl_id', 0);
-	$lg = getVariable('lg');
-	//$db_prefix = getVariable('db_prefix');
+	$userdb = getArgument('userdb', $database);
+	$basedir = getArgument('srvdir');
+	$usertable = getArgument('usertable');
+	$pa_filename = getArgument('pa_filename', $usertable);
+	$query = getArgument('query', 'MENU');
+	$bl_id = getArgument('bl_id', 0);
+	$lg = getArgument('lg');
+	//$db_prefix = getArgument('db_prefix');
 
 	$datacontrols = new DataControls($lg, $db_prefix);
 	$controls = new Controls($lg, $db_prefix);
@@ -56,25 +56,25 @@ function checkValues() {
 	
 	//Options de menu
 	$rad_menu = ['', ''];
-	$menu = getVariable('menu', 0);
+	$menu = getArgument('menu', 0);
 	$rad_menu[$menu]=" checked"; 
 	
 	//Options de script
 	$rad_dbgrid = ['', ''];
-	$dbgrid = getVariable('dbgrid', 0);
+	$dbgrid = getArgument('dbgrid', 0);
 	$rad_dbgrid[$dbgrid]=" checked"; 
 	
 	//Option de filtre
 	$chk_filter = '';
-	$filter = getVariable('filter');
+	$filter = getArgument('filter');
 	if($filter=="1") $chk_filter=" checked"; 
 	
 	//Option d'ajout
 	$chk_addoption = '';
-	$addoption = getVariable('addoption');
+	$addoption = getArgument('addoption');
 	if($addoption=="1") $chk_addoption=" checked";
 
-	$me_id = getVariable('me_id');
+	$me_id = getArgument('me_id');
 
 	
 	$hidden="<input type='hidden' name='query' value=''>\n";

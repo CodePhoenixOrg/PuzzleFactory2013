@@ -1,11 +1,11 @@
 <?php    
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$pa_id = getVariable("pa_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$pa_id = getArgument("pa_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
@@ -41,9 +41,9 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$pa_id = $_POST["pa_id"];
-			$di_name = $_POST["di_name"];
-			$pa_filename = $_POST["pa_filename"];
+			$pa_id = filterPOST("pa_id");
+			$di_name = filterPOST("di_name");
+			$pa_filename = filterPOST("pa_filename");
 			$sql="update pages set ".
 				"pa_id='$pa_id', ".
 				"di_name='$di_name', ".

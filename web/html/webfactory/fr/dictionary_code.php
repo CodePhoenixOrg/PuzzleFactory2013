@@ -1,11 +1,11 @@
 <?php    
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$di_name = getVariable("di_name");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$di_name = getArgument("di_name");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -58,13 +58,13 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$di_name = $_POST["di_name"];
-			$di_fr_short = $_POST["di_fr_short"];
-			$di_fr_long = $_POST["di_fr_long"];
-			$di_en_short = $_POST["di_en_short"];
-			$di_en_long = $_POST["di_en_long"];
-			$di_ru_short = $_POST["di_ru_short"];
-			$di_ru_long = $_POST["di_ru_long"];
+			$di_name = filterPOST("di_name");
+			$di_fr_short = filterPOST("di_fr_short");
+			$di_fr_long = filterPOST("di_fr_long");
+			$di_en_short = filterPOST("di_en_short");
+			$di_en_long = filterPOST("di_en_long");
+			$di_ru_short = filterPOST("di_ru_short");
+			$di_ru_long = filterPOST("di_ru_long");
 			$sql="update dictionary set ".
 				"di_name='$di_name', ".
 				"di_fr_short='$di_fr_short', ".

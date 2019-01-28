@@ -4,8 +4,8 @@
 
 	use \Puzzle\Data\Controls as DataControls;
 	$datacontrols = new DataControls($lg, $db_prefix);
-	$pc = getVariable("pc");
-	$sr = getVariable("sr");
+	$pc = getArgument("pc");
+	$sr = getArgument("sr");
 	$curl_pager = "";
 	$dialog = "";
 	if(isset($pc)) $curl_pager="&pc=$pc";

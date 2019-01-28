@@ -355,11 +355,11 @@ INSERT;
 
     public function createMainMenu($database, $level=0)
     {
-        //${this->lg}=getVariable("lg");
+        //${this->lg}=getArgument("lg");
     
         $main_menu="<table border='0' cellpading='0' cellspacing='0'><tr>";
         $sql="";
-        $sql=   "select m.pa_id, m.me_level, d.di_" . $this->lg . "_short " .
+        $sql=   "select m.pa_id, m.me_level, d.di_{$this->lg}_short " .
                 "from {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and m.me_level='$level' " .
@@ -380,7 +380,7 @@ INSERT;
             //$link=$rows[4];
         
             #$main_menu=$main_menu . "<td bgcolor='black'><a href='page.php?id=$index&lg=" . ${this->lg} . "'><span style='color:#ffffff'><b>$caption</b></span></a><span style='color:#ffffff'><b>&nbsp;|&nbsp;</b></span></td>";
-            $main_menu=$main_menu . "<td><a href='page.php?id=$index&lg=" . $this->lg . "'><span style='color:#ffffff'><b>$caption</b></span></a><span style='color:#ffffff'><b>&nbsp;|&nbsp;</b></span></td>";
+            $main_menu=$main_menu . "<td><a href='page.php?id=$index&lg={$this->lg}'><span style='color:#ffffff'><b>$caption</b></span></a><span style='color:#ffffff'><b>&nbsp;|&nbsp;</b></span></td>";
         
             if ($count==0) {
                 $default_id=$index;
@@ -399,7 +399,7 @@ INSERT;
     {
         $main_menu="";
         $sql="";
-        $sql=   "select m.pa_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename " .
+        $sql=   "select m.pa_id, m.me_level, d.di_{$this->lg}_short, m.me_target, p.pa_filename " .
                 "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.me_level=1 " .
                 "and m.pa_id=p.pa_id " .
@@ -420,7 +420,7 @@ INSERT;
             $main_menu.="\t<param name=\"hovercolor\" value=\"$over_color\">\n";
             $main_menu.="\t<param name=\"effect\" value=\"glow\">\n";
             $main_menu.="\t<param name=\"target\" value=\"page\">\n";
-            $main_menu.="\t<param name=\"url\" valuetype=\"ref\" value=\"" . $this->lg . "/$link?lg=" . $this->lg . "\">\n";
+            $main_menu.="\t<param name=\"url\" valuetype=\"ref\" value=\"{$this->lg}/$link?lg={$this->lg}\">\n";
             $main_menu.="</applet>\n\n";
         }
         //$stmt->free();
@@ -435,7 +435,7 @@ INSERT;
             $sub_menu="<table width='100%'>";
         }
     
-        $sql=	"select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
+        $sql=	"select m.me_id, m.me_level, d.di_{$this->lg}_short, m.me_target, p.pa_filename, p.pa_id " .
                 "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.pa_id=m.pa_id " .
@@ -456,29 +456,29 @@ INSERT;
             if ($orientation==SUB_MENU_HORIZONTAL) {
                 switch ($level) {
             case "2":
-                            $sub_menu.="<a href='page.php?id=$index&lg=" . $this->lg . "'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='page.php?id=$index&lg={$this->lg}'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
             case "3":
-                            $sub_menu.="<a href='$target?id=$index&lg=" . $this->lg . "'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='$target?id=$index&lg={$this->lg}'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
             case "4":
-                            $sub_menu.="<a href='page.php?id=$page&lg=" . $this->lg . "#$target'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='page.php?id=$page&lg={$this->lg}#$target'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                             //$sub_menu.="<a href='$PHP_SELF#$target'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
                     }
             } elseif ($orientation==SUB_MENU_VERTICAL) {
                 switch ($level) {
             case "2":
-                            $sub_menu.="<tr><td><a href='page.php?id=$index&lg=" . $this->lg . "'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td><a href='page.php?id=$index&lg={$this->lg}'>$caption</a></td></tr>";
                 break;
             case "3":
-                            $sub_menu.="<tr><td><a href='$target?id=$index&lg=" . $this->lg . "'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td><a href='$target?id=$index&lg={$this->lg}'>$caption</a></td></tr>";
                 break;
             case "4":
-                            $sub_menu.="<tr><td><a href='page.php?id=$page&lg=" . $this->lg . "#$target'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td><a href='page.php?id=$page&lg={$this->lg}#$target'>$caption</a></td></tr>";
                 break;
             case "5":
-                            $sub_menu.="<tr><td>&nbsp;&nbsp;&nbsp;<a href='page.php?id=$page&lg=" . $this->lg . "#$target'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td>&nbsp;&nbsp;&nbsp;<a href='page.php?id=$page&lg={$this->lg}#$target'>$caption</a></td></tr>";
                             // no break
             case "6":
                             $sub_menu.="<tr><td><a href='$link' target='_new'>$caption</a></td></tr>";
@@ -503,7 +503,7 @@ INSERT;
             $sub_menu="<table width='100%'>";
         }
 
-        $sql=   "select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
+        $sql=   "select m.me_id, m.me_level, d.di_{$this->lg}_short, m.me_target, p.pa_filename, p.pa_id " .
                 "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.me_level>1 " .
                 "and m.pa_id=p.pa_id " .
@@ -524,13 +524,13 @@ INSERT;
             }
         }
         
-        $sql=   "select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
+        $sql=   "select m.me_id, m.me_level, d.di_{$this->lg}_short, m.me_target, p.pa_filename, p.pa_id " .
                 "from {$this->db_prefix}menus m, pages p, {$this->db_prefix}dictionary d " .
                 "where m.me_level=1 " .
                 "and m.pa_id=p.pa_id " .
                 "and m.di_name=d.di_name " .
         "union " .
-            "select m.me_id, m.me_level, d.di_" . $this->lg . "_short, m.me_target, p.pa_filename, p.pa_id " .
+            "select m.me_id, m.me_level, d.di_{$this->lg}_short, m.me_target, p.pa_filename, p.pa_id " .
                 "from {$this->db_prefix}menus m, {$this->db_prefix}pages p, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and m.me_id<>m.pa_id " .
@@ -551,35 +551,35 @@ INSERT;
             if ($orientation==SUB_MENU_HORIZONTAL) {
                 switch ($level) {
             case "1":
-                            $sub_menu.="<a href='page.php?id=$index&lg=" . $this->lg . "'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='page.php?id=$index&lg={$this->lg}'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
             case "2":
-                            $sub_menu.="<a href='page.php?id=$index&lg=" . $this->lg . "'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='page.php?id=$index&lg={$this->lg}'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
             case "3":
-                            $sub_menu.="<a href='$target?id=$index&lg=" . $this->lg . "'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='$target?id=$index&lg={$this->lg}'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
             case "4":
-                            $sub_menu.="<a href='page.php?id=$page&lg=" . $this->lg . "#$target'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
+                            $sub_menu.="<a href='page.php?id=$page&lg={$this->lg}#$target'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                             //$sub_menu.="<a href='$PHP_SELF#$target'><span style='color:#FFFFFF'>$caption</span></a><span style='color:#FFFFFF'>&nbsp;|&nbsp;</span>";
                 break;
                     }
             } elseif ($orientation==SUB_MENU_VERTICAL) {
                 switch ($level) {
             case "1":
-                            $sub_menu.="<tr><td><a href='page.php?id=$index&lg=" . $this->lg . "'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td><a href='page.php?id=$index&lg={$this->lg}'>$caption</a></td></tr>";
                 break;
             case "2":
-                            $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='page.php?id=$index&lg=" . $this->lg . "'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='page.php?id=$index&lg={$this->lg}'>$caption</a></td></tr>";
                 break;
             case "3":
-                            $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='$target?id=$index&lg=" . $this->lg . "'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='$target?id=$index&lg={$this->lg}'>$caption</a></td></tr>";
                 break;
             case "4":
-                            $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='page.php?id=$page&lg=" . $this->lg . "#$target'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='page.php?id=$page&lg={$this->lg}#$target'>$caption</a></td></tr>";
                 break;
             case "5":
-                            $sub_menu.="<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='page.php?id=$page&lg=" . $this->lg . "#$target'>$caption</a></td></tr>";
+                            $sub_menu.="<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='page.php?id=$page&lg={$this->lg}#$target'>$caption</a></td></tr>";
                             // no break
             case "6":
                             $sub_menu.="<tr><td>&nbsp;&nbsp;<a href='$link' target='_new'>$caption</a></td></tr>";
@@ -601,7 +601,7 @@ INSERT;
         $title="";
         $page="";
         $sql = "";
-        $sql=   "select d.di_name, p.pa_filename, m.me_charset, d.di_" . $this->lg . "_short, d.di_" . $this->lg . "_long " .
+        $sql=   "select d.di_name, p.pa_filename, m.me_charset, d.di_{$this->lg}_short, d.di_{$this->lg}_long " .
                 "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name " .
@@ -646,7 +646,7 @@ INSERT;
         $title="";
         $page="";
         $sql = "";
-        $sql=   "select d.di_name, p.pa_filename, m.me_charset, d.di_" . $this->lg . "_short, d.di_" . $this->lg . "_long " .
+        $sql=   "select d.di_name, p.pa_filename, m.me_charset, d.di_{$this->lg}_short, d.di_{$this->lg}_long " .
                 "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name " .
@@ -692,7 +692,7 @@ INSERT;
         $title="";
         $page="";
         $sql = "";
-        $sql=   "select m.me_id, p.pa_filename, d.di_" . $this->lg . "_short, d.di_" . $this->lg . "_long " .
+        $sql=   "select m.me_id, p.pa_filename, d.di_{$this->lg}_short, d.di_{$this->lg}_long " .
                 "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name ".

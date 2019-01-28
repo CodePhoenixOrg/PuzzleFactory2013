@@ -1,11 +1,11 @@
 <?php   
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$nw_id = getVariable("nw_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$nw_id = getArgument("nw_id");
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
@@ -35,12 +35,12 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$nw_title = $_POST["nw_title"];
-			$nw_author = $_POST["nw_author"];
-			$nw_text = $_POST["nw_text"];
-			$nw_url = $_POST["nw_url"];
-			$nw_picture = $_POST["nw_picture"];
-			$nw_date = $_POST["nw_date"];
+			$nw_title = filterPOST("nw_title");
+			$nw_author = filterPOST("nw_author");
+			$nw_text = filterPOST("nw_text");
+			$nw_url = filterPOST("nw_url");
+			$nw_picture = filterPOST("nw_picture");
+			$nw_date = filterPOST("nw_date");
 			$nw_title=escapeChars($nw_title);
 			$nw_author=escapeChars($nw_author);
 			$nw_url=escapeChars($nw_url);
@@ -65,12 +65,12 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$nw_title = $_POST["nw_title"];
-			$nw_author = $_POST["nw_author"];
-			$nw_text = $_POST["nw_text"];
-			$nw_url = $_POST["nw_url"];
-			$nw_picture = $_POST["nw_picture"];
-			$nw_date = $_POST["nw_date"];
+			$nw_title = filterPOST("nw_title");
+			$nw_author = filterPOST("nw_author");
+			$nw_text = filterPOST("nw_text");
+			$nw_url = filterPOST("nw_url");
+			$nw_picture = filterPOST("nw_picture");
+			$nw_date = filterPOST("nw_date");
 			$nw_title=escapeChars($nw_title);
 			$nw_author=escapeChars($nw_author);
 			$nw_url=escapeChars($nw_url);

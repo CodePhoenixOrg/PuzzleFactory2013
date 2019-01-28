@@ -1,11 +1,11 @@
 <?php    
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$br_id = getVariable("br_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$br_id = getArgument("br_id");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -38,13 +38,13 @@
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$br_id = $_POST["br_id"];
-			$br_title = $_POST["br_title"];
-			$br_text = $_POST["br_text"];
-			$br_importance = $_POST["br_importance"];
-			$br_status = $_POST["br_status"];
-			$br_date = $_POST["br_date"];
-			$mbr_id = $_POST["mbr_id"];
+			$br_id = filterPOST("br_id");
+			$br_title = filterPOST("br_title");
+			$br_text = filterPOST("br_text");
+			$br_importance = filterPOST("br_importance");
+			$br_status = filterPOST("br_status");
+			$br_date = filterPOST("br_date");
+			$mbr_id = filterPOST("mbr_id");
 			$br_title=escapeChars($br_title);
 			$br_text=escapeChars($br_text);
 			$br_status=escapeChars($br_status);
@@ -71,13 +71,13 @@
 			echo 'SQL ADD: ' . $sql;
 		break;
 		case "Modifier":
-			$br_id = $_POST["br_id"];
-			$br_title = $_POST["br_title"];
-			$br_text = $_POST["br_text"];
-			$br_importance = $_POST["br_importance"];
-			$br_status = $_POST["br_status"];
-			$br_date = $_POST["br_date"];
-			$mbr_id = $_POST["mbr_id"];
+			$br_id = filterPOST("br_id");
+			$br_title = filterPOST("br_title");
+			$br_text = filterPOST("br_text");
+			$br_importance = filterPOST("br_importance");
+			$br_status = filterPOST("br_status");
+			$br_date = filterPOST("br_date");
+			$mbr_id = filterPOST("mbr_id");
 			$br_title=escapeChars($br_title);
 			$br_text=escapeChars($br_text);
 			$br_status=escapeChars($br_status);

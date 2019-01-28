@@ -103,15 +103,15 @@ function createDiaryControl($date, $colors=array()) {
 	}
 
 	//$hl_back_color="grey";
-    	//$id = getVariable('id');
-	$lg = getVariable('lg');
+    	//$id = getArgument('id');
+	$lg = getArgument('lg');
 	
 	//echo $database;
 	if(!isset($diarydb)) $diarydb=$database;
 	
 	$cs=connection(CONNECT, $diarydb);
 	
-	$date = getVariable('date');
+	$date = getArgument('date');
 	if(empty($date))
        		$sql_date="now()";
 	else
@@ -369,13 +369,13 @@ function createFramedDiaryControl($date, $target, $colors=array()) {
 	}
 
 	//$hl_back_color="grey";
-    	//$id = getVariable('id');
-	$lg = getVariable('lg');
+    	//$id = getArgument('id');
+	$lg = getArgument('lg');
 	if(empty($diarydb)) $diarydb=$database;
 	
 	$cs=connection(CONNECT, $diarydb);
 	
-	$date = getVariable('date');
+	$date = getArgument('date');
 	if(empty($date))
        		$sql_date="now()";
 	else
@@ -665,7 +665,7 @@ function createDiaryGrid($name="", $date="", $id=0, $page_link="",  $curl_rows="
 	if($image_link=="") $image_link="img/Editer.png";
 
 	//Détermine la langue de la page qui sera affichée
-	//$lg=getVariable("lg");
+	//$lg=getArgument("lg");
 	$add="Ajouter";
 	
 	/*

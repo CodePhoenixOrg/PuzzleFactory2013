@@ -1,11 +1,11 @@
 <?php    
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$app_id = getVariable("app_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$app_id = getArgument("app_id");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -42,9 +42,9 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$app_id = $_POST["app_id"];
-			$app_link = $_POST["app_link"];
-			$di_name = $_POST["di_name"];
+			$app_id = filterPOST("app_id");
+			$app_link = filterPOST("app_link");
+			$di_name = filterPOST("di_name");
 			$sql="update applications set ".
 				"app_id='$app_id', ".
 				"app_link='$app_link', ".

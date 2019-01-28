@@ -1,11 +1,11 @@
 <?php   
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query", "SELECT");
-	$event = getVariable("event", "onLoad");
-	$action = getVariable("action", "Ajouter");
-	$id = getVariable("id");
-	$di = getVariable("di");
-	$cl_id = getVariable("cl_id");
+	$query = getArgument("query", "SELECT");
+	$event = getArgument("event", "onLoad");
+	$action = getArgument("action", "Ajouter");
+	$id = getArgument("id");
+	$di = getArgument("di");
+	$cl_id = getArgument("cl_id");
 
 	if($event=="onLoad" && $query=="ACTION") {
 		switch ($action) {
@@ -19,7 +19,6 @@
 			$cl_text="";
 			$cl_date="";
 			$cl_time="";
-			$fr_id="";
 			$mbr_id="";
 		break;
 		case "Modifier":
@@ -31,20 +30,18 @@
 			$cl_text=$rows["cl_text"];
 			$cl_date=$rows["cl_date"];
 			$cl_time=$rows["cl_time"];
-			$fr_id=$rows["fr_id"];
 			$mbr_id=$rows["mbr_id"];
 		break;
 		}
 	} else if($event=="onRun" && $query=="ACTION") {
 		switch ($action) {
 		case "Ajouter":
-			$cl_id = $_POST["cl_id"];
-			$cl_title = $_POST["cl_title"];
-			$cl_text = $_POST["cl_text"];
-			$cl_date = $_POST["cl_date"];
-			$cl_time = $_POST["cl_time"];
-			$fr_id = $_POST["fr_id"];
-			$mbr_id = $_POST["mbr_id"];
+			$cl_id = filterPOST("cl_id");
+			$cl_title = filterPOST("cl_title");
+			$cl_text = filterPOST("cl_text");
+			$cl_date = filterPOST("cl_date");
+			$cl_time = filterPOST("cl_time");
+			$mbr_id = filterPOST("mbr_id");
 ;
 			$sql="insert into pz_changelog (".
 				"cl_id, ".
@@ -52,7 +49,6 @@
 				"cl_text, ".
 				"cl_date, ".
 				"cl_time, ".
-				"fr_id, ".
 				"mbr_id".
 			") values (".
 				"'$cl_id', ".
@@ -60,19 +56,17 @@
 				"'$cl_text', ".
 				"'$cl_date', ".
 				"'$cl_time', ".
-				"'$fr_id', ".
 				"'$mbr_id'".
 			")";
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$cl_id = $_POST["cl_id"];
-			$cl_title = $_POST["cl_title"];
-			$cl_text = $_POST["cl_text"];
-			$cl_date = $_POST["cl_date"];
-			$cl_time = $_POST["cl_time"];
-			$fr_id = $_POST["fr_id"];
-			$mbr_id = $_POST["mbr_id"];
+			$cl_id = filterPOST("cl_id");
+			$cl_title = filterPOST("cl_title");
+			$cl_text = filterPOST("cl_text");
+			$cl_date = filterPOST("cl_date");
+			$cl_time = filterPOST("cl_time");
+			$mbr_id = filterPOST("mbr_id");
 ;
 			$sql="update pz_changelog set ".
 				"cl_id='$cl_id', ".
@@ -80,7 +74,6 @@
 				"cl_text='$cl_text', ".
 				"cl_date='$cl_date', ".
 				"cl_time='$cl_time', ".
-				"fr_id='$fr_id', ".
 				"mbr_id='$mbr_id' ".
 			"where cl_id='$cl_id'";
 			$stmt = $cs->query($sql);

@@ -1,9 +1,9 @@
 <?php    
 	$cs=connection(CONNECT,$database);
-	$query = getVariable("query");
-	$event = getVariable("event");
-	$action = getVariable("action");
-	$sub_id = getVariable("sub_id");
+	$query = getArgument("query");
+	$event = getArgument("event");
+	$action = getArgument("action");
+	$sub_id = getArgument("sub_id");
 	if(empty($query)) $query="SELECT";
 	if(empty($event)) $event="onLoad";
 	if(empty($action)) $action="Ajouter";
@@ -40,8 +40,8 @@
 			$stmt = $cs->query($sql);
 		break;
 		case "Modifier":
-			$sub_id = $_POST["sub_id"];
-			$sub_email = $_POST["sub_email"];
+			$sub_id = filterPOST("sub_id");
+			$sub_email = filterPOST("sub_email");
 			$sql="update subscribers set ".
 				"sub_id='$sub_id', ".
 				"sub_email='$sub_email' ".

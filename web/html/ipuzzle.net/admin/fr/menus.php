@@ -4,8 +4,8 @@
 
 	use \Puzzle\Data\Controls as DataControls;
 	$datacontrols = new DataControls($lg, $db_prefix);
-	$pc = getVariable("pc");
-	$sr = getVariable("sr");
+	$pc = getArgument("pc");
+	$sr = getArgument("sr");
 	$curl_pager = "";
 	$dialog = "";
 	if(isset($pc)) $curl_pager="&pc=$pc";
@@ -37,7 +37,7 @@ SQL;
 			echo "<br>".$dbgrid;
 	} elseif($query=="ACTION") {
 ?>
-<form method='POST' name='menusForm' action='page.php?id=18&lg=fr'>
+<form method='POST' name='menusForm' action='page.php?id=213&lg=fr'>
 	<input type='hidden' name='query' value='ACTION'>
 	<input type='hidden' name='event' value='onRun'>
 	<input type='hidden' name='pc' value='<?php echo $pc?>'>
@@ -67,7 +67,7 @@ SQL;
 					<td>pa_id</td>
 					<td>
 						<select name='pa_id'>
-						<?php   $sql='select pa_id, di_name from pages order by di_name';
+						<?php   $sql='select pa_id, di_name from pz_pages order by di_name';
 						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, [], $pa_id, false, $cs);
 						echo $options["list"];?>
 						</select>
@@ -77,7 +77,7 @@ SQL;
 					<td>bl_id</td>
 					<td>
 						<select name='bl_id'>
-						<?php   $sql='select bl_id, bl_column from blocks order by bl_column';
+						<?php   $sql='select bl_id, bl_column from pz_blocks order by bl_column';
 						$options = $datacontrols->createOptionsFromQuery($sql, 0, 1, [], $bl_id, false, $cs);
 						echo $options["list"];?>
 						</select>
