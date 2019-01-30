@@ -53,7 +53,7 @@ class Analyzer
             //$lines=($fieldsize>80) ? ceil($fieldsize / 80): 1;
         
             $lines = ($lines > 8) ? 8 : $lines;
-            //echo "fieldname='$fieldname'<br>";
+            //echo "fieldname=\"$fieldname\"<br>";
         
             if ($i==0) {
                 $indexfield=$fieldname;
@@ -100,14 +100,14 @@ class Analyzer
                         }
                         $j++;
                     }
-                    $options="\t\t\t\t\t\t<?php   \$sql='select $frn_idfield, $frn_firstfield from $currentTable order by $frn_firstfield';\n";
+                    $options="\t\t\t\t\t\t<?php   \$sql=\"select $frn_idfield, $frn_firstfield from $currentTable order by $frn_firstfield\";\n";
                     $options.="\t\t\t\t\t\t\$options = \$datacontrols->createOptionsFromQuery(\$sql, 0, 1, [], $$frn_idfield, false, \$cs);\n";
                     $options.="\t\t\t\t\t\techo \$options[\"list\"];?>\n";
                     $L_fields.="$frn_idfield;";
                     $L_formFields.="\t\t\t\t<tr>\n" .
                         "\t\t\t\t\t<td>$fieldname</td>\n" .
                         "\t\t\t\t\t<td>\n" .
-                        "\t\t\t\t\t\t<select name='$frn_idfield'>\n" .
+                        "\t\t\t\t\t\t<select name=\"$frn_idfield\">\n" .
                         "$options" .
                         "\t\t\t\t\t\t</select>\n" .
                         "\t\t\t\t\t</td>\n" .
@@ -130,7 +130,7 @@ class Analyzer
                         $L_formFields.="\t\t\t\t<tr>\n";
                         $L_formFields.="\t\t\t\t\t<td>$fieldname</td>\n";
                         $L_formFields.="\t\t\t\t\t<td>\n";
-                        $L_formFields.="\t\t\t\t\t\t<input type='text' name='$fieldname' size='$cols' value='<?php echo (empty($$fieldname)) ? date('1970-01-01') : $$fieldname; ?>' >\n";
+                        $L_formFields.="\t\t\t\t\t\t<input type=\"text\" name=\"$fieldname\" size=\"$cols\" value=\"<?php echo (empty($$fieldname)) ? date(\"1970-01-01\") : $$fieldname; ?>\" >\n";
                         $L_formFields.="\t\t\t\t\t</td>\n";
                         $L_formFields.="\t\t\t\t</tr>§";
                         $L_fieldDefs.="$fieldname,$fieldsize,$fieldtype,TEXTAREA,$cols,$lines;";
@@ -139,17 +139,17 @@ class Analyzer
                         $L_formFields.="\t\t\t\t<tr>\n";
                         $L_formFields.="\t\t\t\t\t<td>$fieldname</td>\n";
                         $L_formFields.="\t\t\t\t\t<td>\n";
-                        $L_formFields.="\t\t\t\t\t\t<textarea name='$fieldname' cols='80' rows='$lines'><?php echo $$fieldname?></textarea>\n";
+                        $L_formFields.="\t\t\t\t\t\t<textarea name=\"$fieldname\" cols=\"80\" rows=\"$lines\"><?php echo $$fieldname?></textarea>\n";
                         $L_formFields.="\t\t\t\t\t</td>\n";
                         $L_formFields.="\t\t\t\t</tr>§";
                         $L_fieldDefs.="$fieldname,$fieldsize,$fieldtype,TEXTAREA,$cols,$lines;";
                     } else {
                         $L_formFields.="\t\t\t\t\t<td>$fieldname</td>\n";
                         $L_formFields.="\t\t\t\t\t<td>\n";
-                        $L_formFields.="\t\t\t\t\t\t<input type='text' name='$fieldname' size='$cols' value='<?php echo $$fieldname?>'>\n";
+                        $L_formFields.="\t\t\t\t\t\t<input type=\"text\" name=\"$fieldname\" size=\"$cols\" value=\"<?php echo $$fieldname?>\">\n";
                         $L_formFields.="\t\t\t\t\t</td>\n";
                         $L_formFields.="\t\t\t\t</tr>§";
-                        /* $L_formFields.="<tr><td>$fieldname</td>\n<td><input type='text' name='$fieldname' value='<?php echo $$fieldname?>'></td></tr>\n§"; */
+                        /* $L_formFields.="<tr><td>$fieldname</td>\n<td><input type=\"text\" name=\"$fieldname\" value=\"<?php echo $$fieldname?>\"></td></tr>\n§"; */
                         $L_fieldDefs.="$fieldname,$fieldsize,$fieldtype,TEXT,$cols,$lines;";
                     }
                 }

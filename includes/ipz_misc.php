@@ -196,7 +196,12 @@ function isNum($var) {
     	return $isNum;
 }
 
-function filterPOST($arg)
+function filterValue($cs, $value)
+{
+    return $value;
+}
+
+function filterPOST($cs, $arg)
 {
     return filter_input(INPUT_POST, $arg, FILTER_DEFAULT);;
 }

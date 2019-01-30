@@ -170,6 +170,11 @@ class Connection
         return $this->_state->lastInsertId();
     }
     
+    public function quote($value)
+    {
+        return $this->_state->quote($value);
+    }
+
     public function close()
     {
         // $this->_state->free();
