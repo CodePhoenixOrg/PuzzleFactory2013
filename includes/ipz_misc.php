@@ -193,17 +193,20 @@ function isNum($var) {
 		$isNum=$isNum && $char_isNum;
 		$i++;
 	}
-    	return $isNum;
+    return $isNum;
 }
 
-function filterValue($cs, $value)
+function escapeQuote($value)
 {
-    return $value;
+    return str_replace('"', '\"', $value);
 }
 
-function filterPOST($cs, $arg)
+function filterPOST($arg)
 {
-    return filter_input(INPUT_POST, $arg, FILTER_DEFAULT);;
+	$result = filter_input(INPUT_POST, $arg, FILTER_SANITIZE_STRING);
+	$result = html_entity_decode($result, ENT_QUOTES);
+	
+	return $result;
 }
 
 function getArgument($arg, $default = '')
@@ -212,9 +215,9 @@ function getArgument($arg, $default = '')
 
 	// mysql_escape_string
     if (isset($_GET[$arg])) {
-        $result = filter_input(INPUT_GET, $arg, FILTER_DEFAULT);
+        $result = filter_input(INPUT_GET, $arg, FILTER_SANITIZE_STRING);
     } elseif (isset($_POST[$arg])) {
-        $result = filter_input(INPUT_POST, $arg, FILTER_DEFAULT);
+        $result = filter_input(INPUT_POST, $arg, FILTER_SANITIZE_STRING);
     }
     
     if ($result === '') {

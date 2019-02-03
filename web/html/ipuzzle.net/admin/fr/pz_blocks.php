@@ -1,6 +1,6 @@
 <center>
 <?php   
-	include("pz_books_code.php");
+	include("pz_blocks_code.php");
 	use \Puzzle\Data\Controls as DataControls;
 	$datacontrols = new DataControls($lg, $db_prefix);
 	$pc = getArgument("pc");
@@ -16,7 +16,7 @@
 			echo "<br>".$dbgrid;
 	} elseif($query === "ACTION") {
 ?>
-<form method="POST" name="pz_booksForm" action="page.php?id=228&lg=fr">
+<form method="POST" name="pz_booksForm" action="page.php?id=229&lg=fr">
 	<input type="hidden" name="query" value="ACTION">
 	<input type="hidden" name="event" value="onRun">
 	<input type="hidden" name="pc" value="<?php echo $pc?>">

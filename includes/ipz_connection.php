@@ -130,6 +130,11 @@ class Connection
         return $this->_state->exec($sql);
     }
 
+    public function prepare($sql)
+    {
+        return $this->_state->prepare($sql);
+    }
+
     public function beginTransaction()
     {
         $this->_state->beginTransaction();

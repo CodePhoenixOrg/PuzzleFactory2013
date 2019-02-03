@@ -53,6 +53,18 @@ class Statement
 
     }
 
+    public function execute($params = []) {
+        $result = null;
+
+        if (isset($params)) {
+            $result = $this->_statement->execute($params);
+        } else {
+            $result = $this->_statement->execute();
+        }
+
+        return $result; 
+    }
+
     public function fetch($mode = \PDO::FETCH_NUM)
     {
         $this->_values = $this->_statement->fetch($mode);

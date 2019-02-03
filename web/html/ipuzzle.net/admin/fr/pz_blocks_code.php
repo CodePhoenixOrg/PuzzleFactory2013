@@ -38,6 +38,11 @@
 			$bo_description = filterPOST("bo_description");
 			$bo_isbn = filterPOST("bo_isbn");
 			$bo_coverpath = filterPOST("bo_coverpath");
+			$bo_title = $bo_title;
+			$bo_author = $bo_author;
+			$bo_publisher = $bo_publisher;
+			$bo_isbn = $bo_isbn;
+			$bo_coverpath = $bo_coverpath;
 			$sql = <<<SQL
 			insert into pz_books (
 				bo_title, 
@@ -65,6 +70,11 @@ SQL;
 			$bo_description = filterPOST("bo_description");
 			$bo_isbn = filterPOST("bo_isbn");
 			$bo_coverpath = filterPOST("bo_coverpath");
+			$bo_title = $bo_title;
+			$bo_author = $bo_author;
+			$bo_publisher = $bo_publisher;
+			$bo_isbn = $bo_isbn;
+			$bo_coverpath = $bo_coverpath;
 			$sql=<<<SQL
 			update pz_books set 
 				bo_title = :bo_title, 
@@ -84,4 +94,8 @@ SQL;
 		break;
 		}
 		$query="SELECT";
+	} else if($event=="onUnload" && $query=="ACTION") {
+		$cs=connection(DISCONNECT,$database);
+		echo "<script language='JavaScript'>window.location.href='page.php?id=229&lg=fr'</script>";
 	}
+?>

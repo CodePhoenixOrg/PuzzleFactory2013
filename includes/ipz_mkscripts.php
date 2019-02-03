@@ -74,102 +74,103 @@ class ScriptsMaker extends Base
                 $script.="\t\t\t\$sql=\"select * from $table where $indexfield='$$indexfield';\";\n";
                 $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
                 $script.="\t\t\t\$rows = \$stmt->fetch(PDO::FETCH_ASSOC);\n";
-                $script.="\t\t\t\$$fieldname = filterValue(\$cs, \$rows[\"$fieldname\"]);\n";
+                $script.="\t\t\t\$$fieldname = \$rows[\"$fieldname\"];\n";
             } else {
-                $script.="\t\t\t\$$fieldname = filterValue(\$cs, \$rows[\"$fieldname\"]);\n";
+                $script.="\t\t\t\$$fieldname = \$rows[\"$fieldname\"];\n";
             }
         }
-        $script.="\t\tbreak;\n";
-        $script.="\t\t}\n";
-        $script.="\t} else if(\$event === \"onRun\" && \$query === \"ACTION\") {\n";
-        $script.="\t\tswitch (\$action) {\n";
-        $script.="\t\tcase \"Ajouter\":\n";
+        $script .= "\t\tbreak;\n";
+        $script .= "\t\t}\n";
+        $script .= "\t} else if(\$event === \"onRun\" && \$query === \"ACTION\") {\n";
+        $script .= "\t\tswitch (\$action) {\n";
+        $script .= "\t\tcase \"Ajouter\":\n";
         for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
             $defs = explode(',', $A_sqlFields[$i]);
             $fieldname = $defs[0];
-            $script .= "\t\t\t\$$fieldname = filterPOST(\$cs, \"$fieldname\");\n";
+            $script .= "\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
         }
         $replaces=[];
         $insertFields=[];
+        $prepargs = [];
         for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
             $defs = explode(',', $A_sqlFields[$i]);
             $fieldname = $defs[0];
             $fieldtype = $stmt->typeNameToPhp($defs[2]);
-            $insertFields[$i] = "\t\t\t\t\"$fieldname";
-            if ($fieldtype === 'string') {
-                $replaces[]="\t\t\t\$$fieldname=filterValue(\$cs, \$$fieldname)";
-            }
+            $insertFields[$i] = "\t\t\t\t$fieldname";
+            // if ($fieldtype === 'string') {
+            //     $replaces[] = "\t\t\t\$$fieldname = \$$fieldname";
+            // }
+            $prepargs[] = "':$fieldname' => \$$fieldname";
         }
-        $script .= implode($replaces, ";\n") . ";\n";
-        $script .= "\t\t\t\$sql=\"insert into $table (\".\n";
-        $script .= implode($insertFields, ", \".\n") . "\".";
-        $script .= "\n\t\t\t\") values (\".\n";
+        $prepare = '[' . implode($prepargs, ', ') . ']'; 
+
+        // $script .= implode($replaces, ";\n") . ";\n";
+        $script .= "\t\t\t\$sql = <<<SQL\n\t\t\tinsert into $table (\n";
+        $script .= implode($insertFields, ", \n") . "";
+        $script .= "\n\t\t\t) values (\n";
         $insertValues = [];
         for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
             $defs = explode(',', $A_sqlFields[$i]);
             $fieldname = $defs[0];
             $fieldtype = $stmt->typeNameToPhp($defs[2]);
-            if ($fieldtype === 'string') {
-                $replaces[] = "\t\t\t\$$fieldname=filterValue(\$cs, \$$fieldname)";
-                $insertValues[$i] = "\t\t\t\t\"\\\"\$$fieldname\\\"";
-            } elseif ($fieldtype === 'int') {
-                $insertValues[$i] = "\t\t\t\t\"\$$fieldname";
-            } elseif ($fieldtype === 'float') {
-                $insertValues[$i] = "\t\t\t\t\"\$$fieldname";
-            } else {
-                $insertValues[$i] = "\t\t\t\t\"\\\"\$$fieldname\\\"";
-            }
+            // if ($fieldtype === 'string') {
+            //     $replaces[] = "\t\t\t\$$fieldname = \$$fieldname";
+            // }
+            $insertValues[$i] = "\t\t\t\t:$fieldname";
         }
-        $script.=implode($insertValues, ", \".\n") . "\".\n";
-        $script.="\t\t\t\")\";\n";
-        $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
-        $script.="\t\tbreak;\n";
-        $script.="\t\tcase \"Modifier\":\n";
+        $script .= implode($insertValues, ", \n") . "\n";
+        $script .= "\t\t\t)\n";
+        $script .= "SQL;\n";
+        $script .= "\t\t\t\$stmt = \$cs->prepare(\$sql);\n";
+        $script .= "\t\t\t\$stmt->execute($prepare);\n";
+        $script .= "\t\tbreak;\n";
+        $script .= "\t\tcase \"Modifier\":\n";
+        for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
+            $defs = explode(',', $A_sqlFields[$i]);
+            $fieldname = $defs[0];
+            $script.="\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
+        }
+        $replaces = [];
+        $update = [];
+        $prepare = [];
         for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
             $defs=explode(',', $A_sqlFields[$i]);
-            $fieldname=$defs[0];
-            $script.="\t\t\t\$$fieldname = filterPOST(\$cs, \"$fieldname\");\n";
-        }
-        $replaces=[];
-        $update=[];
-        for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
-            $defs=explode(',', $A_sqlFields[$i]);
-            $fieldname=$defs[0];
+            $fieldname = $defs[0];
             $fieldtype = $stmt->typeNameToPhp($defs[2]);
         
-            if ($fieldtype=='string') {
-                $replaces[]="\t\t\t\$$fieldname=filterValue(\$cs, \$$fieldname)";
-                $update[$i]="\t\t\t\t\"$fieldname=\\\"\$$fieldname\\\"";
-            } elseif ($fieldtype==11) {
-                $update[$i]="\t\t\t\t\"$fieldname=\$$fieldname";
-            } elseif ($fieldtype=='float') {
-                $update[$i]="\t\t\t\t\"$fieldname=\$$fieldname";
-            } else {
-                $update[$i]="\t\t\t\t\"$fieldname=\\\"\$$fieldname\\\"";
-            }
+            // if ($fieldtype=='string') {
+            //     $replaces[]="\t\t\t\$$fieldname = \$$fieldname";
+            // }
+            $update[$i]="\t\t\t\t$fieldname = :$fieldname";
+            $prepargs[] = "':$fieldname' => \$$fieldname";
         }
-        $script.=implode($replaces, ";\n") . ";\n";
-        $script.="\t\t\t\$sql=\"update $table set \".\n";
-        $script.=implode($update, ", \".\n") . " \".\n";
-        $script.="\t\t\t\"where $indexfield='\$$indexfield'\";\n";
-        $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
-        $script.="\t\tbreak;\n";
-        $script.="\t\tcase \"Supprimer\":\n";
-        $script.="\t\t\t\$sql=\"delete from $table where $indexfield='\$$indexfield'\";\n";
-        $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
-        $script.="\t\tbreak;\n";
-        $script.="\t\t}\n";
+        $prepare = '[' . implode($prepargs, ', ') . ']'; 
+
+        // $script .= implode($replaces, ";\n") . ";\n";
+        $script .= "\t\t\t\$sql=<<<SQL\n\t\t\tupdate $table set \n";
+        $script .= implode($update, ", \n") . "\n";
+        $script .= "\t\t\twhere $indexfield = '\$$indexfield';\n";
+        $script .= "SQL;\n";
+        $script .= "\t\t\t\$stmt = \$cs->prepare(\$sql);\n";
+        $script .= "\t\t\t\$stmt->execute($prepare);\n";
+        $script .= "\t\tbreak;\n";
+        $script .= "\t\tcase \"Supprimer\":\n";
+        $script .= "\t\t\t\$sql = \"delete from $table where $indexfield='\$$indexfield'\";\n";
+        $script .= "\t\t\t\$stmt = \$cs->query(\$sql);\n";
+        $script .= "\t\tbreak;\n";
+        $script .= "\t\t}\n";
         if ($with_frames) {
             $script.="\t\techo \"<script language='JavaScript'>window.location.href='<?php echo \$lg?>/$page_id_page?id=$page_id&lg=fr'</script>\";\n";
         } elseif (!$with_frames) {
             $script.="\t\t\$query=\"SELECT\";\n";
         }
+        
         //$script.="\t\techo \"<script language='JavaScript'>window.location.href='page.php?id=$page_id&lg=fr'</script>\";\n";
-        $script.="\t} else if(\$event==\"onUnload\" && \$query==\"ACTION\") {\n";
-        $script.="\t\t\$cs=connection(DISCONNECT,\$database);\n";
-        $script.="\t\techo \"<script language='JavaScript'>window.location.href='page.php?id=$page_id&lg=fr'</script>\";\n";
-        $script.="\t}\n";
-        $script.="?>\n";
+        // $script.="\t} else if(\$event==\"onUnload\" && \$query==\"ACTION\") {\n";
+        // $script.="\t\t\$cs=connection(DISCONNECT,\$database);\n";
+        // $script.="\t\techo \"<script language='JavaScript'>window.location.href='page.php?id=$page_id&lg=fr'</script>\";\n";
+        $script .= "\t}\n";
+        // $script.="\? >\n";
 
         return $script;
     }
@@ -344,7 +345,7 @@ class ScriptsMaker extends Base
         $script.="\t\tcase \"Modifier\":\n";
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
-            $script.="\t\t\t\$$fieldname = filterPOST(\$cs, \"$fieldname\");\n";
+            $script.="\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
         }
         $script.="\t\t\t\$sql=\"update $table set \".\n";
         $update="";

@@ -858,7 +858,7 @@ class Controls extends \Puzzle\Base
                     $fieldtype = $stmt->getFieldType($j);
                     $fieldlen = $stmt->getFieldLen($j);
 
-                    $field=$rows[$j];
+                    $field = htmlentities($rows[$j]);
                     
                     if (!empty($curl_rows)) {
                         $url.=$curl_rows;
