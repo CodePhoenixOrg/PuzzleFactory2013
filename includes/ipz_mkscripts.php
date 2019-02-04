@@ -228,7 +228,7 @@ class ScriptsMaker extends Base
         $script.="\t\t\t<td align=\"center\" valign=\"top\" bgcolor=\"<?php echo \$panel_colors[\"back_color\"]?>\">\n";
         $script.="\t\t\t\t<table>\n";
         $inputs="";
-        for ($i=0;$i<sizeof($A_formFields);$i++) {
+        for ($i = 0; $i < sizeof($A_formFields); $i++) {
             $inputs.= $A_formFields[$i] . "\n";
         }
         $script.= $inputs;
