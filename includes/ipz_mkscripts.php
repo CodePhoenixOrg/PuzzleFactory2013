@@ -49,6 +49,7 @@ class ScriptsMaker extends Base
         $script.="\t\$action = getArgument(\"action\", \"Ajouter\");\n";
         $script.="\t\$id = getArgument(\"id\");\n";
         $script.="\t\$di = getArgument(\"di\");\n";
+        $script.="\t\$tablename = \"$table\";\n";
         $defs=explode(',', $A_sqlFields[0]);
         $fieldname=$defs[0];
         $script.="\t$$fieldname = getArgument(\"$fieldname\");\n";
@@ -71,7 +72,7 @@ class ScriptsMaker extends Base
             $defs=explode(',', $A_sqlFields[$i]);
             $fieldname=$defs[0];
             if ($i === 1) {
-                $script.="\t\t\t\$sql=\"select * from $table where $indexfield='$$indexfield';\";\n";
+                $script.="\t\t\t\$sql=\"select * from \$tablename where $indexfield='$$indexfield';\";\n";
                 $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
                 $script.="\t\t\t\$rows = \$stmt->fetch(PDO::FETCH_ASSOC);\n";
                 $script.="\t\t\t\$$fieldname = \$rows[\"$fieldname\"];\n";
@@ -105,7 +106,7 @@ class ScriptsMaker extends Base
         $prepare = '[' . implode($prepargs, ', ') . ']'; 
 
         // $script .= implode($replaces, ";\n") . ";\n";
-        $script .= "\t\t\t\$sql = <<<SQL\n\t\t\tinsert into $table (\n";
+        $script .= "\t\t\t\$sql = <<<SQL\n\t\t\tinsert into \$tablename (\n";
         $script .= implode($insertFields, ", \n") . "";
         $script .= "\n\t\t\t) values (\n";
         $insertValues = [];
@@ -147,7 +148,7 @@ class ScriptsMaker extends Base
         $prepare = '[' . implode($prepargs, ', ') . ']'; 
 
         // $script .= implode($replaces, ";\n") . ";\n";
-        $script .= "\t\t\t\$sql=<<<SQL\n\t\t\tupdate $table set \n";
+        $script .= "\t\t\t\$sql=<<<SQL\n\t\t\tupdate \$tablename set \n";
         $script .= implode($update, ", \n") . "\n";
         $script .= "\t\t\twhere $indexfield = '\$$indexfield';\n";
         $script .= "SQL;\n";
@@ -155,7 +156,7 @@ class ScriptsMaker extends Base
         $script .= "\t\t\t\$stmt->execute($prepare);\n";
         $script .= "\t\tbreak;\n";
         $script .= "\t\tcase \"Supprimer\":\n";
-        $script .= "\t\t\t\$sql = \"delete from $table where $indexfield='\$$indexfield'\";\n";
+        $script .= "\t\t\t\$sql = \"delete from \$tablename where $indexfield='\$$indexfield'\";\n";
         $script .= "\t\t\t\$stmt = \$cs->query(\$sql);\n";
         $script .= "\t\tbreak;\n";
         $script .= "\t\t}\n";
@@ -202,12 +203,13 @@ class ScriptsMaker extends Base
         $script.="\t\$sr = getArgument(\"sr\");\n";
         $script.="\t\$curl_pager = \"\";\n";
         $script.="\t\$dialog = \"\";\n";
+        // $script.="\t\$tablename = \"$table\";\n";
         $script.="\tif(isset(\$pc)) \$curl_pager=\"&pc=\$pc\";\n";
         $script.="\tif(isset(\$sr)) \$curl_pager.=\"&sr=\$sr\";\n";
         $script.="\tif(\$query === \"SELECT\") {\n";
-        $script.="\t\t\t\$sql = \"select $indexfield, $secondfield from $table order by $indexfield\";\n";
-        $script.="\t\t\t\$dbgrid = \$datacontrols->createPagerDbGrid(\"$table\", \$sql, \$id, \"page.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
-        $script.="\t\t\t//\$dbgrid = tableShadow(\"$table\", \$dbgrid);\n";
+        $script.="\t\t\t\$sql = \"select $indexfield, $secondfield from \$tablename order by $indexfield\";\n";
+        $script.="\t\t\t\$dbgrid = \$datacontrols->createPagerDbGrid(\$tablename, \$sql, \$id, \"page.php\", \"&query=ACTION\$curl_pager\", \"\", true, true, \$dialog, array(0, 400), 15, \$grid_colors, \$cs);\n";
+        $script.="\t\t\t//\$dbgrid = tableShadow(\$tablename, \$dbgrid);\n";
         $script.="\t\t\techo \"<br>\".\$dbgrid;\n";
         $script.="\t} elseif(\$query === \"ACTION\") {\n";
         $script.="?>\n";

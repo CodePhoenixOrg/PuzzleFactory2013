@@ -56,8 +56,8 @@ class Controls extends \Puzzle\Base
 
         $fields=explode(",", $fields);
         $i=0;
-        foreach ($fields as $field) {
-            $afields=explode(" ", trim($field));
+        foreach ($fields as $value) {
+            $afields=explode(" ", trim($value));
             $s=sizeof($afields)-1;
             //$result[$i]="'".trim($afields[$s])."'";
             $result[$i]=trim($afields[0]);
@@ -858,7 +858,7 @@ class Controls extends \Puzzle\Base
                     $fieldtype = $stmt->getFieldType($j);
                     $fieldlen = $stmt->getFieldLen($j);
 
-                    $field = htmlentities($rows[$j]);
+                    $value = $rows[$j];
                     
                     if (!empty($curl_rows)) {
                         $url.=$curl_rows;
@@ -877,13 +877,13 @@ class Controls extends \Puzzle\Base
                     }
                     if ($i>1 && $j==0) {
                         $tag_align=" align='center'";
-                        $field="<img border='0' src='$image_link' height='16' width='16'$on_click>";
-                        $table.="<td>$ahref$field$a</td>\n";
+                        $value="<img border='0' src='$image_link' height='16' width='16'$on_click>";
+                        $table.="<td>$ahref$value$a</td>\n";
                     } else {
                         if ($fieldtype=="datetime") {
-                            $field = dateMysqlToFrench($field);
+                            $value = dateMysqlToFrench($value);
                         }
-                        //if($fieldtype=="time") $field = timeMysqlToShort($field);
+                        //if($fieldtype=="time") $value = timeMysqlToShort($value);
                         $tag_align=" align='left'";
                         if ($fieldtype=="int") {
                             $tag_align=" align='right'";
@@ -892,7 +892,7 @@ class Controls extends \Puzzle\Base
                             $tag_align=" align='center'";
                         }
                         $c=$j-1;
-                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'><span$on_click>$field</span></span>$a</td>\n";
+                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'><span$on_click>$value</span></span>$a</td>\n";
                     }
                 }
             }
@@ -945,7 +945,7 @@ class Controls extends \Puzzle\Base
                         $rows[$j+1]=$rows[$j];
                     }
                 } else {
-                    $field=$rows[$j];
+                    $value=$rows[$j];
                     
                     if (!empty($curl_rows)) {
                         $url.=$curl_rows;
@@ -957,12 +957,12 @@ class Controls extends \Puzzle\Base
                 
                     if ($i>1 && $j==0) {
                         $tag_align=" align='center'";
-                        $field="<img border='0' src='$image_link' height='16' width='16'>";
-                        $table.="<td>$ahref$field$a</td>\n";
+                        $value="<img border='0' src='$image_link' height='16' width='16'>";
+                        $table.="<td>$ahref$value$a</td>\n";
                     } else {
                         $tag_align=" align='left'";
                         $c=$j-1;
-                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$field</span>$a</td>\n";
+                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$value</span>$a</td>\n";
                     }
                 }
             }
@@ -1332,7 +1332,7 @@ class Controls extends \Puzzle\Base
                         $fieldtype = $stmt->getFieldType($j);
                         $fieldlen = $stmt->getFieldLen($j);
 
-                        $field=$rows[$j];
+                        $value=$rows[$j];
                     
                         if (!empty($curl_rows)) {
                             $url.=$curl_rows;
@@ -1348,11 +1348,11 @@ class Controls extends \Puzzle\Base
                             if (!empty($dialog)) {
                                 $on_click=" onClick=\"".OpenDialog($url, $dialog[0], $dialog[1])."\"";
                             }
-                            $field="<img border='0' src='$image_link' height='16' width='16'$on_click>";
-                            $table.="<td>$ahref$field$a</td>\n";
+                            $value="<img border='0' src='$image_link' height='16' width='16'$on_click>";
+                            $table.="<td>$ahref$value$a</td>\n";
                         } else {
                             if ($fieldtype=="date") {
-                                $field = preg_replace('^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$', '\3/\2/\1', $field);
+                                $value = preg_replace('^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$', '\3/\2/\1', $value);
                             }
                             $tag_align=" align='left'";
                             if ($fieldtype=="int") {
@@ -1363,7 +1363,7 @@ class Controls extends \Puzzle\Base
                             }
                             $c=$j-1;
                             $onmouseover=" onmouseover='thmb.src=\"".getHttpRoot()."/$database/$lg/galerie/albums/$al_id/small/".$rows[$web_field]."\";'";
-                            $table.="<td$tag_align$tag_width$onmouseover>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$field</span>$a</td>\n";
+                            $table.="<td$tag_align$tag_width$onmouseover>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$value</span>$a</td>\n";
                         }
                     }
                 }
@@ -1415,7 +1415,7 @@ class Controls extends \Puzzle\Base
                     }
                 } else {
                     if ($fieldname!="al_id") {
-                        $field=$rows[$j];
+                        $value=$rows[$j];
                     
                         if (!empty($curl_rows)) {
                             $url.=$curl_rows;
@@ -1427,12 +1427,12 @@ class Controls extends \Puzzle\Base
                 
                         if ($i>1 && $j==0) {
                             $tag_align=" align='center'";
-                            $field="<img border='0' src='$image_link' height='16' width='16'>";
-                            $table.="<td>$ahref$field$a</td>\n";
+                            $value="<img border='0' src='$image_link' height='16' width='16'>";
+                            $table.="<td>$ahref$value$a</td>\n";
                         } else {
                             $tag_align=" align='left'";
                             $c=$j-1;
-                            $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$field</span>$a</td>\n";
+                            $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$value</span>$a</td>\n";
                         }
                     }
                 }
@@ -1669,7 +1669,7 @@ class Controls extends \Puzzle\Base
                     $fieldtype = $stmt->getFieldType($j);
                     $fieldlen = $stmt->getFieldLen($j);
 
-                    $field=$rows[$j];
+                    $value=$rows[$j];
                     
                     if (!empty($curl_rows)) {
                         $url.=$curl_rows;
@@ -1685,11 +1685,11 @@ class Controls extends \Puzzle\Base
                         if (!empty($dialog)) {
                             $on_click=" onClick=\"".OpenDialog($url, $dialog[0], $dialog[1])."\"";
                         }
-                        $field="<img border='0' src='$image_link' height='16' width='16'$on_click>";
-                        $table.="<td>$ahref$field$a</td>\n";
+                        $value="<img border='0' src='$image_link' height='16' width='16'$on_click>";
+                        $table.="<td>$ahref$value$a</td>\n";
                     } else {
                         if ($fieldtype=="date") {
-                            $field = preg_replace('^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$', '\3/\2/\1', $field);
+                            $value = preg_replace('^([0-9]{2,4})-([0-9]{1,2})-([0-9]{1,2})$', '\3/\2/\1', $value);
                         }
                         $tag_align=" align='left'";
                         if ($fieldtype=="int") {
@@ -1699,7 +1699,7 @@ class Controls extends \Puzzle\Base
                             $tag_align=" align='center'";
                         }
                         $c=$j-1;
-                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$field</span>$a</td>\n";
+                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$value</span>$a</td>\n";
                     }
                 }
             }
@@ -1749,7 +1749,7 @@ class Controls extends \Puzzle\Base
                         $rows[$j+1]=$rows[$j];
                     }
                 } else {
-                    $field=$rows[$j];
+                    $value=$rows[$j];
                     
                     if (!empty($curl_rows)) {
                         $url.=$curl_rows;
@@ -1761,12 +1761,12 @@ class Controls extends \Puzzle\Base
                 
                     if ($j==0) {
                         $tag_align=" align='center'";
-                        $field="<img border='0' src='$image_link' height='16' width='16'>";
-                        $table.="<td>$ahref$field$a</td>\n";
+                        $value="<img border='0' src='$image_link' height='16' width='16'>";
+                        $table.="<td>$ahref$value$a</td>\n";
                     } else {
                         $tag_align=" align='left'";
                         $c=$j-1;
-                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$field</span>$a</td>\n";
+                        $table.="<td$tag_align$tag_width>$ahref<span id='caption_$name$r$c'style='color:$fore_color'>$value</span>$a</td>\n";
                     }
                 }
             }
