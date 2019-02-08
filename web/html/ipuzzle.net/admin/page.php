@@ -127,7 +127,7 @@
 			if(!isset($mbr_valider)) $mbr_valider="";
 			
 			$blocks = new \Puzzle\Blocks($lg, $db_prefix);
-			$block_set= $blocks->createEnhancedBlockSet($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
+			$block_set = $blocks->createEnhancedBlockSet($database, BLOCK_LEFT_COLUMN, $id, $lg, $panel_colors);
 			echo $block_set."\n\n";
 		?>
 	
