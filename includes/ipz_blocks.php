@@ -62,7 +62,7 @@ class Blocks extends Base
     
         $block_set="";
         $sql="select bl_id, bl_type from {$this->db_prefix}blocks where bl_column=$column order by bl_id";
-        // debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        // self::getLogger()->debug($sql, __FILE__, __LINE__);
 
         //echo "$sql<br>";
         $stmt = $cs->query($sql);
@@ -152,7 +152,7 @@ class Blocks extends Base
         "from {$this->db_prefix}blocks b, {$this->db_prefix}dictionary d ".
         "where  b.di_id=d.di_id ".
         "and b.bl_id=$block_num";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
         
         $stmt = $cs->query($sql);
         $rows=$stmt->fetch();
@@ -165,7 +165,7 @@ class Blocks extends Base
         "and m.bl_id=b.bl_id ".
         "and m.bl_id=$block_num ".
         "order by m.me_id";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
         
         $sub_menu="";
         $count=0;

@@ -20,23 +20,24 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 define("LINUX", "linux");
 define("WIN32", "windows");
-define ('DEBUG_LOG_FILE', serverPath() . '/logs/debug.log');
-define("DOCUMENT_ROOT", getWwwRoot()."/");
+define("CONNECT", "connect");
+define("DISCONNECT", "disconnect");
+// define ('DEBUG_LOG_FILE', serverPath() . '/logs/debug.log');
+// define("DOCUMENT_ROOT", getWwwRoot()."/");
 
-define ('CR_LF', "\r\n");
-global $DEBUG_LOG_FILE;
+// global $DEBUG_LOG_FILE;
 
-$DEBUG_LOG_FILE = serverPath() . '/logs/debug.log';
+// $DEBUG_LOG_FILE = serverPath() . '/logs/debug.log';
 
-function debugLog($message, $object = '') {
-    global $DEBUG_LOG_FILE;
+// function debugLog($message, $object = '') {
+//     // global $DEBUG_LOG_FILE;
 
-    $handle = fopen($DEBUG_LOG_FILE, 'a');
+//     $handle = fopen($DEBUG_LOG, 'a');
     
-    $message = date('Y-m-d h:i:s') . " : $message"  . (isset($object) ? " : " . print_r($object, true) : "");
-    fwrite($handle, $message . CR_LF);
-    fclose($handle);
-}
+//     $message = date('Y-m-d h:i:s') . " : $message"  . (isset($object) ? " : " . print_r($object, true) : "");
+//     fwrite($handle, $message . PHP_EOL);
+//     fclose($handle);
+// }
 
 function serverPath() {
     $result = '';

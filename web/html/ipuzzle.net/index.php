@@ -11,6 +11,7 @@
     // include_once 'puzzle/ipz_menus.php';
     session_start();
     
+    include 'phink/phink_library.php';
     include 'puzzle/ipuzzle_library.php';
     include(PZ_DEFAULTS);
 

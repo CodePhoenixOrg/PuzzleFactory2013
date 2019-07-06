@@ -9,6 +9,7 @@
 	//$include_path = ini_get("include_path");
 	//ini_set("include_path","$default_include_path:/usr/share/php/ipuzzle.inc/");
 
+    include 'phink/phink_library.php';
 	include 'puzzle/ipuzzle_library.php';
 	include(PZ_DEFAULTS);
 	
@@ -23,7 +24,8 @@
 
 	$menus = new Puzzle\Menus($lg, $db_prefix);
 	$design = new Puzzle\Design();
-	$scriptMaker = new Puzzle\ScriptsMaker();
+	// $scriptMaker = new Puzzle\ScriptsMaker();
+	$scriptMaker = new Phink\Web\UI\TScriptMaker();
 
 	$main_menu = $menus->createMainMenu($database, 1);
 	$sub_menu = $menus->createSubMenu($database, 1, SUB_MENU_HORIZONTAL);

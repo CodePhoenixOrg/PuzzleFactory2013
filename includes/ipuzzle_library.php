@@ -28,7 +28,7 @@ class iPuzzleLibrary {
             "crud_queries.php",
             "data_driver.php",
             "data_statement.php",
-            "connection.php",
+            // "connection.php",
             "mysqlconn.php",
             "design.php",
             "controls.php",

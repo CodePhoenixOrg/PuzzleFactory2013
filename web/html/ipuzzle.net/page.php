@@ -21,9 +21,12 @@
 	
 	// include_once 'puzzle/ipz_style.php';
 	session_start();
+    include 'phink/phink_library.php';
 	require 'puzzle/ipuzzle_library.php';
 
 	include(PZ_DEFAULTS);
+
+	use Phink\Log\TLog;
 
 	// include_once 'puzzle/ipz_menus.php';
 	// include_once 'puzzle/ipz_blocks.php';
@@ -52,11 +55,11 @@
 		$di=$title_page["index"];
 	}
 	
-	debugLog("TITLE PAGE", $title_page);
+	TLog::create()->dump("TITLE PAGE", $title_page);
 
 	$title = $title_page["title"];
 	$page = $lg . "/" . $title_page["page"];
-	debugLog("TITLE PAGE", $page);
+	TLog::create()->dump("TITLE PAGE", $page);
 
 	
 	if(!empty($page_colors)) {

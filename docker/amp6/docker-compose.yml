@@ -25,6 +25,8 @@ services:
     container_name: amp6_web
     ports:
      - "8100:80"
+    expose:
+     - "8100/tcp"
     privileged: true
     volumes:
      - ../../web:/var/www

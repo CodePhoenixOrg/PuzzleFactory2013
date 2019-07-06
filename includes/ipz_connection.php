@@ -23,6 +23,7 @@ define("DISCONNECT", "disconnect");
 
 use PDO;
 
+use Phink\Core\TObject;
 use Puzzle\Data\Driver;
 use Puzzle\Data\Statement;
 
@@ -31,7 +32,7 @@ use Puzzle\Data\Statement;
  *
  * @author david
  */
-class Connection 
+class Connection extends TObject
 {
 
     private $_state = null;
@@ -49,6 +50,8 @@ class Connection
 
     public function __construct($driver, $databaseName, $host = '', $user = '', $password = '', $port = 0)
     {
+        parent::__construct();
+        
         $this->_driver = $driver;
         $this->_databaseName = $databaseName;
         $this->_host = $host;
@@ -97,7 +100,7 @@ class Connection
                 $this->_state = new \PDO($this->_dsn, $this->_user, $this->_password);
             }
         } catch (\PDOException $ex) {
-            debugLog(__FILE__ . ':' . __LINE__ . ':', $ex);
+            self::getLogger()->error($ex, __FILE__, __LINE__);
         }
 
         return $this->_state !== null;
@@ -116,10 +119,10 @@ class Connection
             
             $result = new Statement($this->_statement, $this->_config, $sql);
         } catch (\PDOException $ex) {
-            debugLog(__FILE__ . ':' . __LINE__ . ':', ['SQL' => $sql, 'PARAMS' => $params]);
-            debugLog(__FILE__ . ':' . __LINE__ . ':', ['exception' => $ex]);
+            self::getLogger()->debug(__FILE__ . ':' . __LINE__ . ':', ['SQL' => $sql, 'PARAMS' => $params]);
+            self::getLogger()->debug(__FILE__ . ':' . __LINE__ . ':', ['exception' => $ex]);
         } catch (\Exception $ex) {
-            debugLog(__FILE__ . ':' . __LINE__ . ':', ['exception' => $ex]);
+            self::getLogger()->debug(__FILE__ . ':' . __LINE__ . ':', ['exception' => $ex]);
         }
         
         return $result;

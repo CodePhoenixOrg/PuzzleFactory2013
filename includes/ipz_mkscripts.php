@@ -27,8 +27,9 @@ class ScriptsMaker extends Base
 {
     public function __construct()
     {
-    }
         
+    }    
+
     public function makeCode(
         $database,
         $table="",
@@ -103,11 +104,11 @@ class ScriptsMaker extends Base
             // }
             $prepargs[] = "':$fieldname' => \$$fieldname";
         }
-        $prepare = '[' . implode($prepargs, ', ') . ']'; 
+        $prepare = '[' . implode(', ', $prepargs) . ']'; 
 
         // $script .= implode($replaces, ";\n") . ";\n";
         $script .= "\t\t\t\$sql = <<<SQL\n\t\t\tinsert into \$tablename (\n";
-        $script .= implode($insertFields, ", \n") . "";
+        $script .= implode(", \n", $insertFields) . "";
         $script .= "\n\t\t\t) values (\n";
         $insertValues = [];
         for ($i = 1; $i < sizeof($A_sqlFields); $i++) {
@@ -119,7 +120,7 @@ class ScriptsMaker extends Base
             // }
             $insertValues[$i] = "\t\t\t\t:$fieldname";
         }
-        $script .= implode($insertValues, ", \n") . "\n";
+        $script .= implode(", \n", $insertValues) . "\n";
         $script .= "\t\t\t)\n";
         $script .= "SQL;\n";
         $script .= "\t\t\t\$stmt = \$cs->prepare(\$sql);\n";
@@ -145,11 +146,11 @@ class ScriptsMaker extends Base
             $update[$i]="\t\t\t\t$fieldname = :$fieldname";
             $prepargs[] = "':$fieldname' => \$$fieldname";
         }
-        $prepare = '[' . implode($prepargs, ', ') . ']'; 
+        $prepare = '[' . implode(', ', $prepargs) . ']'; 
 
         // $script .= implode($replaces, ";\n") . ";\n";
         $script .= "\t\t\t\$sql=<<<SQL\n\t\t\tupdate \$tablename set \n";
-        $script .= implode($update, ", \n") . "\n";
+        $script .= implode(", \n", $update) . "\n";
         $script .= "\t\t\twhere $indexfield = '\$$indexfield';\n";
         $script .= "SQL;\n";
         $script .= "\t\t\t\$stmt = \$cs->prepare(\$sql);\n";
@@ -328,19 +329,19 @@ class ScriptsMaker extends Base
         $script.="\t\tswitch (\$action) {\n";
         $script.="\t\tcase \"Ajouter\":\n";
         $script.="\t\t\t\$sql=\"insert into $table (\".\n";
-        $insert="";
+        $insert=[];
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
             $insert[$i]="\t\t\t\t\"$fieldname";
         }
-        $script.=implode($insert, ", \".\n") . "\".";
+        $script.=implode(", \".\n", $insert) . "\".";
         $script.="\n\t\t\t\") values (\".\n";
-        $insert="";
+        $insert=[];
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
             $insert[$i]="\t\t\t\t\"'\$$fieldname'";
         }
-        $script.=implode($insert, ", \".\n") . "\".\n";
+        $script.=implode(", \".\n", $insert) . "\".\n";
         $script.="\t\t\t\")\";\n";
         $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
         $script.="\t\tbreak;\n";
@@ -350,12 +351,12 @@ class ScriptsMaker extends Base
             $script.="\t\t\t\$$fieldname = filterPOST(\"$fieldname\");\n";
         }
         $script.="\t\t\t\$sql=\"update $table set \".\n";
-        $update="";
+        $update=[];
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
             $update[$i]="\t\t\t\t\"$fieldname='\$$fieldname'";
         }
-        $script.=implode($update, ", \".\n") . " \".\n";
+        $script.=implode(", \".\n", $update) . " \".\n";
         $script.="\t\t\t\"where $indexfield='\$$indexfield'\";\n";
         $script.="\t\t\t\$stmt = \$cs->query(\$sql);\n";
         $script.="\t\tbreak;\n";
@@ -637,19 +638,19 @@ class ScriptsMaker extends Base
         $script.="\t\tinclude('".$pa_filename."_form".$extension."')\n";
         $script.="\t} else if(\$event==\"onRun\") {\n";
         $script.="\t\t\$sql=\"insert into $table (\".\n";
-        $insert="";
+        $insert=[];
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
             $insert[$i]="\t\t\t\"$fieldname";
         }
-        $script.=implode($insert, ", \".\n") . "\".";
+        $script.=implode(", \".\n", $insert) . "\".";
         $script.="\n\t\t\") values (\".\n";
-        $insert="";
+        $insert=[];
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
             $insert[$i]="\t\t\t\"'\$$fieldname'";
         }
-        $script.=implode($insert, ", \".\n") . "\".\n";
+        $script.=implode(", \".\n", $insert) . "\".\n";
         $script.="\t\t\")\";\n";
         $script.="\t\t\$stmt = \$cs->query(\$sql);\n";
         $script.="\t\tinclude('".$pa_filename."_browse".$extension."')\n";
@@ -695,12 +696,12 @@ class ScriptsMaker extends Base
         $script.="\t\tinclude('".$pa_filename."_form".$extension."')\n";
         $script.="\t} else if(\$event==\"onRun\") {\n";
         $script.="\t\t\$sql=\"update $table set \".\n";
-        $update="";
+        $update=[];
         for ($i=0;$i<sizeof($A_sqlFields);$i++) {
             $fieldname=$A_sqlFields[$i];
             $update[$i]="\t\t\t\"$fieldname='\$$fieldname'";
         }
-        $script.=implode($update, ", \".\n") . " \".\n";
+        $script.=implode(", \".\n", $update) . " \".\n";
         $script.="\t\t\t\"where $indexfield='\$$indexfield'\";\n";
         $script.="\t\t\$stmt = \$cs->query(\$sql);\n";
         $script.="\t\tinclude('".$pa_filename."_browse".$extension."')\n";

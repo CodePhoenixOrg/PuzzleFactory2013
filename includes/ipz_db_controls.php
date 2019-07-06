@@ -28,7 +28,7 @@ class Controls extends \Puzzle\Base
         $jsArray="<script language='JavaScript'>\n";
 
         $stmt = $cs->query($sql);
-        $n=$stmt->rowCount();
+        $n=$stmt->getRowCount();
         $i=0;
         $jsArray.="\tvar $name=new Array($n);\n";
         $jsArray.="\t$name"."[$i]=new Array(\"0\", \"\");"."\n";
@@ -58,7 +58,7 @@ class Controls extends \Puzzle\Base
         $i=0;
         foreach ($fields as $value) {
             $afields=explode(" ", trim($value));
-            $s=sizeof($afields)-1;
+            // $s=sizeof($afields)-1;
             //$result[$i]="'".trim($afields[$s])."'";
             $result[$i]=trim($afields[0]);
             $i++;
@@ -67,7 +67,7 @@ class Controls extends \Puzzle\Base
         return $result;
     }
 
-    public function insertTest($sql, $left, $right, $operator, $right_is_quoted)
+    public function insertTest($sql, $left, $right, $operator, $right_is_quoted, $criterion = "")
     {
         $where="where";
         $having="having";
@@ -240,7 +240,7 @@ class Controls extends \Puzzle\Base
 
         $stmt = $cs->query($sql);
         $nfields = $stmt->columnConut();
-        //$nrows=$stmt->rowCount();
+        //$nrows=$stmt->getRowCount();
     
         for ($i=0;$i<$nfields;$i++) {
             $names[$i] = $stmt->getFieldName($i);
@@ -276,6 +276,7 @@ class Controls extends \Puzzle\Base
         */
         global $img, $pc, $lg;
 
+        $table="";
         $sql_query=strtolower(trim($sql_query));
         $p=strpos($sql_query, " ");
         $sql_clause=substr($sql_query, 0, $p);
@@ -303,7 +304,7 @@ class Controls extends \Puzzle\Base
             $stmt = $cs->query($sql);
             //$rows=$stmt->fetch();
             //$pc=$rows[0];
-            $pc=$stmt->rowCount();
+            $pc=$stmt->getRowCount();
             //echo "Count='$pc'<br>";
         }
         $min_sr=0;
@@ -425,7 +426,7 @@ class Controls extends \Puzzle\Base
             $stmt = $cs->query($sql);
             //$rows=$stmt->fetch();
             //$pc=$rows[0];
-            $pc=$stmt->rowCount();
+            $pc=$stmt->getRowCount();
             //echo "Count='$pc'<br>";
         }
         $min_sr=0;
@@ -695,7 +696,7 @@ class Controls extends \Puzzle\Base
 
         //echo "sql='$sql'<br>";
         $stmt = $cs->query($sql);
-        $num=$stmt->rowCount();
+        $num=$stmt->getRowCount();
     
         //if($num) {
 
@@ -703,7 +704,7 @@ class Controls extends \Puzzle\Base
         //Si le nombre de largeurs définies est inférieur on aggrandi le tableau avec des valeurs à 0.
         $width_count=count($col_widths);
 
-        $fields_count = $stmt->columnCount();
+        $fields_count = $stmt->getFieldCount();
         $cols=$fields_count;
         if ($width_count<$fields_count) {
             $j=$fields_count-$width_count;
@@ -904,7 +905,7 @@ class Controls extends \Puzzle\Base
             $rows[0]="0";
             $rows[1]="($add)";
 
-            $fields_count = $stmt->columnCount();
+            $fields_count = $stmt->getFieldCount();
     
             for ($i=2; $i<$fields_count; $i++) {
                 $rows[$i]="...";
@@ -1022,7 +1023,10 @@ class Controls extends \Puzzle\Base
         */
         global $sr, $pc, $img, $lg, $database;
     
-        $criterion=getArgument("criterion");
+        $criterion = getArgument("criterion");
+        $image_link = $page_link;
+
+        $userdb = $this->database;
     
         //Détermine les couleurs du dbGrid
         if (!empty($colors)) {
@@ -1152,14 +1156,14 @@ class Controls extends \Puzzle\Base
 
         //echo "sql='$sql'<br>";
         $stmt = $cs->query($sql);
-        $num=$stmt->rowCount();
+        $num=$stmt->getRowCount();
     
         //if($num) {
 
         //Les colonnes auront la largeur définie par ordre d'indexation dans le tableau $col_width.
         //Si le nombre de largeurs définies est inférieur on aggrandi le tableau avec des valeurs à 0.
         $width_count=count($col_widths);
-        $fields_count=$stmt->columnCount();
+        $fields_count=$stmt->getFieldCount();
         $cols=$fields_count;
         if ($width_count<$fields_count) {
             $j=$fields_count-$width_count;
@@ -1375,7 +1379,7 @@ class Controls extends \Puzzle\Base
             $rows=array();
             $rows[0]="0";
             $rows[1]="($add)";
-            for ($i=2; $i<$stmt->columnCount(); $i++) {
+            for ($i=2; $i<$stmt->getFieldCount(); $i++) {
                 $rows[$i]="...";
             }
         
@@ -1480,6 +1484,9 @@ class Controls extends \Puzzle\Base
         */
         global $img, $lg;
 
+        $image_link="img/edit.png";
+        $step = getArgument('pc');
+
         //Détermine les couleurs du dbGrid
         if (!empty($colors)) {
             global $grid_colors;
@@ -1494,6 +1501,7 @@ class Controls extends \Puzzle\Base
             $header_fore_color=$colors["header_fore_color"];
             $even_fore_color=$colors["even_fore_color"];
             $odd_fore_color=$colors["odd_fore_color"];
+            $pager_color=$colors["pager_color"];
         } else {
             $border_color="white";
             $header_back_color="black";
@@ -1502,9 +1510,7 @@ class Controls extends \Puzzle\Base
             $header_fore_color="white";
             $even_fore_color="black";
             $odd_fore_color="white";
-        }
-        if ($image_link=="") {
-            $image_link="img/edit.png";
+            $pager_color="lightgrey";
         }
 
         //Détermine la langue de la page qui sera affichée
@@ -1553,13 +1559,13 @@ class Controls extends \Puzzle\Base
 
         //echo "SQL='$sql'<br>";
         $stmt = $cs->query($sql);
-        $num=$stmt->rowCount();
+        $num=$stmt->getRowCount();
         //if($num) {
 
         //Les colonnes auront la largeur définie par ordre d'indexation dans le tableau $col_width.
         //Si le nombre de largeurs définies est inférieur on aggrandi le tableau avec des valeurs à 0.
         $width_count=count($col_widths);
-        $i=$stmt->columnCount();
+        $i=$stmt->getFieldCount();
         if ($width_count<$i) {
             $j=$i-$width_count;
             $a=array_fill($width_count, $j, 0);
@@ -1710,7 +1716,7 @@ class Controls extends \Puzzle\Base
             $rows=array();
             $rows[0]="0";
             $rows[1]="($add)";
-            for ($i=2; $i<$stmt->columnCount(); $i++) {
+            for ($i=2; $i<$stmt->getFieldCount(); $i++) {
                 $rows[$i]="...";
             }
         
@@ -1810,7 +1816,7 @@ class Controls extends \Puzzle\Base
         if (!empty($orderby)) {
             $order_by_field=" order by $orderby";
         } else {
-            $order_by_field=" order by $option";
+            $order_by_field=" order by $option_field";
         }
 
         if (!$only_default) {
@@ -1864,7 +1870,7 @@ class Controls extends \Puzzle\Base
         }
         $inter=(array) null;
 
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
         /*
         echo "<pre>";
         print_r($selected);

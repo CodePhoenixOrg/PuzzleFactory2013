@@ -1,7 +1,6 @@
 <center>
 <?php
-    include_once("puzzle/ipz_db_controls.php");
-    include_once("puzzle/ipz_design.php");
+    use Phink\Log\TLog;
     use \Puzzle\Data\Controls as DataControls;
     use \Puzzle\Design;
 
@@ -10,7 +9,7 @@
     $design = new Design();
 
     $sql = 'select nw_id, nw_url, concat(\'<span style=\"font-size:12; font-weight:bold\">\', nw_title, \'</span><br><span style=\"font-size:12; font-style:normal\">\', nw_text, \'</span><br><span style=\"font-size:10; font-style:italic; text-align:right\">\', nw_author, \', \', nw_date, \' @ \', nw_time, \'</span>\') as News from '.$db_prefix.'news order by nw_date desc, nw_time desc';
-    debugLog("SQL : " . __FILE__ . ":" . __LINE__, $sql);
+    TLog::create()->debug("SQL : " . __FILE__ . ":" . __LINE__, $sql);
 
 // DEBUG
 /* begin

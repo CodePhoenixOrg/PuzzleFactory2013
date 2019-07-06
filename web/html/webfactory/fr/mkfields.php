@@ -1,5 +1,9 @@
 <center>
 <?php   
+
+	use \Phink\Data\TAnalyzer;
+	use \Phink\Log\TLog;
+
 	//if(empty($userdb)) $userdb="webfactory";
 	$userdb = getArgument("userdb");
 	$usertable = getArgument("usertable");
@@ -25,7 +29,7 @@
 	//$filedir="$wwwroot/../$userdb/fr/";
 	$datacontrols = new \Puzzle\Data\Controls($lg, $db_prefix);
 	
-	$analyzer = new \Puzzle\Data\Analyzer();
+	$analyzer = new TAnalyzer;
 
 	$references = $analyzer->searchReferences($userdb, $usertable, $cs);
 	

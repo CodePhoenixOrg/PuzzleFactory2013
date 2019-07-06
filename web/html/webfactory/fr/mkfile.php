@@ -1,8 +1,11 @@
 <center>
 <?php   
-	include_once 'puzzle/ipz_menus.php';
-	include_once 'puzzle/ipz_source.php';
-    include_once 'puzzle/ipz_analyser.php';
+	// include_once 'puzzle/ipz_menus.php';
+	// include_once 'puzzle/ipz_source.php';
+    // include_once 'puzzle/ipz_analyser.php';
+
+	use \Phink\Data\TAnalyzer;
+	use \Phink\Log\TLog;
 
 	define('YES', 'Oui');
 	define('NO', 'Non');
@@ -31,7 +34,7 @@
 	$tmp_filename = 'tmp_'.$pa_filename;
 	$wwwroot = getWwwRoot();
 	
-	$analyzer = new \Puzzle\Data\Analyzer();
+	$analyzer = new TAnalyzer;
     $references = $analyzer->searchReferences($userdb, $usertable, $cs);
 	$A_fieldDefs = $references["field_defs"];
 	
@@ -47,17 +50,17 @@
 	$root_page_filename = $wwwroot.$basedir.$pa_filename.$extension;
 
 	
-	debugLog(__FILE__ . ':' . __LINE__ . ':WWWROOT:' . $wwwroot);
-	debugLog(__FILE__ . ':' . __LINE__ . ':BASEDIR:' . $basedir);
-	debugLog(__FILE__ . ':' . __LINE__ . ':PA_FILENAME:' . $pa_filename);
-	debugLog(__FILE__ . ':' . __LINE__ . ':DECL:FILE:PAGE:' . $root_code_filename);
-	debugLog(__FILE__ . ':' . __LINE__ . ':DECL:FILE:CODE:' . $root_page_filename);
+	TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':WWWROOT:' . $wwwroot);
+	TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':BASEDIR:' . $basedir);
+	TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':PA_FILENAME:' . $pa_filename);
+	TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':DECL:FILE:PAGE:' . $root_code_filename);
+	TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':DECL:FILE:CODE:' . $root_page_filename);
 
 	$script_exists = file_exists($rel_page_filename);
 	$script_exists_tostring = $script_exists ? YES : NO;
 	$http_root = getHttpRoot();
 
-	$menus = new \Puzzle\Menus($lg, $db_prefix);
+	// $menus = new \Puzzle\Menus($lg, $db_prefix);
 
 	if($save === "") {
  
@@ -276,8 +279,8 @@
 
             copy('tmp_code.php', $root_code_filename);
 			copy('tmp_page.php', $root_page_filename);
-			debugLog(__FILE__ . ':' . __LINE__ . ':FILE:PAGE:' . $root_code_filename);
-			debugLog(__FILE__ . ':' . __LINE__ . ':FILE:CODE:' . $root_page_filename);
+			TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':FILE:PAGE:' . $root_code_filename);
+			TLog::create()->debug(__FILE__ . ':' . __LINE__ . ':FILE:CODE:' . $root_page_filename);
 
 			 
             // copy('tmp_browse.php', $pa_filename.'_browse'.$extension);

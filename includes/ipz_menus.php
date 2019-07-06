@@ -67,7 +67,7 @@ class Menus extends Base
     
         //tableau_sql("menu", $sql, 0, "edit.php", "", "&database=$database", "", "", "", $cs);
         //container("menu", 50, 250, 200, 355, 16);
-        $dbgrid=createDbGrid("menu", $sql, "editor", "page.php", "&me_id=#Menu&userdb=$database", false, $dialog, array(), $grid_colors, $cs);
+        $dbgrid=createDbGrid("menu", $sql, "editor", "page.php", "&me_id=#Menu&userdb={$this->database}", false, $dialog, array(), $grid_colors, $cs);
         echo $dbgrid;
     }
 
@@ -95,8 +95,8 @@ class Menus extends Base
     {
         $cs = connection(CONNECT, $userdb);
         $sql = "select pa_id from {$this->db_prefix}pages where pa_filename = '$pa_filename'";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
-        debugLog('LG', $this->lg);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
+        self::getLogger()->dump('LG', $this->lg);
 
         $stmt = $cs->query($sql);
         $rows = $stmt->fetch();
@@ -109,7 +109,7 @@ class Menus extends Base
     {
         $cs = connection(CONNECT, $database);
         $sql = "select m.me_id, p.pa_id from {$this->db_prefix}menus m left outer join {$this->db_prefix}pages p on m.pa_id = p.pa_id where p.pa_filename = '$pa_filename'";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
         $stmt = $cs->query($sql);
         $rows = $stmt->fetch();
         $me_id = isset($rows[0]) ? (int)$rows[0] : 0;
@@ -121,7 +121,7 @@ class Menus extends Base
     {
         $cs = connection(CONNECT, $userdb);
         $sql = "select m.me_id, p.pa_id from {$this->db_prefix}menus m left outer join {$this->db_prefix}pages p on m.pa_id = p.pa_id where p.pa_filename = '$pa_filename'";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
         $stmt = $cs->query($sql);
         $rows = $stmt->fetch();
         $me_id = isset($rows[0]) ? (int)$rows[0] : 0;
@@ -173,7 +173,7 @@ INSERT;
             $affected_rows = $cs->exec($sql);
             $di_id = $cs->lastInsertId();
 
-            debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+            self::getLogger()->debug($sql, __FILE__, __LINE__);
 
             $sql = <<<INSERT
     insert into {$this->db_prefix}pages (di_name, pa_filename)
@@ -182,7 +182,7 @@ INSERT;
             $affected_rows += $cs->exec($sql);
             $pa_id = $cs->lastInsertId();
 
-            debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+            self::getLogger()->debug($sql, __FILE__, __LINE__);
     
             $sql = <<<INSERT
     insert into {$this->db_prefix}menus (di_name, me_level, me_target, pa_id)
@@ -191,7 +191,7 @@ INSERT;
             $affected_rows += $cs->exec($sql);
             $me_id = $cs->lastInsertId();
 
-            debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+            self::getLogger()->debug($sql, __FILE__, __LINE__);
 
             $cs->commit();
         }
@@ -209,6 +209,7 @@ INSERT;
         $di_en_short,
         $di_en_long
     ) {
+        list($me_id, $pa_id) = $this->getMenuAndPage($userdb, $pa_filename);
 
         $cs=connection(CONNECT, $userdb);
 
@@ -366,8 +367,8 @@ INSERT;
                 "order by m.me_id";
         
         //		echo $sql . "<br>";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
-        debugLog('LG', $this->lg);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
+        self::getLogger()->dump('LG', $this->lg);
         
         $cs=connection(CONNECT, $database);
         $stmt = $cs->query($sql);
@@ -413,7 +414,7 @@ INSERT;
             $caption=$rows[2];
             $target=$rows[3];
             $link=$rows[4];
-            $main_menu.="<applet code=\"fphover.class\" codebase=\"/$database/java/\" width=\"$width\" height=\"$height\">\n";
+            $main_menu.="<applet code=\"fphover.class\" codebase=\"/{$this->database}/java/\" width=\"$width\" height=\"$height\">\n";
             $main_menu.="\t<param name=\"textcolor\" value=\"$text_color\">\n";
             $main_menu.="\t<param name=\"text\" value=\"$caption\">\n";
             $main_menu.="\t<param name=\"color\" value=\"$color\">\n";
@@ -606,7 +607,7 @@ INSERT;
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name " .
                 "and p.pa_id=$id";
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
 
         //echo $sql . "<br>";
         //"and p.pa_id=m.me_id " .
@@ -620,7 +621,7 @@ INSERT;
         if ($title=="") {
             $title = $rows["di_".$this->lg."_short"];
         }
-        debugLog(__FILE__ . ':' . __LINE__, $rows);
+        self::getLogger()->debug($rows, __FILE__, __LINE__);
     
         $request="";
         $p=strpos($page, "?", 0);
@@ -651,7 +652,7 @@ INSERT;
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name " .
                 "and m.me_id=$id";
-        // debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        // self::getLogger()->debug($sql, __FILE__, __LINE__);
 
 //        echo $sql . "<br>";
         //"and p.pa_id=m.me_id " .
@@ -666,7 +667,7 @@ INSERT;
             $title = $rows["di_".$this->lg."_short"];
         }
     
-        debugLog(__FILE__ . ':' . __LINE__, $rows);
+        self::getLogger()->debug($rows, __FILE__, __LINE__);
     
         $request="";
         $p=strpos($page, "?", 0);
@@ -692,13 +693,13 @@ INSERT;
         $title="";
         $page="";
         $sql = "";
-        $sql=   "select m.me_id, p.pa_filename, d.di_{$this->lg}_short, d.di_{$this->lg}_long " .
+        $sql=   "select m.me_id, p.pa_filename, m.me_charset, d.di_{$this->lg}_short, d.di_{$this->lg}_long " .
                 "from {$this->db_prefix}pages p, {$this->db_prefix}menus m, {$this->db_prefix}dictionary d " .
                 "where m.di_name=d.di_name " .
                 "and p.di_name=m.di_name ".
                 "and d.di_name='$di'";
                 
-        debugLog(__FILE__ . ':' . __LINE__ . ':' . $sql);
+        self::getLogger()->debug($sql, __FILE__, __LINE__);
 
         $cs=connection(CONNECT, $database);
         $stmt = $cs->query($sql);
@@ -711,7 +712,7 @@ INSERT;
             $title = $rows["di_".$this->lg."_short"];
         }
 
-        debugLog(__FILE__ . ':' . __LINE__, $rows);
+        self::getLogger()->debug($rows, __FILE__, __LINE__);
 
         $request="";
         $p=strpos($page, "?", 0);
@@ -727,13 +728,13 @@ INSERT;
 
     public function getTabIdes($database)
     {
-        debugLog(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':DATABASE', $database);
+        self::getLogger()->dump(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':DATABASE', $database);
     
         $sql="select m.me_id, m.di_name ";
         $sql.="from {$this->db_prefix}menus m ";
         $sql.="where m.di_name like 'mk%' ";
         $sql.="order by m.me_id";
-        debugLog(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':SQL', $sql);
+        self::getLogger()->dump(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':SQL', $sql);
     
         $cs=connection(CONNECT, $database);
     
@@ -745,7 +746,7 @@ INSERT;
             $i++;
         }
     
-        debugLog(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':RES', $tab_ides);
+        self::getLogger()->dump(__FILE__ . ':' . __METHOD__ . ':' . __LINE__ . ':RES', $tab_ides);
 
         return $tab_ides;
     }

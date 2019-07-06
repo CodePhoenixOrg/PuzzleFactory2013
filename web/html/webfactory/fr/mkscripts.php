@@ -1,6 +1,6 @@
 <center>
 <?php   
-	include_once 'puzzle/ipz_mkscripts.php';
+	// use Puzzle\ScriptsMaker;
 	
 	$query=$_GET["query"];
 	$table=$_GET["table"];
@@ -40,7 +40,7 @@
 			$secondfield=$A_sqlFields[1];
 			
 			$catalog_pa_filename="$table.php";
-			$catalog=getMenuId($userdb, $catalog_pa_filename);
+			$catalog = $menu->getMenuId($userdb, $catalog_pa_filename);
 		
 			//echo "catalog='$catalog'<br>";
 	

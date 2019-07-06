@@ -20,6 +20,7 @@ namespace Puzzle\Data;
 
 use PDOStatement;
 
+use Phink\Core\TObject;
 use Puzzle\Data\Driver;
 
 /**
@@ -27,7 +28,7 @@ use Puzzle\Data\Driver;
  *
  * @author david
  */
-class Statement
+class Statement extends TObject
 {
     private $_statement;
     private $_values;
@@ -184,7 +185,7 @@ class Statement
 
                 $this->_result = $cs->query($this->_sql);
             } catch (\Exception $ex) {
-                \debugLog(__FILE__ . ':' . __LINE__ . ':' . __METHOD__ . ':', $ex);
+                self::getLogger()->dump(__FILE__ . ':' . __LINE__ . ':' . __METHOD__ . ':', $ex);
                 return false;
             }
         }
